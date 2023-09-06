@@ -19,3 +19,7 @@
     transition: color 1s;
     color: blue;
 }
+.navBar-link:active {
+    transition: font-size 100ms;
+    font-size: 1.2rem
+}
