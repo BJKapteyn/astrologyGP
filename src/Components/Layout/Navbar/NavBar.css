@@ -7,8 +7,15 @@
 }
 
 .navBar-link {
+    text-decoration: none;
     text-align: center;
     display: inline-block;
     margin: auto;
     padding: 10px;
+    color: red;
+}
+
+.navBar-link:hover {
+    transition: color 1s;
+    color: blue;
 }

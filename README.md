@@ -82,3 +82,7 @@ CSS:
     class naming: 'componentNameCamelCase-className'
     All compontent css should go in its own file
     All animations should go in App.css 
+
+Links to dependency docs:
+
+-React Router - https://reactrouter.com/en/main/start/overview
