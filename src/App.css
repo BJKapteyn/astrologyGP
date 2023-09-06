@@ -1,15 +1,10 @@
 html {
   background: yellowgreen;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.navLink {
-  display: inline-block;
-  margin: auto;
-  padding: 10px;
-}
-
-.navBar {
-  position: fixed;
+.testPage {
+  height: 100em;
 }
 
 @keyframes App-logo-spin {

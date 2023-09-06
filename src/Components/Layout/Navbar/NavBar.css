@@ -1,0 +1,14 @@
+
+.navBar-bar {
+    width: 100%;
+    position: fixed;
+    margin: auto;
+    text-align: center;
+}
+
+.navBar-link {
+    text-align: center;
+    display: inline-block;
+    margin: auto;
+    padding: 10px;
+}

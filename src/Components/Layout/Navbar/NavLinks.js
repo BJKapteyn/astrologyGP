@@ -1,21 +1,20 @@
-
 export const NavLinks = [
     {
         id: 1,
         href: '',
-        className: 'navLink',
+        className: 'navBar-link',
         text: 'Home'
     },
     {
         id: 2,
         href: '',
-        className: 'navLink',
+        className: 'navBar-link',
         text: 'About'
     },
     {
         id: 3,
         href: '',
-        className: 'navLink',
+        className: 'navBar-link',
         text: 'Staff'
     },
 ]
