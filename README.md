@@ -68,3 +68,21 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+How to get started:
+
+-pull master
+-navigate CLI to root folder
+-run npm install to get nodemodules
+
+
+Conventions:
+
+CSS:
+    class naming: 'componentNameCamelCase-className'
+    All compontent css should go in its own file
+    All animations should go in App.css 
+
+Links to dependency docs:
+
+-React Router - https://reactrouter.com/en/main/start/overview
