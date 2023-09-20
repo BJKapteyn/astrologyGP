@@ -1,5 +1,5 @@
-import { NavLinks as NavLinkData } from "./NavLinkData.jsx";
-import { Link } from "react-router-dom";
+import { NavLinkData } from "./NavLinkData.jsx";
+//import { Link } from "react-router-dom";
 import './NavBar.css';
 import '../../../App.css'
 
