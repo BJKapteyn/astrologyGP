@@ -11,7 +11,7 @@ export function Footer() {
                 <p>Copywrite 2023</p>
             </div>
             <div className='footer-item'>
-                <p>Phone</p>
+                <a href='tel:5554412345'><p>Phone</p></a>
             </div>
             <div className='footer-item'>
                 <p>Email</p>
