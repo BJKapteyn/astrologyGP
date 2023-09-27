@@ -1,6 +1,8 @@
 import { NavBar } from './Components/Layout/Navbar/NavBar.jsx';
 import { BioCard } from './Components/PageElements/BioCard/BioCard.jsx';
+import { Footer } from './Components/Layout/Footer/Footer.jsx';
 import './App.css';
+
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
         {/* addstuff to test here */}
         <div className='testPage'></div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }
