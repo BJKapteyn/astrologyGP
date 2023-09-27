@@ -1,4 +1,5 @@
-import { NavBar } from './Components/Layout/Navbar/NavBar.js';
+import { NavBar } from './Components/Layout/Navbar/NavBar.jsx';
+import { BioCard } from './Components/PageElements/BioCard/BioCard.jsx';
 import './App.css';
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className="App">
       <NavBar></NavBar>
       <div className="testContent">
+        <BioCard></BioCard>
         {/* addstuff to test here */}
         <div className='testPage'></div>
       </div>

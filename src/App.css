@@ -1,17 +1,19 @@
 html {
-  background: yellowgreen;
+  background: rgb(162, 167, 153);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+  @font-face {
+    font-family: bivoac-reguler;
+    src: url("./Fonts/bivoac-reguler.regular-copy.woff");
+  }
+
+  font-family: biovac-reguler;
 }
 
 .testPage {
   height: 100em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+

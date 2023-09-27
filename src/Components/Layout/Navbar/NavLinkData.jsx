@@ -1,4 +1,5 @@
-export const NavLinks = [
+// Links on the Nav Bar
+export const NavLinkData = [
     {
         id: 1,
         href: '',
