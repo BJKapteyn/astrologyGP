@@ -17,8 +17,8 @@ JSX:
     Pascel case .jsx files
     Inside folder with the same name and css file
     Example JSX object: 
-        export const ActionButton = (params) => {
-            const {prop1, prop2, prop3} = params;
+        export const ActionButton = (dataObject) => {
+            const {prop1, prop2, prop3} = dataObject; (just use individual parameters if there's no data object)
 
             //Javascript stuff if needed
            
@@ -31,7 +31,7 @@ JSX:
         This will make them uniform and I think easier to read
 
 Javascript:
-    Just follow best practices         
+    Just follow best practices otherwise have at it it's javascript  
     
         
 Links to dependency docs:
