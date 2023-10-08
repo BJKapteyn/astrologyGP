@@ -1,12 +1,14 @@
 import './TitleCard.css';
-import { logo } from '../../../Pics/Logos/MainLogoTitle.svg'
+import MainLogoTitle from '../../../Pics/Logos/MainLogoTitle.svg'
 
-export default function TitleCard() {
+export function TitleCard() {
     
-    return 
-    (
+
+    return (
+        <div>
         <section id='titleCard-title-card'>
-            <img src={logo} />
+            <img alt='main logo' src={MainLogoTitle} />
         </section>
+        </div>
     );
 }
