@@ -3,14 +3,28 @@ html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+h1 {
+  @font-face {
+    font-family: Busorama-ITC-Std-Bold;
+    src: url('./Fonts/Busorama-ITC-Std-Bold.woff');
+  }
+  font-size: 200px;
+}
+
 p {
   @font-face {
     font-family: bivoac-reguler;
-    src: url("./Fonts/bivoac-reguler.regular-copy.woff");
+    src: url("./Fonts/bivoac-reguler.woff");
   }
 
   font-family: biovac-reguler;
 }
+
+.title {
+  height: 10%;
+}
+
+/*                        Test               */
 
 .testPage {
   height: 100em;

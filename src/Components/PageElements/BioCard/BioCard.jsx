@@ -15,8 +15,8 @@ export function BioCard() {
                             <div className="biocard-image-container">
                                 <img className="biocard-image" alt={description} src={require('../../../Pics/BioCardPics/' + image + '.jpg')}></img>
                             </div>
-                            <div className="description-container">
-                                <p className="description">{description}</p>
+                            <div className="biocard-description-container">
+                                <p className="biocard-description">{description}</p>
                             </div>
                         </section>
                     );
