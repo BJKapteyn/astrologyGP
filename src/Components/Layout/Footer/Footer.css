@@ -1,0 +1,14 @@
+.footer-container {
+    height: 10em;
+    width: 100%;
+    background-color: purple;
+}
+
+.footer-item {
+    text-align: center;
+    color: white;
+}
+
+#footer-top-item{
+    padding-top: 1em;
+}
