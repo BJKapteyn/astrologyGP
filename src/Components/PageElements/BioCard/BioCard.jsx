@@ -5,10 +5,9 @@ import "./BioCard.css";
 export function BioCard() {
 
     return (
-        <div>
-            <div className="biocard-flex-container">
-                {CardInfoData.map((card) => {
-                    const {id, image, description} = card;
+        <div className="biocard-flex-container">
+            {CardInfoData.map((card) => {
+                const {id, image, description} = card;
 
                     return (
                         <section className="biocard-flexbox" key={id}>
