@@ -20,7 +20,6 @@ export function BioCard() {
                         </section>
                     );
                 })}
-            </div>
         </div>
     );
 }
