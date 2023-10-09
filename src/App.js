@@ -13,11 +13,10 @@ function App() {
   return (
     <div className="App">
       <NavBar></NavBar>
-      <TitleCard></TitleCard>
       <div className="testContent">
-        {/* addstuff to test here */}
+        <TitleCard></TitleCard>
         <BioCard></BioCard>
-        <ActionButton buttonSettings={{buttonText: 'Whtever', action: testAction}} />
+        {/* addstuff to test here */}
         <div className='testPage'></div>
       </div>
       <Footer></Footer>
