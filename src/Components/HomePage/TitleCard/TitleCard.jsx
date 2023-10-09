@@ -5,7 +5,7 @@ export default function TitleCard() {
     
     return 
     (
-        <section id='titleCard-title-card'>
+        <section id='titleCard-container'>
             <img src={logo} />
         </section>
     );

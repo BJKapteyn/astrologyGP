@@ -1,5 +1,6 @@
-.titleCard-title-card {
+.titleCard-container {
     background-color: blueviolet;
+    background-image: url('../../../Pics/Backgrounds/titleCardBackground.jpg');
     height: 100vh;
     width: auto;
 }
