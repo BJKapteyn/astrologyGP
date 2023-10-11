@@ -7,9 +7,9 @@ export function TitleCard() {
 
     return (
         <div>
-        <section id='titleCard-title-card'>
-            <img alt='main logo' src={MainLogoTitle} />
-        </section>
+            <section id='titleCard-container'>
+                <img alt='main logo' src={logo} />
+            </section>
         </div>
     );
 }
