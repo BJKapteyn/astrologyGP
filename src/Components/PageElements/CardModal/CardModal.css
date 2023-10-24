@@ -1,0 +1,14 @@
+.cardmodal-container {
+    height: auto;
+    position: fixed;
+    z-index: 10;
+}
+
+.cardmodal-exit{
+    position: relative;
+}
+
+.cardmodal-background {
+    position: fixed;
+    width: 100%;
+}
