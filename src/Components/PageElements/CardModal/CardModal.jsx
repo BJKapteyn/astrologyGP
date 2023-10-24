@@ -7,16 +7,17 @@ export const CardModal = (data) => {
     selectBioData(data);
 
     function deSelect() {
-        selectBioData({});
+        selectBioData(null);
     }
 
-    function select() {
-
+    function select(bioData) {
+        if(bioData != null) 
+            selectBioData(bioData);
     }
 
     return (
         <div className="cardmodal-background" onClick={deSelect}>
-
+            <Card data={bioData}></Card>
         </div>
     );
 }
