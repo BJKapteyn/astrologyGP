@@ -1,0 +1,28 @@
+.infocard-flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10%;
+    flex-wrap: wrap;
+}
+
+.infocard-flexbox {
+    /*width: 25%;*/
+    height: 450px;
+}
+
+.infocard-image-container {
+    height: 70%;
+    position: relative;
+}
+
+.infocard-image {
+    height: 100%;
+}
+
+.infocard-keyword {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    color: white;
+    font-size: 3em;
+}
