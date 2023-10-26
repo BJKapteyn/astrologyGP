@@ -3,7 +3,6 @@ import '../../../App.css';
 import logo  from '../../../Pics/Logos/MainLogoTitle.svg'
 
 export function TitleCard() {
-    
 
     return (
         <div>
