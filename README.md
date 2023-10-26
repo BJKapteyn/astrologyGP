@@ -8,27 +8,18 @@ How to get started:
 Conventions:
 
 CSS:
-    Class naming: 'componentNameCamelCase-classNameCamelCase' this will avoid having the same name across .css files 
-        (they're all joined up when the project is built)
-    All compontent css should go in its own file
+    Class naming: 'ComponentNamePascalCase-ClassName' this will avoid having the same name across .css files 
+        
+    All compontent css should go in the associated component file
     All animations should go in App.css 
 
 JSX:
     Pascel case .jsx files
     Inside folder with the same name and css file
     Example JSX object: 
-        export const ActionButton = (dataObject) => {
-            const {prop1, prop2, prop3} = dataObject; (just use individual parameters if there's no data object)
+    
+        export const ActionButton = (props) => {}
 
-            //Javascript stuff if needed
-           
-            return (
-                <pageElement>
-                    //Content
-                </pageElement>
-            );
-        }
-        This will make them uniform and I think easier to read
 
 Javascript:
     Just follow best practices otherwise have at it it's javascript  
