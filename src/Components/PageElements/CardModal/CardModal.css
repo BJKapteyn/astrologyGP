@@ -1,11 +1,34 @@
+::-webkit-scrollbar {
+    width: 3%;
+    background-color: aqua;
+}
+
 .cardmodal-container {
-    height: auto;
+    overflow-y: initial;
+    display: block;
+    height: 100%;
+    width: 100%;
     position: fixed;
+    top: 0%;
     z-index: 10;
+}
+
+.cardmodal-card {
+    overflow-y: auto;
+    background-color: white;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    margin-top: -20%;
+    margin-left: -40%;
+    left:50%;
+    top:50%;
 }
 
 .cardmodal-exit{
     position: relative;
+    top: 1em;
+    left: 1em;
 }
 
 .cardmodal-background {
@@ -14,7 +37,21 @@
     opacity: .8;
     top: 0px;
     width: 100%;
-    height: 500px;
+    height: 100%;
+    z-index: 9;
+}
+
+
+
+.cardmodal-biocard {
+
+    text-align: center;
+    width: 100%;
+}
+
+.cardmodal-image {
+    display: block;
+    width: 100%;
 }
 
 .cardmodal-description-text {
