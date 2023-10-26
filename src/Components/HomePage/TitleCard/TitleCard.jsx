@@ -2,6 +2,7 @@ import './TitleCard.css';
 import '../../../App.css';
 import logo  from '../../../Pics/Logos/MainLogoTitle.svg'
 
+// Homepage Landing
 export function TitleCard() {
     
 
