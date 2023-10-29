@@ -1,37 +1,75 @@
-::-webkit-scrollbar {
-    width: 3%;
-    background-color: aqua;
-}
-
 .cardmodal-container {
     overflow-y: initial;
-    display: block;
-    height: 100%;
-    width: 100%;
+    display: inline-block;
+    margin: auto;
+    height: 80%;
+    width: 80%;
     position: fixed;
-    top: 0%;
+    top: 80%;
+    right: 50%;
     z-index: 10;
+    margin: -40%;
 }
 
 .cardmodal-card {
-    overflow-y: auto;
+    border-radius: 20px;
+    overflow-y: initial;
     background-color: white;
+}
+
+.cardmodal-border {
     position: absolute;
-    width: 80%;
-    height: 80%;
-    margin-top: -20%;
-    margin-left: -40%;
-    left:50%;
-    top:50%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
 .cardmodal-exit{
+    top: 2em;
+    right: -92%;
     position: relative;
-    top: 1em;
-    left: 1em;
+    z-index: 11;
+    background:  rgb(72,31,75);
+    padding: 1em;
+    border-radius: 1em;
+    color: white;
+    font-weight: bold;
+    transform: scale(1);
+    height: 2em;
+    width: 2em;
+    cursor: pointer;
+    transition: background-color 500ms, color 500ms, transform 1s;
+    -webkit-transition: background-color 500ms, color 500ms, transform 1s;
+    -moz-transition: background-color 500ms, color 500ms, transform 1s;
+    -ms-transition: background-color 500ms, color 500ms, transform 1s;
+    -o-transition: background-color 500ms, color 500ms, transform 1s;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+.cardmodal-exit:hover{
+    background-color: rgb(198, 171, 210);
+    color: rgb(72,31,75);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
 
 .cardmodal-background {
+    cursor: pointer;
+    animation-name: modalBackgroundFadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
     position: fixed;
     background-color: black;
     opacity: .8;
@@ -41,17 +79,20 @@
     z-index: 9;
 }
 
-
-
 .cardmodal-biocard {
-
     text-align: center;
     width: 100%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
 .cardmodal-image {
     display: block;
-    width: 100%;
+    width: 30%;
+    margin: auto;
 }
 
 .cardmodal-description-text {
