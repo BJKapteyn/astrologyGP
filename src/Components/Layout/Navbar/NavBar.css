@@ -10,18 +10,18 @@
 }
 
 .navBar-link {
-    font-size: 20px;
+    font-size: 25px;
     text-decoration: none;
     text-align: center;
     display: inline-block;
     margin: auto;
-    padding: 10px;
+    padding: 12px 25px;
     color: white;
 }
 
 .navBar-link:hover {
     transition: color 500ms;
-    color: rgb(72,31,75);
+    color: rgb(198, 171, 210);
     -webkit-transition: color 500ms;
     -moz-transition: color 500ms;
     -ms-transition: color 500ms;

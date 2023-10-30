@@ -15,12 +15,13 @@ html {
 body {
   margin: 0;
 }
+
 h1 {
   @font-face {
-    font-family: Busorama-ITC-Std-Bold;
     src: url('./Fonts/Busorama-ITC-Std-Bold.woff');
   }
-  font-size: 200px;
+  font-family: Busorama-ITC-Std-Bold;
+  font-size: 100px;
 }
 
 p {
