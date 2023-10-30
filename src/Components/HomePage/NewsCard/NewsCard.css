@@ -1,0 +1,49 @@
+/*
+  main - violet                         rgb(72,31,75)
+  main complement - light purple        rgb(198, 171, 210)
+  accent 1 - grey                       rgb(202, 201, 171)
+  accent 2 - light blue                 rgb(183, 200, 219)
+  accent 3 - light pink                 rgb(253, 229, 183)
+  accent 4 - light orange               rgb(241, 199, 97)
+*/
+
+.newscard-section {
+    height: 150vh;
+    background: linear-gradient(45deg, rgb(72,31,75) 0%, rgb(183, 200, 219) 50%,  rgb(198, 171, 210) 100%);
+    background-size: "200% 200%";
+    animation-name: backgroundGradient;
+    animation: backgroundGradient 3s ease infinite;
+    -webkit-animation: backgroundGradient 3s ease infinite;
+}
+          
+
+
+.newscard-card {
+    margin: 5% auto;
+    padding: 5%;
+    width: 70%;
+    border-radius: 20px;
+    height: 700px;
+    background-color: white;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.newscard-buffer {
+    height: 20px;
+}
+ 
+@keyframes backgroundGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  };
+      
+

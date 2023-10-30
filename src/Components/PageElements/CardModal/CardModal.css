@@ -1,19 +1,22 @@
 .cardmodal-container {
-    overflow-y: initial;
-    display: inline-block;
-    margin: auto;
-    height: 80%;
-    width: 80%;
+    overflow-y: hidden;
+    height: 80vh;
+    width: 60vw;
     position: fixed;
-    top: 80%;
-    right: 50%;
+    top: 50vh;
+    left: 50vw;
     z-index: 10;
-    margin: -40%;
+    margin-top: -18vw;
+    margin-left: -30vw;
+    background-color: white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
 .cardmodal-card {
-    border-radius: 20px;
-    overflow-y: initial;
     background-color: white;
 }
 
@@ -21,12 +24,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
+    overflow-y: scroll;
 }
 
 .cardmodal-exit{
@@ -82,11 +80,6 @@
 .cardmodal-biocard {
     text-align: center;
     width: 100%;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
 }
 
 .cardmodal-image {
@@ -96,5 +89,6 @@
 }
 
 .cardmodal-description-text {
-    font-size: 15px;
+    padding: 3em;
+    font-size: 1em;
 }

@@ -3,6 +3,7 @@ import { BioCards } from './Components/PageElements/BioCard/BioCards.jsx';
 import { Footer } from './Components/Layout/Footer/Footer.jsx';
 import { TitleCard } from './Components/HomePage/TitleCard/TitleCard.jsx';
 import { InfoCard } from './Components/PageElements/InfoCard/InfoCard';
+import { NewsCard } from './Components/HomePage/NewsCard/NewsCard.jsx';
 import './App.css';
 
 
@@ -16,6 +17,7 @@ function App() {
       <div className="testContent">
         <TitleCard></TitleCard>
         <BioCards></BioCards>
+        <NewsCard></NewsCard>
         <InfoCard></InfoCard>
         {/* addstuff to test here */}
         <div className='testPage'></div>
