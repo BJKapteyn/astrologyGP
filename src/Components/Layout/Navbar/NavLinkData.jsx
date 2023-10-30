@@ -10,12 +10,12 @@ export const NavLinkData = [
         id: 2,
         href: '',
         className: 'navBar-link',
-        text: 'About'
+        text: 'Blog'
     },
     {
         id: 3,
         href: '',
         className: 'navBar-link',
-        text: 'Staff'
+        text: 'Store'
     },
 ]

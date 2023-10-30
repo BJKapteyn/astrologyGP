@@ -20,7 +20,7 @@ export function BioCards() {
     return (
         <section className="biocard-section">
             <div className="biocard-title-container">
-                <h1 id="biocard-title">Meet Y Us ABCDEFGHIJKLMNOP</h1>
+                <h1 id="biocard-title">Our Mediums</h1>
             </div>
             <div className="biocard-flex-container">
             
