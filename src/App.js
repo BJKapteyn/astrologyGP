@@ -16,11 +16,10 @@ function App() {
       <NavBar></NavBar>
       <div className="testContent">
         <TitleCard></TitleCard>
-        <BioCards></BioCards>
-        <NewsCard></NewsCard>
         <InfoCard></InfoCard>
+        <NewsCard></NewsCard>
+        <BioCards></BioCards>
         {/* addstuff to test here */}
-        <div className='testPage'></div>
       </div>
       <Footer></Footer>
     </div>

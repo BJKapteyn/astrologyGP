@@ -4,18 +4,18 @@ export const NavLinkData = [
         id: 1,
         href: '',
         className: 'navBar-link',
-        text: 'Home'
+        text: 'HOME'
     },
     {
         id: 2,
         href: '',
         className: 'navBar-link',
-        text: 'Blog'
+        text: 'BLOG'
     },
     {
         id: 3,
         href: '',
         className: 'navBar-link',
-        text: 'Store'
+        text: 'STORE'
     },
 ]
