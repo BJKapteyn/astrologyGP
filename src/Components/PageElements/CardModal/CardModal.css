@@ -88,6 +88,10 @@
     margin: auto;
 }
 
+.cardmodal-datapoint {
+    color: purple;
+}
+
 .cardmodal-description-text {
     padding: 3em;
     font-size: 1em;

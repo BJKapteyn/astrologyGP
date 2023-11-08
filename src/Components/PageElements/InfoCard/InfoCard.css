@@ -2,12 +2,24 @@
     display: flex;
     justify-content: space-evenly;
     padding: 10%;
+    padding-top:0px;
+
     flex-wrap: wrap;
 }
 
 .infocard-flexbox {
     /*width: 25%;*/
     height: 450px;
+}
+
+#infocard-title {
+    background: linear-gradient(45deg, rgb(72,31,75) 0%, rgb(183, 200, 219) 90%,  rgb(198, 171, 210) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.infocard-description {
+    font-size: 3em;
 }
 
 .infocard-image-container {
@@ -25,4 +37,6 @@
     bottom: 50%;
     color: white;
     font-size: 3em;
+    padding-left: .1em;
+    text-shadow: 1px 1px 10px black;
 }

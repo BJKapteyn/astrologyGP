@@ -31,7 +31,7 @@
     margin: 2%;
     border: 1px solid rgb(183, 200, 219);
     overflow: hidden;
-    box-shadow: 5px 5px 10px rgb(198, 171, 210), -5px -5px 10px rgb(198, 171, 210);
+    box-shadow: 1px 1px 20px rgba(198, 171, 210, 0.47), -1px -1px 20px rgba(198, 171, 210, 0.492);
     border-radius: 50px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
@@ -59,6 +59,15 @@
     width: 100%;
     margin: auto;
     overflow: hidden;
+}
+
+.biocard-name {
+    color: rgb(198, 171, 210);
+    text-shadow: 1px 1px 3px black;
+    position: relative;
+    font-size: 2em;
+    top: 80%;
+    left: 10%;
 }
 
 .biocard-image {

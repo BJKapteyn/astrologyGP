@@ -24,6 +24,7 @@
     width: 70%;
     border-radius: 20px;
     height: 700px;
+    box-shadow: 1px 1px 10px rgba(17, 16, 16, 0.09), -1px -1px 10px rgba(16, 14, 14, 0.112);
     background-color: white;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -32,6 +33,53 @@
 }
 .newscard-buffer {
     height: 20px;
+}
+
+#newscard-title {
+  /* text-shadow: 1px 1px 10px black; */
+  color: rgb(72,31,75);
+  margin: 20px auto;
+}
+
+.newscard-infoflex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.newscard-infoflex div {
+  overflow-y: initial;
+  width: 30%;
+  margin: 2%;
+}
+.newscard-infoflex div p {
+  padding: 5%;
+  overflow-y: inherit;
+  width: 100%;
+  display: block;
+  height: 200px;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+#one {
+  background: rgb(198, 171, 210);
+}
+
+#two {
+  background: rgb(183, 200, 219);
+
+}
+
+#three {
+  background: rgb(183, 200, 219);
+  
+}
+
+#four {
+  background: rgb(198, 171, 210);
+  
 }
  
 @keyframes backgroundGradient {
