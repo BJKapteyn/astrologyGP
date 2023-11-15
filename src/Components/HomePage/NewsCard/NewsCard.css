@@ -8,7 +8,8 @@
 */
 
 .newscard-section {
-    height: 150vh;
+    overflow: auto;
+    height: auto;
     background: linear-gradient(45deg, rgb(72,31,75) 0%, rgb(183, 200, 219) 50%,  rgb(198, 171, 210) 100%);
     background-size: "200% 200%";
     animation-name: backgroundGradient;
@@ -30,9 +31,6 @@
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
-}
-.newscard-buffer {
-    height: 20px;
 }
 
 #newscard-title {
