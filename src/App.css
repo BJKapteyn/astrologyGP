@@ -6,10 +6,21 @@
   accent 3 - light pink                 rgb(253, 229, 183)
   accent 4 - light orange               rgb(241, 199, 97)
 */
+@font-face {
+  font-family: "bivoac-regular";
+  src: url("./Fonts/bivoac-reguler.woff");
+  src: url("./Fonts/bivoac-reguler.woff") format('.woff');
+}
+
 
 html {
   background: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "bivoac-reguler";
+  @font-face {
+    font-family: "bivoac-reguler";
+    src: url("./Fonts/Bivoac Reguler.woff") format('.woff');
+    src: url("./Fonts/Bivoac Reguler.woff") format('.woff');
+  }
 }
 
 body {
@@ -25,19 +36,22 @@ h1 {
 }
 
 h2 {
-  font-family: bivoac-reguler;
-  src: url("./Fonts/bivoac-reguler.woff");
-  font-family: biovac-reguler;
-
+  font-family: "bivoac-reguler";
+  @font-face {
+    font-family: "bivoac-reguler";
+    src: url("./Fonts/Bivoac Reguler.woff") format('.woff');
+    src: url("./Fonts/Bivoac Reguler.woff") format('.woff');
+  }
 }
 
 p {
+  font-family: "Bivoac Reguler";
   @font-face {
-    font-family: bivoac-reguler;
-    src: url("./Fonts/bivoac-reguler.woff");
+    font-family: "Bivoac Reguler";
+    src: url("./Fonts/Bivoac Reguler.woff") format('.woff');
+    src: url("./Fonts/Bivoac Reguler.woff") format('.woff');
   }
 
-  font-family: biovac-reguler;
 }
 
 .blurb {
