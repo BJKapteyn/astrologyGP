@@ -64,8 +64,8 @@
 }
 
 .biocard-name {
-    color: rgb(198, 171, 210);
-    text-shadow: 1px 1px 3px black;
+    color: white;
+    text-shadow: 0px 0px 10px black;
     position: relative;
     font-size: 2em;
     z-index: 10;

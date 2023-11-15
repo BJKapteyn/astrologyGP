@@ -23,14 +23,9 @@
     margin: 5% auto;
     padding: 5%;
     width: 70%;
-    border-radius: 20px;
     height: 700px;
     box-shadow: 1px 1px 10px rgba(17, 16, 16, 0.09), -1px -1px 10px rgba(16, 14, 14, 0.112);
     background-color: white;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
 }
 
 #newscard-title {

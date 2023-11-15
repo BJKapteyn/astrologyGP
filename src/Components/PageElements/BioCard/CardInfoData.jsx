@@ -51,17 +51,6 @@ export const CardInfoData = [
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!"  
     },
     {
-        id: 6,
-        image: "woman6.png",
-        name: "Geronimo-Gordon-Lovet",
-        sign: "Cancer",
-        email: "yahoo@yahoo.google",
-        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!"  
-    },
-    {
         id: 7,
         image: "woman7.png",
         name: "Gammy",
