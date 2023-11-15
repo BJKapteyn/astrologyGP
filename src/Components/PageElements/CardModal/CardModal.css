@@ -73,18 +73,31 @@
 }
 
 .cardmodal-biocard {
+    display: grid;
+    grid-template-areas: "image info"
+                        "image info"
+                        "description description";
     text-align: center;
     width: 100%;
 }
 
 .cardmodal-image {
+    grid-area: image;
     display: block;
     width: 30%;
     margin: auto;
 }
 
+.cardmodal-info {
+    grid-area: info;
+}
+
 .cardmodal-datapoint {
     color: purple;
+}
+
+.cardmodal-description {
+    grid-area: description;
 }
 
 .cardmodal-description-text {
