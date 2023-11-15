@@ -1,5 +1,5 @@
 #titleCard-container {
-    background-color: rgb(72,31,75);
+    background-color: rgb(198, 171, 210);
     background-image: url('../../../Pics/Landscapes/moonMountain.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -11,6 +11,8 @@
 }
 
 #titleCard-logo {
+    display: block;
+    margin: auto;
     height: 100vh;
     animation: fadeIn 2s forwards;
     animation-fill-mode: forwards;

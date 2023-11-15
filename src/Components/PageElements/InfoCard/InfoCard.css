@@ -1,7 +1,7 @@
 .infocard-flex-container {
     display: flex;
-    justify-content: space-evenly;
-    padding: 10%;
+    justify-content: space-between;
+    padding: 10% 10% 10%;
     padding-top:0px;
     flex-wrap: wrap;
 }
@@ -39,4 +39,14 @@
 
 .infocard-description {
     font-size: 3em;
+}
+
+.infocard-blurb {
+    padding: 5%;
+    background: linear-gradient(60deg, rgb(72,31,75) 0%,  rgb(111, 138, 169) 100%);
+    color: white;
+    text-shadow: 1px 1px 5px black;
+    margin: auto;
+    margin-bottom: 5%;
+    width: 70%;
 }

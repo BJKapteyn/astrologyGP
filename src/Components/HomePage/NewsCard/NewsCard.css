@@ -21,7 +21,7 @@
 
 .newscard-card {
     margin: 5% auto;
-    padding: 5%;
+    padding: 2% 5%;
     width: 70%;
     height: 700px;
     box-shadow: 1px 1px 10px rgba(17, 16, 16, 0.09), -1px -1px 10px rgba(16, 14, 14, 0.112);
@@ -31,7 +31,7 @@
 #newscard-title {
   /* text-shadow: 1px 1px 10px black; */
   color: rgb(72,31,75);
-  margin: 20px auto;
+  margin: 2% auto;
 }
 
 .newscard-infoflex {
