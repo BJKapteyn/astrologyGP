@@ -5,7 +5,7 @@ export function BioCard({cardData, callbackSelect}) {
         <section onClick={() => callbackSelect(cardData)} className="biocard-flexbox" key={cardData.id}>
             <div className="biocard-image-container">
                 <span className="biocard-name">{cardData.name}</span>
-                <img className="biocard-image" alt={cardData.description} src={require('../../../Pics/BioCardPics/' + cardData.image + '.jpg')}></img>
+                <img className="biocard-image" alt={cardData.description} src={require('../../../Pics/Headshots/' + cardData.image)}></img>
             </div>
             <div className="biocard-description-container">
                 <p className="biocard-description">{cardData.description}</p>

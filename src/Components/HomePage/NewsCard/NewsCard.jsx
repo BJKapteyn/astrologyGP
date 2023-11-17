@@ -5,7 +5,6 @@ export const NewsCard = () => {
 
     return (
         <section className="newscard-section">
-            <div className="newscard-buffer"></div>
             <div className="newscard-card">
                 <div>
                     <h1 id='newscard-title' className="title-container">Recent News</h1>

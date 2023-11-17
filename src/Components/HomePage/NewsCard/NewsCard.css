@@ -8,7 +8,8 @@
 */
 
 .newscard-section {
-    height: 150vh;
+    overflow: auto;
+    height: auto;
     background: linear-gradient(45deg, rgb(72,31,75) 0%, rgb(183, 200, 219) 50%,  rgb(198, 171, 210) 100%);
     background-size: "200% 200%";
     animation-name: backgroundGradient;
@@ -20,25 +21,17 @@
 
 .newscard-card {
     margin: 5% auto;
-    padding: 5%;
+    padding: 2% 5%;
     width: 70%;
-    border-radius: 20px;
     height: 700px;
     box-shadow: 1px 1px 10px rgba(17, 16, 16, 0.09), -1px -1px 10px rgba(16, 14, 14, 0.112);
     background-color: white;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-}
-.newscard-buffer {
-    height: 20px;
 }
 
 #newscard-title {
   /* text-shadow: 1px 1px 10px black; */
   color: rgb(72,31,75);
-  margin: 20px auto;
+  margin: 2% auto;
 }
 
 .newscard-infoflex {
