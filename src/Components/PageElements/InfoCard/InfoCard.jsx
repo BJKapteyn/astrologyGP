@@ -5,7 +5,7 @@ export function InfoCard() {
     return (
         <div>
             <div className="title-container">
-                <h1 id="infocard-title">WHAT WE'RE ABOUT</h1>
+                <h1 id="infocard-title">WELCOME!</h1>
             </div>
             <div className="infocard-blurb">
                 <p className="infocard-description">Welcome to Vibe Collective, where we provide quality divination readings online to help you access various metaphysical and healing techniques. Our goal is to create an intimate and accessible user experience, so you can book your reading from anywhere in the world at any time of the day.</p>
