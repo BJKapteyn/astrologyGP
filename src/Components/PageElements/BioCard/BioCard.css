@@ -23,6 +23,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 0%;
+    padding-bottom: 6%;
     margin:auto;
     width: 80%;
 }
