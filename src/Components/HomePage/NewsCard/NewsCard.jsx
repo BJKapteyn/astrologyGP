@@ -7,7 +7,7 @@ export const NewsCard = () => {
         <section className="newscard-section">
             <div className="newscard-card">
                 <div>
-                    <h1 id='newscard-title' className="title-container">Recent News</h1>
+                    <h1 id='newscard-title' className="title-container">RECENT NEWS</h1>
                 </div>
                 <div className="newscard-infoflex">
                     <div >
@@ -23,6 +23,7 @@ export const NewsCard = () => {
                         <p id="four" className="blurb">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, vero! Deleniti quo ad a excepturi iure vel dolorum necessitatibus sint, praesentium, cupiditate libero? Nam reprehenderit aliquid pariatur debitis commodi modi!</p>
                     </div>
                 </div>
+                <div className='button1'>MORE</div>
             </div>
 
         </section>

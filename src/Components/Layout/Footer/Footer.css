@@ -1,12 +1,55 @@
 .footer-container {
-    background: linear-gradient(45deg, rgb(183, 200, 219)  0%, rgb(72,31,75) 40%, rgb(72,31,75) 60%,  rgb(198, 171, 210) 100%);
-    height: 10em;
+    background: linear-gradient(90deg, rgb(97, 49, 101)  0%, rgb(72,31,75) 40%, rgb(72,31,75) 60%,  rgb(97, 49, 101) 100%);
+    height: auto;
     width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .footer-item {
     text-align: center;
     color: white;
+    padding: 1px;
+    font-size: 1.2em;
+}
+
+.footer-flex-item {
+    margin: auto;
+    display: block;
+    width: 30%;
+    text-align: center;
+}
+
+#footer-logo img {
+    width: 70%;
+}
+
+#footer-logo {
+    height: 100%;
+}
+
+.footer-social {
+    display: block;
+    padding: 1%;
+    cursor: pointer;
+    transition: transform 1s ease;
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    -moz-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    -o-transform: scale(1.0);
+    -webkit-transition: transform 1s ease;
+    -moz-transition: transform 1s ease;
+    -ms-transition: transform 1s ease;
+    -o-transition: transform 1s ease;
+}
+
+.footer-social:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
 }
 
 #footer-top-item{
