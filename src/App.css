@@ -7,20 +7,21 @@
   accent 4 - light orange               rgb(241, 199, 97)
 */
 @font-face {
-  font-family: "bivoac-regular";
-  src: url("./Fonts/bivoac-reguler.woff");
-  src: url("./Fonts/bivoac-reguler.woff") format('.woff');
+  font-family: bivoac-regular;
+  src: url("./Fonts/Bivoac Reguler.woff");
+  src: url("./Fonts/Bivoac Reguler.woff") format("woff"),
+       url("./Fonts/Bivoac Reguler.otf") format("opentype")
 }
 
+@font-face {
+  font-family: Busorama-ITC-Std-Bold;
+  src: url('./Fonts/Busorama-ITC-Std-Bold.woff');
+  src: url('./Fonts/Busorama-ITC-Std-Bold.woff') format("woff"),
+}
 
-html {
-  background: white;
-  font-family: "bivoac-reguler";
-  @font-face {
-    font-family: "bivoac-reguler";
-    src: url("./Fonts/Bivoac Reguler.woff") format('.woff');
-    src: url("./Fonts/Bivoac Reguler.woff") format('.woff');
-  }
+html, p, h1, h2, h3, h4 {
+  font-family: bivoac-regular;
+
 }
 
 body {
@@ -28,30 +29,8 @@ body {
 }
 
 h1 {
-  @font-face {
-    src: url('./Fonts/Busorama-ITC-Std-Bold.woff');
-  }
-  font-family: Busorama-ITC-Std-Bold;
+
   font-size: 100px;
-}
-
-h2 {
-  font-family: "bivoac-reguler";
-  @font-face {
-    font-family: "bivoac-reguler";
-    src: url("./Fonts/Bivoac Reguler.woff") format('.woff');
-    src: url("./Fonts/Bivoac Reguler.woff") format('.woff');
-  }
-}
-
-p {
-  font-family: "Bivoac Reguler";
-  @font-face {
-    font-family: "Bivoac Reguler";
-    src: url("./Fonts/Bivoac Reguler.woff") format('.woff');
-    src: url("./Fonts/Bivoac Reguler.woff") format('.woff');
-  }
-
 }
 
 .blurb {
