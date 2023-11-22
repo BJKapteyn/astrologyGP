@@ -1,3 +1,12 @@
+/*
+  main - violet                         rgb(72,31,75)
+  main complement - light purple        rgb(198, 171, 210)
+  accent 1 - grey                       rgb(202, 201, 171)
+  accent 2 - light blue                 rgb(183, 200, 219)
+  accent 3 - light pink                 rgb(253, 229, 183)
+  accent 4 - light orange               rgb(241, 199, 97)
+*/
+
 .cardmodal-container {
     overflow-y: hidden;
     height: 80vh;
@@ -9,11 +18,6 @@
     margin-top: -18vw;
     margin-left: -30vw;
     background-color: white;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
 }
 
 .cardmodal-card {
@@ -32,9 +36,8 @@
     right: -92%;
     position: relative;
     z-index: 11;
-    background:  rgb(72,31,75);
+    background:  rgb(241, 199, 97);
     padding: 1em;
-    border-radius: 1em;
     color: white;
     font-weight: bold;
     transform: scale(1);
@@ -78,18 +81,31 @@
 }
 
 .cardmodal-biocard {
+    display: grid;
+    grid-template-areas: "image info"
+                        "image info"
+                        "description description";
     text-align: center;
     width: 100%;
 }
 
 .cardmodal-image {
+    grid-area: image;
     display: block;
     width: 30%;
     margin: auto;
 }
 
+.cardmodal-info {
+    grid-area: info;
+}
+
 .cardmodal-datapoint {
     color: purple;
+}
+
+.cardmodal-description {
+    grid-area: description;
 }
 
 .cardmodal-description-text {

@@ -1,12 +1,14 @@
 import {InfoCardData} from "./InfoCardData";
-import '../../../App.css';
 import "./InfoCard.css";
 
 export function InfoCard() {
     return (
         <div>
             <div className="title-container">
-                <h1 id="infocard-title">WHAT WE'RE ABOUT</h1>
+                <h1 id="infocard-title">WELCOME!</h1>
+            </div>
+            <div className="infocard-blurb">
+                <p className="infocard-description">Welcome to Vibe Collective, where we provide quality divination readings online to help you access various metaphysical and healing techniques. Our goal is to create an intimate and accessible user experience, so you can book your reading from anywhere in the world at any time of the day.</p>
             </div>
             <div className="infocard-flex-container">
                 {InfoCardData.map((data) => {
@@ -24,9 +26,7 @@ export function InfoCard() {
                         </section>
                     );
                 })}
-                <div className="blurb">
-                    <p className="infocard-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia beatae quae fugit possimus dolores. Quisquam ea voluptatem pariatur quam sapiente repellat incidunt aperiam, quidem a eum iusto error voluptates. Perferendis?</p>
-                </div>
+
             </div>
         </div>
     );

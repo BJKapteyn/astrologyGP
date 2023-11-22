@@ -1,6 +1,6 @@
 #titleCard-container {
-    background-color: rgb(72,31,75);
-    background-image: url('../../../Pics/Backgrounds/titleCardBackground.jpg');
+    background-color: rgb(198, 171, 210);
+    background-image: url('../../../Pics/Landscapes/moonMountain.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -11,11 +11,13 @@
 }
 
 #titleCard-logo {
+    display: block;
+    margin: auto;
     height: 100vh;
-    opacity: 0;
     animation: fadeIn 2s forwards;
     animation-fill-mode: forwards;
     -webkit-animation: fadeIn 2s forwards;
     animation-timing-function: cubic-bezier(0.34, 0.58, 0.15, 0.95 );
     animation-delay: 500ms;
+    opacity: 0%;
 }
