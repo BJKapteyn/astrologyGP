@@ -3,7 +3,9 @@ import '../../../App.css'
 import { NewsCardData } from './NewsCardData';
 
 export const NewsCard = () => {
-
+    function leftOrRight(data) {
+        
+    }
     return (
         <section className="newscard-section">
             <div className="newscard-card">
@@ -25,22 +27,22 @@ export const NewsCard = () => {
                     </div>
                 </div>
                 <div className='button1'>MORE</div>
+                    </div>
                 {
                     NewsCardData.map(data => {
-                        const imagePath = require('../../../Pics/Portraits' + data.image)
+                        const imagePath = require('../../../Pics/Portraits/' + data.image)
                         return (
                             <div key={data.id} className="newscard">
                                 <div className="newscard-image-container">
                                     <img src={imagePath} alt={data.id} className="newscard-image" />
                                 </div>
                                 <div className="newscard-text-container">
-                                    <div className="newscard-text">{data.text}</div>
+                                    <p className="newscard-text">{data.text}</p>
                                 </div>
                             </div>
                         );
                     })
                 }
-            </div>
 
         </section>
     )

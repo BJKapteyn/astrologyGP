@@ -18,30 +18,35 @@
 }
           
 .newscard {
-  height: 80vh;
+  height: 600px;
   width: 80%;
-  display: block;
-  margin: 5%;
+  display: flex;
+  margin: 5% auto;
+
 }
 
 .newscard-image-container {
   display: inline-block;
   padding: 0px;
-  margin: 0px;
+  height: 100%;
   width: 30%;
   overflow: hidden;
 }
 .newscard-image {
   height: 100%;
-  width: auto;
+  width: 100%;
 }
 
 .newscard-text-container {
+  background-color: whitesmoke;
+  display: inline-block;
   width: 70%;
   height: 100%;
 } 
 .newscard-text {
-  padding: 10%;
+  padding: 5%;
+  height: 100%;
+  width: 90%;
   color: black;
 }
 
