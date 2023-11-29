@@ -3,8 +3,30 @@ import '../../../App.css'
 import { NewsCardData } from './NewsCardData';
 
 export const NewsCard = () => {
-    function leftOrRight(data) {
+    function buildNewsCard(data) {
+        if(data == null) {
+            console.debug('News card data is null');
+        }
         
+        const imagePath = require('../../../Pics/Portraits/' + data.image)
+        const imageAndContainer = (
+            <div className="newscard-image-container">
+                <img src={imagePath} alt={data.id} className="newscard-image" />
+            </div>
+        );
+        const textAndContainer = (
+            <div className="newscard-text-container">
+                <p className="newscard-text">{data.text}</p>
+            </div>
+        );
+        // set order of image and text
+        const newsCard = (
+            <div key={data.id} className="newscard">
+                {data.imageLeftSide ? imageAndContainer : textAndContainer}
+                {data.imageLeftSide ? textAndContainer : imageAndContainer}
+            </div>
+        );
+        return newsCard;
     }
     return (
         <section className="newscard-section">
@@ -30,17 +52,16 @@ export const NewsCard = () => {
                     </div>
                 {
                     NewsCardData.map(data => {
-                        const imagePath = require('../../../Pics/Portraits/' + data.image)
-                        return (
-                            <div key={data.id} className="newscard">
-                                <div className="newscard-image-container">
-                                    <img src={imagePath} alt={data.id} className="newscard-image" />
-                                </div>
-                                <div className="newscard-text-container">
-                                    <p className="newscard-text">{data.text}</p>
-                                </div>
-                            </div>
-                        );
+                        return buildNewsCard(data);
+                            // <div key={data.id} className="newscard">
+                            //     <div className="newscard-image-container">
+                            //         <img src={imagePath} alt={data.id} className="newscard-image" />
+                            //     </div>
+                            //     <div className="newscard-text-container">
+                            //         <p className="newscard-text">{data.text}</p>
+                            //     </div>
+                            // </div>
+                        
                     })
                 }
 
