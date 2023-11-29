@@ -8,24 +8,50 @@
 */
 
 .newscard-section {
-    overflow: auto;
-    height: auto;
-    background: linear-gradient(45deg, rgb(72,31,75) 0%, rgb(93, 150, 215) 50%,  rgb(202, 89, 251) 100%);
-    background-size: "200% 200%";
-    animation-name: backgroundGradient;
-    animation: backgroundGradient 3s ease infinite;
-    -webkit-animation: backgroundGradient 3s ease infinite;
+  overflow: auto;
+  height: auto;
+  background: linear-gradient(45deg, rgb(72,31,75) 0%, rgb(93, 150, 215) 50%,  rgb(202, 89, 251) 100%);
+  background-size: "200% 200%";
+  animation-name: backgroundGradient;
+  animation: backgroundGradient 3s ease infinite;
+  -webkit-animation: backgroundGradient 3s ease infinite;
 }
           
+.newscard {
+  height: 80vh;
+  width: 80%;
+  display: block;
+  margin: 5%;
+}
 
+.newscard-image-container {
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;
+  width: 30%;
+  overflow: hidden;
+}
+.newscard-image {
+  height: 100%;
+  width: auto;
+}
+
+.newscard-text-container {
+  width: 70%;
+  height: 100%;
+} 
+.newscard-text {
+  padding: 10%;
+  color: black;
+}
 
 .newscard-card {
-    margin: 8% auto;
-    padding: 2% 5%;
-    width: 70%;
-    height: auto;
-    box-shadow: 1px 1px 10px rgba(17, 16, 16, 0.09), -1px -1px 10px rgba(16, 14, 14, 0.112);
-    background-color: white;
+  margin: 8% auto;
+  padding: 2% 5%;
+  width: 70%;
+  height: auto;
+  box-shadow: 1px 1px 10px rgba(17, 16, 16, 0.09), -1px -1px 10px rgba(16, 14, 14, 0.112);
+  background-color: white;
 }
 
 #newscard-title {

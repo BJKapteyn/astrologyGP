@@ -1,5 +1,6 @@
 import './NewsCard.css';
 import '../../../App.css'
+import { NewsCardData } from './NewsCardData';
 
 export const NewsCard = () => {
 
@@ -24,6 +25,21 @@ export const NewsCard = () => {
                     </div>
                 </div>
                 <div className='button1'>MORE</div>
+                {
+                    NewsCardData.map(data => {
+                        const imagePath = require('../../../Pics/Portraits' + data.image)
+                        return (
+                            <div key={data.id} className="newscard">
+                                <div className="newscard-image-container">
+                                    <img src={imagePath} alt={data.id} className="newscard-image" />
+                                </div>
+                                <div className="newscard-text-container">
+                                    <div className="newscard-text">{data.text}</div>
+                                </div>
+                            </div>
+                        );
+                    })
+                }
             </div>
 
         </section>
