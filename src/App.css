@@ -19,9 +19,13 @@
   src: url('./Fonts/Busorama-ITC-Std-Bold.woff') format("woff"),
 }
 
-html, p, h1, h2, h3, h4 {
+p {
   font-family: bivoac-regular;
 
+}
+
+h1, h2, h3, h4 {
+  font-family: Busorama-ITC-Std-Bold;
 }
 
 body {
