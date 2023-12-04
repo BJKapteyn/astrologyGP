@@ -30,11 +30,11 @@
 
 .biocard-flexbox {
     width: 25%;
-    height: 500px;
+    height: 35em;
     cursor: pointer;
     margin: 2%;
-    border: 3px solid rgb(183, 200, 219);
-    box-shadow: 0px 0px 0px rgb(183, 200, 219), 0px 0px 0px rgb(183, 200, 219);
+    border: .3em solid rgb(183, 200, 219);
+    box-shadow: 0em 0em 0em rgb(183, 200, 219), 0em 0em 0em rgb(183, 200, 219);
     transition: box-shadow 1s ease-out, border 1s ease-out;
     -webkit-transition: box-shadow 1s ease-out, border 1s ease-out;
     -moz-transition: box-shadow 1s ease-out, border 1s ease-out;
@@ -43,10 +43,9 @@
 }
 
 .biocard-flexbox:hover {
-    box-shadow: 0px 0px 20px rgb(183, 200, 219), 0px 0px 20px rgb(183, 200, 219);
-    border: 3px solid rgb(122, 164, 211);
+    box-shadow: em 0em 2em rgb(183, 200, 219), 0em 0em 2em rgb(183, 200, 219);
+    border: .3em solid rgb(122, 164, 211);
 }
-
 
 .biocard-description-container {
     width: 100%;
@@ -69,9 +68,9 @@
 
 .biocard-name {
     color: white;
-    text-shadow: 0px 0px 10px black;
+    text-shadow: 0em 0em 1em black;
     position: relative;
-    font-size: 2em;
+    font-size: 1.5em;
     z-index: 10;
     top: 80%;
     left: 10%;
@@ -83,5 +82,5 @@
     margin: auto;
     display: block;
     position: relative;
-    top: -20%;
+    top: -25%;
 }

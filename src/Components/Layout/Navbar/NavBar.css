@@ -10,12 +10,12 @@
 }
 
 .navBar-link {
-    font-size: 25px;
+    font-size: 2em;
     text-decoration: none;
     text-align: center;
     display: inline-block;
     margin: auto;
-    padding: 12px 25px;
+    padding: .5em 1em;
     color: white;
 }
 

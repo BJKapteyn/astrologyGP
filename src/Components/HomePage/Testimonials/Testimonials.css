@@ -23,7 +23,7 @@
 }
 .testimonials-header {
     display: block;
-    height: 100px;
+    height: 10em;
 }
 
 .testimonials-name {
@@ -34,8 +34,8 @@
 
 .testimonials-image-container {
     display: inline-block;
-    height: 100px;
-    width: 100px;
+    height: 10em;
+    width: 10em;
     border-radius: 50%;
     overflow: hidden;
 }

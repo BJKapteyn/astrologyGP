@@ -7,13 +7,49 @@
 
 .infocard-flexbox {
     width: 22%;
-    height: 450px;
+    height: 25em;
 }
 
 #infocard-title {
-    background: linear-gradient(45deg, rgb(72,31,75) 0%, rgb(183, 200, 219) 90%,  rgb(198, 171, 210) 100%);
+    background: rgb(72,31,75);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.infocard-joinflexitem {
+    width: 33.3%;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.infocard-joinflex {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 5%;
+    height: 20em;
+}
+
+#infocard-blurbimage-container {
+    background-color: rgb(72,31,75);
+}
+#infocard-blurbimage {
+    width: 130%;
+    opacity: .9;
+}
+
+#infocard-joinlink {
+    background-color: rgb(72,31,75);
+    height: 100%;
+    display:flex;
+}
+
+#infocard-join h2 {
+    color: rgb(241, 199, 97);
+    margin: 0%;
 }
 
 .infocard-image-container {
@@ -21,9 +57,8 @@
     height: 70%;
     position: relative;
 }
-
 .infocard-image {
-    height: 122%;
+    height: 108%;
 }
 
 .infocard-keyword {
@@ -33,19 +68,20 @@
     color: white;
     font-size: 3em;
     padding-left: .1em;
-    text-shadow: 1px 1px 10px black;
+    text-shadow: 0em 0em 1em black;
 }
 
 .infocard-description {
-    font-size: 3em;
+    font-size: 1.3em;
+    padding: 1em;
+    font-weight: bold;
 }
 
 .infocard-blurb {
     padding: 5%;
-    background: url('../../../Pics/Landscapes/moonClouds.png');
+    background: white;
     color: white;
-    text-shadow: 1px 1px 5px black;
+    text-shadow: 0em 0em .2em black;
     margin: auto;
     margin-bottom: 5%;
-    width: 70%;
 }

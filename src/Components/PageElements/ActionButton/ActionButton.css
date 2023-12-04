@@ -3,7 +3,7 @@
     height: auto;
     display: inline-block;
     background-color: blueviolet;
-    border: 5px solid blueviolet;
+    border: .5em solid blueviolet;
     transition: background-color 500ms;
     -webkit-transition: background-color 500ms;
     -moz-transition: background-color 500ms;
