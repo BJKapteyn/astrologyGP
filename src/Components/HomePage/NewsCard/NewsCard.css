@@ -34,6 +34,8 @@
 }
 .newscard-image {
   width: 100%;
+  position: relative;
+
 }
 
 .newscard-text-container {
@@ -60,7 +62,6 @@
 }
 
 #newscard-title {
-  /* text-shadow: 1px 1px 10px black; */
   color: rgb(72,31,75);
   margin: 2% auto;
 }

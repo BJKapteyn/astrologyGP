@@ -33,7 +33,7 @@
     height: 20em;
 }
 
-#infocard-blurbimage-container {
+#infocard-leftimage-container {
     background-color: rgb(72,31,75);
 }
 #infocard-blurbimage {
@@ -54,7 +54,7 @@
 
 .infocard-image-container {
     overflow: hidden;
-    height: 70%;
+    height: 85%;
     position: relative;
 }
 .infocard-image {
@@ -84,4 +84,34 @@
     text-shadow: 0em 0em .2em black;
     margin: auto;
     margin-bottom: 5%;
+}
+
+
+/*                      ---------------            Join Us Section          ----------------                          */
+
+.joinus {
+    height: auto;
+}
+
+.joinus-header {
+    height: auto;
+    width: 80%;
+    overflow: hidden;
+    text-align: center;
+    margin: auto;
+}
+
+.joinus-headerimage, .joinus-headertext {
+    position: relative;
+}
+.joinus-headerimage {
+    top: -20%;
+    right: 10%;
+    z-index: 5;
+}
+.joinus-headertext {
+    top: 0%;
+    height: 2em;
+    color: white;
+    z-index: 6;
 }
