@@ -1,3 +1,12 @@
+/*
+  main - violet                         rgb(72,31,75)
+  main complement - light purple        rgb(198, 171, 210)
+  accent 1 - grey                       rgb(202, 201, 171)
+  accent 2 - light blue                 rgb(183, 200, 219)
+  accent 3 - light pink                 rgb(253, 229, 183)
+  accent 4 - light orange               rgb(241, 199, 97)
+*/
+
 .infocard-flex-container {
     display: flex;
     justify-content: space-between;
@@ -47,7 +56,7 @@
     display:flex;
 }
 
-#infocard-join h2 {
+#infocard-join h3 {
     color: rgb(241, 199, 97);
     margin: 0%;
 }
@@ -72,9 +81,9 @@
 }
 
 .infocard-description {
-    font-size: 1.3em;
-    padding: 1em;
+    padding: 0em 1em;
     font-weight: bold;
+    color: rgb(138, 164, 194);
 }
 
 .infocard-blurb {
@@ -86,16 +95,23 @@
     margin-bottom: 5%;
 }
 
+#infocard-split {
+    color: rgb(198, 171, 210);
+    margin: 1em;
+    font-size: 4em;
+}
 
 /*                      ---------------            Join Us Section          ----------------                          */
 
 .joinus {
-    height: auto;
+    width: 100%;
+    margin: auto;
+    height: 60em;
 }
 
 .joinus-header {
     height: 15em;
-    width: 80%;
+    width: 100%;
     position: relative;
     overflow: hidden;
     text-align: center;
@@ -106,14 +122,12 @@
     position: absolute;
 }
 .joinus-headerimage {
+    width: 100%;
     top: -80%;
-    right: -20%;
-    transform: scale(.8);
+    right: 0%;
     z-index: 5;
-    -webkit-transform: scale(.8);
-    -moz-transform: scale(.8);
-    -ms-transform: scale(.8);
-    -o-transform: scale(.8);
+    
+
 }
 .joinus-headertext {
     top: 25%;
@@ -125,5 +139,25 @@
 }
 
 .joinus-flex {
-    
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.joinus-flexitem {
+    text-align: center;
+    width: 50%;
+}
+
+.joinus-scheduleheader{
+    color: rgb(72,31,75);
+}
+
+#joinus-schedulemedium {
+}
+
+.joinus-schedulebody {
+    color: rgb(138, 164, 194);
+    font-weight: bold;
+    font-size: 2em;
 }

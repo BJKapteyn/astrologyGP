@@ -15,14 +15,17 @@ export function InfoCard() {
                     <img src={blurbimage} alt="yoga" id="infocard-blurbimage" />
                 </div>
                 <div className="infocard-joinflexitem" id="infocard-join">
-                    <h2>WELCOME!</h2>
-                    <p className="infocard-description">Welcome to Vibe Collective, where we provide quality divination readings online to help you access various metaphysical and healing techniques. Our goal is to create an intimate and accessible user experience, so you can book your reading from anywhere in the world at any time of the day.</p>
+                    <h3>THE VIBE</h3>
+                    <p className="infocard-description">Welcome to Vibe Collective, where we provide quality divination readings online to help you access various metaphysical and healing techniques.</p>
                 </div>
                 <div className="infocard-joinflexitem" id="infocard-rightimage-container">
                     <img src={blurbimage2} alt="astrology" id="infocard-blurbimage" />
                 </div>
             </div>
+            <h1 id="infocard-split">Terrot Cards | astrology | spiritual connection</h1>
             <JoinUs />
+            <div className="title-container">
+            </div>
             <div className="infocard-flex-container">
                 {InfoCardData.map((data) => {
                     const {id, image, keywordText} = data;

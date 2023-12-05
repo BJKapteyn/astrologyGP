@@ -10,9 +10,8 @@ export const JoinUs = () => {
             </div>
             <div className="joinus-flex">
                 <div className="joinus-flexitem" id="joinus-schedulemedium">
-                    <h1>
-
-                    </h1>
+                    <h3 className="joinus-scheduleheader">SCHEDULE A READING</h3>
+                    <p className="infocard-description">Our goal is to create an intimate and accessible user experience, so you can book your reading from anywhere in the world at any time of the day.</p>
                 </div>
                 <div className="joinus-flexitem"></div>
             </div>
