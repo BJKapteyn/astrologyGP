@@ -94,24 +94,36 @@
 }
 
 .joinus-header {
-    height: auto;
+    height: 15em;
     width: 80%;
+    position: relative;
     overflow: hidden;
     text-align: center;
     margin: auto;
 }
 
 .joinus-headerimage, .joinus-headertext {
-    position: relative;
+    position: absolute;
 }
 .joinus-headerimage {
-    top: -20%;
-    right: 10%;
+    top: -80%;
+    right: -20%;
+    transform: scale(.8);
     z-index: 5;
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    -o-transform: scale(.8);
 }
 .joinus-headertext {
-    top: 0%;
-    height: 2em;
+    top: 25%;
+    height: 1em;
+    margin: 0em;
     color: white;
     z-index: 6;
+    width: 100%;
+}
+
+.joinus-flex {
+    
 }
