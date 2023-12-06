@@ -15,7 +15,7 @@ export function InfoCard() {
                     <img src={blurbimage} alt="yoga" id="infocard-blurbimage" />
                 </div>
                 <div className="infocard-joinflexitem" id="infocard-join">
-                    <h3>THE VIBE</h3>
+                    <h3 id='infocard-joinheader'>THE VIBE</h3>
                     <p className="infocard-description">Welcome to Vibe Collective, where we provide quality divination readings online to help you access various metaphysical and healing techniques.</p>
                 </div>
                 <div className="infocard-joinflexitem" id="infocard-rightimage-container">
@@ -23,7 +23,9 @@ export function InfoCard() {
                 </div>
             </div>
             <h1 id="infocard-split">Terrot Cards | astrology | spiritual connection</h1>
+
             <JoinUs />
+
             <div className="title-container">
             </div>
             <div className="infocard-flex-container">

@@ -56,9 +56,8 @@
     display:flex;
 }
 
-#infocard-join h3 {
-    color: rgb(241, 199, 97);
-    margin: 0%;
+#infocard-joinheader {
+    margin: 2%;
 }
 
 .infocard-image-container {
@@ -82,6 +81,7 @@
 
 .infocard-description {
     padding: 0em 1em;
+    height: 4em;    
     font-weight: bold;
     color: rgb(138, 164, 194);
 }
@@ -98,7 +98,7 @@
 #infocard-split {
     color: rgb(198, 171, 210);
     margin: 1em;
-    font-size: 4em;
+    font-size: 3.6em;
 }
 
 /*                      ---------------            Join Us Section          ----------------                          */
@@ -106,7 +106,7 @@
 .joinus {
     width: 100%;
     margin: auto;
-    height: 60em;
+    height: auto;
 }
 
 .joinus-header {
@@ -126,8 +126,6 @@
     top: -80%;
     right: 0%;
     z-index: 5;
-    
-
 }
 .joinus-headertext {
     top: 25%;
@@ -160,4 +158,11 @@
     color: rgb(138, 164, 194);
     font-weight: bold;
     font-size: 2em;
+}
+
+.joinus-button {
+    margin: 4em auto;
+}
+.joinus-button * p {
+    width: 8em;
 }
