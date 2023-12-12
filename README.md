@@ -1,9 +1,13 @@
 How to get started:
-
 -Pull master
 -Navigate CLI to root folder
 -command 'npm install' to get node-modules
 -command 'npm start' to start an instance locally
+
+
+Recommended VS Code Plugins:
+-CSS Peek
+-Simple React Snippets
 
 
 Conventions:

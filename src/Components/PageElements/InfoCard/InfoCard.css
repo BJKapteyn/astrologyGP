@@ -79,9 +79,13 @@
     text-shadow: 0em 0em 1em black;
 }
 
+.infocard-signupcontainer {
+    height: 8em;
+}
+
 .infocard-description {
     padding: 0em 1em;
-    height: 4em;    
+    height: auto;    
     font-weight: bold;
     color: rgb(138, 164, 194);
 }

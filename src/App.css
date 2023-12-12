@@ -8,15 +8,15 @@
 */
 @font-face {
   font-family: bivoac-regular;
-  src: url("./Fonts/Bivoac Reguler.woff");
-  src: url("./Fonts/Bivoac Reguler.woff") format("woff"),
-       url("./Fonts/Bivoac Reguler.otf") format("opentype")
+  src: url('./Fonts/Bivoac Reguler.woff');
+  src: url('./Fonts/Bivoac Reguler.woff') format('woff'),
+       url('./Fonts/Bivoac Reguler.otf') format('opentype')
 }
 
 @font-face {
   font-family: Busorama-ITC-Std-Bold;
   src: url('./Fonts/Busorama-ITC-Std-Bold.woff');
-  src: url('./Fonts/Busorama-ITC-Std-Bold.woff') format("woff"),
+  src: url('./Fonts/Busorama-ITC-Std-Bold.woff') format('woff'),
 }
 
 body {
@@ -55,6 +55,18 @@ h3 {
 .title-container {
   height: 10%;
   text-align: center;
+}
+
+input.textinput {
+  width: 50%;
+  height: 2em;
+  font-size: 2em;
+  padding: .2em .5em;
+  margin: .5em;
+}
+
+::placeholder {
+  color: rgb(211, 211, 211);
 }
 
 /*                        Animations         */

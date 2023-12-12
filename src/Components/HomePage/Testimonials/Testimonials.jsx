@@ -15,7 +15,7 @@ export const Testimonials = () => {
                                                               require('../../../Pics/Headshots/' + testimonial.image);
 
                 return (
-                    <div className='testimonials-flex-item'>
+                    <div key={testimonial.id} className='testimonials-flex-item'>
                         <div className='testimonials-header'>
                             <div className='testimonials-image-container'>
                                 <img alt={testimonial.name} className='testimonials-image' src={dataSource}></img>
