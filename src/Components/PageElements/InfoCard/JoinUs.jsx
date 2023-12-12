@@ -19,7 +19,7 @@ export const JoinUs = () => {
                 <img src={girlsInField} alt='women holding hands in a field' className='joinus-headerimage' />
             </div>
             <div className='joinus-flex'>
-                <div className='joinus-flexitem' id='joinus-schedulemedium'>
+                <div className='joinus-flexitem' >
                     <h3>SCHEDULE A READING</h3>
                     <p className='infocard-description'>Our goal is to create an intimate and accessible user experience, so you can book your reading from anywhere in the world at any time of the day.</p>
                     <div className="joinus-button">

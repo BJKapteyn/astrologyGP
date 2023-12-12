@@ -96,7 +96,7 @@
 }
 
 #infocard-split {
-    color: rgb(198, 171, 210);
+    color: rgb(202,201,171);
     margin: 1em;
     font-size: 3.6em;
 }
@@ -149,9 +149,6 @@
 
 .joinus-scheduleheader{
     color: rgb(72,31,75);
-}
-
-#joinus-schedulemedium {
 }
 
 .joinus-schedulebody {

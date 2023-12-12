@@ -3,6 +3,7 @@ import './ActionButton.css';
 export const ActionButton = ({buttonSettings}) => {
     const {buttonText, action} = buttonSettings;
 
+    // Always override the defualt button behavior
     const actionButtonWrapper = (event, buttonAction) => {
         event.preventDefault();
         buttonAction();
