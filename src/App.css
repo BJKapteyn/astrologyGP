@@ -8,44 +8,48 @@
 */
 @font-face {
   font-family: bivoac-regular;
-  src: url("./Fonts/Bivoac Reguler.woff");
-  src: url("./Fonts/Bivoac Reguler.woff") format("woff"),
-       url("./Fonts/Bivoac Reguler.otf") format("opentype")
+  src: url('./Fonts/Bivoac Reguler.woff');
+  src: url('./Fonts/Bivoac Reguler.woff') format('woff'),
+       url('./Fonts/Bivoac Reguler.otf') format('opentype')
 }
 
 @font-face {
   font-family: Busorama-ITC-Std-Bold;
   src: url('./Fonts/Busorama-ITC-Std-Bold.woff');
-  src: url('./Fonts/Busorama-ITC-Std-Bold.woff') format("woff"),
-}
-
-
-
-p {
-  font-family: bivoac-regular;
-  font-size: 15px;
-  margin: 0;
-}
-
-h1, h2, h3, h4 {
-  font-family: Busorama-ITC-Std-Bold;
+  src: url('./Fonts/Busorama-ITC-Std-Bold.woff') format('woff'),
 }
 
 body {
   margin: 0;
 }
 
-h1 {
-
-  font-size: 100px;
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.6em;
+  margin: 0;
 }
 
-.blurb {
-  padding: 5%;
-  background: linear-gradient(60deg, rgb(72,31,75) 0%,  rgb(111, 138, 169) 100%);
-  color: white;
-  text-shadow: 1px 1px 5px black;
-  margin: auto;
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+h2, h3, h4, span, a, button p {
+  font-family: bivoac-regular, Arial, Helvetica, sans-serif;
+}
+
+h2, h3 {
+  color: rgb(198, 171, 210);
+}
+
+h1 {
+  font-family: Busorama-ITC-Std-Bold, Arial, Helvetica, sans-serif;
+  font-size: 6em;
+}
+h2 {
+  font-size: 4em;
+}
+h3 {
+  font-size: 2.5em;
 }
 
 .title-container {
@@ -53,6 +57,17 @@ h1 {
   text-align: center;
 }
 
+input.textinput {
+  width: 50%;
+  height: 2em;
+  font-size: 2em;
+  padding: .2em .5em;
+  margin: .5em;
+}
+
+::placeholder {
+  color: rgb(211, 211, 211);
+}
 
 /*                        Animations         */
 @keyframes fadeIn {

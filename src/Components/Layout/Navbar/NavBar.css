@@ -1,5 +1,5 @@
 
-.navBar-bar {
+.navbar-bar {
     width: 100%;
     position: fixed;
     margin: auto;
@@ -9,17 +9,17 @@
 
 }
 
-.navBar-link {
-    font-size: 25px;
+.navbar-link {
+    font-size: 1.4em;
     text-decoration: none;
     text-align: center;
     display: inline-block;
     margin: auto;
-    padding: 12px 25px;
+    padding: .5em 1em;
     color: white;
 }
 
-.navBar-link:hover {
+.navbar-link:hover {
     transition: color 500ms;
     color: rgb(198, 171, 210);
     -webkit-transition: color 500ms;
@@ -27,7 +27,7 @@
     -ms-transition: color 500ms;
     -o-transition: color 500ms;
 }
-.navBar-link:active {
+.navbar-link:active {
     transition: font-size 100ms;
     font-size: 2rem
 }

@@ -1,9 +1,19 @@
+/*
+  main - violet                         rgb(72,31,75)
+  main complement - light purple        rgb(198, 171, 210)
+  accent 1 - grey                       rgb(202, 201, 171)
+  accent 2 - light blue                 rgb(183, 200, 219)
+  accent 3 - light pink                 rgb(253, 229, 183)
+  accent 4 - light orange               rgb(241, 199, 97)
+*/
+
 .actionButton-container {
     width: auto;
+    font-size: 2em;
     height: auto;
     display: inline-block;
-    background-color: blueviolet;
-    border: 5px solid blueviolet;
+    background-color: white;
+    border: .5em solid rgb(241, 199, 97);
     transition: background-color 500ms;
     -webkit-transition: background-color 500ms;
     -moz-transition: background-color 500ms;
@@ -12,12 +22,14 @@
 }
 
 .actionButton-container:hover {
-    background-color: white;
+    background-color: rgb(241, 199, 97);
+    cursor: pointer;
 }
 
 .actionButton-text {
-    padding: 1em;
-    color: white;
+    padding: .5em;
+    color: rgb(241, 199, 97);
+    font-size: 1em;
     transition: color 500ms;
     -webkit-transition: color 500ms;
     -moz-transition: color 500ms;
@@ -25,6 +37,6 @@
     -o-transition: color 500ms;
 }
 
-.actionButton-text:hover {
-    color: blueviolet;
+.actionButton-container:hover .actionButton-text {
+    color: white;
 }

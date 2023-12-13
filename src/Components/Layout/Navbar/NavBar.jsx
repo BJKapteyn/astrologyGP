@@ -5,10 +5,10 @@ import '../../../App.css'
 
 export const NavBar = () => {
     return (
-    <section className='navBar-bar'>
+    <section className='navbar-bar'>
         {NavLinkData.map((link) => {
             const {id, className, text, href} = link;
-            return <a className={className} key={id} href={href}>{text}</a>
+            return <a className="navbar-link" key={id} href={href}>{text}</a>
         })}
     </section>
     )

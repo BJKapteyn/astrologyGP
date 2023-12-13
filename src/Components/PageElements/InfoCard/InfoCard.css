@@ -1,3 +1,12 @@
+/*
+  main - violet                         rgb(72,31,75)
+  main complement - light purple        rgb(198, 171, 210)
+  accent 1 - grey                       rgb(202, 201, 171)
+  accent 2 - light blue                 rgb(183, 200, 219)
+  accent 3 - light pink                 rgb(253, 229, 183)
+  accent 4 - light orange               rgb(241, 199, 97)
+*/
+
 .infocard-flex-container {
     display: flex;
     justify-content: space-between;
@@ -7,23 +16,57 @@
 
 .infocard-flexbox {
     width: 22%;
-    height: 450px;
+    height: 25em;
 }
 
 #infocard-title {
-    background: linear-gradient(45deg, rgb(72,31,75) 0%, rgb(183, 200, 219) 90%,  rgb(198, 171, 210) 100%);
+    background: rgb(72,31,75);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.infocard-image-container {
+.infocard-joinflexitem {
+    width: 33.3%;
+    margin: 0;
+    height: 100%;
     overflow: hidden;
-    height: 70%;
-    position: relative;
 }
 
+.infocard-joinflex {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 5%;
+    height: 20em;
+}
+
+#infocard-leftimage-container {
+    background-color: rgb(72,31,75);
+}
+#infocard-blurbimage {
+    width: 130%;
+    opacity: .9;
+}
+
+#infocard-joinlink {
+    background-color: rgb(72,31,75);
+    height: 100%;
+    display:flex;
+}
+
+#infocard-joinheader {
+    margin: 2%;
+}
+
+.infocard-image-container {
+    overflow: hidden;
+    height: 85%;
+    position: relative;
+}
 .infocard-image {
-    height: 122%;
+    height: 108%;
 }
 
 .infocard-keyword {
@@ -33,19 +76,94 @@
     color: white;
     font-size: 3em;
     padding-left: .1em;
-    text-shadow: 1px 1px 10px black;
+    text-shadow: 0em 0em 1em black;
+}
+
+.infocard-signupcontainer {
+    height: 8em;
 }
 
 .infocard-description {
-    font-size: 3em;
+    padding: 0em 1em;
+    height: auto;    
+    font-weight: bold;
+    color: rgb(138, 164, 194);
 }
 
 .infocard-blurb {
     padding: 5%;
-    background: url('../../../Pics/Landscapes/moonClouds.png');
+    background: white;
     color: white;
-    text-shadow: 1px 1px 5px black;
+    text-shadow: 0em 0em .2em black;
     margin: auto;
     margin-bottom: 5%;
-    width: 70%;
+}
+
+#infocard-split {
+    color: rgb(202,201,171);
+    margin: 1em;
+    font-size: 3.6em;
+}
+
+/*                      ---------------            Join Us Section          ----------------                          */
+
+.joinus {
+    width: 100%;
+    margin: auto;
+    height: auto;
+}
+
+.joinus-header {
+    height: 15em;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    margin: auto;
+}
+
+.joinus-headerimage, .joinus-headertext {
+    position: absolute;
+}
+.joinus-headerimage {
+    width: 100%;
+    top: -80%;
+    right: 0%;
+    z-index: 5;
+}
+.joinus-headertext {
+    top: 25%;
+    height: 1em;
+    margin: 0em;
+    color: white;
+    z-index: 6;
+    width: 100%;
+}
+
+.joinus-flex {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.joinus-flexitem {
+    text-align: center;
+    width: 50%;
+}
+
+.joinus-scheduleheader{
+    color: rgb(72,31,75);
+}
+
+.joinus-schedulebody {
+    color: rgb(138, 164, 194);
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.joinus-button {
+    margin: 4em auto;
+}
+.joinus-button * p {
+    width: 8em;
 }

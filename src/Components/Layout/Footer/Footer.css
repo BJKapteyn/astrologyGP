@@ -9,8 +9,11 @@
 .footer-item {
     text-align: center;
     color: white;
-    padding: 1px;
+    padding: .1em;
     font-size: 1.2em;
+}
+.footer-itemtext {
+    font-family: bivoac-regular;
 }
 
 .footer-flex-item {

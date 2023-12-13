@@ -1,4 +1,5 @@
 import './Footer.css';
+import '../../../App.css'
 import facebook from '../../../Pics/Logos/facebook-48.png';
 import twitter from '../../../Pics/Logos/twitter-48.png';
 import instagram from '../../../Pics/Logos/instagram-48.png';
@@ -27,16 +28,16 @@ export function Footer() {
             </div>
             <div className="footer-companyinfo footer-flex-item">
                 <div id='footer-top-item' className='footer-item'>
-                    <p>The Vibe Collective</p>
+                    <p className="footer-itemtext">The Vibe Collective</p>
                 </div>
                 <div className='footer-item'>
-                    <p>Copyright 2023</p>
+                    <p className="footer-itemtext">Copyright 2023</p>
                 </div>
                 <div className='footer-item'>
-                    <a href='tel:5554412345'><p>Phone</p></a>
+                    <a className="footer-itemtext" href='tel:5554412345'><p>Phone</p></a>
                 </div>
                 <div className='footer-item'>
-                    <p>Email</p>
+                    <p className="footer-itemtext">Email</p>
                 </div>
             </div>
             <div className="footer-flex-item" id="footer-logo">

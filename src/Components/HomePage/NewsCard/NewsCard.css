@@ -19,23 +19,23 @@
 }
           
 .newscard {
-  height: 600px;
+  height: 30em;
   width: 80%;
   display: flex;
   margin: 5% auto;
-
 }
 
 .newscard-image-container {
   display: inline-block;
-  padding: 0px;
+  padding: 0em;
   height: 100%;
   width: 30%;
   overflow: hidden;
 }
 .newscard-image {
-  height: 100%;
   width: 100%;
+  position: relative;
+
 }
 
 .newscard-text-container {
@@ -45,6 +45,7 @@
   height: 100%;
 } 
 .newscard-text {
+  font-size: 1.5em;
   padding: 5%;
   height: 100%;
   width: 90%;
@@ -56,12 +57,11 @@
   padding: 2% 5%;
   width: 70%;
   height: auto;
-  box-shadow: 1px 1px 10px rgba(17, 16, 16, 0.09), -1px -1px 10px rgba(16, 14, 14, 0.112);
+  box-shadow: .1em .1em 1em rgba(17, 16, 16, 0.09), -.1em -.1em 1em rgba(16, 14, 14, 0.112);
   background-color: white;
 }
 
 #newscard-title {
-  /* text-shadow: 1px 1px 10px black; */
   color: rgb(72,31,75);
   margin: 2% auto;
 }
@@ -79,8 +79,8 @@
   display: inline-block;
   width: auto;
   color: white;
-  padding: 8px;
-  font-size: 28px;
+  padding: .5em;
+  font-size: 1.5em;
   position: relative;
   bottom: 5%;
   right: -95%;
@@ -111,8 +111,9 @@
   overflow-y: inherit;
   width: 100%;
   display: block;
-  height: 200px;
-  font-size: 20px;
+  height: 10em;
+  font-size: 1.5em;
+  color: whitesmoke;
   background-color: transparent;
 }
 
