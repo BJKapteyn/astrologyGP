@@ -7,10 +7,7 @@ import { NewsCard } from './Components/HomePage/NewsCard/NewsCard.jsx';
 import { Testimonials } from './Components/HomePage/Testimonials/Testimonials.jsx';
 import './App.css';
 
-
-
 function App() {
-
 
   return (
     <div className="App">
