@@ -84,9 +84,3 @@ input.textinput {
   from {opacity: .8}
   to {opacity: 0}
 }
-
-/*                        Test               */
-
-.testPage {
-  height: 50em;
-}
