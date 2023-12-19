@@ -3,8 +3,9 @@ import { CardModal } from "../CardModal/CardModal";
 import { useState } from "react";
 import { CardInfoData } from "./CardInfoData";
 
-export function BioCards() {
+export function BioCards(numberOfCards) {
     const [bioData, selectBioData] = useState(null);
+    let numberOfCardsToPrint = numberOfCards ?? CardInfoData.length;
 
     // Deselects data for modal
     function deSelectBioCard() {
@@ -24,13 +25,14 @@ export function BioCards() {
             </div>
             <div className="biocard-flex-container">
             
-                {CardInfoData.map((card) => {
+                {CardInfoData.concat(1, numberOfCardsToPrint).map((card) => {
                     return <BioCard
                                 key={card.id} 
                                 callbackSelect={selectBioCard}
                                 cardData={card}
                                 />;
                     })}
+
             </div>
             {/* This can deselect the modal */}
             {bioData !== null ? (<CardModal cardData={bioData} callBackDeselect={deSelectBioCard} ></CardModal>) : null}
