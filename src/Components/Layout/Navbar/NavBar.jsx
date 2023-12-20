@@ -5,8 +5,8 @@ import '../../../App.css'
 export const NavBar = () => {
     return (
     <nav className='navbar'>
-        <Link to="/">Home</Link>
-        <Link to="/Readers">Readers</Link>
+        <Link className="navbar-link" to="/">Home</Link>
+        <Link className="navbar-link" to="/Readers">Readers</Link>
     </nav>
     )
 }

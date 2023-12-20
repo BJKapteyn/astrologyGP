@@ -9,7 +9,6 @@
 
 .actionButton-container {
     width: auto;
-    font-size: 2em;
     height: auto;
     display: inline-block;
     background-color: white;
@@ -27,9 +26,9 @@
 }
 
 .actionButton-text {
-    padding: .5em;
+    padding: .5em;  
     color: rgb(241, 199, 97);
-    font-size: 1em;
+    font-size: 2em;
     transition: color 500ms;
     -webkit-transition: color 500ms;
     -moz-transition: color 500ms;

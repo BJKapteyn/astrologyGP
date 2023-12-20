@@ -30,6 +30,7 @@
     margin: 0;
     height: 100%;
     overflow: hidden;
+    position: sticky;
 }
 
 .infocard-joinflex {
@@ -39,14 +40,18 @@
     justify-content: center;
     margin: auto;
     margin-bottom: 5%;
-    height: 20em;
+    height: 24em;
+}
+
+#infocard-morebutton {
+    font-size: 1em;
 }
 
 #infocard-leftimage-container {
     background-color: rgb(72,31,75);
 }
 #infocard-blurbimage {
-    width: 130%;
+    width: 139%;
     opacity: .9;
 }
 
@@ -84,6 +89,7 @@
 }
 
 .infocard-description {
+    font-size: 1.5em;
     padding: 0em 1em;
     height: auto;    
     font-weight: bold;

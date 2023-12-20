@@ -10,7 +10,7 @@ export default function HomePage() {
             <TitleCard></TitleCard>
             <InfoCard></InfoCard>
             <NewsCard></NewsCard>
-            <BioCards></BioCards>
+            <BioCards ></BioCards>
             <Testimonials></Testimonials>
         </>
     )

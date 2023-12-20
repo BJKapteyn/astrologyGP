@@ -1,17 +1,19 @@
 import './ActionButton.css';
 
 export const ActionButton = ({buttonSettings}) => {
-    const {buttonText, action} = buttonSettings;
+    const {buttonText, buttonStyleId, buttonTextStyleId, action} = buttonSettings;
 
     // Always override the defualt button behavior
     const actionButtonWrapper = (event, buttonAction) => {
         event.preventDefault();
-        buttonAction();
+        if(buttonAction != null) {
+            buttonAction();
+        }
     }
 
     return (
-        <button onClick={(event) => { actionButtonWrapper(event, action) }} className='actionButton-container'>
-            <p className="actionButton-text">{buttonText}</p>
+        <button id={buttonStyleId ?? ''} onClick={(event) => { actionButtonWrapper(event, action) }} className={'actionButton-container'}>
+            <p id={buttonTextStyleId ?? ''} className="actionButton-text">{buttonText}</p>
         </button>
     );
 } 

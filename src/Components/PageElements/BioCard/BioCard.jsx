@@ -1,6 +1,8 @@
 import "./BioCard.css";
 
-export function BioCard({cardData, callbackSelect}) {
+// cardData         - data to populate the card
+// callBackSelect   - call back function to select this cards data for the modal in the parent page
+export const BioCard = ({cardData, callbackSelect})  => {
     return (
         <section onClick={() => callbackSelect(cardData)} className="biocard-flexbox" key={cardData.id}>
             <div className="biocard-image-container">
