@@ -94,6 +94,7 @@
     height: auto;    
     font-weight: bold;
     color: rgb(138, 164, 194);
+    text-align: center;
 }
 
 .infocard-blurb {
