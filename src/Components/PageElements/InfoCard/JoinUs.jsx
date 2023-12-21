@@ -31,7 +31,7 @@ export const JoinUs = () => {
                 <div className="joinus-flexitem">
                     <h3>MONTHLY NEWSLETTER</h3>
                     <div className="infocard-signupcontainer">
-                        <p className="infocard-description">Subscribe to our monthly newsletter</p>
+                        <p className="infocard-description">Subscribe to our monthly newsletter:</p>
                         <input type="text" className="textinput" id="submitemail" placeholder="Enter Your Email..."></input>
                     </div>
                     <div className="joinus-button">
