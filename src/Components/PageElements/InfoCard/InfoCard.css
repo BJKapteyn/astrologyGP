@@ -44,7 +44,11 @@
 }
 
 #infocard-morebutton {
-    font-size: 1em;
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    margin-left: -5em;
+    width: 10em;
 }
 
 #infocard-leftimage-container {
