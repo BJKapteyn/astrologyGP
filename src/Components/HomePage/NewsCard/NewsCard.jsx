@@ -17,7 +17,12 @@ export const NewsCard = () => {
 
         const textAndContainer = (
             <div className="newscard-text-container">
-                <p className="newscard-text">{data.text}</p>
+                <div className="newscard-crop">
+                    <h3 className="newscard-text-title">{data.title}</h3>
+                    <div className="newscard-text-crop">
+                        <p className="newscard-text">{data.text}</p>
+                    </div>
+                </div>
             </div>
         );
 

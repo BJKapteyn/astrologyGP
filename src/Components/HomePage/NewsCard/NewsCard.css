@@ -38,12 +38,28 @@
 
 }
 
+.newscard-crop {
+  padding: 0%;
+  margin: 3%;
+  height: 90%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
 .newscard-text-container {
   background-color: whitesmoke;
   display: inline-block;
   width: 70%;
   height: 100%;
+  scrollbar-width: none;
 } 
+.newscard-text-title {
+  padding-top: .5em;
+  margin: 0px;
+}
+.newscard-text-crop {
+  scrollbar-width: none;
+  margin: auto;
+}
 .newscard-text {
   font-size: 1.5em;
   padding: 5%;
