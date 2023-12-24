@@ -1,10 +1,17 @@
 import { JoinUs } from "./JoinUs";
-import {InfoCardData} from "./InfoCardData";
+import { InfoCardData } from "./InfoCardData";
+import { ActionButton } from "../ActionButton/ActionButton";
 import blurbimage from '../../../Pics/Landscapes/groupYoga.png';
 import blurbimage2 from '../../../Pics/Landscapes/findSign.png';
 import "./InfoCard.css";
 
 export function InfoCard() {
+    const moreButtonSettings = {
+        buttonText: 'more',
+        action: null, 
+        buttonStyleId: 'infocard-morebutton'
+    }
+
     return (
         <div>
             <div className="title-container">
@@ -17,6 +24,7 @@ export function InfoCard() {
                 <div className="infocard-joinflexitem" id="infocard-join">
                     <h3 id='infocard-joinheader'>THE VIBE</h3>
                     <p className="infocard-description">Welcome to Vibe Collective, where we provide quality divination readings online to help you access various metaphysical and healing techniques.</p>
+                    <ActionButton buttonSettings={moreButtonSettings}></ActionButton>
                 </div>
                 <div className="infocard-joinflexitem" id="infocard-rightimage-container">
                     <img src={blurbimage2} alt="astrology" id="infocard-blurbimage" />
@@ -26,8 +34,6 @@ export function InfoCard() {
 
             <JoinUs />
 
-            <div className="title-container">
-            </div>
             <div className="infocard-flex-container">
                 {InfoCardData.map((data) => {
                     const {id, image, keywordText} = data;

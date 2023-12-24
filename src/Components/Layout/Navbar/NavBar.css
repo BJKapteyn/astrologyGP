@@ -1,12 +1,10 @@
-
-.navbar-bar {
+.navbar {
     width: 100%;
     position: fixed;
     margin: auto;
     text-align: center;
     z-index: 50;
     background-color: rgba(0, 0, 0, 0.4);
-
 }
 
 .navbar-link {

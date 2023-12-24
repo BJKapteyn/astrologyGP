@@ -14,11 +14,18 @@ export const NewsCard = () => {
                 <img src={imagePath} alt={data.id} className="newscard-image" />
             </div>
         );
+
         const textAndContainer = (
             <div className="newscard-text-container">
-                <p className="newscard-text">{data.text}</p>
+                <div className="newscard-crop">
+                    <h3 className="newscard-text-title">{data.title}</h3>
+                    <div className="newscard-text-crop">
+                        <p className="newscard-text">{data.text}</p>
+                    </div>
+                </div>
             </div>
         );
+
         // set order of image and text
         const newsCard = (
             <div key={data.id} className="newscard">
@@ -52,19 +59,9 @@ export const NewsCard = () => {
                     </div>
                 {
                     NewsCardData.map(data => {
-                        return buildNewsCard(data);
-                            // <div key={data.id} className="newscard">
-                            //     <div className="newscard-image-container">
-                            //         <img src={imagePath} alt={data.id} className="newscard-image" />
-                            //     </div>
-                            //     <div className="newscard-text-container">
-                            //         <p className="newscard-text">{data.text}</p>
-                            //     </div>
-                            // </div>
-                        
+                        return buildNewsCard(data);       
                     })
                 }
-
         </section>
     )
 }

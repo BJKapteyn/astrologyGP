@@ -1,6 +1,7 @@
 .testimonials-section {
     width: 100%;
     background: rgb(250, 249, 249);
+    padding-top: 6%;
 }
 .testimonials {
     height: auto;
@@ -8,9 +9,8 @@
     margin:auto;
 }
 
-.testimonials-title{
-    text-align: center;
-    padding-top: 5%;
+#testimonials-title{
+    margin: 0% 0% 3% 0%;
 }
 .testimonials-flex-container {
     display: flex;

@@ -25,8 +25,9 @@ body {
 
 p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.6em;
+  font-size: 1.5em;
   margin: 0;
+  font-weight: bold;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,8 +43,10 @@ h2, h3 {
 }
 
 h1 {
+  color: rgb(72,31,75);
   font-family: Busorama-ITC-Std-Bold, Arial, Helvetica, sans-serif;
   font-size: 6em;
+  margin: 3% 0%;
 }
 h2 {
   font-size: 4em;
@@ -83,10 +86,4 @@ input.textinput {
 @keyframes modalBackgroundFadeOut {
   from {opacity: .8}
   to {opacity: 0}
-}
-
-/*                        Test               */
-
-.testPage {
-  height: 50em;
 }
