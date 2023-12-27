@@ -16,7 +16,7 @@
 
 .infocard-flexbox {
     width: 22%;
-    height: 25em;
+    height: 20em;
 }
 
 #infocard-title {
@@ -71,7 +71,7 @@
 
 .infocard-image-container {
     overflow: hidden;
-    height: 85%;
+    height: 100%;
     position: relative;
 }
 .infocard-image {
@@ -79,11 +79,12 @@
 }
 
 .infocard-keyword {
+    font-family: bivoac-regular;
     position: absolute;
     top: 50%;
     bottom: 50%;
     color: white;
-    font-size: 3em;
+    font-size: 2.5em;
     padding-left: .1em;
     text-shadow: 0em 0em 1em black;
 }
