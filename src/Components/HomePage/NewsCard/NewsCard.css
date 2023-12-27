@@ -24,6 +24,11 @@
   display: flex;
   margin: 5% auto;
 }
+.newscards {
+  margin: 0%;
+  height: auto;
+  overflow: auto;
+}
 
 .newscard-image-container {
   display: inline-block;
@@ -61,6 +66,7 @@
   margin: auto;
 }
 .newscard-text {
+  cursor: n-resize;
   font-size: 1.5em;
   padding: 5%;
   height: 100%;

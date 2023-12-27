@@ -1,40 +1,9 @@
+import { NewsCards } from './NewsCards.jsx';
 import './NewsCard.css';
-import '../../../App.css'
-import { NewsCardData } from './NewsCardData';
+import '../../../App.css';
 
 export const NewsCard = () => {
-    function buildNewsCard(data) {
-        if(data == null) {
-            console.debug('News card data is null');
-        }
-        
-        const imagePath = require('../../../Pics/Portraits/' + data.image)
-        const imageAndContainer = (
-            <div className="newscard-image-container">
-                <img src={imagePath} alt={data.id} className="newscard-image" />
-            </div>
-        );
 
-        const textAndContainer = (
-            <div className="newscard-text-container">
-                <div className="newscard-crop">
-                    <h3 className="newscard-text-title">{data.title}</h3>
-                    <div className="newscard-text-crop">
-                        <p className="newscard-text">{data.text}</p>
-                    </div>
-                </div>
-            </div>
-        );
-
-        // set order of image and text
-        const newsCard = (
-            <div key={data.id} className="newscard">
-                {data.imageLeftSide ? imageAndContainer : textAndContainer}
-                {data.imageLeftSide ? textAndContainer : imageAndContainer}
-            </div>
-        );
-        return newsCard;
-    }
     return (
         <section className="newscard-section">
             <div className="newscard-card">
@@ -57,11 +26,7 @@ export const NewsCard = () => {
                 </div>
                 <div className='button1'>MORE</div>
                     </div>
-                {
-                    NewsCardData.map(data => {
-                        return buildNewsCard(data);       
-                    })
-                }
+            <NewsCards></NewsCards>
         </section>
     )
 }
