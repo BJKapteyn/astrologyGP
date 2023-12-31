@@ -11,7 +11,7 @@
   overflow: auto;
   overflow-y: hidden;
   height: auto;
-  background: linear-gradient(45deg, rgb(72,31,75) 0%, rgb(93, 150, 215) 50%,  rgb(202, 89, 251) 100%);
+  background: linear-gradient(0deg, rgb(72,31,75) 0%, rgb(93, 150, 215) 100%);
   background-size: "200% 200%";
   animation-name: backgroundGradient;
   animation: backgroundGradient 3s ease infinite;
@@ -71,7 +71,6 @@
   padding: 5%;
   height: 100%;
   width: 90%;
-  color: black;
 }
 
 .newscard-card {

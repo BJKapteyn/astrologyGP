@@ -5,6 +5,7 @@ import { NewsCard } from '../Components/HomePage/NewsCard/NewsCard.jsx';
 import { Testimonials } from '../Components/HomePage/Testimonials/Testimonials.jsx';
 
 export default function HomePage() {
+
     return (
         <>
             <TitleCard></TitleCard>

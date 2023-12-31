@@ -7,7 +7,7 @@
   accent 4 - light orange               rgb(241, 199, 97)
 */
 
-.actionButton-container {
+.actionbutton-container {
     width: auto;
     height: auto;
     display: inline-block;
@@ -20,16 +20,16 @@
     -o-transition: background-color 500ms;
 }
 
-.actionButton-container:hover {
+.actionbutton-container:hover {
     background-color: rgb(241, 199, 97);
     cursor: pointer;
 }
 
-.actionButton-container:hover .actionButton-text {
+.actionbutton-container:hover .actionbutton-text {
     color: white;
 }
 
-.actionButton-text {
+.actionbutton-text {
     padding: .5em;  
     color: rgb(241, 199, 97);
     font-size: 2em;

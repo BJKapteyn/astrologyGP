@@ -8,11 +8,11 @@
 
 .footer-item {
     text-align: center;
-    color: white;
     padding: .1em;
     font-size: 1.2em;
 }
 .footer-itemtext {
+    color: white;
     font-family: bivoac-regular;
 }
 

@@ -10,16 +10,18 @@ export const CardModal = ({cardData, callBackDeselect}) => {
                     <div className="cardmodal-card">
                         <span onClick={callBackDeselect} className="cardmodal-exit">X</span>
                         <div className="cardmodal-biocard">
-                            <img className="cardmodal-image" alt={cardData.description} src={require('../../../Pics/Headshots/' + cardData.image)}></img>
+                            <div className="cardmodal-image-container">
+                                <img className="cardmodal-image" alt={cardData.description} src={require('../../../Pics/Headshots/' + cardData.image)}></img>
+                            </div>
                             <div className="cardmodal-info">
-                                <div>
-                                    <span>{cardData.name}</span>
+                                <div className="cardmodal-infoitem">
+                                    <span id='cardmodal-name'>{cardData.name}</span>
                                 </div>
-                                <div>
-                                    <span>Sign: </span><span>{cardData.sign}</span>
+                                <div className="cardmodal-infoitem">
+                                    <span className="cardmodal-label">Sign:</span><span className='cardmodal-data'>{cardData.sign}</span>
                                 </div>
-                                <div>
-                                    <span>Email: </span><span>{cardData.email}</span>
+                                <div className="cardmodal-infoitem">
+                                    <span className="cardmodal-label">Email:</span><span className='cardmodal-data'>{cardData.email}</span>
                                 </div>
                             </div>
                             <div className="cardmodal-description">

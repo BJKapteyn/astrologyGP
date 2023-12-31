@@ -10,14 +10,17 @@
 .cardmodal-container {
     overflow-y: hidden;
     height: 80vh;
-    width: 60vw;
+    width: 70vw;
     position: fixed;
-    top: 50vh;
-    left: 50vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 10;
-    margin-top: -18vw;
-    margin-left: -30vw;
     background-color: white;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
 }
 
 .cardmodal-card {
@@ -86,14 +89,20 @@
     grid-template-areas: "image info"
                         "image info"
                         "description description";
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 50vh auto;
     text-align: center;
-    width: 100%;
+    width: 90%;
+    padding: 5%;
+}
+
+.cardmodal-image-container {
+    grid-area: image;
 }
 
 .cardmodal-image {
-    grid-area: image;
     display: block;
-    width: 30%;
+    width: 100%;
     margin: auto;
 }
 
@@ -101,8 +110,26 @@
     grid-area: info;
 }
 
-.cardmodal-datapoint {
-    color: purple;
+#cardmodal-name {
+    color: rgb(72,31,75);
+    font-size: 2.5em;
+}
+
+.cardmodal-infoitem span {
+    display: inline-block;
+    font-size: 2em;
+    padding: .5em;
+}
+
+.cardmodal-data {
+    color: rgb(198, 171, 210);
+    width: 40%;
+    text-align: left;
+}
+.cardmodal-label {
+    text-align: right;
+    width: 20%;
+    color: rgb(183, 200, 219);
 }
 
 .cardmodal-description {
@@ -110,6 +137,7 @@
 }
 
 .cardmodal-description-text {
-    padding: 3em;
-    font-size: 1em;
+    padding-top: 2em;
+    font-size: 1.5em;
+    text-align: left;
 }

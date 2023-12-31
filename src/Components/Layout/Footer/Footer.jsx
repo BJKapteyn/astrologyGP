@@ -34,7 +34,7 @@ export function Footer() {
                     <p className="footer-itemtext">Copyright 2023</p>
                 </div>
                 <div className='footer-item'>
-                    <a className="footer-itemtext" href='tel:5554412345'><p>Phone</p></a>
+                    <a className="footer-itemtext" href='tel:5554412345'><p className="footer-itemtext">Phone</p></a>
                 </div>
                 <div className='footer-item'>
                     <p className="footer-itemtext">Email</p>
