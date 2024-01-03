@@ -6,6 +6,10 @@
   accent 3 - light pink                 rgb(253, 229, 183)
   accent 4 - light orange               rgb(241, 199, 97)
 */
+/* :root {
+
+} */
+
 @font-face {
   font-family: bivoac-regular;
   src: url('./Fonts/Bivoac Reguler.woff');
