@@ -1,5 +1,3 @@
-import { JoinUs } from "./JoinUs";
-import { InfoCardData } from "./InfoCardData";
 import { ActionButton } from "../ActionButton/ActionButton";
 import blurbimage from '../../../Pics/Landscapes/groupYoga.png';
 import blurbimage2 from '../../../Pics/Landscapes/findSign.png';
@@ -31,23 +29,6 @@ export function InfoCard() {
                 </div>
             </div>
             <h1 id="infocard-split">Terrot Cards | astrology | spiritual connection</h1>
-
-            <JoinUs />
-
-            <div className="infocard-flex-container">
-                {InfoCardData.map((data) => {
-                    const {id, image, keywordText} = data;
-
-                    return (
-                        <section className="infocard-flexbox" key={id}>
-                            <div className="infocard-image-container">
-                                <img className="infocard-image" alt={keywordText} src={require('../../../Pics/InfoCardPics/' + image + '.jpg')}/>
-                                <p className="infocard-keyword">{keywordText}</p>
-                            </div>
-                        </section>
-                    );
-                })}
-            </div>
         </div>
     );
 }   
