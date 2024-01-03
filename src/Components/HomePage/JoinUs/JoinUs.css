@@ -1,5 +1,5 @@
 .joinus-signupcontainer {
-    height: 8em;
+    height: 10em;
 }
 
 .joinus-description {
@@ -8,7 +8,10 @@
     height: auto;    
     font-weight: bold;
     color: rgb(138, 164, 194);
-    text-align: center;
+}
+
+#joinus-signuptext {
+    text-align: left;
 }
 
 .joinus {

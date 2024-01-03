@@ -34,9 +34,8 @@
 }
 
 .aboutsection-text-container {
-    width: 80%;
-    text-align: center;
-    margin: auto;
+    width: 75%;
+    text-align: left;
+    margin: 2% auto 6% auto;
     height: 8em;
-    margin-bottom: 6%;
 }
