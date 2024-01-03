@@ -1,5 +1,6 @@
 import girlsInField from '../../../Pics/Landscapes/girlsInField.png'
-import { ActionButton } from '../ActionButton/ActionButton';
+import { ActionButton } from '../../PageElements/ActionButton/ActionButton';
+import './JoinUs.css';
 
 export const JoinUs = () => {
 
@@ -21,8 +22,8 @@ export const JoinUs = () => {
             <div className="joinus-flex">
                 <div className="joinus-flexitem" >
                     <h3>SCHEDULE A READING</h3>
-                    <div className="infocard-signupcontainer">
-                        <p className="infocard-description">Our goal is to create an intimate and accessible user experience, so you can book your reading from anywhere in the world at any time of the day.</p>
+                    <div className="joinus-signupcontainer">
+                        <p id="joinus-signuptext" className="joinus-description">&emsp;At Vibe Collective, we believe that everyone deserves to live their best life, and we're here to support you on your journey. Our fun, vibrant, and unique approach to divination will leave you feeling uplifted and empowered. So why wait? Book your reading today and take the ﬁrst step towards a more fulﬁlling life.</p>
                     </div>
                     <div className="joinus-button">
                         <ActionButton  buttonSettings={actionButtonSettings}></ActionButton>
@@ -30,8 +31,8 @@ export const JoinUs = () => {
                 </div>
                 <div className="joinus-flexitem">
                     <h3>MONTHLY NEWSLETTER</h3>
-                    <div className="infocard-signupcontainer">
-                        <p className="infocard-description">Subscribe to our monthly newsletter:</p>
+                    <div className="joinus-signupcontainer">
+                        <p className="joinus-description">Subscribe to our monthly newsletter:</p>
                         <input type="text" className="textinput" id="submitemail" placeholder="Enter Your Email..."></input>
                     </div>
                     <div className="joinus-button">

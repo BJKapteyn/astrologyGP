@@ -7,22 +7,19 @@
   accent 4 - light orange               rgb(241, 199, 97)
 */
 
-.infocard-flex-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 0% 10%;
-    flex-wrap: wrap;
-}
 
-.infocard-flexbox {
-    width: 22%;
-    height: 25em;
-}
 
 #infocard-title {
     background: rgb(72,31,75);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+#infocard-join {
+    background-image: url('../../../Pics/Logos/sublogo-light-grey.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45%;
 }
 
 .infocard-joinflexitem {
@@ -52,7 +49,7 @@
 }
 
 #infocard-leftimage-container {
-    background-color: rgb(72,31,75);
+    background-color: white;
 }
 #infocard-blurbimage {
     width: 139%;
@@ -67,25 +64,6 @@
 
 #infocard-joinheader {
     margin: 2%;
-}
-
-.infocard-image-container {
-    overflow: hidden;
-    height: 85%;
-    position: relative;
-}
-.infocard-image {
-    height: 108%;
-}
-
-.infocard-keyword {
-    position: absolute;
-    top: 50%;
-    bottom: 50%;
-    color: white;
-    font-size: 3em;
-    padding-left: .1em;
-    text-shadow: 0em 0em 1em black;
 }
 
 .infocard-signupcontainer {
@@ -114,67 +92,4 @@
     color: rgb(202,201,171);
     margin: 1em;
     font-size: 3.6em;
-}
-
-/*                      ---------------            Join Us Section          ----------------                          */
-
-.joinus {
-    width: 100%;
-    margin: auto;
-    height: auto;
-}
-
-.joinus-header {
-    height: 15em;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    margin: auto;
-}
-
-.joinus-headerimage, .joinus-headertext {
-    position: absolute;
-}
-.joinus-headerimage {
-    width: 100%;
-    top: -80%;
-    right: 0%;
-    z-index: 5;
-}
-.joinus-headertext {
-    top: 25%;
-    height: 1em;
-    margin: 0em;
-    color: white;
-    z-index: 6;
-    width: 100%;
-}
-
-.joinus-flex {
-    display: flex;
-    width: 80%;
-    margin: auto;
-}
-
-.joinus-flexitem {
-    text-align: center;
-    width: 50%;
-}
-
-.joinus-scheduleheader{
-    color: rgb(72,31,75);
-}
-
-.joinus-schedulebody {
-    color: rgb(138, 164, 194);
-    font-weight: bold;
-    font-size: 2em;
-}
-
-.joinus-button {
-    margin: 4em auto;
-}
-.joinus-button * p {
-    width: 8em;
 }

@@ -1,0 +1,10 @@
+.zodiacdecor {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.zodiacdecor {
+    width: 5%;
+    height: auto;
+}

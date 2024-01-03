@@ -11,7 +11,7 @@
   overflow: auto;
   overflow-y: hidden;
   height: auto;
-  background: linear-gradient(45deg, rgb(72,31,75) 0%, rgb(93, 150, 215) 50%,  rgb(202, 89, 251) 100%);
+  background: linear-gradient(0deg, rgb(72,31,75) 0%, rgb(93, 150, 215) 100%);
   background-size: "200% 200%";
   animation-name: backgroundGradient;
   animation: backgroundGradient 3s ease infinite;
@@ -23,6 +23,11 @@
   width: 80%;
   display: flex;
   margin: 5% auto;
+}
+.newscards {
+  margin: 0%;
+  height: auto;
+  overflow: auto;
 }
 
 .newscard-image-container {
@@ -61,15 +66,15 @@
   margin: auto;
 }
 .newscard-text {
+  cursor: n-resize;
   font-size: 1.5em;
   padding: 5%;
   height: 100%;
   width: 90%;
-  color: black;
 }
 
 .newscard-card {
-  margin: 8% auto;
+  margin: 6% auto;
   padding: 2% 5%;
   width: 70%;
   height: auto;

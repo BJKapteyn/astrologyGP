@@ -6,6 +6,10 @@
   accent 3 - light pink                 rgb(253, 229, 183)
   accent 4 - light orange               rgb(241, 199, 97)
 */
+/* :root {
+
+} */
+
 @font-face {
   font-family: bivoac-regular;
   src: url('./Fonts/Bivoac Reguler.woff');
@@ -16,7 +20,19 @@
 @font-face {
   font-family: Busorama-ITC-Std-Bold;
   src: url('./Fonts/Busorama-ITC-Std-Bold.woff');
-  src: url('./Fonts/Busorama-ITC-Std-Bold.woff') format('woff'),
+  src: url('./Fonts/Busorama-ITC-Std-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: QuattrocentoSans;
+  src: url('./Fonts/QuattrocentoSans-Regular.ttf') format('truetype');
+  src: url('./Fonts//QuattrocentoSans-Regular.woff') format('woff');
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(72,31,75) rgb(183, 200, 219);
 }
 
 body {
@@ -24,10 +40,11 @@ body {
 }
 
 p {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: QuattrocentoSans, Geneva, Tahoma, sans-serif;
   font-size: 1.5em;
   margin: 0;
   font-weight: bold;
+  color: rgb(55, 55, 55);
 }
 
 h1, h2, h3, h4, h5, h6 {

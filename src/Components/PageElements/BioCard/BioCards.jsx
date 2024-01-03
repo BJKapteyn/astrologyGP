@@ -29,15 +29,9 @@ export const BioCards = ({lowerBound, upperBound}) => {
     }
 
     return (
-        // <section className="biocard-section">
-        //     <div className="biocard-title-container">
-        //         <h1 id="biocard-title">MEET OUR MEDIUMS</h1>
-        //     </div>
         <div className="biocard-flex-container">
             {renderCards(lowerBound, upperBound)}
             {bioData !== null ? (<CardModal cardData={bioData} callBackDeselect={deSelectBioCard} ></CardModal>) : null}
         </div>
-
-        // </section>
     );
 }
