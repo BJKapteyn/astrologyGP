@@ -5,11 +5,11 @@ import './JoinUs.css';
 export const JoinUs = () => {
 
     const actionButtonSettings = {
-        buttonText: 'book now',
+        buttonText: 'Book Now',
         action: () => {}
     }
     const subscribeButtonSettings = {
-        buttonText: 'subscribe',
+        buttonText: 'Subscribe',
         action: () => {}
     }
 
@@ -26,7 +26,7 @@ export const JoinUs = () => {
                         <p id="joinus-signuptext" className="joinus-description">&emsp;At Vibe Collective, we believe that everyone deserves to live their best life, and we're here to support you on your journey. Our fun, vibrant, and unique approach to divination will leave you feeling uplifted and empowered. So why wait? Book your reading today and take the ﬁrst step towards a more fulﬁlling life.</p>
                     </div>
                     <div className="joinus-button">
-                        <ActionButton  buttonSettings={actionButtonSettings}></ActionButton>
+                        <ActionButton buttonSettings={actionButtonSettings}></ActionButton>
                     </div>
                 </div>
                 <div className="joinus-flexitem">

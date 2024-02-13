@@ -1,6 +1,7 @@
 import { ActionButton } from "../ActionButton/ActionButton";
 import blurbimage from '../../../Pics/Landscapes/groupYoga.png';
 import blurbimage2 from '../../../Pics/Landscapes/findSign.png';
+import { ZodiacDecor } from '../../PageElements/ZodiacDecor/ZodiacDecor';
 import "./InfoCard.css";
 
 export function InfoCard() {

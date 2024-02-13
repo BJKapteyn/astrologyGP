@@ -12,20 +12,18 @@ import taurus from '../../../Pics/Zodiac/taurus.svg';
 import virgo from '../../../Pics/Zodiac/virgo.svg';
 
 export const ZodiacDecor = () => {
+    const signs = [
+        aquarius, aries, cancer, capricorn, gemini, leo, libra, pisces, sagittarius, taurus, virgo, scorpio
+    ];
     return (
         <div className="zodiacdecor">
-            <img src={aquarius} alt="aquarius zodiac symbol" className="zodiacdecor-zodiacsymbol" />
-            <img src={aries} alt="aries zodiac symbol" className="zodiacdecor-zodiacsymbol" />
-            <img src={cancer} alt="cancer zodiac symbol" className="zodiacdecor-zodiacsymbol" />
-            <img src={capricorn} alt="capricorn zodiac symbol" className="zodiacdecor-zodiacsymbol" />
-            <img src={gemini} alt="gemini zodiac symbol" className="zodiacdecor-zodiacsymbol" />
-            <img src={leo} alt="leo zodiac symbol" className="zodiacdecor-zodiacsymbol" />
-            <img src={libra} alt="libra zodiac symbol" className="zodiacdecor-zodiacsymbol" />
-            <img src={pisces} alt="pisces zodiac symbol" className="zodiacdecor-zodiacsymbol" />
-            <img src={sagittarius} alt="sagittarius zodiac symbol" className="zodiacdecor-zodiacsymbol" />
-            <img src={scorpio} alt="scorpio zodiac symbol" className="zodiacdecor-zodiacsymbol" />
-            <img src={taurus} alt="taurus zodiac symbol" className="zodiacdecor-zodiacsymbol" />
-            <img src={virgo} alt="virgo zodiac symbol" className="zodiacdecor-zodiacsymbol" />
+            {signs.map(sign => {
+                return(
+                    <div className="zodiacdecor-zodiacsymbol">
+                        <img src={sign} alt="zodiac symbol" />
+                    </div>
+                );
+            })}
         </div>
     );
 }

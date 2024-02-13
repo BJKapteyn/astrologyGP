@@ -1,10 +1,20 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { InfoCardData } from '../../PageElements/InfoCard/InfoCardData';
 import './AboutSection.css';
 
 
 export const AboutSection = () => {
-    const [selectedData, selectData] = useState(InfoCardData[0].text);
+    let initialText = '';
+
+    useEffect(() => {
+        if(InfoCardData != null) {
+            initialText = InfoCardData[0].text;
+        } else {
+            console.log(`Infocard data is ${InfoCardData}`);
+        }
+    }, []);
+
+    const [selectedData, selectData] = useState(initialText);
 
     return (
         <section className="aboutsection">
