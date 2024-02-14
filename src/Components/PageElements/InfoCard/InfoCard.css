@@ -7,7 +7,9 @@
   accent 4 - light orange               rgb(241, 199, 97)
 */
 
-
+#title-snap {
+    scroll-snap-align: none start;
+}
 
 #infocard-title {
     background: rgb(72,31,75);

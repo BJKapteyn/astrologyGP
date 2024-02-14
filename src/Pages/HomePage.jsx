@@ -9,7 +9,7 @@ import { AboutSection } from '../Components/HomePage/AboutSection/AboutSection.j
 export default function HomePage() {
 
     return (
-        <>
+        <div className="scroll-snap">
             <TitleCard></TitleCard>
             <InfoCard></InfoCard>
             <JoinUs></JoinUs>
@@ -17,6 +17,6 @@ export default function HomePage() {
             <NewsCard></NewsCard>
             <BioSection></BioSection>
             <Testimonials></Testimonials>
-        </>
+        </div>
     )
 }
