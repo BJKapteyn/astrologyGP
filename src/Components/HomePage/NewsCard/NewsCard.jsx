@@ -1,8 +1,14 @@
 import { NewsCards } from './NewsCards.jsx';
+import { ActionButton } from '../../PageElements/ActionButton/ActionButton.jsx';
+import { Link } from 'react-router-dom';
 import './NewsCard.css';
 import '../../../App.css';
 
 export const NewsCard = () => {
+
+    const moreButtonSettings = {
+        buttonText: 'MORE',
+    }
 
     return (
         <section className="newscard-section">
@@ -24,9 +30,11 @@ export const NewsCard = () => {
                         <p id="four" className="blurb">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, vero! Deleniti quo ad a excepturi iure vel dolorum necessitatibus sint, praesentium, cupiditate libero? Nam reprehenderit aliquid pariatur debitis commodi modi!</p>
                     </div>
                 </div>
-                <div className='button1'>MORE</div>
-                    </div>
-            <NewsCards></NewsCards>
+                <div className="newscard-more-container">
+                    <Link to={'/News'}><ActionButton buttonSettings={moreButtonSettings}></ActionButton></Link>
+                </div>
+            </div>
+            <NewsCards numberOfCards={2}></NewsCards>
         </section>
     )
 }

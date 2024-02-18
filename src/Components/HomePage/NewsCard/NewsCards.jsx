@@ -2,6 +2,9 @@ import { NewsCardData } from "./NewsCardData";
 import './NewsCard.css';
 
 export const NewsCards = ({numberOfCards}) => {
+
+    let cardsToDisplay = numberOfCards ? NewsCardData.slice(0, numberOfCards) : NewsCardData;
+
     function buildNewsCard(data) {
         if(data == null) {
             console.debug('News card data is null');
@@ -38,10 +41,11 @@ export const NewsCards = ({numberOfCards}) => {
     return(
         <section className="newscards">
             {
-                NewsCardData.map(data => {
+                cardsToDisplay.map(data => {
                     return buildNewsCard(data);       
                 })
             }
+
         </section>
     );
 }
