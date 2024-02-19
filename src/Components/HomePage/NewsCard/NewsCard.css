@@ -73,6 +73,10 @@
   width: 90%;
 }
 
+.newscard-more-container {
+  margin: auto;
+}
+
 .newscard-card {
   margin: 6% auto;
   padding: 2% 5%;

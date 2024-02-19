@@ -36,6 +36,7 @@ html {
 }
 
 body {
+  scroll-snap-type: y mandatory;
   margin: 0;
 }
 
@@ -70,6 +71,14 @@ h2 {
 }
 h3 {
   font-size: 2.5em;
+}
+
+.scroll-snap {
+  scroll-snap-type: x mandatory;
+}
+
+.child-scroll-snap {
+  scroll-snap-align: start;
 }
 
 .title-container {
