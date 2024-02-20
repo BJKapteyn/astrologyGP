@@ -2,7 +2,6 @@ import { NewsCardData } from "./NewsCardData";
 import './NewsCard.css';
 
 export const NewsCards = ({numberOfCards}) => {
-
     let cardsToDisplay = numberOfCards ? NewsCardData.slice(0, numberOfCards) : NewsCardData;
 
     function buildNewsCard(data) {
@@ -45,7 +44,6 @@ export const NewsCards = ({numberOfCards}) => {
                     return buildNewsCard(data);       
                 })
             }
-
         </section>
     );
 }
