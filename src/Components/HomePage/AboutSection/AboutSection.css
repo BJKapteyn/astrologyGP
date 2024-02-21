@@ -39,3 +39,15 @@
     margin: 2% auto 6% auto;
     height: 8em;
 }
+
+.aboutsection-text {
+    opacity: 0;
+    transition: opacity 500ms;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -ms-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+}
+.aboutsection-text.fade {
+    opacity: 100;
+}

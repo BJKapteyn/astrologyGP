@@ -78,7 +78,7 @@
 }
 
 .newscard-card {
-  margin: 6% auto;
+  margin: 6% auto auto;
   padding: 2% 5%;
   width: 70%;
   height: auto;
@@ -92,6 +92,7 @@
 }
 
 .newscard-infoflex {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -128,6 +129,7 @@
 
 .newscard-infoflex div {
   overflow-y: initial;
+  overflow-x: hidden;
   width: 30%;
   margin: 2%;
 }
