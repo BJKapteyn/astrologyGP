@@ -14,10 +14,11 @@ export const AboutSection = () => {
     function addFade() {
         let fadeClass = 'fade';
         let elementToFade = fadeInElement();
-        if(elementToFade.classList.contains(fadeClass)) {
-            elementToFade.classList.remove(fadeClass);
-        }
-        elementToFade.style.opacity = '0';
+        let parent = elementToFade.parentElement;
+        parent.removeChild(elementToFade);
+        // elementToFade.style.opacity = '0';
+        parent.appendChild(elementToFade)
+        // elementToFade.style.opacity = '100';
         elementToFade.classList.add(fadeClass);
     }
 

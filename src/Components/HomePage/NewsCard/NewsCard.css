@@ -128,15 +128,14 @@
 }
 
 .newscard-infoflex div {
-  overflow-y: initial;
-  overflow-x: hidden;
-  width: 30%;
+  overflow-y: auto;
+  width: 40%;
   margin: 2%;
 }
-.newscard-infoflex div p {
+.blurb {
+  scrollbar-width: none;
   padding: 5%;
-  overflow-y: inherit;
-  width: 100%;
+  width: 90%;
   display: block;
   height: 10em;
   font-size: 1.5em;
@@ -144,24 +143,11 @@
   background-color: transparent;
 }
 
-#one {
+.newscard-newsblurb {
   background: rgb(198, 171, 210);
+  scrollbar-width: none;
 }
 
-#two {
-  background: rgb(183, 200, 219);
-
-}
-
-#three {
-  background: rgb(183, 200, 219);
-  
-}
-
-#four {
-  background: rgb(198, 171, 210);
-  
-}
  
 @keyframes backgroundGradient {
     0% {

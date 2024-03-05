@@ -10,7 +10,10 @@ export const NewsCardData = [
         id: 2
         ,title: 'Tarot Mysteries'
         ,image: 'portrait-sunsetWaves.png'
-        ,text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde pariatur debitis sapiente animi cupiditate cumque ducimus tenetur aliquam excepturi incidunt blanditiis vel officia optio labore rerum, temporibus molestiae suscipit eveniet!'
+        ,text: 'In the realm of divination and introspection, tarot cards have long captivated individuals seeking insights into the' +
+        ' unknown. These mystical cards, each bearing unique imagery and symbolism, are thought to hold the keys to unlocking the secrets' +
+        ' of the past, present, and future. While their origins are shrouded in mystery, dating back centuries, tarot cards have endured as a' +
+        ' powerful tool for self-reflection and guidance. Whether viewed as a spiritual practice, a psychological tool, or simply a source of fascination, the allure of tarot continues to intrigue and inspire seekers of all walks of life, inviting them to delve into the depths of their own consciousness and explore the mysteries that lie within.'
         ,imageLeftSide: false
     },
     {
