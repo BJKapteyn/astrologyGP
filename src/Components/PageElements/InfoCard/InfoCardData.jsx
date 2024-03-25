@@ -2,25 +2,49 @@ export const InfoCardData = [
     {
         id: 1,
         image: 'DiscoBall',
-        keywordText: 'Fun',
-        text: 'At Vibe Collective, we believe that everyone deserves to live their best life, and we\'re here to support you on your journey. Our fun, vibrant, and unique approach to divination will leave you feeling uplifted and empowered. So why wait? Book your reading today and take the ﬁrst step towards a more fulﬁlling life.'
+        keywordText: 'Tarot',
+        text: 'Access the current energy through a personalized Tarot Reading. Find clarity and empowerment as the cards illuminate pathways for you to traverse life\'s twists and turns.'
     },
     {
         id: 2,
         image: 'Butterfly',
-        keywordText: 'Vibrant',
-        text: 'We\'ve connected with an abundance of talented metaphysical practitioners over time, we realized the importance of providing a dynamic online platform where individuals can comfortably receive a top-notch reading without ever leaving their own space.'
+        keywordText: 'Astrology',
+        text: 'Explore the intricacies of your astrological charts. Each session promises profound insights into your personality, relationships, and life path, guiding you toward deeper self-awareness and understanding.'
     },
     {
         id: 3,
         image: 'Mushrooms',
-        keywordText: 'Unique',
-        text: 'We understand that life can get overwhelming and stressful at times, but with our divination readings, we aim to provide you with a sense of grounding and clarity. Whether you\'re seeking guidance on matters of love, career, or personal growth, our team of experienced and intuitive readers are here to help.'
+        keywordText: 'Mediumship',
+        text: 'Tap into the mystical realm as our Mediums connect with spirit to provide insights, guidance, and messages from the other side. Embark on a journey of spiritual exploration in a personalized and transformative consultation.'
     },
     {
         id: 4,
         image: 'FeetUp',    
-        keywordText: 'Grounding',
-        text: 'As a team that spans across the globe, we are thrilled to bring ancient wisdom to your doorstep. Our expertise in astrology, tarot, energy, and inner healing are all here, waiting to welcome you into this vibrant community. Whether you\'re a seasoned pro or just starting on your journey, we\'re here to provide grounding support as you explore the mystical world of self-discovery. Join us and discover a unique path to healing and growth.'
-    }    
+        keywordText: 'Past Life Regression',
+        text: 'Past life regression is a therapeutic technique aimed at accessing and exploring past life memories or experiences through guided relaxation/hypnosis. Heal unresolved issues, gain insights into present life challenges & experience the expansion of a more aware self through the process.'
+    },
+    {
+        id: 5,
+        image: '',
+        keywordText: 'Reiki',
+        text: 'Energetically purifying, Reiki fosters stress relief, emotional healing, chakra balancing & better sleep. Through the movement of energy, Reiki supports deep peace & a more emotionally aligned life.'
+    },
+    {
+        id: 6,
+        image: '',
+        keywordText: 'Human Design',
+        text: 'A Human Design reading provides personalized insights into your unique energy type, decision-making process, and life purpose based on the principles of astrology, the I Ching, and other esoteric systems. Through a Bodygraph chart analysis, discover your innate strengths, potential challenges, and strategies for living in alignment with your authentic self.'
+    },
+    {
+        id: 7,
+        image: '',
+        keywordText: 'Sound Healing',
+        text: 'Experience the transformative power of sound healing as ancient vibrations harmonize your body and mind, promoting deep relaxation and inner balance. Allow the soothing resonance of crystal bowls and Tibetan singing bowls to guide you on a journey of self-discovery and renewal.'
+    },
+    {
+        id: 8,
+        image: '',
+        keywordText: 'Kundalini Yoga',
+        text: 'Kundalini yoga classes incorporate dynamic movements, breathwork, and meditation techniques that awaken your inner kundalini energy and elevate your consciousness.'
+    }
 ]

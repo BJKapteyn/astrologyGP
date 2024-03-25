@@ -8,22 +8,16 @@ export const AboutSection = () => {
     let initialText = '';
     let fadeInElement = () => document.getElementById('fader');  
 
-
     const [selectedData, selectData] = useState(initialText);
 
-    function addFade() {
-        let fadeClass = 'fade';
-        let elementToFade = fadeInElement();
-        let parent = elementToFade.parentElement;
-        parent.removeChild(elementToFade);
-        // elementToFade.style.opacity = '0';
-        parent.appendChild(elementToFade)
-        // elementToFade.style.opacity = '100';
-        elementToFade.classList.add(fadeClass);
-    }
+    useEffect(() => {
+        fadeInElement().style.opacity = 1;
+        console.log(fadeInElement());
+        return () => {fadeInElement().style.opacity = 0;}
+    }, [selectedData])
+
 
     function handleClick(text) {
-        addFade();
         selectData(text);
     }
 
@@ -43,7 +37,7 @@ export const AboutSection = () => {
                 })}
             </div>
             <div className="aboutsection-text-container">
-                <p id="fader" className="aboutsection-text">{selectedData}</p>
+                <p style={{opacity: '0', transitionProperty: 'opacity', transitionDuration: '500ms'}} id="fader" className="aboutsection-text">{selectedData}</p>
             </div>
         </section>
     )
