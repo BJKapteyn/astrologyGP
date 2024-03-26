@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { InfoCardData } from '../../PageElements/InfoCard/InfoCardData';
 import '../../../App.css';
 import './AboutSection.css';
@@ -6,16 +6,8 @@ import './AboutSection.css';
 
 export const AboutSection = () => {
     let initialText = '';
-    let fadeInElement = () => document.getElementById('fader');  
 
     const [selectedData, selectData] = useState(initialText);
-
-    useEffect(() => {
-        fadeInElement().style.opacity = 1;
-        console.log(fadeInElement());
-        return () => {fadeInElement().style.opacity = 0;}
-    }, [selectedData])
-
 
     function handleClick(text) {
         selectData(text);
@@ -26,10 +18,16 @@ export const AboutSection = () => {
             <div className="aboutsection-flexcontainer">
                 {InfoCardData.map((data) => {
                     const {id, image, keywordText, text} = data;
+                    let actualText = null;
+
+                    if(image) {
+                        actualText = require('../../../Pics/InfoCardPics/' + image + '.jpg');
+                    }
+                    
                     return (
                         <div onClick={() => handleClick(text)} className="aboutsection-flexbox" key={id}>
                             <div className="aboutsection-image-container">
-                                <img className="aboutsection-image" alt={keywordText} src={require('../../../Pics/InfoCardPics/' + image + '.jpg')}/>
+                                <img className="aboutsection-image" alt={keywordText} src={actualText}/>
                                 <p className="aboutsection-keyword">{keywordText}</p>
                             </div>
                         </div>

@@ -5,7 +5,7 @@ export const ActionButton = ({buttonSettings = {}}) => {
 
     // Override the default button behavior
     const actionButtonWrapper = (event, buttonAction) => {
-        if(buttonAction != null) {
+        if(buttonAction) {
             event.preventDefault();
             buttonAction();
         } else {

@@ -1,13 +1,14 @@
 import { ActionButton } from "../ActionButton/ActionButton";
-import { Link } from "react-router-dom";
+import { useRef } from "react";
 import blurbimage from '../../../Pics/Landscapes/groupYoga.png';
 import blurbimage2 from '../../../Pics/Landscapes/findSign.png';
-import { ZodiacDecor } from '../../PageElements/ZodiacDecor/ZodiacDecor';
 import "./InfoCard.css";
 
 export function InfoCard() {
+    const moreButtonRef = useRef(null);
+
     const moreButtonSettings = {
-        buttonText: 'more',
+        buttonText: 'JOIN THE COLLECTIVE',
         action: null, 
         buttonStyleId: 'infocard-morebutton'
     }
@@ -15,24 +16,20 @@ export function InfoCard() {
     return (
         <div className="child-scroll-snap">
             <div className="title-container">
-                <h1 id="infocard-title">REMOTE DIVINATION READINGS</h1>
+                <h1 id="infocard-title">VIRTUAL METAPHYSICAL READINGS</h1>
             </div>
             <div className="infocard-joinflex">
-                <div className="infocard-joinflexitem" id="infocard-leftimage-container">
-                    <img src={blurbimage} alt="yoga" id="infocard-blurbimage" />
-                </div>
+
                 <div className="infocard-joinflexitem" id="infocard-join">
                     <h3 id='infocard-joinheader'>THE VIBE</h3>
-                    <p className="infocard-description">Welcome to Vibe Collective, where we provide quality divination readings online to help you access various metaphysical and healing techniques.</p>
+                    <p className="infocard-description">Guiding you towards a fulfilling life</p>
                     
                     <a href='#joinus-header-id'><ActionButton buttonSettings={moreButtonSettings}></ActionButton></a>
 
                 </div>
-                <div className="infocard-joinflexitem" id="infocard-rightimage-container">
-                    <img src={blurbimage2} alt="astrology" id="infocard-blurbimage" />
-                </div>
+
             </div>
-            <h1 id="infocard-split">Terrot Cards | astrology | spiritual connection</h1>
+            <h1 id="infocard-split">Terrot Readings | Astrology | Mediumship</h1>
         </div>
     );
 }   
