@@ -22,6 +22,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 45%;
+    text-align: center;
 }
 
 .infocard-joinflexitem {
@@ -43,11 +44,7 @@
 }
 
 #infocard-morebutton {
-    position: absolute;
-    bottom: 1%;
-    left: 50%;
-    margin-left: -5em;
-    width: 10em;
+    display: block;
 }
 
 #infocard-leftimage-container {
