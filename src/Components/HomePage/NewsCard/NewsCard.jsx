@@ -23,7 +23,7 @@ export const NewsCard = () => {
                     {
                         newsToPrint.map(x => {
                             return (
-                                <div className="newscard-newsblurb">
+                                <div key={x.id} className="newscard-newsblurb">
                                     <p className='blurb'>{x.text}</p>
                                 </div>
                             )
