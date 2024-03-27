@@ -6,11 +6,10 @@ import './AboutSection.css';
 
 
 export const AboutSection = () => {
-    let initialText = '';
-    const cardData = useRef(AboutCardData);
+    const [text, setText] = useState('');
 
-    const topCards = AboutCardData.slice(0, 4);
-    // const bottomCards = cardData.slice(4, 8);
+    const topCards = useRef(AboutCardData.slice(0, 4));
+    const bottomCards = useRef(AboutCardData.slice(4, 8));
 
     // const [selectedData, selectData] = useState(initialText);
 
@@ -20,18 +19,20 @@ export const AboutSection = () => {
     return (
         <section className="aboutsection">
             <div className="aboutsection-flexcontainer">
-                {AboutCardData.map((aboutCardData) => {
-                    debugger;
+                {topCards.current.map((aboutCardData) => {
                     return (
-                            <AboutCard aboutCardDataa={aboutCardData} />
+                        <AboutCard setOutText={setText} key={aboutCardData.id} aboutCardDataa={aboutCardData} />
                     );
                 })}
-                {topCards.map((aboutCardData) => {
-                    debugger;
+            </div>
+            <div id='aboutsection-textoutput'>
+                <p>{text}</p>
+            </div>
+            <div className="aboutsection-flexcontainer">
+                {bottomCards.current.map((aboutCardData) => {
                     return (
-                        <AboutCard aboutCardDataa={aboutCardData} />
-
-                    )
+                        <AboutCard setOutText={setText} key={aboutCardData.id} aboutCardDataa={aboutCardData} />
+                    );
                 })}
             </div>
             <div className="aboutsection-text-container">
