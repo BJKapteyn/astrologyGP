@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { BioCard } from "./BioCard";
 import { CardModal } from "../CardModal/CardModal";
 import { CardInfoData } from "./CardInfoData";
 
+// lowerBound inclusive and upperBound exclusive refers to the sliced portion of the data
 export const BioCards = ({lowerBound, upperBound}) => {
     const [bioData, selectBioData] = useState(null);
-    const data = CardInfoData;
+    const data = useRef(CardInfoData);
 
     // Deselects data for modal
     function deSelectBioCard() {
@@ -19,7 +20,7 @@ export const BioCards = ({lowerBound, upperBound}) => {
     }
 
     function renderCards(sliceLowerBound = 0, sliceUpperBound = CardInfoData.length) {
-        return data.slice(sliceLowerBound, sliceUpperBound).map((card) => {
+        return data.current.slice(sliceLowerBound, sliceUpperBound).map((card) => {
             return <BioCard
                         key={card.id} 
                         callbackSelect={selectBioCard}

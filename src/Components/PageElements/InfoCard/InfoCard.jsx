@@ -4,7 +4,7 @@ import blurbimage from '../../../Pics/Landscapes/groupYoga.png';
 import blurbimage2 from '../../../Pics/Landscapes/findSign.png';
 import "./InfoCard.css";
 
-export function InfoCard() {
+export const InfoCard = () => {
     const moreButtonRef = useRef(null);
 
     const moreButtonSettings = {
