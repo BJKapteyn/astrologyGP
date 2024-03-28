@@ -23,9 +23,7 @@ export const InfoCard = () => {
                 <div className="infocard-joinflexitem" id="infocard-join">
                     <h3 id='infocard-joinheader'>THE VIBE</h3>
                     <p className="infocard-description">Guiding you towards a fulfilling life</p>
-                    
                     <a href='#joinus-header-id'><ActionButton buttonSettings={moreButtonSettings}></ActionButton></a>
-
                 </div>
 
             </div>
