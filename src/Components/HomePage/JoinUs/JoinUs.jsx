@@ -22,16 +22,16 @@ export const JoinUs = () => {
             </div>
             <div className="joinus-flex">
                 <div className="joinus-flexitem" >
-                    <h3>SCHEDULE A READING</h3>
+                    <h3 className="joinus-newsletter">WHY YOU SHOULD VIBE</h3>
                     <div className="joinus-signupcontainer">
-                        <p id="joinus-signuptext" className="joinus-description">&emsp;At Vibe Collective, we believe that everyone deserves to live their best life, and we're here to support you on your journey. Our fun, vibrant, and unique approach to divination will leave you feeling uplifted and empowered. So why wait? Book your reading today and take the ﬁrst step towards a more fulﬁlling life.</p>
+                        <p id="joinus-signuptext" className="joinus-description">At The Vibe Collective, we don't just offer jobs, we creaft careers within a dynamic and inclusive ecosystem. We're committed to fostering growth, embracing collaboration and achieving harmonious work-life balance.</p>
                     </div>
                     <div className="joinus-button">
                         <Link to={'/Readers'}><ActionButton buttonSettings={actionButtonSettings}></ActionButton></Link>
                     </div>
                 </div>
                 <div className="joinus-flexitem">
-                    <h3>MONTHLY NEWSLETTER</h3>
+                    <h3 className="joinus-newsletter">MONTHLY NEWSLETTER</h3>
                     <div className="joinus-signupcontainer">
                         <p className="joinus-description">Subscribe to our monthly newsletter:</p>
                         <input type="text" className="textinput" id="submitemail" placeholder="Enter Your Email..."></input>

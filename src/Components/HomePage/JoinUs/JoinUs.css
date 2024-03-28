@@ -11,7 +11,7 @@
 }
 
 #joinus-signuptext {
-    text-align: left;
+    text-align: center;
 }
 
 .joinus {
@@ -59,6 +59,10 @@
     width: 50%;
 }
 
+.joinus-newsletter {
+    font-size: 3em;
+}
+
 .joinus-scheduleheader{
     color: rgb(72,31,75);
 }
@@ -70,7 +74,7 @@
 }
 
 .joinus-button {
-    margin: 4em auto;
+    margin: 3em auto 5% auto;
 }
 .joinus-button * p {
     width: 8em;

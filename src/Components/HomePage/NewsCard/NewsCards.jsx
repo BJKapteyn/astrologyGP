@@ -10,9 +10,10 @@ export const NewsCards = ({numberOfCards}) => {
         }
         
         const imagePath = require('../../../Pics/Portraits/' + data.image)
+        const imageId = 'newscard-image' + data.id;
         const imageAndContainer = (
             <div className="newscard-image-container">
-                <img src={imagePath} alt={data.id} className="newscard-image" />
+                <img id={imageId} src={imagePath} alt={data.id} className="newscard-image" />
             </div>
         );
 
