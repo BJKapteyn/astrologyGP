@@ -1,0 +1,29 @@
+.recruit-flex {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.recruit-flexbox {
+    width: 30%;
+    margin: 1%;
+}
+
+.recruit-title-container, .recruit-text, .recruit-flexbox {
+    text-align: center;
+}
+.recruit-text {
+    height: 16em;
+}
+
+.recruit-image-container {
+    width: 100%;
+    height: auto;
+}
+
+.recruit-image {
+    width: 100%;
+    height: auto;
+}
+

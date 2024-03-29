@@ -18,10 +18,7 @@ export const ActionButton = ({buttonSettings = {}}) => {
             id={buttonStyleId ?? ''}
             onClick={(event) => { action ?? actionButtonWrapper(event, action) }}
             className="actionbutton-container">
-            <p
-                id={textStyleId ?? ''}
-                className="actionbutton-text">{buttonText}
-            </p>
+            <p id={textStyleId ?? ''} className="actionbutton-text">{buttonText}</p>
         </button>
     );
 } 
