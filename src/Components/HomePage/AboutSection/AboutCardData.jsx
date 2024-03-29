@@ -31,19 +31,19 @@ export const AboutCardData = [
     },
     {
         id: 6,
-        image: 'FeetUp',
+        image: 'Mushrooms',
         keywordText: 'Human Design',
         text: 'A Human Design reading provides personalized insights into your unique energy type, decision-making process, and life purpose based on the principles of astrology, the I Ching, and other esoteric systems. Through a Bodygraph chart analysis, discover your innate strengths, potential challenges, and strategies for living in alignment with your authentic self.'
     },
     {
         id: 7,
-        image: 'FeetUp',
+        image: 'Butterfly',
         keywordText: 'Sound Healing',
         text: 'Experience the transformative power of sound healing as ancient vibrations harmonize your body and mind, promoting deep relaxation and inner balance. Allow the soothing resonance of crystal bowls and Tibetan singing bowls to guide you on a journey of self-discovery and renewal.'
     },
     {
         id: 8,
-        image: 'FeetUp',
+        image: 'DiscoBall',
         keywordText: 'Kundalini Yoga',
         text: 'Kundalini yoga classes incorporate dynamic movements, breathwork, and meditation techniques that awaken your inner kundalini energy and elevate your consciousness.'
     }

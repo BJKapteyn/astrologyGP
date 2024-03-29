@@ -6,6 +6,7 @@ import { Testimonials } from '../Components/HomePage/Testimonials/Testimonials.j
 import { JoinUs } from '../Components/HomePage/JoinUs/JoinUs.jsx';
 import { RecruitSection } from '../Components/HomePage/Recruit/RecruitSection.jsx';
 import { AboutSection } from '../Components/HomePage/AboutSection/AboutSection.jsx';
+import { Book } from '../Components/HomePage/Book/Book.jsx';
 
 export default function HomePage() {
 
@@ -17,7 +18,7 @@ export default function HomePage() {
             <NewsCardSection></NewsCardSection>
             <AboutSection></AboutSection>
             <RecruitSection></RecruitSection>
-            <BioSection></BioSection>
+            <Book></Book>
             <Testimonials></Testimonials>
         </div>
     )

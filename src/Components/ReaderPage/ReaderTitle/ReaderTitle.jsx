@@ -4,7 +4,7 @@ import './ReaderTitle.css';
 export const ReaderTitle = () => {
     return (
         <section className="reader-section">
-            <h1 id="reader-title">Find Your Reader</h1>
+            <h1 id="reader-title">Work with the Collective</h1>
             <div className="reader-info">
                 <p className="reader-infotext">
                     Are you yearning to reconnect with the souls who have touched your heart? Book a session with us, and together, we will open the door to the infinite wisdom and love that exists in the spirit realm. Whether you are seeking closure, understanding, or simply a reaffirmation of the eternal bond with your loved ones, I am here to guide you on this sacred journey.

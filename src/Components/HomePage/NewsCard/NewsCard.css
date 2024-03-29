@@ -64,6 +64,7 @@
 } 
 .newscard-text-title {
   padding-top: .5em;
+  font-size: 2em;
   margin: 0px;
 }
 .newscard-text-crop {

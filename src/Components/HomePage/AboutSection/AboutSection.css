@@ -15,22 +15,40 @@
 
 .aboutsection-image-container {
     overflow: hidden;
-    height: 100%;
+    height: 80%;
     position: relative;
+    transition: transform 500ms ease-out;
+    -webkit-transition: transform 500ms ease-out;
+    -moz-transition: transform 500ms ease-out;
+    -ms-transition: transform 500ms ease-out;
+    -o-transition: transform 500ms ease-out;
 }
 .aboutsection-image {
-    height: 108%;
+    height: 160%;
 }
-
+.aboutsection-image-container:hover {
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+}
 .aboutsection-keyword {
     font-family: bivoac-regular;
     position: absolute;
     top: 50%;
     bottom: 50%;
     color: white;
-    font-size: 2.5em;
+    font-size: 2em;
     padding-left: .1em;
     text-shadow: 0em 0em 1em black;
+}
+
+#aboutsection-textoutput {
+    width: 80%;
+    margin: auto;
+    height: 8em;
+    padding: 1em;
 }
 
 #fader {

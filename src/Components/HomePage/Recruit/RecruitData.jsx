@@ -2,7 +2,7 @@ export const RecruitData = [
     {
         id: 1,
         title: 'Past Life Readings',
-        image: '',
+        image: 'yogaSunrise',
         text: 'I offer relationship coaching services to help you improve your relationship with others. We will work on your communication skills, empathy, and conflict resolution strategies to help you build healthy and fulfilling relationships.'
     },
     {

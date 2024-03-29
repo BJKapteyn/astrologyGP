@@ -4,6 +4,7 @@ import Layout from './Components/Layout/Layout.jsx';
 import ReadersPage from './Pages/ReadersPage.jsx'
 import HomePage from './Pages/HomePage.jsx';
 import NewsPage from './Pages/NewsPage.jsx';
+import WhyVibePage from './Pages/WhyVibePage.jsx';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route index element={<HomePage />}></Route>
           <Route path="/Readers" element={<ReadersPage />}></Route>
           <Route path="/News" element={<NewsPage />}></Route>
+          <Route path="/WhyVibe" element={<WhyVibePage />}></Route>
         </Route>
       </Routes>
     </div>

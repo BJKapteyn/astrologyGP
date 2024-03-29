@@ -3,20 +3,33 @@
     width: 80%;
     flex-wrap: wrap;
     margin: auto;
-    margin-top: 2%;
+    justify-content: space-between;
+}
+
+.recruit-title {
+    font-size: 2em;
 }
 
 .recruit-flexbox {
     width: 30%;
-    margin: 1%;
+    margin: 1% 0%;
 }
 
 .recruit-title-container, .recruit-text-container, .recruit-flexbox {
     text-align: center;
 }
+.recruit-title-container {
+    margin: 2em auto;
+}
+
+.recruit-text-container {
+    height: 15em;
+    padding: 1em;
+}
 .recruit-text {
     height: 16em;
 }
+
 
 .recruit-image-container {
     width: 100%;
