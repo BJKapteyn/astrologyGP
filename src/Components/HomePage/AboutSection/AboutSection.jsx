@@ -35,9 +35,6 @@ export const AboutSection = () => {
                     );
                 })}
             </div>
-            <div className="aboutsection-text-container">
-                <p style={{opacity: '0', transitionProperty: 'opacity', transitionDuration: '500ms'}} id="fader" className="aboutsection-text">{}</p>
-            </div>
         </section>
     )
 }

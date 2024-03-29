@@ -11,15 +11,11 @@
   overflow: auto;
   overflow-y: hidden;
   height: auto;
-  background: linear-gradient(0deg, rgb(72,31,75) 0%, rgb(93, 150, 215) 100%);
-  background-size: "200% 200%";
-  animation-name: backgroundGradient;
-  animation: backgroundGradient 3s ease infinite;
-  -webkit-animation: backgroundGradient 3s ease infinite;
+  margin-top: 3%;
 }
           
 .newscard {
-  height: 30em;
+  height: 24em;
   width: 80%;
   display: flex;
   margin: 5% auto;
@@ -42,9 +38,15 @@
   position: relative;
 }
 
-#newscard-image1 {
+#newscard-image2 {
   position: relative;
-  top: -60%;
+  top: -50%;
+}
+
+
+#newscard-image3 {
+  position: relative;
+  top: -70%;
 }
 
 .newscard-crop {
@@ -55,7 +57,6 @@
   scrollbar-width: none;
 }
 .newscard-text-container {
-  background-color: whitesmoke;
   display: inline-block;
   width: 50%;
   height: 100%;
@@ -70,11 +71,11 @@
   margin: auto;
 }
 .newscard-text {
+  text-align: center;
   cursor: n-resize;
-  font-size: 1.5em;
+  font-size: 1.4em;
   padding: 5%;
   height: 100%;
-  width: 90%;
 }
 
 .newscard-more-container {

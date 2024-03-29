@@ -33,13 +33,6 @@
     text-shadow: 0em 0em 1em black;
 }
 
-.aboutsection-text-container {
-    width: 75%;
-    text-align: left;
-    margin: 2% auto 6% auto;
-    height: 8em;
-}
-
 #fader {
     opacity: 0;
 }

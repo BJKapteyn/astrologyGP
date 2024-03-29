@@ -3,6 +3,7 @@
     width: 80%;
     flex-wrap: wrap;
     margin: auto;
+    margin-top: 2%;
 }
 
 .recruit-flexbox {
@@ -10,7 +11,7 @@
     margin: 1%;
 }
 
-.recruit-title-container, .recruit-text, .recruit-flexbox {
+.recruit-title-container, .recruit-text-container, .recruit-flexbox {
     text-align: center;
 }
 .recruit-text {

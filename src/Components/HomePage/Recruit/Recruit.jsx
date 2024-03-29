@@ -9,12 +9,12 @@ export const Recruit = ({recruitData}) => {
     return (
         <div key={id} className="recruit-flexbox">
             <div className="recruit-title-container">
-                <h3>{title}a</h3>
+                <h3 className="recruit-title">{title}</h3>
             </div>
             <div className="recruit-image-container">
                 <img className="recruit-image" src={imageSource} alt={title} />
             </div>
-            <div className="recruit-text">
+            <div className="recruit-text-container">
                 <p>{text}</p>
             </div>
             <ActionButton buttonSettings={{buttonText: 'Join Waitlist'}}></ActionButton>
