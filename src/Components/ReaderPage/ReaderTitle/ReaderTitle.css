@@ -1,6 +1,12 @@
+.reader-title-section {
+    background-image: url('../../../Pics/Landscapes/mountainPool.png');
+    height: auto;
+}
+
 #reader-title {
     margin-top: 0px;
-    padding-top: 5%;
+    padding-top: 15%;
+    color: #ccc;
 }
 
 #reader-mediums{
@@ -10,15 +16,17 @@
 .reader-info {
     height: auto;
     width: 100%;
-    background-color: rgb(198, 171, 210);
-    background-image: url('../../../Pics/Landscapes/purpleGeode.png');
+    /* background-color: rgb(198, 171, 210);
+    background-image: url('../../../Pics/Landscapes/purpleGeode.png'); */
 }
 
 .reader-infotext {
-    padding: 5%;
+    padding: 2% 0% 8% 0%;
     width: 80%;
     color: rgb(55, 55, 55);
     margin: auto;
     text-align: center;
-    
+    font-size: 1.8em;
+    color: white;
+    text-shadow: 3em 3em 3em black;
 }

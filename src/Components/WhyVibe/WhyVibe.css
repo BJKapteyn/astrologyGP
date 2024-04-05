@@ -1,4 +1,21 @@
 .whyvibe {
-width: 80%;
-margin: auto;
+    margin: auto;
+}
+
+.whyvibe-bullet-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.whyvibe-bullet {
+    width: 25%;
+}
+
+.whyvibe-text {
+    width: 70%;
+    height: auto;
 }
