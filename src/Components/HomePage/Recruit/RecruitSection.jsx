@@ -8,7 +8,7 @@ export const RecruitSection = () =>  {
             <div className="recruit-flex">
                 {RecruitData.map((data) => {
                     return (
-                        <Recruit recruitData={data}></Recruit>
+                        <Recruit key={data.id} recruitData={data}></Recruit>
                     );
                 })}
             </div>

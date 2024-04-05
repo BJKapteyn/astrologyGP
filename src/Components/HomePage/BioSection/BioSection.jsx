@@ -1,6 +1,6 @@
 import { BioCards } from "../../PageElements/BioCard/BioCards";
 
-export function BioSection() {
+export const BioSection = () => {
     return(
         <section className="biosection">
             <div className="biocardsection-title-container">

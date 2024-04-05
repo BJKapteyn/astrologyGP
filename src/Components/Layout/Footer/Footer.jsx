@@ -7,7 +7,7 @@ import tiktok from '../../../Pics/Logos/tiktok-48.png';
 import sublogo from '../../../Pics/Logos/sublogo-white.svg'
 
 
-export function Footer() {
+export const Footer = () => {
 
     return (
         <footer className='footer-container'>

@@ -4,10 +4,10 @@ import './Recruit.css';
 export const Recruit = ({recruitData}) => {
     const {id, title, text, image} = recruitData;
 
-    const imageSource = image ? require('../../../Pics/Landscapes/' + image + '.png') : null;
+    const imageSource = image ? require('../../../Pics/Landscapes/' + image) : null;
 
     return (
-        <div key={id} className="recruit-flexbox">
+        <div className="recruit-flexbox">
             <div className="recruit-title-container">
                 <h3 className="recruit-title">{title}</h3>
             </div>

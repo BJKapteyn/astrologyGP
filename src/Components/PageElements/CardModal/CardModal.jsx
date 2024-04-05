@@ -32,7 +32,6 @@ export const CardModal = ({cardData, callBackDeselect}) => {
                 </div>
             </section>
             <div className="cardmodal-background" onClick={callBackDeselect}></div>
-
         </div>
     );
 }

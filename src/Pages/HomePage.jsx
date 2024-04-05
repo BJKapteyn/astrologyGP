@@ -1,4 +1,3 @@
-import { BioSection } from '../Components/HomePage/BioSection/BioSection.jsx'
 import { TitleCard } from '../Components/HomePage/TitleCard/TitleCard.jsx';
 import { InfoCard } from '../Components/PageElements/InfoCard/InfoCard';
 import { NewsCardSection } from '../Components/HomePage/NewsCard/NewsCardSection.jsx';
