@@ -21,7 +21,7 @@ export const InfoCard = () => {
                     <a href='#joinus-header-id'><ActionButton buttonSettings={moreButtonSettings}></ActionButton></a>
                 </div>
             </div>
-            <h1 id="infocard-split">Terrot Readings | Astrology | Mediumship</h1>
+            <h1 id="infocard-split">Tarot Readings | Astrology | Mediumship</h1>
         </div>
     );
 }   

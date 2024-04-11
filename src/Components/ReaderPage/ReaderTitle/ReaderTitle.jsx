@@ -13,7 +13,7 @@ export const ReaderTitle = () => {
                     </p>
                 </div>
             </div>
-            <h3 className="reader-header">Terrot Card Readers</h3>
+            <h3 className="reader-header">Tarot Card Readers</h3>
             <div className="reader-terot">
 
                 <BioCards lowerBound={0} upperBound={6}></BioCards>

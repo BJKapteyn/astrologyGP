@@ -46,6 +46,7 @@ p {
   margin: 0;
   font-weight: bold;
   color: rgb(55, 55, 55);
+  letter-spacing: .06em;
 }
 
 a {

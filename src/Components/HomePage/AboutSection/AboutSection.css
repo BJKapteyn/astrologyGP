@@ -1,3 +1,7 @@
+.aboutsection {
+    margin-top: 5%;
+}
+
 .aboutsection-flexcontainer {
     display: flex;
     justify-content: space-between;

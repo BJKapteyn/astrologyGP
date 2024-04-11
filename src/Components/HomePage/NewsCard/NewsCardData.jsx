@@ -22,9 +22,9 @@ export const NewsCardData = [
     },
     {
         id: 4
-        ,title: 'Starlit Readings Explored'
+        ,title: 'Collective Open May 2024'
         ,image: 'portrait-moonBeach.png'
-        ,text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde pariatur debitis sapiente animi cupiditate cumque ducimus tenetur aliquam excepturi incidunt blanditiis vel officia optio labore rerum, temporibus molestiae suscipit eveniet!'
+        ,text: 'We are so excited to VIBE with you! /nPlease Join our waitlist or newsletter to be one of the first to join the collective and have a reading with one of our amazing collective readers.'
         ,imageLeftSide: false
     },
     {
