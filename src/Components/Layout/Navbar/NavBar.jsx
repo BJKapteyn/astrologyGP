@@ -6,15 +6,13 @@ import '../../../App.css'
 export const NavBar = () => {
     return (
         <nav className='navbar'>
-            {NavLinkData.map((linkDatas) => {
-                return (
-                    <ul>
-                        <li>
-                            <NavPageLink linkData={linkDatas}></NavPageLink>
-                        </li>
-                    </ul>
-                );
-            })}
+            <ul className="navbar-main-nav">
+                {NavLinkData.map((linkDatas) => {
+                    return (
+                        <NavPageLink linkData={linkDatas}></NavPageLink>
+                    );
+                })}
+            </ul>
         </nav>
         // <nav className='navbar'>
         //     <Link className="navbar-link" to="/">Home</Link>

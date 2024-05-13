@@ -17,6 +17,19 @@
     color: white;
 }
 
+.navbar-main-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.navbar-submenu {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    flex-direction: column;
+}
+
 .navbar-link:hover {
     transition: color 500ms;
     color: rgb(198, 171, 210);

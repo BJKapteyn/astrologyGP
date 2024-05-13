@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 // return Link with data or submenu if it exists
 export const NavPageLink = ({linkData}) => {
     const {text, route, subMenu} = linkData;
-    let navLink;
     const link = <Link className="navbar-link" to={route}>{text}</Link>;
+    let navLink;
 
     if(subMenu) {
         navLink = (
@@ -21,15 +21,13 @@ export const NavPageLink = ({linkData}) => {
                 })}
             </ul>
         );
-
-        
     } else {
         navLink = link;
     }
 
     return (
-        <span>
+        <li>
             {navLink}
-        </span>
+        </li>
     );
 }
