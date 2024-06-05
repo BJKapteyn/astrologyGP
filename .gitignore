@@ -87,3 +87,5 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/react,windows,visualstudiocode
+.firebase/hosting.cHVibGlj.cache
+.firebase/hosting.YnVpbGQ.cache
