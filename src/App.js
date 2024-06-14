@@ -18,7 +18,7 @@ function App() {
           <Route path="/Readers" element={<ReadersPage />}></Route>
           <Route path="/News" element={<NewsPage />}></Route>
           <Route path="/WhyVibe" element={<WhyVibePage />}></Route>
-          <Route path="/Offerings" element={<Offerings url={"http://localhost:7186/api/getitems"} />}></Route>
+          <Route path="/Offerings" element={<Offerings />}></Route>
         </Route>
       </Routes>
     </div>
