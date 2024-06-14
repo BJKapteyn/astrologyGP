@@ -5,6 +5,7 @@ import ReadersPage from './Pages/ReadersPage.jsx'
 import HomePage from './Pages/HomePage.jsx';
 import NewsPage from './Pages/NewsPage.jsx';
 import WhyVibePage from './Pages/WhyVibePage.jsx';
+import Offerings from './Pages/Offerings.jsx';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/Readers" element={<ReadersPage />}></Route>
           <Route path="/News" element={<NewsPage />}></Route>
           <Route path="/WhyVibe" element={<WhyVibePage />}></Route>
+          <Route path="/Offerings" element={<Offerings url={"http://localhost:7186/api/getitems"} />}></Route>
         </Route>
       </Routes>
     </div>

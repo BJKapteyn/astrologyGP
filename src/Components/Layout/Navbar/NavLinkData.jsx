@@ -20,47 +20,47 @@ export const NavLinkData = [
     },
     {
         id: 4,
-        route: '/',
+        route: '/Offerings',
         text: 'Offerings',
         subMenu: [
             {
                 id: 6,
-                route: '',
+                route: '/Offerings',
                 text: 'Tarot',
             },
             {
                 id: 7,
-                route: '',
+                route: '/Offerings',
                 text: 'Astrology',
             },
             {
                 id: 8,
-                route: '',
+                route: '/Offerings',
                 text: 'Mediumship',
             },
             {
                 id: 9,
-                route: '',
+                route: '/Offerings',
                 text: 'Past Life Regression',
             },
             {
                 id: 10,
-                route: '',
+                route: '/Offerings',
                 text: 'Reiki',
             },
             {
                 id: 11,
-                route: '',
+                route: '/Offerings',
                 text: 'Human Design',
             },
             {
                 id: 12,
-                route: '',
+                route: '/Offerings',
                 text: 'Sound Healing',
             },
             {
                 id: 13,
-                route: '',
+                route: '/Offerings',
                 text: 'Kundalini Yoga',
             },
         ]
