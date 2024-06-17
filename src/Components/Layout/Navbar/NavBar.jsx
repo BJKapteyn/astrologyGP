@@ -27,16 +27,16 @@ export const NavBar = () => {
             </ul>
             <div className="navbar-social-flex">
                 <div className="navbar-social">
-                    <img src={instagram} alt="" />
+                    <img src={instagram} alt="istagram logo" />
                 </div>
                 <div className="navbar-social">
-                    <img src={facebook} alt="" />
+                    <img src={facebook} alt="facebook logo" />
                 </div>
                 <div className="navbar-social">
-                    <img src={twitter} alt="" />
+                    <img src={twitter} alt="twitter logo" />
                 </div>
                 <div className="navbar-social">
-                    <img src={tiktok} alt="" />
+                    <img src={tiktok} alt="tiktok logo" />
                 </div>
             </div>
         </nav>
