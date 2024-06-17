@@ -29,6 +29,12 @@
   src: url('./Fonts//QuattrocentoSans-Regular.woff') format('woff');
 }
 
+@font-face {
+  font-family: Futura;
+  src: url('./Fonts/FuturaStdHeavy.ttf');
+  src: url('./Fonts/FuturaStdHeavy.ttf') format('truetype');
+}
+
 html {
   scroll-behavior: smooth;
   scrollbar-width: thin;

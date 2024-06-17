@@ -1,26 +1,32 @@
 .navbar {
+    position: sticky;
     width: 100%;
-    position: fixed;
     margin: auto;
     text-align: center;
     z-index: 50;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: white;
 }
 
 .navbar-link {
-    font-size: 1.4em;
+    font-size: 1.2em;
+    font-family: Futura, sans-serif;
     text-decoration: none;
     text-align: center;
     display: inline-block;
     margin: auto;
-    padding: .5em 1em;
-    color: white;
+    padding: .5em 2em;
+    color: rgb(72,31,75);
 }
 
 .navbar-main-nav {
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
+}
+
+.navbar-logo {
+    height: 100%;
 }
 
 .navbar-submenu {
@@ -28,6 +34,21 @@
     align-items: center;
     padding: 0px;
     flex-direction: column;
+}
+
+.navbar-social-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    top: 0%;
+    right: 5%;
+    border-bottom-color: black;
+}
+
+.navbar-social {
+    height: 100%;
+    width: auto;
 }
 
 .navbar-link:hover {

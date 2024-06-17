@@ -6,7 +6,6 @@ import instagram from '../../../Pics/Logos/instagram-48.png';
 import tiktok from '../../../Pics/Logos/tiktok-48.png';
 import sublogo from '../../../Pics/Logos/sublogo-white.svg'
 
-
 export const Footer = () => {
 
     return (
