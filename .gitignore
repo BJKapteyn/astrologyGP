@@ -10,6 +10,7 @@
 
 # production
 /build
+.env
 
 # misc
 .DS_Store
@@ -86,3 +87,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# End of https://www.toptal.com/developers/gitignore/api/react,windows,visualstudiocode
+.firebase/hosting.cHVibGlj.cache
+.firebase/hosting.YnVpbGQ.cache
