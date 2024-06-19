@@ -1,13 +1,31 @@
-#titleCard-container {
+.titleCard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: rgb(198, 171, 210);
     background-image: url('../../../Pics/Landscapes/moonMountain.png');
-    background-position: center;
+    background-position: 0% 85%;
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 100vh;
-    position: inherit;
+    height: 80vh;
     z-index: 1;
     width: auto;
+}
+
+.titleCard-flexitem {
+    color: rgba(255,255,255,0.8);   
+    margin: 0px;
+    padding: 1em;
+}
+
+#titlecard-title {
+    font-size: 3.6em;
+}
+
+#titlecard-subtext {
+    font-size: 1.5em;
+    font-family: Futura;
+    color: #f1d9ab;
 }
 
 #titleCard-logo {
