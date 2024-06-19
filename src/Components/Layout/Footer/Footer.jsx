@@ -9,14 +9,36 @@ import sublogo from '../../../Pics/Logos/sublogo-white.svg'
 export const Footer = () => {
 
     return (
-        <footer className='footer-container'>
-            <div className="footer-flex-item">
+        <footer className='footer'>
+            <div className="footer-flexrow" id="footer-logo">
+                <img id="footer-image" src={sublogo} alt="Vibe Collective" />
+            </div>
+            <div className="footer-flexrow" id="footer-links">
+                <div className="footer-item">
+                    <p className="footer-itemtext">CONSULTATIONS</p>
+                </div>
+                <div className="footer-item">
+                    <p className="footer-itemtext">ABOUT ME</p>
+                </div>
+                <div className="footer-item">
+                    <a className="footer-itemtext"><p className="footer-itemtext">FAQ</p></a>
+                </div>
+                <div className="footer-item">
+                    <p className="footer-itemtext">UPCOMING EVENTS</p>
+                </div>
+                <div className="footer-item">
+                    <p className="footer-itemtext">BLOG</p>
+                </div>
+                <div className='footer-item'>
+                    <p className="footer-itemtext">CONNECT</p>
+                </div>
+            </div>
+            <div className="footer-flexrow" id="footer-socials">
                 <div className="footer-social">
                     <img src={twitter} alt="twitter" />
                 </div>
                 <div className="footer-social">
                     <img src={facebook} alt="facebook" />
-
                 </div>
                 <div className="footer-social">
                     <img src={instagram} alt="instagram" />
@@ -25,22 +47,8 @@ export const Footer = () => {
                     <img src={tiktok} alt="tiktok" />
                 </div>
             </div>
-            <div className="footer-companyinfo footer-flex-item">
-                <div id='footer-top-item' className='footer-item'>
-                    <p className="footer-itemtext">The Vibe Collective</p>
-                </div>
-                <div className='footer-item'>
-                    <p className="footer-itemtext">Copyright 2023</p>
-                </div>
-                <div className='footer-item'>
-                    <a className="footer-itemtext" href='tel:5554412345'><p className="footer-itemtext">Phone</p></a>
-                </div>
-                <div className='footer-item'>
-                    <p className="footer-itemtext">Email</p>
-                </div>
-            </div>
-            <div className="footer-flex-item" id="footer-logo">
-                <img src={sublogo} alt="Vibe Collective" />
+            <div className="footer-flexrow" id="footer-rights">
+                <p className="footer-itemtext">THE VIBE COLLECTIVE 2024</p>
             </div>
         </footer>
     )
