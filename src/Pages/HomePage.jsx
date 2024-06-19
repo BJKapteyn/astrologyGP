@@ -13,12 +13,12 @@ export default function HomePage() {
         <div className="scroll-snap">
             <TitleCard></TitleCard>
             <InfoCard></InfoCard>
-            <JoinUs></JoinUs>
             <NewsCardSection></NewsCardSection>
             <AboutSection></AboutSection>
             <RecruitSection></RecruitSection>
             <Book></Book>
             <Testimonials></Testimonials>
+            <JoinUs></JoinUs>
         </div>
     )
 }
