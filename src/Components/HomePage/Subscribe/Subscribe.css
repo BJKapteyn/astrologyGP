@@ -1,29 +1,29 @@
-.joinus-signupcontainer {
+.subscribe-signupcontainer {
     height: auto;
 }
 
-.joinus-description {
+.subscribe-description {
     font-size: 1.5em;
     padding: 0em 1em;
     margin-bottom: 0px;
     font-weight: bold;
 }
 
-.joinus-descriptiontext {
+.subscribe-descriptiontext {
     color: var(--main-color);
 }
 
-#joinus-signuptext {
+#subscribe-signuptext {
     text-align: center;
 }
 
-.joinus {
+.subscribe {
     width: 100%;
     background-color: var(--main-accent-color);
     padding: 5em 0em;
 }
 
-.joinus-header {
+.subscribe-header {
     height: 15em;
     width: 100%;
     position: relative;
@@ -32,17 +32,17 @@
     margin: auto;
 }
 
-.joinus-headerimage, .joinus-headertext {
+.subscribe-headerimage, .subscribe-headertext {
     position: absolute;
 }
-.joinus-headerimage {
+.subscribe-headerimage {
     width: 100%;
     top: -80%;
     right: 0%;
     z-index: 5;
 }
 
-.joinus-headertext {
+.subscribe-headertext {
     top: 25%;
     height: 1em;
     margin: 0em;
@@ -51,48 +51,49 @@
     width: 100%;
 }
 
-.joinus-flex {
+.subscribe-flex {
     display: flex;
     justify-content: center;
     width: 80%;
     margin: auto;
 }
 
-.joinus-flexitem {
+.subscribe-flexitem {
     text-align: center;
     width: 100%;
 }
 
-.joinus-newsletter {
+.subscribe-newsletter {
     font-size: 3em;
     color: var(--main-color);
+    margin-top: 0px;
 }
 
-.joinus-scheduleheader{
+.subscribe-scheduleheader{
     color: var(--main-color), rgb(72,31,75);
 }
 
-.joinus-schedulebody {
+.subscribe-schedulebody {
     color: rgb(138, 164, 194);
     font-weight: bold;
     font-size: 2em;
 }
 
-.joinus-button {
+.subscribe-button {
     margin: 3em auto 0em auto;
 }
 
-#joinus-subscribebutton {
+#subscribe-subscribebutton {
     display: inline-block;
     background-color: var(--main-color);
     color: white;
 }
 
-#joinus-subscribebutton:hover {
+#subscribe-subscribebutton:hover {
     background-color: var(--secondary-orange);
 }
 
-#joinus-subscribebutton, .joinus-textinput {
+#subscribe-subscribebutton, .subscribe-textinput {
     height: 2.5em;
     font-size: 1em;
     padding: 0em 1em;
@@ -100,7 +101,7 @@
     border: none;
 }
 
-.joinus-textinput {
+.subscribe-textinput {
     width: 30em;
     border-radius: 0px;
 }

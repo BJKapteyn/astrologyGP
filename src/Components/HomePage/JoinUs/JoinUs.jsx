@@ -5,14 +5,11 @@ import './JoinUs.css';
 
 export const JoinUs = () => {
 
-    const actionButtonSettings = {
-        buttonText: 'Book Now',
-        action: () => {}
-    }
-    const subscribeButtonSettings = {
-        buttonText: 'Subscribe',
-        action: () => {}
-    }
+    // const subscribeButtonSettings = {
+    //     buttonText: 'Subscribe',
+    //     buttonStyleId: 'joinus-subscribebutton',
+    //     action: () => {}
+    // }
 
     return (
         <section className="joinus">
@@ -30,16 +27,21 @@ export const JoinUs = () => {
                         <Link to={'/Readers'}><ActionButton buttonSettings={actionButtonSettings}></ActionButton></Link>
                     </div>
                 </div> */}
-                <div className="joinus-flexitem">
+                {/* <div className="joinus-flexitem">
                     <h3 className="joinus-newsletter">MONTHLY VIBE CHECK</h3>
                     <div className="joinus-signupcontainer">
-                        <h4 className="joinus-description">Subscribe to our monthly newsletter:</h4>
-                        <input type="text" className="textinput" id="submitemail" placeholder="Enter Your Email..."></input>
+                        <div className="joinus-subscribe-text">
+                            <h4 className="joinus-description">Subscribe to our monthly newsletter:</h4>
+                            <p className="joinus-descriptiontext">Be the first to learn about classes, special offers, and events</p>
+                        </div>
                         <div className="joinus-button">
+                            <input type="text" className="joinus-textinput" id="submitemail" placeholder="Enter Your Email..."></input>
+                            
                             <ActionButton  buttonSettings={subscribeButtonSettings}></ActionButton>
+
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     );

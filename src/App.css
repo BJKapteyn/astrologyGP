@@ -9,6 +9,8 @@
 :root {
   --main-color: rgb(72,31,75);
   --main-accent-color: rgb(198, 171, 210);
+  --text-color-grey: rgb(55, 55, 55);
+  --secondary-orange: rgb(241, 199, 97);
 }
 
 @font-face {
@@ -65,20 +67,16 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: var(--main-color);
+  font-family: bivoac-regular, Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
-h2, h3, h4, span, a, button p {
-  font-family: bivoac-regular, Arial, Helvetica, sans-serif;
-}
-
-h2, h3 {
-  color: rgb(198, 171, 210);
+button {
+  color: var(--main-color);
 }
 
 h1 {
-  color: rgb(72,31,75);
-  font-family: Busorama-ITC-Std-Bold, Arial, Helvetica, sans-serif;
   font-size: 6em;
   margin: 3% 0%;
 }
@@ -100,14 +98,6 @@ h3 {
 .title-container {
   height: 10%;
   text-align: center;
-}
-
-input.textinput {
-  width: 50%;
-  height: 2em;
-  font-size: 2em;
-  padding: .2em .5em;
-  margin: .5em;
 }
 
 ::placeholder {
