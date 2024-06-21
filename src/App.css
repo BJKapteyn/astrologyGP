@@ -11,6 +11,7 @@
   --main-accent-color: rgb(198, 171, 210);
   --text-color-grey: rgb(55, 55, 55);
   --secondary-orange: rgb(241, 199, 97);
+  --white-seethrough: rgba(255,255,255,0.8);
 }
 
 @font-face {
@@ -34,8 +35,8 @@
 
 @font-face {
   font-family: Futura;
-  src: url('./Fonts/FuturaStdHeavy.ttf');
-  src: url('./Fonts/FuturaStdHeavy.ttf') format('truetype');
+  src: url('./Fonts/FuturaStdBook.ttf');
+  src: url('./Fonts/FuturaStdBook.ttf') format('truetype');
 }
 
 html {
@@ -59,7 +60,7 @@ p {
   margin: 0;
   font-weight: bold;
   color: rgb(55, 55, 55);
-  letter-spacing: .06em;
+  letter-spacing: .01em;
 }
 
 a {
