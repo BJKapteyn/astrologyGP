@@ -7,11 +7,15 @@
 }
 
 .divider-text { 
-    font-family: Futura;
+    font-family: bivoac-regular;
     font-size: 2em;
     padding: 1em 0em;
 }
 
-.divider-bivoac {
-    font-family: bivoac-regular;
+.divider-futura {
+    font-family: Futura;
+}
+
+.divider-textglow {
+    text-shadow: 0 0 30px var(--secondary-orange);
 }

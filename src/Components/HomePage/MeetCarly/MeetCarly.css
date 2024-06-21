@@ -1,0 +1,30 @@
+.meet-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.meet-flexitem {
+    width: 50%;
+}
+
+.meet-morebutton {
+    border: .1em solid;
+    border-color: white;
+    color: white;
+    padding: .1em 2em;
+    margin: 1em;
+    border-radius: .5em;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    -ms-border-radius: .5em;
+    -o-border-radius: .5em;
+}
+
+.meet-video {
+    width: 90%;
+    height: 90%;
+}
