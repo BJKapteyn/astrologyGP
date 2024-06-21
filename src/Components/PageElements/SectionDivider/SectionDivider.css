@@ -1,5 +1,17 @@
 .divider {
     width: 100%;
     display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.divider-text { 
+    font-family: Futura;
+    font-size: 2em;
+    padding: 1em 0em;
+}
+
+.divider-bivoac {
+    font-family: bivoac-regular;
 }

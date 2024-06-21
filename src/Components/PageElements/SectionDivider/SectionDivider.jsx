@@ -1,8 +1,16 @@
-export const SectionDivider = ({text}) => {
+import '../../../App.css';
+import './SectionDivider.css';
+
+export const SectionDivider = ({textData, styleId}) => {
+
 
     return (
         <section className="divider">
-            <h1 className="divider-text">{text}</h1>
+            {textData.map(text => {
+                return (
+                    <h1 id={styleId} key={text} className="divider-text">{text}</h1>
+                );
+            })}
         </section>
     );
 }

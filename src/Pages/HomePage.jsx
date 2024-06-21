@@ -9,13 +9,14 @@ import { Book } from '../Components/HomePage/Book/Book.jsx';
 import { SectionDivider } from '../Components/PageElements/SectionDivider/SectionDivider.jsx';
 
 export default function HomePage() {
+    const titleDividerData = ['TAROT READINGS', 'ASTROLOGY', 'MEDIUMSHIP'];
+    const futuraStyle = 'divider-futura'
 
     return (
         <div className="scroll-snap">
             <TitleCard></TitleCard>
-            <SectionDivider textData={['tarot readings', 'astrology', 'mediumship']} />
+            <SectionDivider textData={titleDividerData} styleId={futuraStyle}/>
             <JoinUs></JoinUs>
-            {/* <InfoCard></InfoCard> */}
             <NewsCardSection></NewsCardSection>
             <AboutSection></AboutSection>
             <RecruitSection></RecruitSection>
