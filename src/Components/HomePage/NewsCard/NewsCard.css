@@ -16,7 +16,6 @@
           
 .newscard {
   height: 24em;
-  width: 80%;
   display: flex;
   margin: 5% auto;
 }
@@ -49,6 +48,11 @@
   top: -70%;
 }
 
+.newscard-text, .newscard-text-title {
+  text-align: left;
+  padding: 5%;
+}
+
 .newscard-crop {
   padding: 0%;
   margin: 3%;
@@ -63,7 +67,7 @@
   scrollbar-width: none;
 } 
 .newscard-text-title {
-  padding-top: .5em;
+  padding-bottom: 0px;
   font-size: 2em;
   margin: 0px;
 }
@@ -72,11 +76,10 @@
   margin: auto;
 }
 .newscard-text {
-  text-align: center;
-  cursor: n-resize;
   font-size: 1.4em;
-  padding: 5%;
+  color: var(--main-color);
   height: 100%;
+
 }
 
 .newscard-more-container {

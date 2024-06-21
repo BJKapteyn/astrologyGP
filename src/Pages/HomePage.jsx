@@ -14,7 +14,7 @@ export default function HomePage() {
         <div className="scroll-snap">
             <TitleCard></TitleCard>
             <JoinUs></JoinUs>
-            <InfoCard></InfoCard>
+            {/* <InfoCard></InfoCard> */}
             <NewsCardSection></NewsCardSection>
             <AboutSection></AboutSection>
             <RecruitSection></RecruitSection>
