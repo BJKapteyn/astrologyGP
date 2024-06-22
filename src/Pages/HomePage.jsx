@@ -1,5 +1,6 @@
-import {titleDividerData} from './data/titleDividerData.jsx';
+import { titleDividerData } from './data/titleDividerData.jsx';
 import { meetCarlyDividerData } from './data/meetCarlyDividerData.jsx';
+import { offeringsDividerData } from './data/offeringsDividerData.jsx';
 import { SectionDivider } from '../Components/PageElements/SectionDivider/SectionDivider.jsx';
 import { TitleCard } from '../Components/HomePage/TitleCard/TitleCard.jsx';
 import { JoinUs } from '../Components/HomePage/JoinUs/JoinUs.jsx';
@@ -19,7 +20,9 @@ export default function HomePage() {
             <MeetCarly></MeetCarly>
             <SectionDivider dividerData={meetCarlyDividerData}></SectionDivider>
             <NewsCardSection></NewsCardSection>
+            <SectionDivider dividerData={offeringsDividerData}></SectionDivider>
             <RecruitSection></RecruitSection>
+            
             <Testimonials></Testimonials>
             <Subscribe></Subscribe>
         </div>

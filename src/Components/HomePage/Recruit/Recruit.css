@@ -1,3 +1,7 @@
+.recruit-section {
+    padding-bottom: 5em;
+}
+
 .recruit-flex {
     display: flex;
     width: 80%;
@@ -8,18 +12,15 @@
 
 .recruit-title {
     font-size: 2em;
+    margin-top: 0px;
 }
 
 .recruit-flexbox {
     width: 30%;
-    margin: 1% 0%;
 }
 
 .recruit-title-container, .recruit-text-container, .recruit-flexbox {
     text-align: center;
-}
-.recruit-title-container {
-    margin: 2em auto;
 }
 
 .recruit-text-container {

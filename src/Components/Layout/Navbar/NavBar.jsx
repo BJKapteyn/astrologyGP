@@ -1,9 +1,9 @@
 import yellowLogo from '../../../Pics/Logos/MainLogoYellow.svg';
 import { NavPageLink } from "./NavPageLink";
-import facebook from '../../../Pics/Logos/facebook.svg';
-import twitter from '../../../Pics/Logos/twitter.svg';
-import instagram from '../../../Pics/Logos/instagram.svg';
-import tiktok from '../../../Pics/Logos/tiktok.svg';
+import facebook from '../../../Pics/Logos/facebook_grey.svg';
+import twitter from '../../../Pics/Logos/twitter_grey.svg';
+import instagram from '../../../Pics/Logos/instagram_grey.svg';
+import tiktok from '../../../Pics/Logos/tiktok_grey.svg';
 import '../../../App.css'
 import './NavBar.css';
 import '../../../App.css'
@@ -23,16 +23,16 @@ export const NavBar = () => {
             </ul>
             <div className="navbar-social-flex">
                 <div className="navbar-social">
-                    <img src={instagram} alt="instagram logo" />
+                    <img className="navbar-socialimage" src={instagram} alt="instagram logo" />
                 </div>
                 <div className="navbar-social">
-                    <img src={facebook} alt="facebook logo" />
+                    <img className="navbar-socialimage" src={facebook} alt="facebook logo" />
                 </div>
                 <div className="navbar-social">
-                    <img src={twitter} alt="twitter logo" />
+                    <img className="navbar-socialimage" src={twitter} alt="twitter logo" />
                 </div>
                 <div className="navbar-social">
-                    <img src={tiktok} alt="tiktok logo" />
+                    <img className="navbar-socialimage" src={tiktok} alt="tiktok logo" />
                 </div>
             </div>
         </nav>

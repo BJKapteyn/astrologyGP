@@ -1,8 +1,6 @@
 import { ActionButton } from '../../PageElements/ActionButton/ActionButton';
 import './MeetCarly.css';
 
-
-
 export const MeetCarly = () => {
     const buttonSettings = {
         buttonText: 'LEARN MORE',
@@ -27,7 +25,9 @@ export const MeetCarly = () => {
                                         careers within a dynamic and inclusive ecosystem. We're
                                         committed to fostering growth, embracing collaboration and
                                         achieving harmonious work-life balance.</p>
+
                 <ActionButton buttonSettings={buttonSettings}></ActionButton>
+
             </div>
         </section>
     );
