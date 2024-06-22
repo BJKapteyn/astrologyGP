@@ -25,6 +25,9 @@
     flex-wrap: nowrap;
 }
 
+.navbar-logo-container {
+    width: 15em;
+}
 .navbar-logo {
     height: 100%;
 }
@@ -43,12 +46,21 @@
     position: absolute;
     top: 0%;
     right: 5%;
-    border-bottom-color: black;
+    border-bottom: .1em solid rgba(95, 79, 80, .1);
 }
 
 .navbar-social {
     height: 100%;
     width: auto;
+    padding: 0em .5em;
+}
+
+.navbar-social:hover {
+    cursor: pointer;
+}
+
+.navbar-socialimage {
+    width: 1.5em;
 }
 
 .navbar-link:hover {
