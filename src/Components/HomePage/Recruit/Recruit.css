@@ -23,7 +23,7 @@
 }
 
 .recruit-text-container {
-    height: 15em;
+    min-height: 18em;
     padding: 1em;
 }
 .recruit-text {
