@@ -25,6 +25,9 @@
     flex-wrap: nowrap;
 }
 
+.navbar-logo-container {
+    width: 15em;
+}
 .navbar-logo {
     height: 100%;
 }

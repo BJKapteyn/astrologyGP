@@ -1,4 +1,4 @@
-import yellowLogo from '../../../Pics/Logos/MainLogoYellow.png';
+import yellowLogo from '../../../Pics/Logos/MainLogoYellow.svg';
 import { NavPageLink } from "./NavPageLink";
 import facebook from '../../../Pics/Logos/facebook.svg';
 import twitter from '../../../Pics/Logos/twitter.svg';
@@ -15,19 +15,15 @@ export const NavBar = () => {
             <ul className="navbar-main-nav">
                 <NavPageLink linkData={{text: 'HOME', route: '/', submenu: null}} />
                 <NavPageLink linkData={{text: 'WORK WITH US', route: '/Readers', submenu: null}} />
-                <img alt='Yellow main logo' src={yellowLogo} className="navbar-logo" />
+                <li className="navbar-logo-container">
+                    <img alt='Yellow main logo' src={yellowLogo} className="navbar-logo" />
+                </li>
                 <NavPageLink linkData={{text: 'OFFERINGS', route: '/', submenu: null}} />
                 <NavPageLink linkData={{text: 'CURRENT VIBE', route: '/News', submenu: null}} />
-                {/* {NavLinkData.map((linkDatas) => {
-
-                    return (
-                        <NavPageLink key={linkDatas.id} linkData={linkDatas}></NavPageLink>
-                    );
-                })} */}
             </ul>
             <div className="navbar-social-flex">
                 <div className="navbar-social">
-                    <img src={instagram} alt="istagram logo" />
+                    <img src={instagram} alt="instagram logo" />
                 </div>
                 <div className="navbar-social">
                     <img src={facebook} alt="facebook logo" />
