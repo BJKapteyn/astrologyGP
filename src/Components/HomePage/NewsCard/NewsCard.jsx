@@ -5,8 +5,9 @@ export const NewsCard = ({newsCardData}) => {
         console.debug('News card data is null');
     }
     
-    const imagePath = require('../../../Pics/Portraits/' + newsCardData.image)
+    const imagePath = require('../../../Pics/' + newsCardData.image);
     const imageId = 'newscard-image' + newsCardData.id;
+
     const imageAndContainer = (
         <div className="newscard-image-container">
             <img id={imageId} src={imagePath} alt={newsCardData.id} className="newscard-image" />

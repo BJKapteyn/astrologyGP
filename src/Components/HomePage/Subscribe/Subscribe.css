@@ -1,0 +1,121 @@
+.subscribe-signupcontainer {
+    height: auto;
+}
+
+.subscribe-description {
+    font-size: 1.5em;
+    padding: 0em 1em;
+    margin-bottom: 0em;
+    font-weight: bold;
+}
+
+.subscribe-descriptiontext {
+    color: var(--main-color);
+}
+
+#subscribe-signuptext {
+    text-align: center;
+}
+
+.subscribe {
+    width: 100%;
+    background-color: var(--main-accent-color);
+    padding: 5em 0em;
+}
+
+.subscribe-header {
+    height: 15em;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    margin: auto;
+}
+
+.subscribe-headerimage, .subscribe-headertext {
+    position: absolute;
+}
+.subscribe-headerimage {
+    width: 100%;
+    top: -80%;
+    right: 0%;
+    z-index: 5;
+}
+
+.subscribe-headertext {
+    top: 25%;
+    height: 1em;
+    margin: 0em;
+    color: white;
+    z-index: 6;
+    width: 100%;
+}
+
+.subscribe-flex {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+.subscribe-flexitem {
+    text-align: center;
+    width: 100%;
+}
+
+.subscribe-newsletter {
+    font-size: 3em;
+    color: var(--main-color);
+    margin-top: 0em;
+}
+
+.subscribe-scheduleheader{
+    color: var(--main-color), rgb(72,31,75);
+}
+
+.subscribe-schedulebody {
+    color: rgb(138, 164, 194);
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.subscribe-button {
+    margin: 3em auto 0em auto;
+}
+
+#subscribe-subscribebutton {
+    display: inline-block;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 0em;
+    -webkit-border-radius: 0em;
+    -moz-border-radius: 0em;
+    -ms-border-radius: 0em;
+    -o-border-radius: 0em;
+}
+
+#subscribe-subscribebutton:hover {
+    background-color: var(--secondary-orange);
+}
+
+#subscribe-subscribebutton, .subscribe-textinput {
+    height: 2.5em;
+    font-size: 1em;
+    padding: 0em 1em;
+    font-family: Futura, Arial, Helvetica, sans-serif;
+    border: none;
+}
+
+.subscribe-textinput {
+    width: 30em;
+    border-radius: 0em;
+    -webkit-border-radius: 0em;
+    -moz-border-radius: 0em;
+    -ms-border-radius: 0em;
+    -o-border-radius: 0em;
+}
+
+.subscribe-subtext {
+    padding: 1em 0em;
+    font-size: 1em;
+}

@@ -1,8 +1,8 @@
 import './ActionButton.css';
 
 export const ActionButton = ({buttonSettings = {}}) => {
-    const {buttonText, buttonStyleId, textStyleId, action, href} = buttonSettings;
-
+    const {buttonText, buttonStyleId, action } = buttonSettings;
+    
     // Override the default button behavior
     const actionButtonWrapper = (event, buttonAction) => {
         if(buttonAction) {
@@ -18,7 +18,7 @@ export const ActionButton = ({buttonSettings = {}}) => {
             id={buttonStyleId ?? ''}
             onClick={(event) => { action ?? actionButtonWrapper(event, action) }}
             className="actionbutton-container">
-            <p id={textStyleId ?? ''} className="actionbutton-text">{buttonText}</p>
+            {buttonText}
         </button>
     );
 } 

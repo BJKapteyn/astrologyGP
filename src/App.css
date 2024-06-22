@@ -6,15 +6,19 @@
   accent 3 - light pink                 rgb(253, 229, 183)
   accent 4 - light orange               rgb(241, 199, 97)
 */
-/* :root {
-
-} */
+:root {
+  --main-color: rgb(72, 31, 75);
+  --main-accent-color: rgb(198, 171, 210);
+  --text-color-grey: rgb(55, 55, 55);
+  --secondary-orange: rgb(241, 199, 97);
+  --white-seethrough: rgba(255, 255, 255, 0.8);
+}
 
 @font-face {
   font-family: bivoac-regular;
   src: url('./Fonts/Bivoac Reguler.woff');
   src: url('./Fonts/Bivoac Reguler.woff') format('woff'),
-       url('./Fonts/Bivoac Reguler.otf') format('opentype')
+    url('./Fonts/Bivoac Reguler.otf') format('opentype')
 }
 
 @font-face {
@@ -29,10 +33,16 @@
   src: url('./Fonts//QuattrocentoSans-Regular.woff') format('woff');
 }
 
+@font-face {
+  font-family: Futura;
+  src: url('./Fonts/FuturaStdBook.ttf');
+  src: url('./Fonts/FuturaStdBook.ttf') format('truetype');
+}
+
 html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: rgb(72,31,75) rgb(183, 200, 219);
+  scrollbar-color: rgb(72, 31, 75) rgb(183, 200, 219);
 }
 
 body {
@@ -40,44 +50,48 @@ body {
   margin: 0;
 }
 
-ul, li {
+ul,
+li {
   list-style-type: none;
 }
 
 p {
-  font-family: QuattrocentoSans, Geneva, Tahoma, sans-serif;
+  font-family: Futura, Geneva, Tahoma, sans-serif;
   font-size: 1.5em;
   margin: 0;
   font-weight: bold;
-  color: rgb(55, 55, 55);
-  letter-spacing: .06em;
+  color: var(--main-color);
+  letter-spacing: .01em;
 }
 
 a {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--main-color);
+  font-family: bivoac-regular, Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
-h2, h3, h4, span, a, button p {
-  font-family: futura, Arial, Helvetica, sans-serif;
-}
-
-h2, h3 {
-  color: rgb(198, 171, 210);
+button {
+  color: var(--main-color);
 }
 
 h1 {
-  color: rgb(72,31,75);
-  font-family: Busorama-ITC-Std-Bold, Arial, Helvetica, sans-serif;
   font-size: 6em;
   margin: 3% 0%;
 }
+
 h2 {
   font-size: 4em;
 }
+
 h3 {
   font-size: 2.5em;
 }
@@ -95,30 +109,37 @@ h3 {
   text-align: center;
 }
 
-input.textinput {
-  width: 50%;
-  height: 2em;
-  font-size: 2em;
-  padding: .2em .5em;
-  margin: .5em;
-}
-
 ::placeholder {
   color: rgb(211, 211, 211);
 }
 
 /*                        Animations         */
 @keyframes fadeIn {
-  from {opacity: 0}
-  to {opacity: .90}
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: .90
+  }
 }
 
 @keyframes modalBackgroundFadeIn {
-  from{opacity: 0}
-  to {opacity: .8}
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: .8
+  }
 }
 
 @keyframes modalBackgroundFadeOut {
-  from {opacity: .8}
-  to {opacity: 0}
+  from {
+    opacity: .8
+  }
+
+  to {
+    opacity: 0
+  }
 }

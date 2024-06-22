@@ -1,13 +1,14 @@
-import './TitleCard.css';
 import '../../../App.css';
+import './TitleCard.css';
 import logo  from '../../../Pics/Logos/MainLogoTitle.svg'
 
 export function TitleCard() {
 
     return (
         <div>
-            <section id='titleCard-container'>
-                <img id='titleCard-logo' alt='main logo' src={logo} />
+            <section className="titleCard-container">
+                <h2 className="titleCard-flexitem" id="titlecard-title">Metaphysical Services for Personal Wellbeing</h2>
+                <h4 className="titleCard-flexitem" id="titlecard-subtext">THE COLLECTIVE THAT SUPPORTS YOUR ABUNDANT LIFE </h4>
             </section>
         </div>
     );
