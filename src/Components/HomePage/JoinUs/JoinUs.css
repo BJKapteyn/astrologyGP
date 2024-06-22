@@ -1,81 +1,45 @@
-.joinus-signupcontainer {
-    height: 10em;
-}
-
-.joinus-description {
-    font-size: 1.5em;
-    padding: 0em 1em;
-    height: auto;    
-    font-weight: bold;
-    color: rgb(138, 164, 194);
-}
-
-#joinus-signuptext {
-    text-align: center;
-}
-
-.joinus {
-    width: 100%;
-    margin: auto;
-    height: auto;
-}
-
-.joinus-header {
-    height: 15em;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    margin: auto;
-}
-
-.joinus-headerimage, .joinus-headertext {
-    position: absolute;
-}
-.joinus-headerimage {
-    width: 100%;
-    top: -80%;
-    right: 0%;
-    z-index: 5;
-}
-.joinus-headertext {
-    top: 25%;
-    height: 1em;
-    margin: 0em;
-    color: white;
-    z-index: 6;
-    width: 100%;
+#joinus {
+    background-image: url('../../../Pics/Landscapes/groupYoga.png');
+    height: 80vh;
+    min-height: 400px;
+    background-position-y: 30%;
 }
 
 .joinus-flex {
     display: flex;
-    width: 80%;
-    margin: auto;
-
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
 }
 
 .joinus-flexitem {
-    text-align: center;
     width: 50%;
 }
 
-.joinus-newsletter {
-    font-size: 3em;
+.joinus-lefttext {
+    color: var(--white-seethrough);
+    text-align: left;
+    width: 80%;
+    margin: auto;
 }
 
-.joinus-scheduleheader{
-    color: rgb(72,31,75);
+#joinus-text {
+    color: white;
 }
 
-.joinus-schedulebody {
-    color: rgb(138, 164, 194);
-    font-weight: bold;
-    font-size: 2em;
+#joinus-joinbutton {
+    border: .1em solid;
+    border-color: white;
+    color: white;
+    padding: .1em 2em;
+    margin: 1em;
+    border-radius: .5em;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    -ms-border-radius: .5em;
+    -o-border-radius: .5em;
 }
 
-.joinus-button {
-    margin: 3em auto 0em auto;
-}
-.joinus-button * p {
-    width: 8em;
+#joinus-joinbutton:hover {
+    border-color: var(--secondary-orange);
 }

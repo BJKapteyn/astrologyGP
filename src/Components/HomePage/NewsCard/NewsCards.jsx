@@ -1,5 +1,6 @@
 import { NewsCardData } from "./NewsCardData";
 import { NewsCard } from "./NewsCard";
+import '../../../App.css';
 import './NewsCard.css';
 
 export const NewsCards = ({numberOfCards}) => {

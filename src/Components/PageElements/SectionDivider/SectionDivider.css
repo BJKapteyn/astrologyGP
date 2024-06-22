@@ -1,0 +1,22 @@
+.divider {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.divider-text { 
+    font-family: bivoac-regular;
+    font-size: 2.6em;
+    padding: .7em 0em;
+}
+
+.divider-futura {
+    font-family: Futura;
+    font-size: 2em;
+}
+
+.divider-textglow {
+    text-shadow: 0 0 30px var(--secondary-orange);
+}
