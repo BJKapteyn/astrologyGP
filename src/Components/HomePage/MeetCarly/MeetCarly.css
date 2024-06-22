@@ -4,27 +4,41 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    padding-top: 5em;
     height: 80vh;
+    min-height: 500px;
 }
 
 .meet-flexitem {
     width: 50%;
+    height: 100%;
 }
 
-.meet-morebutton {
-    border: .1em solid;
-    border-color: white;
-    color: white;
-    padding: .1em 2em;
-    margin: 1em;
-    border-radius: .5em;
-    -webkit-border-radius: .5em;
-    -moz-border-radius: .5em;
-    -ms-border-radius: .5em;
-    -o-border-radius: .5em;
+#meet-morebutton {
+    margin-left: 1em;
+    width: fit-content;
 }
 
 .meet-video {
+    display: block;
     width: 90%;
-    height: 90%;
+    height: 100%;
+    margin: auto
+}
+
+.meet-heading, .meet-text, .meet-morebutton {
+    margin: 1em 0em;
+}
+
+.meet-heading {
+    padding-bottom: 0px;
+    font-size: 2em;
+    margin: 0px;
+    text-align: left;
+}
+
+#meet-textflex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

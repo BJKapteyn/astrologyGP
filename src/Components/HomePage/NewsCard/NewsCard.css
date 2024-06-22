@@ -11,13 +11,12 @@
   overflow: auto;
   overflow-y: hidden;
   height: auto;
-  margin-top: 3%;
 }
           
 .newscard {
   height: 24em;
   display: flex;
-  margin: 5% auto;
+  margin: 0em 0em 2em 0em;
 }
 .newscards {
   margin: 0%;
@@ -35,17 +34,6 @@
 .newscard-image {
   width: 100%;
   position: relative;
-}
-
-#newscard-image2 {
-  position: relative;
-  top: -50%;
-}
-
-
-#newscard-image3 {
-  position: relative;
-  top: -70%;
 }
 
 .newscard-text, .newscard-text-title {
@@ -79,7 +67,6 @@
   font-size: 1.4em;
   color: var(--main-color);
   height: 100%;
-
 }
 
 .newscard-more-container {

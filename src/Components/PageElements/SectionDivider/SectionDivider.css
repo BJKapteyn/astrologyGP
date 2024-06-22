@@ -8,12 +8,13 @@
 
 .divider-text { 
     font-family: bivoac-regular;
-    font-size: 2em;
+    font-size: 2.6em;
     padding: 1em 0em;
 }
 
 .divider-futura {
     font-family: Futura;
+    font-size: 2em;
 }
 
 .divider-textglow {

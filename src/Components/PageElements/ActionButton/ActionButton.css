@@ -8,13 +8,17 @@
 */
 
 .actionbutton-container {
-    width: auto;
-    height: auto;
     display: inline-block;
     font-size: 1.5em;
+    padding: .1em 2em;
     background-color: rgba(255, 255, 255, 0.0);
     border: .1em solid var(--main-color);
     border-color: var(--main-color);
+    border-radius: .5em;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    -ms-border-radius: .5em;
+    -o-border-radius: .5em;
     transition: background-color 500ms, border-color 500ms;
     -webkit-transition: background-color 500ms, border-color 500ms;
     -moz-transition: background-color 500ms, border-color 500ms;
@@ -27,8 +31,6 @@
     border: .1em solid var(--secondary-orange);
     cursor: pointer;
 }
-
-
 
 .actionbutton-text {
     padding: .5em;  
