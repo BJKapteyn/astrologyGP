@@ -18,7 +18,7 @@ export const NavBar = () => {
                 <li className="navbar-logo-container">
                     <img alt='Yellow main logo' src={yellowLogo} className="navbar-logo" />
                 </li>
-                <NavPageLink linkData={{text: 'OFFERINGS', route: '/', submenu: null}} />
+                <NavPageLink linkData={{text: 'OFFERINGS', route: '/Offerings', submenu: null}} />
                 <NavPageLink linkData={{text: 'CURRENT VIBE', route: '/News', submenu: null}} />
             </ul>
             <div className="navbar-social-flex">
