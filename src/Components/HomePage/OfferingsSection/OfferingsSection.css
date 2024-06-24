@@ -1,0 +1,44 @@
+.offering-section--section {
+    padding-bottom: 5em;
+}
+
+.offering-section--flex {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.offering-section--title {
+    font-size: 2em;
+    margin-top: 0px;
+}
+
+.offering-section--flexbox {
+    width: 30%;
+}
+
+.offering-section--title-container, .offering-section--text-container, .offering-section--flexbox {
+    text-align: center;
+}
+
+.offering-section--text-container {
+    min-height: 18em;
+    padding: 1em;
+}
+.offering-section--text {
+    height: 16em;
+}
+
+
+.offering-section--image-container {
+    width: 100%;
+    height: auto;
+}
+
+.offering-section--image {
+    width: 100%;
+    height: auto;
+}
+
