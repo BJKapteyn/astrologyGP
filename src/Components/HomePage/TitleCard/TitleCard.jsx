@@ -1,6 +1,5 @@
 import '../../../App.css';
 import './TitleCard.css';
-import logo  from '../../../Pics/Logos/MainLogoTitle.svg'
 
 export function TitleCard() {
 

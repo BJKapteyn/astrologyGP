@@ -1,4 +1,3 @@
-import girlsInField from '../../../Pics/Landscapes/girlsInField.png'
 import { ActionButton } from '../../PageElements/ActionButton/ActionButton';
 import './JoinUs.css';
 

@@ -8,7 +8,7 @@ import { MeetCarly } from '../Components/HomePage/MeetCarly/MeetCarly.jsx';
 import { NewsCardSection } from '../Components/HomePage/NewsCard/NewsCardSection.jsx';
 import { Testimonials } from '../Components/HomePage/Testimonials/Testimonials.jsx';
 import { Subscribe } from '../Components/HomePage/Subscribe/Subscribe.jsx';
-import { OfferingSection } from '../Components/HomePage/OfferingsSection/OfferingSection.jsx';
+import { OfferingSection } from '../Components/HomePage/OfferingSection/OfferingSection.jsx';
 
 export default function HomePage() {
 

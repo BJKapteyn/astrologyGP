@@ -17,6 +17,7 @@ export default function Offerings() {
                 .then(data => {
                     if (active)
                         setProductData(data);
+                        setEndpointUrl(url);
                 });
                 
             return productData;
@@ -27,7 +28,7 @@ export default function Offerings() {
         return () => {
             active = false;
         }
-    }, []);
+    });
 
     if(!productData || !Array.isArray(productData)) {
         return <p>loading</p>
