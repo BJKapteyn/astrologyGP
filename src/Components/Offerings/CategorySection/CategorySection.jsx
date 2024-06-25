@@ -23,7 +23,7 @@ export const CategorySection = ({ productData }) => {
         
         setCategories(categoryData);
         setItems(itemData);
-    }, []);
+    }, [productData]);
 
     return (
         <>

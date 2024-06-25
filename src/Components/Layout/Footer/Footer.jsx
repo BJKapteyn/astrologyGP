@@ -21,7 +21,7 @@ export const Footer = () => {
                     <p className="footer-itemtext">ABOUT ME</p>
                 </div>
                 <div className="footer-item">
-                    <a className="footer-itemtext"><p className="footer-itemtext">FAQ</p></a>
+                    <p className="footer-itemtext">FAQ</p>
                 </div>
                 <div className="footer-item">
                     <p className="footer-itemtext">UPCOMING EVENTS</p>
