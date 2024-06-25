@@ -4,33 +4,57 @@
 
 .offering-section-flex {
     display: flex;
-    width: 80%;
     flex-wrap: wrap;
     margin: auto;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .offering-section-title {
     font-size: 2em;
-    margin-top: 0px;
+    padding: 2em 0em;
+    color: white;
 }
 
 .offering-section-flexbox {
-    width: 30%;
+    border: .1em solid #c7b3ce;
+    width: 29%;
+    padding-bottom: 2em;
 }
 
 .offering-section-title-container, .offering-section-text-container, .offering-section-flexbox {
     text-align: center;
 }
 
-.offering-section-text-container {
-    min-height: 18em;
-    padding: 1em;
-}
-.offering-section-text {
-    height: 16em;
+#offering-yogasunrise, 
+#offering-moonmountain, 
+#offering-groupyoga {
+    background-size: cover;
 }
 
+#offering-yogasunrise {
+    background-image: url('../../../Pics/Landscapes/yogaSunrise_dark.jpg');
+}
+
+#offering-moonmountain {
+    background-image: url('../../../Pics/Landscapes/diary_darkened.jpg');
+}
+
+#offering-groupyoga {
+    background-image: url('../../../Pics/Landscapes/girlsInField_dark.jpg');
+    background-position-x: -5em;
+}
+
+.offering-section-title-container {
+    padding: 1em;
+}
+
+.offering-section-text-container {
+    min-height: 7em;
+    padding: 2.5em 1em;
+}
+.offering-section-text {
+    font-size: 1.3em;
+}
 
 .offering-section-image-container {
     width: 100%;
