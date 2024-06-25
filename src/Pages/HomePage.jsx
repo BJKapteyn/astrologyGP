@@ -8,7 +8,7 @@ import { MeetCarly } from '../Components/HomePage/MeetCarly/MeetCarly.jsx';
 import { NewsCardSection } from '../Components/HomePage/NewsCard/NewsCardSection.jsx';
 import { Testimonials } from '../Components/HomePage/Testimonials/Testimonials.jsx';
 import { Subscribe } from '../Components/HomePage/Subscribe/Subscribe.jsx';
-import { RecruitSection } from '../Components/HomePage/Recruit/RecruitSection.jsx';
+import { OfferingSection } from '../Components/HomePage/OfferingsSection/OfferingSection.jsx';
 
 export default function HomePage() {
 
@@ -21,8 +21,7 @@ export default function HomePage() {
             <SectionDivider dividerData={meetCarlyDividerData}></SectionDivider>
             <NewsCardSection></NewsCardSection>
             <SectionDivider dividerData={offeringsDividerData}></SectionDivider>
-            <RecruitSection></RecruitSection>
-            
+            <OfferingSection></OfferingSection>
             <Testimonials></Testimonials>
             <Subscribe></Subscribe>
         </div>
