@@ -1,11 +1,9 @@
 import { ActionButton } from "../../PageElements/ActionButton/ActionButton";
 import '../../../App.css';
-import './OfferingsSection.css';
+import './OfferingSection.css';
 
 export const OfferingItem = ({offeringItemData}) => {
-    const {style, title, text, image} = offeringItemData;
-
-    const imageSource = image ? require('../../../Pics/Landscapes/' + image) : null;
+    const {style, title, text} = offeringItemData;
 
     return (
         <div className="offering-section-flexbox">

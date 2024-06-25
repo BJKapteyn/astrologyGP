@@ -1,6 +1,6 @@
 import { OfferingSectionData } from './OfferingSectionData.jsx';
 import { OfferingItem } from './OfferingItem.jsx';
-import './OfferingsSection.css'
+import './OfferingSection.css'
 
 export const OfferingSection = () =>  {
     
