@@ -1,0 +1,9 @@
+.dividergraphic-container {
+    width: 50em;
+    height: 5em;
+}
+
+.dividergraphic-svgContainer {
+    display: inline-block;
+    height: 1em;
+}

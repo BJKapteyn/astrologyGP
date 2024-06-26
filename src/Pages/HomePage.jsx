@@ -9,12 +9,14 @@ import { NewsCardSection } from '../Components/HomePage/NewsCard/NewsCardSection
 import { Testimonials } from '../Components/HomePage/Testimonials/Testimonials.jsx';
 import { Subscribe } from '../Components/HomePage/Subscribe/Subscribe.jsx';
 import { OfferingSection } from '../Components/HomePage/OfferingSection/OfferingSection.jsx';
+import { DividerGraphic } from '../Components/PageElements/DividerGraphic/DividerGraphic.jsx';
 
 export default function HomePage() {
 
     return (
         <div className="scroll-snap">
             <TitleCard></TitleCard>
+            <DividerGraphic></DividerGraphic>
             <SectionDivider dividerData={titleDividerData} />
             <JoinUs></JoinUs>
             <MeetCarly></MeetCarly>
