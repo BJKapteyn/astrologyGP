@@ -1,9 +1,17 @@
+
 .dividergraphic-container {
-    width: 50em;
-    height: 5em;
+    width: 25%;
 }
 
 .dividergraphic-svgContainer {
     display: inline-block;
-    height: 1em;
+    height: 1.2em;
+}
+
+#dividergraphic-lineContainer {
+    width: 95%;
+}
+
+#dividergraphic-circleContainer {
+    width: 5%;
 }

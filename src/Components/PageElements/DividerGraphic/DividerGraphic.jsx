@@ -1,43 +1,51 @@
-// import rightStemGraphic from '../../../Pics/SvgDrawings/CircleDividerLeft.svg'
 import './DividerGraphic.css';
 
-export const DividerGraphic = () => {
+// Accent graphic for section dividers
+export const DividerGraphic = ({needsFlip = false}) => {
     const circleStyle = {
-        fill: '#f1775b',
+        fill: '#e4ba61',
         fillOpacity: '1',
         stroke:'#f17761',
         strokeWidth: '0.264583',
         strokeOpacity: '1'
     };
+
     const lineStyle = {
-        fill: '#000000',
+        fill: '#ddddce',
         fillOpacity: '1',
-        stroke:'#000000',
-        strokeWidth: '2',
+        stroke:'#ddddce',
+        strokeWidth: '5',
         strokeOpacity: '1',
         strokeDasharray: 'none'
     };
-// "fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.365;stroke-dasharray:none;stroke-opacity:1"
+
+    const line = (
+        <div className="dividergraphic-svgContainer" id="dividergraphic-lineContainer">
+            <svg width="100%" height="100%" viewBox="0 0 212 50" id="svg1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio='none'>
+                <path
+                    style={lineStyle}
+                    d="M 0,24.152477 H 212.84371" />
+            </svg>
+        </div>
+    );
+
+    const circle = (
+        <div className='dividergraphic-svgContainer' id="dividergraphic-circleContainer">
+            <svg width="100%" height="100%" viewBox="0 0 50 55" id="svg1" xmlns="http://www.w3.org/2000/svg">
+                <circle
+                    style={circleStyle}
+                    id="path1"
+                    cx="25"
+                    cy="25"
+                    r="24" />
+            </svg>
+        </div>
+    );
 
     return (
         <div className="dividergraphic-container">
-            <div className="dividergraphic-svgContainer" id="dividergraphic-lineContainer">
-                <svg width="100%" height="100%" viewBox="0 0 212 50" id="svg1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio='none'>
-                    <path
-                        style={lineStyle}
-                        d="M 0,24.152477 H 212.84371" />
-                </svg>
-            </div>
-            <div className='dividergraphic-svgContainer' id="dividergraphic-circleContainer">
-                <svg width="100%" height="100%" viewBox="0 0 50 50" id="svg1" xmlns="http://www.w3.org/2000/svg">
-                    <circle
-                        style={circleStyle}
-                        id="path1"
-                        cx="25.473314"
-                        cy="25.095934"
-                        r="24.341167" />
-                </svg>
-            </div>
+            {needsFlip ? circle : line}
+            {needsFlip ? line : circle}
         </div>
     );
 }

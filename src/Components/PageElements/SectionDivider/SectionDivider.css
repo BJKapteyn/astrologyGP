@@ -3,13 +3,17 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .divider-text { 
     font-family: bivoac-regular;
     font-size: 2.6em;
     padding: .7em 0em;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .divider-futura {
