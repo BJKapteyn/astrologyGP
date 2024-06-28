@@ -16,7 +16,7 @@ export default function HomePage() {
     return (
         <div className="scroll-snap">
             <TitleCard></TitleCard>
-            <TitleDivider dividerData={titleDividerData} />
+            <TitleDivider></TitleDivider>
             <JoinUs></JoinUs>
             <MeetCarly></MeetCarly>
             <SectionDivider dividerData={meetCarlyDividerData}></SectionDivider>

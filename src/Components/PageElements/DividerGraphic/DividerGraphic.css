@@ -1,6 +1,6 @@
 
 .dividergraphic-container {
-    width: 25%;
+    width: 100%;
 }
 
 .dividergraphic-svgContainer {
@@ -15,3 +15,10 @@
 #dividergraphic-circleContainer {
     width: 5%;
 }
+
+#dividergraphic-lineInbetween {
+    width: 47%;
+}
+
+
+

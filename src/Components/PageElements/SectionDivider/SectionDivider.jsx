@@ -6,8 +6,10 @@ import './SectionDivider.css';
 export const SectionDivider = ({dividerData}) => {
 
     return (
-        <section className="divider">
-            <DividerGraphic needsFlip={true} />
+        <div className="divider">
+            <div className="divider-sectionGraphic">
+                <DividerGraphic needsFlip={true}></DividerGraphic>
+            </div>
 
             {dividerData.map(data => {
                 const {id, classname, headingText} = data;
@@ -17,7 +19,9 @@ export const SectionDivider = ({dividerData}) => {
                 );
             })}
 
-            <DividerGraphic />
-        </section>
+            <div className="divider-sectionGraphic">
+                <DividerGraphic></DividerGraphic>
+            </div>
+        </div>
     );
 }
