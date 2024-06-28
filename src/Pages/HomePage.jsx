@@ -2,6 +2,7 @@ import { titleDividerData } from './data/titleDividerData.jsx';
 import { meetCarlyDividerData } from './data/meetCarlyDividerData.jsx';
 import { offeringsDividerData } from './data/offeringsDividerData.jsx';
 import { SectionDivider } from '../Components/PageElements/SectionDivider/SectionDivider.jsx';
+import { TitleDivider } from '../Components/PageElements/SectionDivider/TitleDivider.jsx';
 import { TitleCard } from '../Components/HomePage/TitleCard/TitleCard.jsx';
 import { JoinUs } from '../Components/HomePage/JoinUs/JoinUs.jsx';
 import { MeetCarly } from '../Components/HomePage/MeetCarly/MeetCarly.jsx';
@@ -15,7 +16,7 @@ export default function HomePage() {
     return (
         <div className="scroll-snap">
             <TitleCard></TitleCard>
-            <SectionDivider dividerData={titleDividerData} />
+            <TitleDivider></TitleDivider>
             <JoinUs></JoinUs>
             <MeetCarly></MeetCarly>
             <SectionDivider dividerData={meetCarlyDividerData}></SectionDivider>

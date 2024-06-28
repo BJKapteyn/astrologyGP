@@ -1,18 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
-   width="212.52637mm"
-   height="48.946918mm"
-   viewBox="0 0 212.52637 48.946918"
+   width="100%"
+   height="100%"
+   viewBox="0 0 212 51"
    id="svg1"
    xmlns="http://www.w3.org/2000/svg"
+   preserveAspectRatio="none"
    >
   <g
      id="layer1"
-     transform="translate(-0.99985531,-0.62247497)">
+     >
     <circle
-       preserveAspectRation="none"
        style="fill:#f1775b;fill-opacity:1;stroke:#f17761;stroke-width:0.264583;stroke-opacity:1"
        id="path1"
        cx="25.473314"
