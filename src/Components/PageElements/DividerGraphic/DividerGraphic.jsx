@@ -38,12 +38,12 @@ export const DividerGraphic = ({needsFlip = false, isInBetween = false}) => {
 
     const circle = (
         <div className='dividergraphic-svgContainer' id="dividergraphic-circleContainer">
-            <svg width="100%" height="100%" viewBox="0 0 50 55" xmlns="http://www.w3.org/2000/svg">
+            <svg width="100%" height="100%" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
                 <circle
                     style={circleStyle}
                     cx="25"
                     cy="25"
-                    r="24" />
+                    r="25" />
             </svg>
         </div>
     );
