@@ -43,6 +43,7 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: rgb(72, 31, 75) rgb(183, 200, 219);
+  overflow-x: hidden;
 }
 
 body {

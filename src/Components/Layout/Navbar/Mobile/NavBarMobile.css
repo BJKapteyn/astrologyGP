@@ -3,7 +3,7 @@
     border: none;
     position: fixed;
     padding: 0px;
-    right: 7em;
-    top: 0em;
+    right: .5em;
+    top: .5em;
     z-index: 10;
 }
