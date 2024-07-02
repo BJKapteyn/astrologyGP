@@ -8,7 +8,7 @@
     background-repeat: no-repeat;
     background-size: 100%;
     height: 80vh;
-    min-height: 115px;
+    min-height: 300px;
     z-index: 1;
     width: auto;
 }
@@ -20,7 +20,8 @@
 }
 
 #titlecard-title {
-    font-size: 3.6em;
+    font-size: 3.4em;
+    padding: 0em 0em 1em 0em;
 }
 
 #titlecard-subtext {
@@ -39,4 +40,45 @@
     animation-timing-function: cubic-bezier(0.34, 0.58, 0.15, 0.95 );
     animation-delay: 500ms;
     opacity: 0%;
+}
+
+@media only screen and (max-width: 910px) {
+    .titleCard-container {
+        background-size: 120%;
+        background-position: 20% 85%;
+        height: 60vh;
+    }
+
+    #titlecard-title {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (max-width: 710px) {
+    .titleCard-container {
+        height: 40vh
+    }
+
+    #titlecard-title {
+        font-size: 2em;
+    }
+
+    #titlecard-subtext {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    .titleCard-container {
+        background-size: 180%;
+        background-position: 50% 85%;
+    }
+
+    #titlecard-title {
+        font-size: 1.5em;
+    }
+
+    #titlecard-subtext {
+        font-size: .8em;
+    }
 }

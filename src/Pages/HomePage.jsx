@@ -1,4 +1,3 @@
-import { titleDividerData } from './data/titleDividerData.jsx';
 import { meetCarlyDividerData } from './data/meetCarlyDividerData.jsx';
 import { offeringsDividerData } from './data/offeringsDividerData.jsx';
 import { SectionDivider } from '../Components/PageElements/SectionDivider/SectionDivider.jsx';

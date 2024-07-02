@@ -79,3 +79,9 @@
     transition: font-size 100ms;
     font-size: 2rem
 } */
+
+.navbar-menuRetracted {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+}
