@@ -61,6 +61,16 @@
 
 .navbar-socialimage {
     width: 1.5em;
+    fill: #fde5b7;
+    transition: fill 500ms;
+    -webkit-transition: fill 500ms;
+    -moz-transition: fill 500ms;
+    -ms-transition: fill 500ms;
+    -o-transition: fill 500ms;
+}
+
+.navbar-socialimage:hover {
+    fill: var(--secondary-orange);
 }
 
 .navbar-link:hover {
