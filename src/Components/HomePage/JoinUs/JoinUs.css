@@ -1,8 +1,9 @@
 #joinus {
     background-image: url('../../../Pics/Landscapes/groupYoga.png');
+    background-size: 100%;
+    background-position-y: 30%;
     height: 80vh;
     min-height: 400px;
-    background-position-y: 30%;
 }
 
 .joinus-flex {
@@ -12,11 +13,11 @@
     height: 100%;
 }
 
-.joinus-flexitem {
+.joinus-flexItem {
     width: 50%;
 }
 
-.joinus-lefttext {
+.joinus-leftText {
     color: var(--white-seethrough);
     text-align: left;
     width: 80%;
@@ -27,7 +28,9 @@
     color: white;
 }
 
-#joinus-joinbutton {
+
+
+#joinus-joinButton {
     border: .1em solid;
     border-color: white;
     color: white;
@@ -42,4 +45,64 @@
 
 #joinus-joinbutton:hover {
     border-color: var(--secondary-orange);
+}
+
+@media only screen and (max-width: 1200px) {
+    #joinus {
+        height: 65vh;
+    }
+
+    #joinus-textSection {
+        width: 42%;
+        margin: auto;
+    }
+
+    .joinus-leftText {
+        font-size: 5em;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    #joinus {
+        background-position-x: 30%;
+    }
+    #joinus-text {
+        font-size: 1.3em;
+    }
+
+    .joinus-leftText {
+        font-size: 4em;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #joinus {
+        background-size: 140%;
+    }
+
+    .joinus-flex {
+        flex-direction: column;
+    }
+
+    .joinus-leftText {
+        font-size: 3.7em;
+    }
+
+    #joinus-text, #joinus-joinButton {
+        font-size: 1.1em;
+    }
+
+    .joinus-flexItem {
+        width: 100%;
+    }
+
+    #joinus-textSection {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .joinus-leftText {
+        font-size: 3em;
+    }
 }
