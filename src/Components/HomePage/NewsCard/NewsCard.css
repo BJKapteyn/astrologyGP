@@ -44,14 +44,19 @@
 }
 
 .newscard-crop {
+  position: relative;
   padding: 0%;
   margin: 3%;
-  height: 90%;
   overflow-y: scroll;
   scrollbar-width: none;
 }
 
+.newscard-text-container, .newscard-image-container {
+  width: 50%;
+}
+
 .newscard-text-container {
+  position:  relative;
   display: inline-block;
   width: 50%;
   height: 100%;
@@ -77,9 +82,10 @@
 
 #newscard-textCover {
   position: absolute;
+  z-index: 2;
   width: 100%;
   height: 100%;
-  background-color: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255,255,255,1));;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(255,255,255,1) 100%);;
 }
 
 .newscard-more-container {
@@ -173,8 +179,43 @@
   }
 }
 
+@media only screen and (max-width: 1320px) {
+  .newscard-text-container {
+    font-size: .9em;
+  }
+  .newscard-text-title, .newscard-text {
+    padding: 1%;
+  }
+  .newscard-text {
+    line-height: 1.2em;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .newscard-text-container {
+    font-size: .8em;
+  }
+}
+
+
 @media only screen and (max-width: 950px) {
   .newscard-text-container {
     font-size: .7em;
   }
+}
+
+@media only screen and (max-width: 750px) {
+  .newscard {
+    flex-direction: column;
+  }
+  .newscard-text-container,
+  .newscard-image-container {
+    width: 100%;
+  }
+  .newscard-text,
+  .newscard-text-title {
+    padding: 1%;
+  }
+
+
 }
