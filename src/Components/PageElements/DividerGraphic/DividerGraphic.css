@@ -17,12 +17,21 @@
 
 #dividergraphic-circleContainer {
     width: auto;
-    height: 1.5em;
+    height: 1.3em;
 }
 
 #dividergraphic-lineInbetween {
     width: 41%;
 }
 
+@media only screen and (max-width: 975px) {
+    .divider-futura {
+        font-size: 1.3em;
+    }
+
+    #dividergraphic-circleContainer {
+        height: 1em;
+    }
+}
 
 

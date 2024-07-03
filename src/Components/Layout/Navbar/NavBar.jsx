@@ -23,7 +23,7 @@ export const NavBar = () => {
         </nav>
     );
 
-    const navBar = isMobile ? <NavBarMobile></NavBarMobile> : defaultNavBar;             
+    const navBar = isMobile ? <NavBarMobile></NavBarMobile> : defaultNavBar; 
     
     return (
         <div>
