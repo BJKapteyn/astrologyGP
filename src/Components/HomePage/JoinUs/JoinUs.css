@@ -49,7 +49,7 @@
 
 @media only screen and (max-width: 1200px) {
     #joinus {
-        height: 65vh;
+        height: 70vh;
     }
 
     #joinus-textSection {
@@ -101,7 +101,12 @@
     }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 560px) {
+    #joinus {
+        background-size: 200%;
+        background-position-x: 40%;
+    }
+
     .joinus-leftText {
         font-size: 3em;
     }
