@@ -1,7 +1,9 @@
 #joinus {
     background-image: url('../../../Pics/Landscapes/groupYoga.png');
-    background-size: 100%;
     background-position-y: 30%;
+    background-size: cover;
+    background-color: var(--main-accent-color);
+    background-repeat: no-repeat;
     height: 80vh;
     min-height: 400px;
 }
@@ -66,6 +68,7 @@
     #joinus {
         background-position-x: 30%;
     }
+    
     #joinus-text {
         font-size: 1.3em;
     }
@@ -77,7 +80,7 @@
 
 @media only screen and (max-width: 750px) {
     #joinus {
-        background-size: 140%;
+        height: auto;
     }
 
     .joinus-flex {
@@ -97,13 +100,14 @@
     }
 
     #joinus-textSection {
+        margin: 0px auto;
         width: 80%;
     }
 }
 
 @media only screen and (max-width: 560px) {
     #joinus {
-        background-size: 200%;
+        width: 100%;
         background-position-x: 40%;
     }
 

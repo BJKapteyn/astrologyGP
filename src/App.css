@@ -69,6 +69,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  font-family: Futura;
+}
+
 h1,
 h2,
 h3,

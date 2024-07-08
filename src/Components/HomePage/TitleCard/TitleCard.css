@@ -4,9 +4,9 @@
     justify-content: center;
     background-color: rgb(198, 171, 210);
     background-image: url('../../../Pics/Landscapes/moonMountain.png');
-    background-position: 0% 85%;
+    background-position-y: 85%;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     height: 80vh;
     min-height: 300px;
     z-index: 1;
@@ -44,7 +44,6 @@
 
 @media only screen and (max-width: 910px) {
     .titleCard-container {
-        background-size: 120%;
         background-position: 20% 85%;
         height: 60vh;
     }

@@ -107,7 +107,8 @@
 }
 
 .subscribe-textinput {
-    width: 30em;
+    width: 60%;
+    max-width: 30em;
     border-radius: 0em;
     -webkit-border-radius: 0em;
     -moz-border-radius: 0em;
@@ -118,4 +119,17 @@
 .subscribe-subtext {
     padding: 1em 0em;
     font-size: 1em;
+}
+
+@media only screen and (max-width: 700px) {
+    .subscribe-flex {
+        width: 100%;
+        font-size: .9em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .subscribe-flex {
+        font-size: .7em;
+    }
 }
