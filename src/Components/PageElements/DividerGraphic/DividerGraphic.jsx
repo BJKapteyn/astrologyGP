@@ -26,7 +26,7 @@ export const DividerGraphic = ({needsFlip = false, isInBetween = false}) => {
 
     let lineStyleId = isInBetween ? 'dividergraphic-lineInbetween' : 'dividergraphic-lineContainer';
 
-    const line = (
+    const lineGraphic = (
         <div className="dividergraphic-svgContainer" id={lineStyleId}>
             <svg width="100%" height="100%" viewBox="0 0 212 50" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio='none'>
                 <path
@@ -36,23 +36,23 @@ export const DividerGraphic = ({needsFlip = false, isInBetween = false}) => {
         </div>
     );
 
-    const circle = (
+    const circleGraphic = (
         <div className='dividergraphic-svgContainer' id="dividergraphic-circleContainer">
-            <svg width="100%" height="100%" viewBox="0 0 50 55" xmlns="http://www.w3.org/2000/svg">
+            <svg width="100%" height="100%" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
                 <circle
                     style={circleStyle}
                     cx="25"
                     cy="25"
-                    r="24" />
+                    r="25" />
             </svg>
         </div>
     );
 
     return (
         <div className="dividergraphic-container">
-            {needsFlip ? circle : line}
-            {needsFlip ? line : circle}
-            {isInBetween && line}
+            {needsFlip ? circleGraphic : lineGraphic}
+            {needsFlip ? lineGraphic : circleGraphic}
+            {isInBetween && lineGraphic}
         </div>
     );
 }

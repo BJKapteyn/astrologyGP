@@ -13,7 +13,7 @@ export const OfferingItem = ({offeringItemData}) => {
             <div className="offering-section-text-container">
                 <p className="offering-section-text">{text}</p>
             </div>
-            <ActionButton buttonSettings={{buttonText: 'Join Waitlist'}}></ActionButton>
+            <ActionButton buttonSettings={{buttonText: 'JOIN WAITLIST'}}></ActionButton>
         </div>
     );
 }

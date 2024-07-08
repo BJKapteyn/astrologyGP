@@ -31,7 +31,7 @@
 }
 
 #footer-links {
-    height: 7em;
+    min-height: 7em;
     border-top: .1em solid white;
     border-bottom: .1em solid white;
 }
@@ -66,4 +66,23 @@
     -moz-transform: scale(1.2);
     -ms-transform: scale(1.2);
     -o-transform: scale(1.2);
+}
+
+
+@media only screen and (max-width: 900px){
+    .footer-item {
+        padding: 1.3em;
+        font-size: .7em;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .footer-item {
+        padding: .7em;
+        font-size: .7em;
+    }
+    #footer-links {
+        flex-direction: column;
+        padding: .7em;
+    }
 }

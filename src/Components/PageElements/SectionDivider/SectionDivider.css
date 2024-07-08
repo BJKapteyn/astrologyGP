@@ -17,7 +17,7 @@
 
 .divider-futura {
     font-family: Futura;
-    font-size: 2em;
+    font-size: 1.9em;
 }
 
 .divider-textglow {
@@ -35,5 +35,30 @@
 
 .divider-titleGraphic {
     width: 10%;
+}
+
+@media only screen and (max-width: 975px) {
+    .divider-text {
+        font-size: 2em;
+    }
+
+    .divider-futura {
+        font-size: 1.3em;
+    }
+
+    .divider-titleGraphic {
+        width: 7%;
+    }
+}
+
+
+@media only screen and (max-width: 560px) {
+    .divider-futura {
+        font-size: 1em;
+    }
+
+    .divider-titleGraphic {
+        width: 5%;
+    }
 }
 
