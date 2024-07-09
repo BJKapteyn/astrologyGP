@@ -1,9 +1,35 @@
 #navbarmobile-menuButton {
-    color: var(--main-color);
+    stroke: var(--secondary-orange);
+    color: var(--secondary-orange);
+    fill: var(--secondary-orange);
     border: none;
     position: fixed;
     padding: 0px;
     right: .5em;
     top: .5em;
-    z-index: 10;
+    z-index: 101;
+    transition: stroke 500ms, fill 500ms;
+    width: 1.8em;
+}
+#navbarmobile-menuButton:hover {
+    background: rgba(0,0,0,0);
+    stroke: var(--main-color);
+    fill: var(--main-color);
+}
+
+.navbar-mainMobile {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: white;
+    width: 100%;
+    margin: 0px;
+    padding: 1em 0em;
+    box-shadow:  0 20px 20px -20px var(--secondary-orange);
+    z-index: 100;
+}
+
+.navbar-logoMobile {
+    width: 15em;
+    margin: auto;
 }
