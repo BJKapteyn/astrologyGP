@@ -6,7 +6,6 @@ import { TitleCard } from '../Components/HomePage/TitleCard/TitleCard.jsx';
 import { JoinUs } from '../Components/HomePage/JoinUs/JoinUs.jsx';
 import { MeetCarly } from '../Components/HomePage/MeetCarly/MeetCarly.jsx';
 import { NewsCardSection } from '../Components/HomePage/NewsCard/NewsCardSection.jsx';
-import { Subscribe } from '../Components/HomePage/Subscribe/Subscribe.jsx';
 import { OfferingSection } from '../Components/HomePage/OfferingSection/OfferingSection.jsx';
 
 export default function HomePage() {
@@ -21,7 +20,6 @@ export default function HomePage() {
             <NewsCardSection></NewsCardSection>
             <SectionDivider dividerData={offeringsDividerData}></SectionDivider>
             <OfferingSection></OfferingSection>
-            <Subscribe></Subscribe>
         </div>
     )
 }
