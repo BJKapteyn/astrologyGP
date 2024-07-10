@@ -1,12 +1,7 @@
-import { ActionButton } from '../../PageElements/ActionButton/ActionButton';
+import { ActionButton } from '../../../PageElements/ActionButton/ActionButton';
 import './Subscribe.css';
 
 export const Subscribe = () => {
-
-    // const actionButtonSettings = {
-    //     buttonText: 'Book Now',
-    //     action: () => {}
-    // }
     const subscribeButtonSettings = {
         buttonText: 'Subscribe',
         buttonStyleId: 'subscribe-subscribebutton',
