@@ -16,7 +16,7 @@ export const NavBar = () => {
         <nav className='navbar'>
             <ul className="navbar-main-nav">
                 <NavPageLink linkData={{text: 'HOME', route: '/', submenu: null}} />
-                <NavPageLink linkData={{text: 'WORK WITH US', route: '/Readers', submenu: null}} />
+                <NavPageLink linkData={{text: 'THE COLLECTIVE', route: '/Readers', submenu: null}} />
                 <li className="navbar-logo-container">
                     <img alt='Yellow main logo' src={yellowLogo} className="navbar-logo" />
                 </li>
