@@ -4,21 +4,14 @@ import './SectionDivider.css';
 
 // Used as a title for the next page section
 export const SectionDivider = ({dividerData}) => {
+    const {classname, headingText} = dividerData;
 
     return (
         <div className="divider">
             <div className="divider-sectionGraphic">
                 <DividerGraphic needsFlip={true}></DividerGraphic>
             </div>
-
-            {dividerData.map(data => {
-                const {id, classname, headingText} = data;
-                
-                return (
-                    <h1 key={id} className={classname}>{headingText}</h1>
-                );
-            })}
-
+            <h1 className={classname ?? 'divider-text'}>{headingText}</h1>
             <div className="divider-sectionGraphic">
                 <DividerGraphic></DividerGraphic>
             </div>

@@ -6,10 +6,18 @@ import { MeetCarly } from '../Components/HomePage/MeetCarly/MeetCarly.jsx';
 import { NewsCardSection } from '../Components/HomePage/NewsCard/NewsCardSection.jsx';
 import { OfferingSection } from '../Components/HomePage/OfferingSection/OfferingSection.jsx';
 import { titleCardData } from '../Components/HomePage/TitleCard/TitleCardData.jsx';
-import { meetCarlyDividerData } from './data/meetCarlyDividerData.jsx';
-import { offeringsDividerData } from './data/offeringsDividerData.jsx';
 
 export default function HomePage() {
+    const videoDivider = {
+        id: 1,
+        classname: 'divider-text',
+        headingText: ['FEEL THE VIBE']
+    }
+    const offeringsDividerData = {
+        id: 1,
+        classname: 'divider-text',
+        headingText: ['OFFERINGS']
+    }
 
     return (
         <div className="scroll-snap">
@@ -17,7 +25,7 @@ export default function HomePage() {
             <TitleDivider></TitleDivider>
             <JoinUs></JoinUs>
             <MeetCarly></MeetCarly>
-            <SectionDivider dividerData={meetCarlyDividerData}></SectionDivider>
+            <SectionDivider dividerData={videoDivider}></SectionDivider>
             <NewsCardSection></NewsCardSection>
             <SectionDivider dividerData={offeringsDividerData}></SectionDivider>
             <OfferingSection></OfferingSection>
