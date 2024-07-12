@@ -20,7 +20,9 @@ export const Subscribe = () => {
                         </div>
                         <div className="subscribe-button">
                             <input type="text" className="subscribe-textinput" id="submitemail" placeholder="Enter Your Email..."></input>
+
                             <ActionButton  buttonSettings={subscribeButtonSettings}></ActionButton>
+                            
                         </div>
                         <p className="subscribe-subtext">We respect your privacy, and your inbox*</p>
                     </div>
