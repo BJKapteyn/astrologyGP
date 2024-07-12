@@ -1,29 +1,42 @@
 import { BioCards } from '../../PageElements/BioCard/BioCards.jsx';
+import { TitleCard } from '../../PageElements/TitleCard/TitleCard.jsx';
+import  { SectionDivider } from '../../PageElements/SectionDivider/SectionDivider.jsx'
+import backgroundImageFile from '../../../Pics/Landscapes/girlsInField.png'
 import './ReaderTitle.css';
 
 export const ReaderTitle = () => {
+    const readerTitleData = {
+        titleText: 'Work with the Collective',
+        backgroundimage: backgroundImageFile
+    }
+
+    const tarotData = {
+        headingText: 'Tarot Card Readers'
+    }
+
+    const mediumData = {
+        headingText: 'Mediums'
+    }
+
+    const bridgeText = 'ARE YOU YEARNING TO RECONNECT WITH THE SOULS WHO HAVE TOUCHED YOUR HEART? BOOK A SESSION WITH US, AND' +
+                        'TOGETHER, WE WILL OPEN THE DOOR TO THE INFINITE WISDOM AND LOVE THAT EXISTS IN THE SPIRIT REALM. WHETHER YOU ARE' +
+                        'SEEKING CLOSURE, UNDERSTANDING, OR SIMPLY A REAFFIRMATION OF THE ETERNAL BOND WITH YOUR LOVED ONES, I AM HERE' +
+                        'TO GUIDE YOU ON THIS SACRED JOURNEY. THANK YOU FOR ENTRUSTING ME WITH YOUR SPIRITUAL PATH. MAY THE MESSAGES' +
+                        'FROM THE OTHER SIDE BRING YOU COMFORT, HEALING, AND THE UNDENIABLE KNOWLEDGE THAT LOVE NEVER DIES.'
+
     return (
         <section className="reader-section">
-            <div className='reader-title-section'>
-                <h1 id="reader-title">Work with the Collective</h1>
-                <div className="reader-info">
-                    <p className="reader-infotext">
-                        Are you yearning to reconnect with the souls who have touched your heart? Book a session with us, and together, we will open the door to the infinite wisdom and love that exists in the spirit realm. Whether you are seeking closure, understanding, or simply a reaffirmation of the eternal bond with your loved ones, I am here to guide you on this sacred journey.
-                        Thank you for entrusting me with your spiritual path. May the messages from the other side bring you comfort, healing, and the undeniable knowledge that love never dies.
-                    </p>
-                </div>
+            <TitleCard titleData={readerTitleData} ></TitleCard>
+            <div className="reader-bridge">
+                <p className="reader-bridgetext">{bridgeText}</p>
             </div>
-            <h3 className="reader-header">Tarot Card Readers</h3>
+            <SectionDivider dividerData={tarotData}></SectionDivider>
             <div className="reader-terot">
-
                 <BioCards lowerBound={0} upperBound={6}></BioCards>
-                
             </div>
-            <h3 id="reader-mediums" className="reader-header">Mediums</h3>
+            <SectionDivider dividerData={mediumData}></SectionDivider>
             <div id='reader-mediums' className="reader-terot">
-
                 <BioCards lowerBound={6} upperBound={10}></BioCards>
-
             </div>
         </section>
     );
