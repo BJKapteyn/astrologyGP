@@ -15,12 +15,11 @@
 .titleCard-flexitem {
     color: rgba(255,255,255,0.8);   
     margin: 0px;
-    padding: 1em;
+    padding: 1em .5em;
 }
 
 #titlecard-title {
     font-size: 3.4em;
-    padding: 0em 0em 1em 0em;
 }
 
 #titlecard-subtext {

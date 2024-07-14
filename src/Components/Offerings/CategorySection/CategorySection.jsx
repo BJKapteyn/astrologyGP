@@ -8,8 +8,8 @@ export const CategorySection = ({ productData }) => {
 
     useEffect(() => {
         let categoryData = [];
-        let itemData = []
-        console.log(productData);
+        let itemData = [];
+
         if(productData.length >= 0) {
             productData.forEach(data => {
                 if(data?.Type === 'CATEGORY')
@@ -19,7 +19,6 @@ export const CategorySection = ({ productData }) => {
                     itemData.push(data);
             }, [productData]);
         }
-        console.log(productData);
         
         setCategories(categoryData);
         setItems(itemData);

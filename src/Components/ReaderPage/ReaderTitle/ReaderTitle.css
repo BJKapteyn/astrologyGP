@@ -32,5 +32,7 @@
 .reader-bridgetext {
     font-size: 1em;
     padding: 2em;
+    background: rgb(241,199,97);
+    background: radial-gradient(farthest-side, rgba(241, 199, 97,.7) 0%, rgba(255,255,255,0) 99%, rgba(255,255,255,0) 100%);
     text-align: center;
 }
