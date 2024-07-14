@@ -1,7 +1,7 @@
 import './CardModal.css';
 import '../../../App.css';
 
-export const CardModal = ({cardData, callBackDeselect}) => {
+export const CardModal = ({cardData, callBackDeselect, children}) => {
 
     return (
         <div>

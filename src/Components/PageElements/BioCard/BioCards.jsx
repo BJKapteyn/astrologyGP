@@ -20,7 +20,9 @@ export const BioCards = ({lowerBound, upperBound}) => {
     }
 
     function renderCards(sliceLowerBound = 0, sliceUpperBound = CardInfoData.length) {
+
         return data.current.slice(sliceLowerBound, sliceUpperBound).map((card) => {
+            
             return <BioCard
                         key={card.id} 
                         callbackSelect={selectBioCard}
@@ -32,7 +34,7 @@ export const BioCards = ({lowerBound, upperBound}) => {
     return (
         <div className="biocard-flex-container">
             {renderCards(lowerBound, upperBound)}
-            {bioData !== null ? (<CardModal cardData={bioData} callBackDeselect={deSelectBioCard} ></CardModal>) : null}
+            {bioData && <CardModal cardData={bioData} callBackDeselect={deSelectBioCard} ></CardModal>}
         </div>
     );
 }
