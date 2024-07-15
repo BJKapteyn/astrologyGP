@@ -2,15 +2,15 @@ import '../../../../App.css';
 import './Item.css';
 import moon from '../../../../Pics/Landscapes/moonClouds.png';
 
-export const Item = ({ itemData }) => {
+export const Item = ({ itemData, callBackSelect }) => {
 
     return (
-            <div className="item">
-                <div style={{backgroundImage: `url(${moon})`}} className="item-header">
+            <div onClick={() => callBackSelect(itemData)} style={{backgroundImage: `url(${moon})`}} className="item">
+                <div className="item-header">
                     <h3 className="item-name">{itemData.Name}</h3>
                 </div>
-                <div className="item-booknowbutton">
-                    <button className="item-booknow">+</button>
+                <div className="item-booknow">
+                    <button className="item-booknowbutton">+</button>
                 </div>
             </div>
     );      
