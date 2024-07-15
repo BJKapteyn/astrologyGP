@@ -95,3 +95,25 @@
     top: 1em;
     right: 1em;
 }
+
+@media only screen and (max-width: 1070px) {
+    .navbar-link {
+        font-size: 1em;
+        padding: .5em 1.5em;
+
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .navbar-socialimage {
+        width: 1.2em;
+    }
+
+
+}
+@media only screen and (max-width: 770px) and (min-width: 600px) {
+    .navbar-link {
+        font-size: .8em;
+
+    }
+}

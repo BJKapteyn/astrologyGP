@@ -1,4 +1,4 @@
-.items-flex {
+.item-modal-flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -6,7 +6,7 @@
     width: 100%;
 }
 
-.items-item {
+.item-modal-item {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 40% 45% 1fr;
@@ -22,7 +22,35 @@
     margin: 2em;
 }
 
-.items-booknowbutton {
+.item-modal-image-container {
+    grid-area: image;
+    overflow: hidden;
+    height: 100%;
+}
+
+.item-modal-image {
+    height: 100%;
+    width: auto;
+}
+
+.item-modal-name {
+    grid-area: name;
+}
+
+.item-modal-description {
+    grid-area: description;
+    overflow-y: hidden;
+    height: 100%;
+}
+
+.item-modal-descriptiontext {
+    overflow-y: scroll;
+    height: 100%;
+    font-size: 1em;
+    padding: 1em;
+}
+
+.item-modal-booknowbutton {
     grid-area: button;
     text-align: center;
 }
