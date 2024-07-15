@@ -24,6 +24,7 @@
 }
 
 #divider-titleDivider {
+    background: radial-gradient(farthest-side, rgba(241, 199, 97,.7) 0%, rgba(255,255,255,0) 99%, rgba(255,255,255,0) 100%);
     width: 90%;
     margin: auto;
 }
@@ -50,6 +51,11 @@
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .divider-text {
+        font-size: 1.5em;
+    }
+}
 
 @media only screen and (max-width: 560px) {
     .divider-futura {

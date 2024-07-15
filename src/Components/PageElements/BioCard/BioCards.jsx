@@ -34,7 +34,29 @@ export const BioCards = ({lowerBound, upperBound}) => {
     return (
         <div className="biocard-flex-container">
             {renderCards(lowerBound, upperBound)}
-            {bioData && <CardModal cardData={bioData} callBackDeselect={deSelectBioCard} ></CardModal>}
+            {bioData && (
+                <CardModal callBackDeselect={deSelectBioCard} >
+                    <div className="biocard-modal-biocard">
+                        <div className="biocard-modal-image-container">
+                            <img className="biocard-modal-image" alt={bioData.description} src={require('../../../Pics/Headshots/' + bioData.image)}></img>
+                        </div>
+                        <div className="biocard-modal-info">
+                            <div className="biocard-modal-infoitem">
+                                <span id='biocard-modal-name'>{bioData.name}</span>
+                            </div>
+                            <div className="biocard-modal-infoitem">
+                                <span className="biocard-modal-label">Sign:</span><span className='biocard-modal-data'>{bioData.sign}</span>
+                            </div>
+                            <div className="biocard-modal-infoitem">
+                                <span className="biocard-modal-label">Email:</span><span className='biocard-modal-data'>{bioData.email}</span>
+                            </div>
+                        </div>
+                        <div className="biocard-modal-description">
+                            <p className="biocard-modal-description-text">{bioData.description}</p>
+                        </div>
+                    </div>
+                </CardModal>
+            )}
         </div>
     );
 }

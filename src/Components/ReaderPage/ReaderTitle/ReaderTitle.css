@@ -36,3 +36,28 @@
     background: radial-gradient(farthest-side, rgba(241, 199, 97,.7) 0%, rgba(255,255,255,0) 99%, rgba(255,255,255,0) 100%);
     text-align: center;
 }
+
+#reader-titlecard {
+    max-height: 2em;
+    background-position-y: 35%;
+}
+
+@media only screen and (max-width: 760px) {
+    .reader-bridgetext {
+        font-size: .8em;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    #reader-titlecard {
+        background-size: 150%;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    #reader-titlecard {
+        height: 20vh;
+        background-size: 180%;
+    }
+}
+

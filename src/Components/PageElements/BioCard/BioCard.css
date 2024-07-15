@@ -12,14 +12,13 @@
 .biocard-flex-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-top: 0%;
     margin:auto;
-    width: 80%;
 }
 
 .biocard-flexbox {
-    width: 25%;
+    width: 16em;
     cursor: pointer;
     margin: 2%;
     box-shadow: 0em 0em 0em rgb(241, 199, 97), 0em 0em 0em rgb(241, 199, 97);
@@ -98,4 +97,80 @@
     text-align: center;
     font-size: 1em;
     padding-bottom: 2em;
+}
+
+.biocard-modal-biocard {
+    display: grid;
+    grid-template-areas: "image info"
+                        "image info"
+                        "description description";
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 50vh auto;
+    text-align: center;
+    width: 90%;
+    padding: 5%;
+}
+
+.biocard-modal-image-container {
+    grid-area: image;
+}
+
+.biocard-modal-image {
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+.biocard-modal-info {
+    grid-area: info;
+}
+
+#biocard-modal-name {
+    color: rgb(72,31,75);
+    font-size: 2.5em;
+}
+
+.biocard-modal-infoitem span {
+    display: inline-block;
+    font-size: 2em;
+    padding: .5em;
+}
+
+.biocard-modal-data {
+    color: rgb(198, 171, 210);
+    width: 40%;
+    text-align: left;
+}
+.biocard-modal-label {
+    text-align: right;
+    width: 20%;
+    color: rgb(183, 200, 219);
+}
+
+.biocard-modal-description {
+    grid-area: description;
+}
+
+.biocard-modal-description-text {
+    padding-top: 2em;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+@media only screen and (max-width: 880px) {
+    .biocard-flexbox {
+        width: 15em;
+    }
+}
+
+@media only screen and (max-width: 521px) {
+    .biocard-flexbox {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 521px) {
+    .biocard-flexbox {
+        width: 80%;
+    }
 }
