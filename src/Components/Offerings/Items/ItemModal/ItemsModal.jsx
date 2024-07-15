@@ -1,6 +1,6 @@
 import '../../../../App.css';
-import '../Items.css';
-import moon from '../../../Pics/Landscapes/moonClouds.png';
+import './ItemsModal.css';
+import moon from '../../../../Pics/Landscapes/moonClouds.png';
 
 export const ItemModal = ({ itemData }) => {
 
