@@ -1,4 +1,4 @@
-import { DividerGraphic } from '../DividerGraphic/DividerGraphic';
+import { DividerGraphic } from './DividerGraphic/DividerGraphic';
 import { useMediaQuery } from 'react-responsive';
 import '../../../App.css';
 import './SectionDivider.css';
@@ -11,7 +11,6 @@ export const TitleDivider = ({dividerData}) => {
             <div className="divider-titleGraphic">
                 <DividerGraphic needsFlip={true}></DividerGraphic>
             </div>
-
             <h1 className="divider-text divider-futura">ASTROLOGY</h1>
 
             {isTablet && (
@@ -29,7 +28,6 @@ export const TitleDivider = ({dividerData}) => {
             )}
 
             <h1 className="divider-text divider-futura">MEDIUMSHIP</h1>
-
             <div className="divider-titleGraphic">
                 <DividerGraphic></DividerGraphic>
             </div>

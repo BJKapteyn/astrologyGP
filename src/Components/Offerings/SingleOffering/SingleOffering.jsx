@@ -15,7 +15,6 @@ export const SingleOffering = ({ singleOfferingData }) => {
             <TitleCard titleData={offeringTitleData}></TitleCard>
 
             <div className="singleoffer-offeringItems">
-
                 {offeringItems.map(offeringItem => {
                     return (
                         <OfferingItem offeringItemData={offeringItem}></OfferingItem>
