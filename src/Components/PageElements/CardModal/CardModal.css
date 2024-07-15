@@ -14,9 +14,9 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
+    z-index: 101;
     background-color: white;
+    transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -38,7 +38,7 @@
     top: 2em;
     right: -92%;
     position: relative;
-    z-index: 11;
+    z-index: 100;
     background:  rgb(241, 199, 97);
     padding: 1em;
     color: white;
@@ -81,63 +81,12 @@
     right: 0%;
     width: 100%;
     height: 100%;
-    z-index: 9;
+    z-index: 100;
 }
 
-.cardmodal-biocard {
-    display: grid;
-    grid-template-areas: "image info"
-                        "image info"
-                        "description description";
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 50vh auto;
-    text-align: center;
-    width: 90%;
-    padding: 5%;
-}
-
-.cardmodal-image-container {
-    grid-area: image;
-}
-
-.cardmodal-image {
-    display: block;
-    width: 100%;
-    margin: auto;
-}
-
-.cardmodal-info {
-    grid-area: info;
-}
-
-#cardmodal-name {
-    color: rgb(72,31,75);
-    font-size: 2.5em;
-}
-
-.cardmodal-infoitem span {
-    display: inline-block;
-    font-size: 2em;
-    padding: .5em;
-}
-
-.cardmodal-data {
-    color: rgb(198, 171, 210);
-    width: 40%;
-    text-align: left;
-}
-.cardmodal-label {
-    text-align: right;
-    width: 20%;
-    color: rgb(183, 200, 219);
-}
-
-.cardmodal-description {
-    grid-area: description;
-}
-
-.cardmodal-description-text {
-    padding-top: 2em;
-    font-size: 1.5em;
-    text-align: left;
+@media only screen and (max-width: 1131px) {
+    .cardmodal-container {
+        width: 85vw;
+        height: 90vh;
+    }
 }

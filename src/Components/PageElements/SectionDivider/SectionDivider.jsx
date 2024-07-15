@@ -1,4 +1,4 @@
-import { DividerGraphic } from '../DividerGraphic/DividerGraphic';
+import { DividerGraphic } from './DividerGraphic/DividerGraphic';
 import '../../../App.css';
 import './SectionDivider.css';
 

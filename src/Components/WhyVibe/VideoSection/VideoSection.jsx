@@ -12,9 +12,7 @@ export const VideoSection = () => {
                         allowFullScreen></iframe>
             </div>
             <div className="videosection-textcontainer">
-                <div className="spacer"></div>
                 <p className="videosection-text">At The Vibe Collective, we don't just offer jobs, we craft careers within a dynamic and inclusive ecosystem. We're committed to fostering growth, embracing collaboration, and achieving a harmonious work-life balance.</p>
-                <div className="spacer"></div>
             </div>
         </div>
     )

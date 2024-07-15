@@ -7,7 +7,8 @@ import './ReaderTitle.css';
 export const ReaderTitle = () => {
     const readerTitleData = {
         titleText: 'Work with the Collective',
-        backgroundimage: backgroundImageFile
+        backgroundimage: backgroundImageFile,
+        styleId: 'reader-titlecard'
     }
 
     const tarotData = {

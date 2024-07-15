@@ -19,7 +19,6 @@ export const WhyVibe = () => {
             <VideoSection></VideoSection>
             <CareerSection></CareerSection>
             <ValueCards cardDatas={WhyVibeCardData}></ValueCards>
-            <h4 id="whyvibe-footnote">Join The Vibe Collective and experience a workplace where diversity is celebrated, talents are nurtured, and every day is an opportunity to make a positive impact. Might be a great time to vibe</h4>
         </main>
     )
 }
