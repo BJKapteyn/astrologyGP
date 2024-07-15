@@ -84,3 +84,9 @@
     z-index: 100;
 }
 
+@media only screen and (max-width: 1131px) {
+    .cardmodal-container {
+        width: 85vw;
+        height: 90vh;
+    }
+}
