@@ -6,6 +6,7 @@ import { CardInfoData } from "./CardInfoData";
 // lowerBound inclusive and upperBound exclusive, it refers to the sliced portion of the data
 export const BioCards = ({lowerBound, upperBound}) => {
     const [bioData, selectBioData] = useState(null);
+    const [modalData, selectModalData] = useState(null);
     const data = useRef(CardInfoData);
 
     // Deselects data for modal

@@ -1,0 +1,32 @@
+.modalitem-grid {
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    grid-template-rows: 25% 50% 1fr;
+    grid-template-areas: 
+                "image info button"
+                "image description description";
+}
+
+.modalitem-imageflex {
+    grid-area: image;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalitem-info {
+    grid-area: info;
+
+}
+
+.modalitem-productname {
+    margin: auto;
+}
+
+.modalitem-infotext {
+    padding-left: 1em;
+}
+
+.modalitem-button {
+    overflow: scroll;
+}
