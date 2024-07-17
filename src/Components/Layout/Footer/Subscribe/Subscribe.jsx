@@ -1,12 +1,7 @@
-import { ActionButton } from '../../PageElements/ActionButton/ActionButton';
+import { ActionButton } from '../../../PageElements/ActionButton/ActionButton';
 import './Subscribe.css';
 
 export const Subscribe = () => {
-
-    // const actionButtonSettings = {
-    //     buttonText: 'Book Now',
-    //     action: () => {}
-    // }
     const subscribeButtonSettings = {
         buttonText: 'Subscribe',
         buttonStyleId: 'subscribe-subscribebutton',
@@ -25,7 +20,9 @@ export const Subscribe = () => {
                         </div>
                         <div className="subscribe-button">
                             <input type="text" className="subscribe-textinput" id="submitemail" placeholder="Enter Your Email..."></input>
+
                             <ActionButton  buttonSettings={subscribeButtonSettings}></ActionButton>
+                            
                         </div>
                         <p className="subscribe-subtext">We respect your privacy, and your inbox*</p>
                     </div>

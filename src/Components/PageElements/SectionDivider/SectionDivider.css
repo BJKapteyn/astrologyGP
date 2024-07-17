@@ -11,13 +11,12 @@
     font-family: bivoac-regular;
     font-size: 2.6em;
     padding: .7em 0em;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin: .5em;
 }
 
 .divider-futura {
     font-family: Futura;
-    font-size: 2em;
+    font-size: 1.9em;
 }
 
 .divider-textglow {
@@ -25,6 +24,7 @@
 }
 
 #divider-titleDivider {
+    background: radial-gradient(farthest-side, rgba(241, 199, 97,.7) 0%, rgba(255,255,255,0) 99%, rgba(255,255,255,0) 100%);
     width: 90%;
     margin: auto;
 }
@@ -35,5 +35,35 @@
 
 .divider-titleGraphic {
     width: 10%;
+}
+
+@media only screen and (max-width: 975px) {
+    .divider-text {
+        font-size: 2em;
+    }
+
+    .divider-futura {
+        font-size: 1.3em;
+    }
+
+    .divider-titleGraphic {
+        width: 7%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .divider-text {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .divider-futura {
+        font-size: 1em;
+    }
+
+    .divider-titleGraphic {
+        width: 5%;
+    }
 }
 

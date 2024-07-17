@@ -1,21 +1,20 @@
+import { useMediaQuery } from 'react-responsive';
 import './NewsCard.css';
 
 export const NewsCard = ({newsCardData}) => {
-    if(newsCardData == null) {
-        console.debug('News card data is null');
-    }
-    
     const imagePath = require('../../../Pics/' + newsCardData.image);
     const imageId = 'newscard-image' + newsCardData.id;
+    const isMobile = useMediaQuery({ query: '(max-width: 750px)' });
 
-    const imageAndContainer = (
+    const image = (
         <div className="newscard-image-container">
             <img id={imageId} src={imagePath} alt={newsCardData.id} className="newscard-image" />
         </div>
     );
 
-    const textAndContainer = (
+    const text = (
         <div className="newscard-text-container">
+            {/* <div id="newscard-textCover"></div> this is for a fade to transparent at the bottom of the text if we need it */}
             <div className="newscard-crop">
                 <h3 className="newscard-text-title">{newsCardData.title}</h3>
                 <div className="newscard-text-crop">
@@ -25,12 +24,22 @@ export const NewsCard = ({newsCardData}) => {
         </div>
     );
 
-    // set order of image and text
+    // Set order of image and text
     const newsCard = (
         <div key={newsCardData.id} className="newscard">
-            {newsCardData.imageLeftSide ? imageAndContainer : textAndContainer}
-            {newsCardData.imageLeftSide ? textAndContainer : imageAndContainer}
+            {newsCardData.imageLeftSide ? image : text}
+            {newsCardData.imageLeftSide ? text : image}
         </div>
     );
-    return newsCard;
+
+    const newsCardMobile = (
+        <div key={newsCardData.id} className="newscard">
+            {image}
+            {text}
+        </div>
+    );
+
+    
+
+    return isMobile ? newsCardMobile : newsCard;
 }

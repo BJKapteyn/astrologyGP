@@ -61,6 +61,16 @@
 
 .navbar-socialimage {
     width: 1.5em;
+    fill: #fde5b7;
+    transition: fill 500ms;
+    -webkit-transition: fill 500ms;
+    -moz-transition: fill 500ms;
+    -ms-transition: fill 500ms;
+    -o-transition: fill 500ms;
+}
+
+.navbar-socialimage:hover {
+    fill: var(--secondary-orange);
 }
 
 .navbar-link:hover {
@@ -79,3 +89,31 @@
     transition: font-size 100ms;
     font-size: 2rem
 } */
+
+.navbar-menuRetracted {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+}
+
+@media only screen and (max-width: 1070px) {
+    .navbar-link {
+        font-size: 1em;
+        padding: .5em 1.5em;
+
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .navbar-socialimage {
+        width: 1.2em;
+    }
+
+
+}
+@media only screen and (max-width: 770px) and (min-width: 600px) {
+    .navbar-link {
+        font-size: .8em;
+
+    }
+}

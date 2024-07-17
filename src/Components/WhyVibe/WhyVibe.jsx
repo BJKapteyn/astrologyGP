@@ -1,42 +1,24 @@
+import { WhyVibeCardData } from './WhyVibeCardData.jsx';
+import { ValueCards } from './ValueCards.jsx';
+import { TitleCard } from '../PageElements/TitleCard/TitleCard.jsx';
+import { VideoSection } from './VideoSection/VideoSection.jsx';
+import { CareerSection } from './CareerSection/CareerSection.jsx';
+import backgroundImage from '../../Pics/Landscapes/moonFade.png';
+
 import './WhyVibe.css';
 export const WhyVibe = () => {
-    
+    const titleData = {
+        titleText: 'Why Vibe?',
+        backgroundimage: backgroundImage,
+        styleId: 'whyvibe-titlecard'
+    };
+
     return (
-        <section className="whyvibe">
-            <div className="whyvibe-title">
-                <h1>why you should vibe</h1>
-                <p className="whyvibe-title-text">At The Vibe Collective, we don't just offer jobs, we craft careers within a dynamic and inclusive ecosystem. We're committed to fostering growth, embracing collaboration, and achieving a harmonious work-life balance.</p>
-            </div>
-            <h2>Why Choose The Vibe Collective?</h2>\
-            <div className="whyvibe-bullet-flex">
-                <h3 className="whyvibe-bullet">Recognition:</h3>
-                <p className="whyvibe-text">Your talents won't go unnoticed here. We actively recognize and nurture the unique strengths you bring to the table, ensuring you flourish in your professional journey.</p>
-            </div>
-            <div className="whyvibe-bullet-flex">
-                <h3 className="whyvibe-bullet">Team Commitment:</h3>
-                <p className="whyvibe-text">We're more than just a team; we're collaborators on a shared mission. Join a collective committed to expansion, where every voice is heard, and every idea contributes to our shared success.</p>
-            </div>
-            <div className="whyvibe-bullet-flex">
-                <h3 className="whyvibe-bullet">Global Impact:</h3>
-                <p className="whyvibe-text">Your work at The Vibe Collective isn't confined by borders. Join us to make a difference worldwide and be part of initiatives that transcend geographical boundaries.</p>
-            </div>
-            <div className="whyvibe-bullet-flex">
-                <h3 className="whyvibe-bullet">Competitive Compensation:</h3>
-                <p className="whyvibe-text">We understand the value of your skills. Enjoy not just an hourly wage, but a competitive compensation package that reflects your expertise and dedication.</p>
-            </div>
-            <div className="whyvibe-bullet-flex">
-                <h3 className="whyvibe-bullet">Comprehensive Benefits:</h3>
-                <p className="whyvibe-text">Your well-being matters. Benefit from a comprehensive package that includes health, financial wellness, and professional development perks, ensuring you thrive both personally and professionally.</p>
-            </div>
-            <div className="whyvibe-bullet-flex">
-                <h3 className="whyvibe-bullet">Valued and Appreciated:</h3>
-                <p className="whyvibe-text">At The Vibe Collective, you're not just an employee; you're a valued member. Your contributions are not only appreciated but celebrated as essential elements of our collective success.</p>
-            </div>
-            <div className="whyvibe-bullet-flex">
-                <h3 className="whyvibe-bullet">Aspirations Supported:</h3>
-                <p className="whyvibe-text">Your dreams are our priority. We actively support your aspirations, providing the resources and encouragement needed for you to reach new heights in your career.</p>
-            </div>
-            <h4 id="whyvibe-footnote">Join The Vibe Collective and experience a workplace where diversity is celebrated, talents are nurtured, and every day is an opportunity to make a positive impact. Might be a great time to vibe</h4>
-        </section>
+        <main className="whyvibe">
+            <TitleCard titleData={titleData}></TitleCard>
+            <VideoSection></VideoSection>
+            <CareerSection></CareerSection>
+            <ValueCards cardDatas={WhyVibeCardData}></ValueCards>
+        </main>
     )
 }

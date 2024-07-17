@@ -1,40 +1,50 @@
-import yellowLogo from '../../../Pics/Logos/MainLogoYellow.svg';
+import { useMediaQuery } from "react-responsive";
 import { NavPageLink } from "./NavPageLink";
-import facebook from '../../../Pics/Logos/facebook_grey.svg';
-import twitter from '../../../Pics/Logos/twitter_grey.svg';
-import instagram from '../../../Pics/Logos/instagram_grey.svg';
-import tiktok from '../../../Pics/Logos/tiktok_grey.svg';
+import { NavBarMobile } from "./Mobile/NavBarMobile";
+import yellowLogo from '../../../Pics/Logos/MainLogoYellow.svg';
+import {ReactComponent as FaceBook} from '../../../Pics/Logos/facebook_yellow.svg';
+import {ReactComponent as Twitter} from '../../../Pics/Logos/twitter_yellow.svg';
+import {ReactComponent as Instagram} from '../../../Pics/Logos/instagram_icon_yellow.svg'
+import {ReactComponent as Tiktok} from '../../../Pics/Logos/tiktok_yellow.svg';
 import '../../../App.css'
 import './NavBar.css';
-import '../../../App.css'
 
 export const NavBar = () => {
+    const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
 
-    return (
+    const defaultNavBar = (
         <nav className='navbar'>
             <ul className="navbar-main-nav">
                 <NavPageLink linkData={{text: 'HOME', route: '/', submenu: null}} />
-                <NavPageLink linkData={{text: 'WORK WITH US', route: '/Readers', submenu: null}} />
+                <NavPageLink linkData={{text: 'THE COLLECTIVE', route: '/Readers', submenu: null}} />
                 <li className="navbar-logo-container">
                     <img alt='Yellow main logo' src={yellowLogo} className="navbar-logo" />
                 </li>
                 <NavPageLink linkData={{text: 'OFFERINGS', route: '/Offerings', submenu: null}} />
-                <NavPageLink linkData={{text: 'CURRENT VIBE', route: '/News', submenu: null}} />
+                <NavPageLink linkData={{text: 'WORK WITH US', route: '/WhyVibe', submenu: null}} />
             </ul>
             <div className="navbar-social-flex">
                 <div className="navbar-social">
-                    <img className="navbar-socialimage" src={instagram} alt="instagram logo" />
+                    <Instagram className="navbar-socialimage"></Instagram>
                 </div>
                 <div className="navbar-social">
-                    <img className="navbar-socialimage" src={facebook} alt="facebook logo" />
+                    <Tiktok className="navbar-socialimage"></Tiktok>
                 </div>
                 <div className="navbar-social">
-                    <img className="navbar-socialimage" src={twitter} alt="twitter logo" />
+                    <Twitter className="navbar-socialimage"></Twitter>
                 </div>
                 <div className="navbar-social">
-                    <img className="navbar-socialimage" src={tiktok} alt="tiktok logo" />
+                    <FaceBook className="navbar-socialimage"></FaceBook>
                 </div>
             </div>
         </nav>
+    );
+
+    const navBar = isMobile ? <NavBarMobile></NavBarMobile> : defaultNavBar; 
+    
+    return (
+        <div>
+            {navBar}
+        </div>
     )
 }

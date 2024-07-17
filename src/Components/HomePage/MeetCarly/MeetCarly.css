@@ -6,12 +6,12 @@
     align-items: center;
     padding-top: 5em;
     height: 80vh;
-    min-height: 500px;
+    min-height: 530px;
 }
 
 .meet-flexitem {
     width: 50%;
-    height: 100%;
+    height: 85%;
 }
 
 #meet-morebutton {
@@ -20,6 +20,7 @@
 }
 
 .meet-video {
+    border: 0px;
     display: block;
     width: 90%;
     height: 100%;
@@ -28,6 +29,10 @@
 
 .meet-heading, .meet-text, .meet-morebutton {
     margin: 1em 0em;
+}
+
+.meet-text {
+    padding-right: 1em;
 }
 
 .meet-heading {
@@ -41,4 +46,32 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+@media only screen and (max-width: 840px) {
+    .meet-flex {
+        height: 65vh;
+    }
+
+    #meet-textflex {
+        font-size: .9em;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    .meet-flex {
+        flex-direction: column;
+    }
+
+    .meet-flexitem {
+        width: 100%;
+    }
+
+    #meet-textflex {
+        width: 90%;
+    }
+
+    .meet-heading {
+        padding-top: 1em;
+    }
 }

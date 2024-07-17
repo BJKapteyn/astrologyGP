@@ -31,8 +31,10 @@ export default function Offerings() {
     });
 
     if(!productData || !Array.isArray(productData)) {
+
         return <p>loading</p>
-    } else{
+    } else {
+
         return (
             <main>
                 <CategorySection productData={productData} />

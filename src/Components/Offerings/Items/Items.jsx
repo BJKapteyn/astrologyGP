@@ -1,29 +1,38 @@
+import { useState } from 'react';
+import { Item } from './Item/Item';
+import { CardModal } from '../../PageElements/CardModal/CardModal';
 import '../../../App.css';
 import './Items.css';
-import moon from '../../../Pics/Landscapes/moonClouds.png';
+import { ItemModal } from './ItemModal/ItemsModal';
 
-export const Items = ({ itemData }) => {
+export const Items = ({ itemData: itemsData }) => {
+    const [modalData, setModalData] = useState(null);
+    function deselectData() {
+        setModalData(null);
+    }
 
+    // Selects data for modal
+    function selectData(bioData) {
+        if(bioData != null) 
+            setModalData(bioData);
+    }
+    
+    
     return (
         <div className="items-flex">
-            {itemData.map(item => {
+            {itemsData.map(item => {
                 const itemObject = item.ItemData;
 
                 return (
-                        <div key={item.Id} className="items-item">
-                            <div className="items-image-container">
-                                <img className="items-image" src={moon} alt="" />
-                            </div>
-                            <h4 className="items-name">{itemObject.Name}</h4>
-                            <div className="items-description">
-                                <p className="items-descriptiontext">{itemObject.Description}</p>
-                            </div>
-                            <div className="items-booknowbutton">
-                                <button className="items-booknow">Book Now</button>
-                            </div>
-                        </div>
+                    <Item callBackSelect={selectData} itemData={itemObject}></Item>
                 );      
-            }, [])}
+            })}
+
+            {modalData && (
+                <CardModal callBackDeselect={deselectData}>
+                    <ItemModal itemData={modalData}></ItemModal>
+                </CardModal>
+            )}
         </div >
     );
 }

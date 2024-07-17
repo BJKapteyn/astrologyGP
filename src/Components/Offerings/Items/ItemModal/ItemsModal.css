@@ -1,0 +1,55 @@
+.item-modal-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.item-modal-item {
+    display: grid;
+    grid-template-areas: 
+        "image"
+        "description"
+        "button";
+    align-items: center;
+    justify-content: space-around;
+    height: 400px;
+    border: 2px solid grey;
+    margin: 2em;
+}
+
+.item-modal-image-container {
+    grid-area: image;
+    overflow: hidden;
+    height: 100%;
+}
+
+.item-modal-image {
+    height: 100%;
+    width: auto;
+}
+
+.item-modal-name {
+    grid-area: name;
+}
+
+.item-modal-description {
+    grid-area: description;
+    overflow-y: hidden;
+    height: 100%;
+}
+
+.item-modal-descriptiontext {
+    overflow-y: scroll;
+    height: 100%;
+    font-size: 1em;
+    padding: 1em;
+}
+
+.item-modal-booknowbutton {
+    grid-area: button;
+    text-align: center;
+}
+
+

@@ -2,8 +2,8 @@ import { ActionButton } from "../../PageElements/ActionButton/ActionButton";
 import '../../../App.css';
 import './OfferingSection.css';
 
-export const OfferingItem = ({offeringItemData}) => {
-    const {style, title, text} = offeringItemData;
+export const OfferingItem = ({ offeringItemData }) => {
+    const { style, title, text } = offeringItemData;
 
     return (
         <div className="offering-section-flexbox">
@@ -13,7 +13,7 @@ export const OfferingItem = ({offeringItemData}) => {
             <div className="offering-section-text-container">
                 <p className="offering-section-text">{text}</p>
             </div>
-            <ActionButton buttonSettings={{buttonText: 'Join Waitlist'}}></ActionButton>
+            <ActionButton buttonSettings={{buttonText: 'JOIN WAITLIST'}}></ActionButton>
         </div>
     );
 }
