@@ -6,6 +6,7 @@ export const CardInfoData = [
         sign: "Taurus",
         type: "Tarot Reader",
         email: "yahoo@yahoo.google",
+        info: '$100 | 1hr',
         description: "Greetings, Seekers of Truth! I am Autumn, a passionate and intuitive Tarot card reader dedicated to illuminating the hidden pathways of your destiny. With a deck of cards in my hands and a heart full of insight, I invite you to embark on a transformative journey with me." +
         "I’ve always found solace in the mystical world of Tarot. Each card, a universe of symbolism and meaning, spoke to the depths of my soul. Over the years, I have honed my craft, delving into the ancient wisdom of Tarot to help others navigate life's enigmatic twists and turns." +
         "My approach to Tarot goes beyond mere predictions. I am here to be your compassionate guide, offering clarity, perspective, and empowerment. Whether you're seeking answers about love, career, or self-discovery, the Tarot reveals the profound truths that lie within your subconscious, guiding you toward your true purpose." +
@@ -22,6 +23,7 @@ export const CardInfoData = [
         sign: "Aries",
         type: "Tarot Reader",
         email: "yahoo@yahoo.google",
+        info: '$100 | 1hr',
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" +
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" +
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem alias, voluptate fuga numquam illum consequatur aspernatur eveniet cum nemo eligendi molestias tempore veritatis, ipsa necessitatibus quasi quos recusandae non at."
@@ -33,6 +35,7 @@ export const CardInfoData = [
         sign: "Cancer",
         type: "Tarot Reader",
         email: "yahoo@yahoo.google",
+        info: '$100 | 1hr',
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
@@ -45,6 +48,7 @@ export const CardInfoData = [
         sign: "Leo",
         type: "Tarot Reader",
         email: "yahoo@yahoo.google",
+        info: '$100 | 1hr',
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
@@ -57,6 +61,7 @@ export const CardInfoData = [
         sign: "Taurus",
         type: "Tarot Reader",
         email: "yahoo@yahoo.google",
+        info: '$100 | 1hr',
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
@@ -69,6 +74,7 @@ export const CardInfoData = [
         sign: "Aires",
         type: "Tarot",
         email: "yahoo@yahoo.google",
+        info: '$100 | 1hr',
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
@@ -81,6 +87,7 @@ export const CardInfoData = [
         sign: "Leo",
         type: "Medium",
         email: "yahoo@yahoo.google",
+        info: '$100 | 1hr',
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
@@ -93,6 +100,7 @@ export const CardInfoData = [
         sign: "Taurus",
         type: "Medium",
         email: "yahoo@yahoo.google",
+        info: '$100 | 1hr',
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
@@ -105,6 +113,7 @@ export const CardInfoData = [
         sign: "Leo",
         type: "Medium",
         email: "yahoo@yahoo.google",
+        info: '$100 | 1hr',
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam eaque ut minima labore! Recusandae atque obcaecati, dignissimos ullam molestiae voluptate, optio velit aperiam a, doloremque et. Doloribus, maxime suscipit!" + 

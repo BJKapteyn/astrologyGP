@@ -6,13 +6,11 @@ export const CardModal = ({ callBackDeselect, children }) => {
     return (
         <div className="cardmodal">
             <section className="cardmodal-container">
-                <div className="cardmodal-border">
-                    <div className="cardmodal-card">
-                        <span onClick={callBackDeselect} className="cardmodal-exit">X</span>
+                <div className="cardmodal-card">
+                    <span onClick={callBackDeselect} className="cardmodal-exit">X</span>
 
-                        {children}
+                    {children}
 
-                    </div>
                 </div>
             </section>
             <div className="cardmodal-background" onClick={callBackDeselect}></div>

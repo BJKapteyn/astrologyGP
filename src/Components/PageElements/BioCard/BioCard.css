@@ -111,52 +111,6 @@
     padding: 5%;
 }
 
-.biocard-modal-image-container {
-    grid-area: image;
-}
-
-.biocard-modal-image {
-    display: block;
-    width: 100%;
-    margin: auto;
-}
-
-.biocard-modal-info {
-    grid-area: info;
-}
-
-#biocard-modal-name {
-    color: rgb(72,31,75);
-    font-size: 2.5em;
-}
-
-.biocard-modal-infoitem span {
-    display: inline-block;
-    font-size: 2em;
-    padding: .5em;
-}
-
-.biocard-modal-data {
-    color: rgb(198, 171, 210);
-    width: 40%;
-    text-align: left;
-}
-.biocard-modal-label {
-    text-align: right;
-    width: 20%;
-    color: rgb(183, 200, 219);
-}
-
-.biocard-modal-description {
-    grid-area: description;
-}
-
-.biocard-modal-description-text {
-    padding-top: 2em;
-    font-size: 1.5em;
-    text-align: left;
-}
-
 @media only screen and (max-width: 880px) {
     .biocard-flexbox {
         width: 15em;
