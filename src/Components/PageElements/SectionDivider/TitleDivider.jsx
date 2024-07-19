@@ -1,34 +1,36 @@
-import { DividerGraphic } from '../DividerGraphic/DividerGraphic';
+import { DividerGraphic } from './DividerGraphic/DividerGraphic';
+import { useMediaQuery } from 'react-responsive';
 import '../../../App.css';
 import './SectionDivider.css';
 
 export const TitleDivider = ({dividerData}) => {
+    const isTablet = useMediaQuery({query: '(min-width: 750px)'});
 
     return (
         <section className="divider" id="divider-titleDivider">
             <div className="divider-titleGraphic">
                 <DividerGraphic needsFlip={true}></DividerGraphic>
             </div>
-            <h1 className="divider-text divider-futura">TAROT READINGS</h1>
-            <div className="divider-titleGraphic">
-                <DividerGraphic isInBetween={true}></DividerGraphic>
-            </div>
-            <h1 className="divider-text divider-futura divider-textglow">ASTROLOGY</h1>
-            <div className="divider-titleGraphic">
-                <DividerGraphic isInBetween={true}></DividerGraphic>
-            </div>
+            <h1 className="divider-text divider-futura">ASTROLOGY</h1>
+
+            {isTablet && (
+                <div className="divider-titleGraphic">
+                    <DividerGraphic isInBetween={true}></DividerGraphic>
+                </div>
+            )}
+
+            <h1 className="divider-text divider-futura divider-textglow">TAROT READINGS</h1>
+
+            {isTablet && (
+                <div className="divider-titleGraphic">
+                    <DividerGraphic isInBetween={true}></DividerGraphic>
+                </div>
+            )}
+
             <h1 className="divider-text divider-futura">MEDIUMSHIP</h1>
             <div className="divider-titleGraphic">
                 <DividerGraphic></DividerGraphic>
             </div>
-
-            {/* {dividerData.map(data => {
-                const {id, classname, headingText} = data;
-
-                return (
-                    <h1 key={id} className={classname}>{headingText}</h1>
-                );
-            })} */}
         </section>
     );
 }

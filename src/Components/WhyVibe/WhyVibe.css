@@ -2,41 +2,14 @@
     margin: auto;
 }
 
-.whyvibe-title {
-    height: 80vh;
-    padding: 5%;
-    background-image: url('../../Pics/Landscapes/womanMountain.png')
+#whyvibe-titlecard {
+    height: 50vh;
 }
 
-.whyvibe-title h1 {
-    margin-top: 0px;
-}
-
-.whyvibe-title-text {
-    padding-top: 7%;
-    color: white;
-    text-align: center;
-    font-size: 2.5em;
-    text-shadow: .1em .1em .5em black;
-}
-
-.whyvibe-bullet-flex {
+.whyvibe-careers {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin: auto;
-}
-
-.whyvibe-bullet {
-    width: 25%;
-    font-size: 2em;
-}
-
-.whyvibe-text {
-    width: 70%;
-    height: auto;
+    justify-content: space-around;
 }
 
 #whyvibe-footnote {
@@ -44,3 +17,44 @@
     width: 80%;
     margin: auto;
 }
+
+/* --------------Value Card Section------------- */
+
+.valuecards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.valuecard {
+    width: 18em;
+    border: .1em solid var(--secondary-orange);
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 5px 5px 10px var(--secondary-orange);
+}
+
+.valucard-titleContainer {
+    position: relative;
+    height: 7em;
+}
+
+.valuecard-title {
+    font-size: 1.5em;
+    margin: 0em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.valucard-text {
+    height: 11em;
+    text-align: center;
+    font-size: .8em;
+    padding: .7em;
+}
+

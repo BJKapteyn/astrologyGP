@@ -1,7 +1,7 @@
 .items-flex {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 100%;
 }
@@ -22,37 +22,50 @@
     margin: 2em;
 }
 
-.items-image-container {
-    grid-area: image;
-    overflow: hidden;
-    height: 100%;
-}
-
-.items-image {
-    height: 100%;
-    width: auto;
-}
-
-.items-name {
-    grid-area: name;
-}
-
-.items-description {
-    grid-area: description;
-    overflow-y: hidden;
-    height: 100%;
-}
-
-.items-descriptiontext {
-    overflow-y: scroll;
-    height: 100%;
-    font-size: 1em;
-    padding: 1em;
-}
-
 .items-booknowbutton {
     grid-area: button;
     text-align: center;
 }
 
+#items-modal {
+    grid-template-columns: 35% 40% 1fr;
+    grid-template-rows: 35% 1fr;
 
+}
+
+#items-modal * h4 {
+    font-size: 1.2em;
+}
+
+#items-modal * button {
+    font-size: 1em;
+}
+
+@media only screen and (max-width: 900px) {
+    #items-modal * h4 {
+        font-size: 1em;
+    }
+
+    #items-modal {
+        grid-template-columns: 35% 35% 1fr;
+        grid-template-rows: 35% 1fr;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+
+    #items-modal .expandedcard-imageflex {
+        margin: 5%;
+    }
+
+    #items-modal {
+        height: 80vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 25% auto auto auto;
+        grid-template-areas: 
+                        "image"
+                        "info"
+                        "description"
+                        "button"
+    }
+}

@@ -1,12 +1,3 @@
-/*
-  main - violet                         rgb(72,31,75)
-  main complement - light purple        rgb(198, 171, 210)
-  accent 1 - grey                       rgb(202, 201, 171)
-  accent 2 - light blue                 rgb(183, 200, 219)
-  accent 3 - light pink                 rgb(253, 229, 183)
-  accent 4 - light orange               rgb(241, 199, 97)
-*/
-
 .biocard-title-container {
     width: 100%;
     text-align: center;
@@ -21,30 +12,30 @@
 .biocard-flex-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     padding-top: 0%;
-    padding-bottom: 4%;
     margin:auto;
-    width: 80%;
 }
 
 .biocard-flexbox {
-    width: 25%;
-    height: 35em;
+    width: 16em;
     cursor: pointer;
     margin: 2%;
-    border: .3em solid #f1d592;
     box-shadow: 0em 0em 0em rgb(241, 199, 97), 0em 0em 0em rgb(241, 199, 97);
-    transition: box-shadow 1s ease-out, border 1s ease-out;
-    -webkit-transition: box-shadow 1s ease-out, border 1s ease-out;
-    -moz-transition: box-shadow 1s ease-out, border 1s ease-out;
-    -ms-transition: box-shadow 1s ease-out, border 1s ease-out;
-    -o-transition: box-shadow 1s ease-out, border 1s ease-out;
+    transition: box-shadow 1s ease-out;
+    position: relative;
+    -webkit-transition: box-shadow 1s ease-out;
+    -moz-transition: box-shadow 1s ease-out;
+    -ms-transition: box-shadow 1s ease-out;
+    -o-transition: box-shadow 1s ease-out;
 }
 
 .biocard-flexbox:hover {
     box-shadow: 0em 0em 2em rgba(237, 199, 110, 0.782), 0em 0em 2em rgba(237, 199, 110, 0.782);
-    border: .3em solid rgb(241, 199, 97);
+}
+
+.biocard-flexbox:hover .biocard-button {
+    background-color: var(--main-color);
 }
 
 .biocard-description-container {
@@ -60,7 +51,7 @@
 }
 
 .biocard-image-container {
-    height: 50%;
+    height: 14em;
     width: 100%;
     margin: auto;
     overflow: hidden;
@@ -77,10 +68,67 @@
 }
 
 .biocard-image {
-    width: auto;
-    height: 172%;
-    margin: auto;
+    width: 100%;
+    height: auto;
     display: block;
-    position: relative;
-    top: -25%;
+}
+
+.biocard-button {
+    position: absolute;
+    top: 54%;
+    font-size: 1.2em;
+    right: 50%;
+    transform: translate(50%, 0);
+    color: white;
+    background-color: var(--secondary-orange);
+    padding: .6em .9em;
+    border-radius: 50%;
+    border: .15em solid white;
+    transition: background-color 500ms;
+}
+
+.biocard-infoName {
+    font-size: 1.5em;
+    margin-bottom: .3em;
+}
+
+.biocard-infoSign {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    padding-bottom: 2em;
+}
+
+.biocard-modal-biocard {
+    display: grid;
+    grid-template-areas: "image info"
+                        "image info"
+                        "description description";
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 50vh auto;
+    text-align: center;
+    width: 90%;
+    padding: 5%;
+}
+
+#biocard-modal-container {
+    height: auto;
+}
+
+@media only screen and (max-width: 880px) {
+    .biocard-flexbox {
+        width: 15em;
+    }
+}
+
+@media only screen and (max-width: 521px) {
+    .biocard-flexbox {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 521px) {
+    .biocard-flexbox {
+        width: 80%;
+    }
 }

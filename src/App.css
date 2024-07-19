@@ -11,6 +11,7 @@
   --main-accent-color: rgb(198, 171, 210);
   --text-color-grey: rgb(55, 55, 55);
   --secondary-orange: rgb(241, 199, 97);
+  --secondary-green: rgb(189, 188, 158);
   --white-seethrough: rgba(255, 255, 255, 0.8);
 }
 
@@ -35,14 +36,15 @@
 
 @font-face {
   font-family: Futura;
-  src: url('./Fonts/FuturaStdBook.ttf');
-  src: url('./Fonts/FuturaStdBook.ttf') format('truetype');
+  src: url('./Fonts/FuturaBook.ttf');
+  src: url('./Fonts/FuturaBook.ttf') format('truetype');
 }
 
 html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: rgb(72, 31, 75) rgb(183, 200, 219);
+  overflow-x: hidden;
 }
 
 body {
@@ -55,17 +57,24 @@ li {
   list-style-type: none;
 }
 
+p, a {
+  letter-spacing: .03em;
+}
+
 p {
   font-family: Futura, Geneva, Tahoma, sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
   margin: 0;
   font-weight: bold;
   color: var(--main-color);
-  letter-spacing: .01em;
 }
 
 a {
   text-decoration: none;
+}
+
+button {
+  font-family: Futura;
 }
 
 h1,
@@ -94,6 +103,10 @@ h2 {
 
 h3 {
   font-size: 2.5em;
+}
+
+h4 {
+  font-size: 2em;
 }
 
 .scroll-snap {
