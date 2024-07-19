@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 export default function Offerings() {
     const url = buildIt(x4tt116);
     const [endpointUrl, setEndpointUrl] = useState(url);
-    const [productData, setProductData] = useState(null);
+    const [product, setProductData] = useState(null);
 
     useEffect(() => {
         let active = true;
@@ -20,7 +20,7 @@ export default function Offerings() {
                         setEndpointUrl(url);
                 });
                 
-            return productData;
+            return product;
         }
 
         getAllItems();
@@ -30,14 +30,14 @@ export default function Offerings() {
         }
     });
 
-    if(!productData || !Array.isArray(productData)) {
+    if(!product || !Array.isArray(product)) {
 
         return <p>loading</p>
     } else {
 
         return (
             <main>
-                <CategorySection productData={productData} />
+                <CategorySection productData={product} />
             </main>
         );
     }

@@ -14,7 +14,6 @@ export const CategorySection = ({ productData }) => {
         styleId: 'cat-section-titlecard'
     }
 
-
     useEffect(() => {
         let itemData = [];
 

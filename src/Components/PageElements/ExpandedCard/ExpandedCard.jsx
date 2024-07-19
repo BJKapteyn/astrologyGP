@@ -2,7 +2,7 @@ import { ActionButton } from '../ActionButton/ActionButton';
 import '../../../App.css';
 import './ExpandedCard.css';
 
-export const ExpandedCard = ({ productItem, callBackDeselect }) => {
+export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {
     const { image,
             name,
             info,
@@ -10,34 +10,33 @@ export const ExpandedCard = ({ productItem, callBackDeselect }) => {
 
     const bookButtonSettings = {
         buttonText: 'BOOK',
-        buttonStyleId: 'modalitem-bookButton'
+        buttonStyleId: 'expandedcard-bookButton'
     };
 
     const closeButtonSettings = {
         buttonText: 'CLOSE',
-        buttonStyleId: 'modalitem-closeButton'
+        buttonStyleId: 'expandedcard-closeButton'
     };
 
-
-    const imageSrc = require(`../../../Pics/Headshots/${image}`);
+    const imageSrc = image ? require(`../../../Pics/Headshots/${image}`) : require(`../../../Pics/Landscapes/moonCrest.png`);
 
     return (
-        <div className="modalitem-grid">
-            <div className="modalitem-imageflex">
-                <img className="modalitem-image" src={imageSrc} alt={name} />
+        <div id={styleId} className="expandedcard-grid">
+            <div className="expandedcard-imageflex">
+                <img className="expandedcard-image" src={imageSrc} alt={name} />
             </div>
-            <div className="modalitem-info">
-                <h4 className="modalitem-productname">{name}</h4>
+            <div className="expandedcard-info">
+                <h4 className="expandedcard-productname">{name}</h4>
+                <p className="expandedcard-infotext">{info}</p>
+            </div>
+            <div className="expandedcard-button">
 
-                <p className="modalitem-infotext">{info}</p>
-                    
-            </div>
-            <div className="modalitem-button">
                 <ActionButton buttonSettings={bookButtonSettings}></ActionButton>
                 <ActionButton callback={callBackDeselect} buttonSettings={closeButtonSettings}></ActionButton>
+
             </div> 
-            <div className="modalitem-description">
-                <p className="modalitem-text">{description}</p>
+            <div className="expandedcard-description">
+                <p className="expandedcard-text">{description}</p>
             </div>
         </div>
     )
