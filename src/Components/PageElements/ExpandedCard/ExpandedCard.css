@@ -1,6 +1,6 @@
 .expandedcard-grid {
     display: grid;
-    grid-template-columns: 35% 40% 1fr;
+    grid-template-columns: 35% 35% 1fr;
     grid-template-rows: 30% 1fr;
     grid-template-areas: 
                 "image info        button"
@@ -88,7 +88,32 @@
 }
 
 @media only screen and (max-width: 900px) {
-    .expandedcard-productname {
-        font-size: 1em;
+    .expandedcard-imageflex {
+        align-items: baseline;
+        height: 100%;
+        width: 70%;
+        margin: 2% auto;
+    }
+    .expandedcard-grid {
+        grid-template-columns: 35% 35% 1fr;
+        grid-template-rows: 35% 1fr;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+
+    .expandedcard-grid {
+        height: 90vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40% auto auto auto;
+        grid-template-areas: 
+                        "image"
+                        "info"
+                        "description"
+                        "button"
+    }
+
+    .expandedcard-button {
+        margin: 2%;
     }
 }
