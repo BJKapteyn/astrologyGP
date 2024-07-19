@@ -1,33 +1,41 @@
 import { ActionButton } from '../ActionButton/ActionButton';
+import '../../../App.css';
 import './ExpandedCard.css';
 
-export const ExpandedCard = ({ productItem }) => {
+export const ExpandedCard = ({ productItem, callBackDeselect }) => {
     const { image,
             name,
             info,
-            description,
-            buttonText } = productItem;
+            description} = productItem;
 
     const bookButtonSettings = {
-        buttonText: buttonText
+        buttonText: 'BOOK',
+        buttonStyleId: 'modalitem-bookButton'
     };
+
+    const closeButtonSettings = {
+        buttonText: 'CLOSE',
+        buttonStyleId: 'modalitem-closeButton'
+    };
+
+
+    const imageSrc = require(`../../../Pics/Headshots/${image}`);
 
     return (
         <div className="modalitem-grid">
             <div className="modalitem-imageflex">
-                <img src={image} alt={name} />
+                <img className="modalitem-image" src={imageSrc} alt={name} />
             </div>
             <div className="modalitem-info">
                 <h4 className="modalitem-productname">{name}</h4>
 
-                <div className="modalitem-infotext">
-                    {info}
-                </div>
+                <p className="modalitem-infotext">{info}</p>
                     
             </div>
             <div className="modalitem-button">
                 <ActionButton buttonSettings={bookButtonSettings}></ActionButton>
-            </div>
+                <ActionButton callback={callBackDeselect} buttonSettings={closeButtonSettings}></ActionButton>
+            </div> 
             <div className="modalitem-description">
                 <p className="modalitem-text">{description}</p>
             </div>

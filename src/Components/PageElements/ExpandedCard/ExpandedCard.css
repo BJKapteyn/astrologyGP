@@ -1,12 +1,13 @@
 .modalitem-grid {
     display: grid;
-    grid-template-columns: 25% 1fr 1fr;
-    grid-template-rows: 25% 1fr;
+    grid-template-columns: 35% 1fr 1fr;
+    grid-template-rows: 30% 1fr;
     grid-template-areas: 
                 "image info        button"
                 "image description description";
     border: .2em solid #ba9fc5;
     overflow: hidden;
+    height: 20em;
 }
 
 .modalitem-imageflex {
@@ -14,24 +15,75 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 80%;
+    margin: 10% 4%;
+    overflow: hidden;
+}
+
+.modalitem-image {
+    margin-top: 5em;
+    width: 100%;
+    height: auto;
 }
 
 .modalitem-info {
     grid-area: info;
 }
 
+.modalitem-productname, .modalitem-infotext {
+    padding-left: 3%;
+}
+
 .modalitem-productname {
+    text-align: left;
     margin: auto;
+    padding-top: 9%;    
 }
 
 .modalitem-infotext {
-    padding-left: 1em;
+    padding-top: .3em;
 }
 
 .modalitem-button {
     grid-area: button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalitem-bookButton, #modalitem-closeButton {
+    font-size: 1.2em;
+    padding: .3em 1em;
+    width: 6em;
+    border-color: var(--secondary-green);
+}
+
+#modalitem-bookButton {
+    background-color: var(--secondary-green);
+    color: white;
+    border-top-right-radius: 0em;
+    border-bottom-right-radius: 0em;
+}
+#modalitem-bookButton:hover, #modalitem-closeButton:hover {
+    background-color: var(--secondary-orange);
+    border: .1em solid var(--secondary-orange);
+}
+
+#modalitem-closeButton {
+    border-top-left-radius: 0em;
+    border-bottom-left-radius: 0em;
+    border-left: 0px;
+    color: var(--secondary-green);
+}
+#modalitem-closeButton:hover {
+    color: white;
 }
 
 .modalitem-description {
+    margin: 5% 2%;
     grid-area: description;
+    height: 75%;
+    overflow: auto;
+    width: 92%;
+    padding-right: 4em;
 }

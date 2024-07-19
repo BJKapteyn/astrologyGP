@@ -37,8 +37,8 @@ export const BioCards = ({lowerBound, upperBound}) => {
         <div className="biocard-flex-container">
             {renderCards(lowerBound, upperBound)}
             {bioData && (
-                <CardModal callBackDeselect={deSelectBioCard} >
-                    <ExpandedCard productItem={bioData}></ExpandedCard>
+                <CardModal showExitButton={false} containerStyleId={'biocard-modal-container'} callBackDeselect={deSelectBioCard} >
+                    <ExpandedCard callBackDeselect={deSelectBioCard}  productItem={bioData}></ExpandedCard>
                 </CardModal>
             )}
         </div>

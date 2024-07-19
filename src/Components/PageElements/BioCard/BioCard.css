@@ -111,6 +111,10 @@
     padding: 5%;
 }
 
+#biocard-modal-container {
+    height: auto;
+}
+
 @media only screen and (max-width: 880px) {
     .biocard-flexbox {
         width: 15em;
