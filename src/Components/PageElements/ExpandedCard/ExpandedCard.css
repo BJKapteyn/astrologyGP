@@ -1,0 +1,119 @@
+.expandedcard-grid {
+    display: grid;
+    grid-template-columns: 35% 35% 1fr;
+    grid-template-rows: 30% 1fr;
+    grid-template-areas: 
+                "image info        button"
+                "image description description";
+    border: .2em solid #ba9fc5;
+    overflow: hidden;
+    height: 20em;
+}
+
+.expandedcard-imageflex {
+    grid-area: image;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    margin: 10% 4%;
+    overflow: hidden;
+}
+
+.expandedcard-image {
+    width: 100%;
+    height: auto;
+}
+
+.expandedcard-info {
+    grid-area: info;
+}
+
+.expandedcard-productname, .expandedcard-infotext {
+    padding-left: 3%;
+}
+
+.expandedcard-productname {
+    text-align: left;
+    margin: auto;
+    padding-top: 9%;    
+}
+
+.expandedcard-infotext {
+    padding-top: .3em;
+}
+
+.expandedcard-button {
+    grid-area: button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#expandedcard-bookButton, #expandedcard-closeButton {
+    font-size: 1.2em;
+    padding: .3em 1em;
+    width: 6em;
+    border-color: var(--secondary-green);
+}
+
+#expandedcard-bookButton {
+    background-color: var(--secondary-green);
+    color: white;
+    border-top-right-radius: 0em;
+    border-bottom-right-radius: 0em;
+}
+#expandedcard-bookButton:hover, #expandedcard-closeButton:hover {
+    background-color: var(--secondary-orange);
+    border: .1em solid var(--secondary-orange);
+}
+
+#expandedcard-closeButton {
+    border-top-left-radius: 0em;
+    border-bottom-left-radius: 0em;
+    border-left: 0px;
+    color: var(--secondary-green);
+}
+#expandedcard-closeButton:hover {
+    color: white;
+}
+
+.expandedcard-description {
+    margin: 5% 2%;
+    grid-area: description;
+    height: 75%;
+    overflow: auto;
+    width: 92%;
+    padding-right: 4em;
+}
+
+@media only screen and (max-width: 900px) {
+    .expandedcard-imageflex {
+        align-items: baseline;
+        height: 100%;
+        width: 70%;
+        margin: 2% auto;
+    }
+    .expandedcard-grid {
+        grid-template-columns: 35% 35% 1fr;
+        grid-template-rows: 35% 1fr;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+
+    .expandedcard-grid {
+        height: 90vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40% auto auto auto;
+        grid-template-areas: 
+                        "image"
+                        "info"
+                        "description"
+                        "button"
+    }
+
+    .expandedcard-button {
+        margin: 2%;
+    }
+}

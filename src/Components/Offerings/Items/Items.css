@@ -27,4 +27,45 @@
     text-align: center;
 }
 
+#items-modal {
+    grid-template-columns: 35% 40% 1fr;
+    grid-template-rows: 35% 1fr;
 
+}
+
+#items-modal * h4 {
+    font-size: 1.2em;
+}
+
+#items-modal * button {
+    font-size: 1em;
+}
+
+@media only screen and (max-width: 900px) {
+    #items-modal * h4 {
+        font-size: 1em;
+    }
+
+    #items-modal {
+        grid-template-columns: 35% 35% 1fr;
+        grid-template-rows: 35% 1fr;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+
+    #items-modal .expandedcard-imageflex {
+        margin: 5%;
+    }
+
+    #items-modal {
+        height: 80vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 25% auto auto auto;
+        grid-template-areas: 
+                        "image"
+                        "info"
+                        "description"
+                        "button"
+    }
+}

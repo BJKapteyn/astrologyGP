@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { BioCard } from "./BioCard";
 import { CardModal } from "../CardModal/CardModal";
 import { CardInfoData } from "./CardInfoData";
+import { ExpandedCard } from "../ExpandedCard/ExpandedCard";
 
 // lowerBound inclusive and upperBound exclusive, it refers to the sliced portion of the data
 export const BioCards = ({lowerBound, upperBound}) => {
@@ -15,8 +16,9 @@ export const BioCards = ({lowerBound, upperBound}) => {
     
     // Selects data for modal
     function selectBioCard(bioData) {
-        if(bioData != null) 
+        if(bioData != null) {
             selectBioData(bioData);
+        }
     }
 
     function renderCards(sliceLowerBound = 0, sliceUpperBound = CardInfoData.length) {
@@ -35,26 +37,8 @@ export const BioCards = ({lowerBound, upperBound}) => {
         <div className="biocard-flex-container">
             {renderCards(lowerBound, upperBound)}
             {bioData && (
-                <CardModal callBackDeselect={deSelectBioCard} >
-                    <div className="biocard-modal-biocard">
-                        <div className="biocard-modal-image-container">
-                            <img className="biocard-modal-image" alt={bioData.description} src={require('../../../Pics/Headshots/' + bioData.image)}></img>
-                        </div>
-                        <div className="biocard-modal-info">
-                            <div className="biocard-modal-infoitem">
-                                <span id='biocard-modal-name'>{bioData.name}</span>
-                            </div>
-                            <div className="biocard-modal-infoitem">
-                                <span className="biocard-modal-label">Sign:</span><span className='biocard-modal-data'>{bioData.sign}</span>
-                            </div>
-                            <div className="biocard-modal-infoitem">
-                                <span className="biocard-modal-label">Email:</span><span className='biocard-modal-data'>{bioData.email}</span>
-                            </div>
-                        </div>
-                        <div className="biocard-modal-description">
-                            <p className="biocard-modal-description-text">{bioData.description}</p>
-                        </div>
-                    </div>
+                <CardModal containerStyleId={'biocard-modal-container'} callBackDeselect={deSelectBioCard} >
+                    <ExpandedCard callBackDeselect={deSelectBioCard}  productItem={bioData}></ExpandedCard>
                 </CardModal>
             )}
         </div>
