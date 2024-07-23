@@ -2,7 +2,7 @@ export const NewsCardData = [
     {
         id: 1
         ,title: 'Welcome'
-        ,image: 'Logos/MainLogoWhite.svg'
+        ,image: 'Logos/VC--02.png'
         ,text: 'At The Vibe Collective, we empower individuals on their spiritual journey by providing insightful guidance and transformative experiences rooted in the metaphysical realm. We are dedicated to offering exceptional support in the form of tarot readings, astrology readings, mediumship, remote reiki, intuitive counseling, and more. We help our clients gain profound insights into their lives.'
         ,imageLeftSide: true
     },
