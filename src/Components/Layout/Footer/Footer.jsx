@@ -3,7 +3,7 @@ import facebook from '../../../Pics/Logos/facebook-48.png';
 import twitter from '../../../Pics/Logos/twitter-48.png';
 import instagram from '../../../Pics/Logos/instagram-48.png';
 import tiktok from '../../../Pics/Logos/tiktok-48.png';
-import sublogo from '../../../Pics/Logos/sublogo-white.svg'
+import sublogo from '../../../Pics/Logos/VC--01.png'
 import './Footer.css';
 import '../../../App.css';
 

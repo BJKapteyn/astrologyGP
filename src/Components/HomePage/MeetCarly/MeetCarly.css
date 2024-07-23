@@ -15,8 +15,11 @@
 }
 
 #meet-morebutton {
-    margin-left: 1em;
     width: fit-content;
+}
+
+#meet-morebutton:hover {
+    color: white
 }
 
 .meet-video {
@@ -32,7 +35,8 @@
 }
 
 .meet-text {
-    padding-right: 1em;
+    font-size: 1.4em;
+    padding: 1em 1em 1.5em 0em;
 }
 
 .meet-heading {

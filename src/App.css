@@ -109,19 +109,6 @@ h4 {
   font-size: 2em;
 }
 
-.scroll-snap {
-  scroll-snap-type: x mandatory;
-}
-
-.child-scroll-snap {
-  scroll-snap-align: start;
-}
-
-.title-container {
-  height: 10%;
-  text-align: center;
-}
-
 ::placeholder {
   color: rgb(211, 211, 211);
 }

@@ -1,4 +1,5 @@
 import { ActionButton } from '../../PageElements/ActionButton/ActionButton';
+import '../../../App.css';
 import './JoinUs.css';
 
 export const JoinUs = () => {

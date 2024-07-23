@@ -24,17 +24,16 @@
     text-align: left;
     width: 80%;
     margin: auto;
+    line-height: 1.5em;
 }
 
 #joinus-text {
+    font-size: 1.4em;
     color: white;
 }
 
-
-
 #joinus-joinButton {
-    border: .1em solid;
-    border-color: white;
+    border: .1em solid white;
     color: white;
     padding: .1em 2em;
     margin: 1em;
@@ -45,8 +44,8 @@
     -o-border-radius: .5em;
 }
 
-#joinus-joinbutton:hover {
-    border-color: var(--secondary-orange);
+#joinus-joinButton:hover {
+    border: .1em solid var(--secondary-orange);
 }
 
 @media only screen and (max-width: 1200px) {
@@ -85,6 +84,7 @@
 
     .joinus-flex {
         flex-direction: column;
+        margin: 1em 0em;
     }
 
     .joinus-leftText {

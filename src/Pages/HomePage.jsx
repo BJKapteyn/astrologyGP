@@ -20,7 +20,7 @@ export default function HomePage() {
     }
 
     return (
-        <div className="scroll-snap">
+        <div id="homepage">
             <TitleCard titleData={titleCardData}></TitleCard>
             <TitleDivider></TitleDivider>
             <JoinUs></JoinUs>
