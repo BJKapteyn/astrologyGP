@@ -23,7 +23,7 @@ export const JoinUs = () => {
     return (
         <section id ="joinus">
             <div className="joinus-flex" id="joinus-heading">
-                <div className="joinus-flexItem">
+                <div className="joinus-flexItem" id="joinus-flexFirst">
                     <h1 className="joinus-leftText">WORK</h1>
                     <h1 className="joinus-leftText">WITH US</h1>
                 </div>
