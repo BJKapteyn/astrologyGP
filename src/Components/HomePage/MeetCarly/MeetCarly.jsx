@@ -18,16 +18,18 @@ export const MeetCarly = () => {
                     referrerPolicy="strict-origin-when-cross-origin" 
                     allowFullScreen></iframe>
             </div>
-            <div id="meet-textflex" className="meet-flexitem">
+            <div className="meet-button-container">
+                <ActionButton buttonSettings={buttonSettings}></ActionButton>
+            </div>
+            {/* <div id="meet-textflex" className="meet-flexitem">
                 <h3 className="meet-heading">WHY THE VIBE</h3>
                 <p className="meet-text">At The Vibe Collective, we don't just offer jobs, we craft
                                         careers within a dynamic and inclusive ecosystem. We're
                                         committed to fostering growth, embracing collaboration and
                                         achieving harmonious work-life balance.</p>
 
-                <ActionButton buttonSettings={buttonSettings}></ActionButton>
 
-            </div>
+            </div> */}
         </section>
     );
 }

@@ -47,13 +47,7 @@
 }
 
 #joinus-joinButton {
-    padding: .1em 2em;
     margin: 1em 0em;
-    border-radius: .5em;
-    -webkit-border-radius: .5em;
-    -moz-border-radius: .5em;
-    -ms-border-radius: .5em;
-    -o-border-radius: .5em;
 }
 
 @media only screen and (max-width: 1200px) {

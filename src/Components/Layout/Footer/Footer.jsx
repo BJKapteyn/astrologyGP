@@ -14,26 +14,6 @@ export const Footer = () => {
             <div className="footer-flexrow" id="footer-logo">
                 <img id="footer-image" src={sublogo} alt="Vibe Collective" />
             </div>
-            {/* <div className="footer-flexrow" id="footer-links">
-                <div className="footer-item">
-                    <p className="footer-itemtext">CONSULTATIONS</p>
-                </div>
-                <div className="footer-item">
-                    <p className="footer-itemtext">ABOUT ME</p>
-                </div>
-                <div className="footer-item">
-                    <p className="footer-itemtext">FAQ</p>
-                </div>
-                <div className="footer-item">
-                    <p className="footer-itemtext">UPCOMING EVENTS</p>
-                </div>
-                <div className="footer-item">
-                    <p className="footer-itemtext">BLOG</p>
-                </div>
-                <div className='footer-item'>
-                    <p className="footer-itemtext">CONNECT</p>
-                </div>
-            </div> */}
             <div className="footer-flexrow" id="footer-socials">
                 <div className="footer-social">
                     <img src={facebook} alt="facebook" />

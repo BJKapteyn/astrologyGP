@@ -2,6 +2,7 @@
     stroke: var(--secondary-orange);
     color: var(--secondary-orange);
     fill: var(--secondary-orange);
+    background-color: rgba(0,0,0,0);
     border: none;
     position: fixed;
     padding: 0px;

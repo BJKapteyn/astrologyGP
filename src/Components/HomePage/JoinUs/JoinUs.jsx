@@ -31,7 +31,7 @@ export const JoinUs = () => {
                     <p id="joinus-text">{welcome}</p>
                     <p id="joinus-text">{midText}</p>
                     <p id="joinus-text">{endText}</p>
-                    <ActionButton buttonSettings={buttonSettings} />
+                    <a href='#subscribe'><ActionButton buttonSettings={buttonSettings} /></a>
                 </div>
             </div>
         </section>

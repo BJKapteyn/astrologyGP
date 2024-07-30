@@ -9,7 +9,7 @@ export const Subscribe = () => {
     }
 
     return (
-        <section className="subscribe">
+        <section id="subscribe">
             <div className="subscribe-flex">
                 <div className="subscribe-flexitem">
                     <h3 className="subscribe-newsletter">MONTHLY VIBE CHECK</h3>
