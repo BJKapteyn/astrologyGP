@@ -28,8 +28,10 @@
 }
 
 #joinus-text {
-    font-size: 1.4em;
+    font-size: 1.3em;
     color: white;
+    text-shadow: .2em .2em 2em black;
+    margin: .2em 0em;
 }
 
 #joinus-joinButton {
@@ -58,6 +60,11 @@
         margin: auto;
     }
 
+    #joinus-text {
+        font-size: 1.2em;
+        padding: .1em 0em;
+    }
+
     .joinus-leftText {
         font-size: 5em;
     }
@@ -69,7 +76,7 @@
     }
     
     #joinus-text {
-        font-size: 1.3em;
+        font-size: .8em;
     }
 
     .joinus-leftText {
@@ -89,6 +96,8 @@
 
     .joinus-leftText {
         font-size: 3.7em;
+        display: inline-block;
+        width: auto;
     }
 
     #joinus-text, #joinus-joinButton {
@@ -96,12 +105,15 @@
     }
 
     .joinus-flexItem {
-        width: 100%;
+        width: 80%;
     }
 
     #joinus-textSection {
-        margin: 0px auto;
         width: 80%;
+    }
+
+    #joinus-heading {
+        padding-top: 1em;
     }
 }
 

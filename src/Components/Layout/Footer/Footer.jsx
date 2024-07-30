@@ -1,6 +1,5 @@
 import { Subscribe } from './Subscribe/Subscribe';
 import facebook from '../../../Pics/Logos/facebook-48.png';
-import twitter from '../../../Pics/Logos/twitter-48.png';
 import instagram from '../../../Pics/Logos/instagram-48.png';
 import tiktok from '../../../Pics/Logos/tiktok-48.png';
 import sublogo from '../../../Pics/Logos/VC--01.png'
@@ -15,7 +14,7 @@ export const Footer = () => {
             <div className="footer-flexrow" id="footer-logo">
                 <img id="footer-image" src={sublogo} alt="Vibe Collective" />
             </div>
-            <div className="footer-flexrow" id="footer-links">
+            {/* <div className="footer-flexrow" id="footer-links">
                 <div className="footer-item">
                     <p className="footer-itemtext">CONSULTATIONS</p>
                 </div>
@@ -34,11 +33,8 @@ export const Footer = () => {
                 <div className='footer-item'>
                     <p className="footer-itemtext">CONNECT</p>
                 </div>
-            </div>
+            </div> */}
             <div className="footer-flexrow" id="footer-socials">
-                <div className="footer-social">
-                    <img src={twitter} alt="twitter" />
-                </div>
                 <div className="footer-social">
                     <img src={facebook} alt="facebook" />
                 </div>
