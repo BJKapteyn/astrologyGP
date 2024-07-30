@@ -24,12 +24,12 @@
 }
 
 #joinus-textSection {
+    padding-right: 3em;
     width: 60%;
 }
 
-.joinus-leftText, #joinus-text, .joinus-title, #joinus-joinButton {
-    text-shadow: .2em .2em 2em black;
-
+.joinus-leftText, #joinus-text, .joinus-title {
+    text-shadow: .5em .5em 2em black;
 }
 
 .joinus-leftText {
@@ -47,8 +47,6 @@
 }
 
 #joinus-joinButton {
-    border: .1em solid white;
-    color: white;
     padding: .1em 2em;
     margin: 1em 0em;
     border-radius: .5em;
@@ -56,10 +54,6 @@
     -moz-border-radius: .5em;
     -ms-border-radius: .5em;
     -o-border-radius: .5em;
-}
-
-#joinus-joinButton:hover {
-    border: .1em solid var(--secondary-orange);
 }
 
 @media only screen and (max-width: 1200px) {
