@@ -30,7 +30,7 @@
 }
 
 .joinus-leftText, #joinus-text {
-    text-shadow: 0em 0em .5em rgb(100,100,100);
+    text-shadow: 0em 0em .5em rgba(0,0,0,.5);
 }
 
 .joinus-leftText {
