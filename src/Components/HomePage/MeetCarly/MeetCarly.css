@@ -1,12 +1,19 @@
 .meet-flex {
+    background-image: url('../../../Pics/SvgDrawings/video_background.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+    background-size: cover;
     display: block;
     margin: auto;
-    padding-top: 5em;
-    height: 80vh;
+    padding-top: 8em;
     min-height: 530px;
+    height: 20em;
 }
 
 .meet-flexitem {
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 85%;
 }
@@ -28,7 +35,6 @@
 .meet-video {
     border: 0px;
     display: block;
-    width: 80%;
     height: 100%;
     max-width: 65em;
     margin: auto
@@ -43,26 +49,9 @@
     padding: 1em 1em 1.5em 0em;
 }
 
-.meet-heading {
-    padding-bottom: 0px;
-    font-size: 2em;
-    margin: 0px;
-    text-align: left;
-}
-
-#meet-textflex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 1050px) {
     .meet-flex {
         height: 65vh;
-    }
-
-    #meet-textflex {
-        font-size: .9em;
     }
 }
 
@@ -73,13 +62,5 @@
 
     .meet-flexitem {
         width: 100%;
-    }
-
-    #meet-textflex {
-        width: 90%;
-    }
-
-    .meet-heading {
-        padding-top: 1em;
     }
 }
