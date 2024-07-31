@@ -1,7 +1,7 @@
 import { BioCards } from '../../PageElements/BioCard/BioCards.jsx';
 import { TitleCard } from '../../PageElements/TitleCard/TitleCard.jsx';
-import  { SectionDivider } from '../../PageElements/SectionDivider/SectionDivider.jsx'
-import backgroundImageFile from '../../../Pics/Landscapes/girlsInField.png'
+import { SectionDivider } from '../../PageElements/SectionDivider/SectionDivider.jsx';
+import backgroundImageFile from '../../../Pics/Landscapes/girlsInField.png';
 import './ReaderTitle.css';
 
 export const ReaderTitle = () => {

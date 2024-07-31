@@ -3,7 +3,7 @@ import { Items } from "../Items/Items";
 import { TitleCard } from "../../PageElements/TitleCard/TitleCard";
 import { SectionDivider } from "../../PageElements/SectionDivider/SectionDivider";
 import { OfferingCategory } from "../data/OfferingCategory";
-import backgroundImage from '../../../Pics/Landscapes/tableHand_dark.png'
+import backgroundImage from '../../../Pics/Landscapes/yogaLivingRoom_dark.png';
 import './Category.css';
 
 export const CategorySection = ({ productData }) => {
@@ -32,13 +32,13 @@ export const CategorySection = ({ productData }) => {
     return (
         <>
             <TitleCard titleData={categoryTitleCardData}></TitleCard>
+            
             {OfferingCategory.map(category => {
                 return (
                     <section key={category.Id} className="category-section">
                         <SectionDivider dividerData={{headingText: category}}></SectionDivider>
 
                         <Items key={category.Id} itemData={items}></Items>
-
                     </section>
                 );
             })}
