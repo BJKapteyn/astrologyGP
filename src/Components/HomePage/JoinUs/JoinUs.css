@@ -1,10 +1,10 @@
 #joinus {
-    background-image: url('../../../Pics/Landscapes/groupYoga.png');
+    background-image: url('../../../Pics/Landscapes/jpeg/WORK_WITH_US.jpg');
     background-position-y: 30%;
     background-size: cover;
     background-color: var(--main-accent-color);
     background-repeat: no-repeat;
-    height: 80vh;
+    height: auto;
     min-height: 400px;
 }
 
@@ -13,6 +13,7 @@
     flex-direction: row;
     align-items: center;
     height: 100%;
+    padding: 2em 0em;
 }
 
 .joinus-flexItem {
@@ -28,8 +29,8 @@
     width: 60%;
 }
 
-.joinus-leftText, #joinus-text, .joinus-title {
-    text-shadow: .5em .5em 2em black;
+.joinus-leftText, #joinus-text {
+    text-shadow: 0em 0em .5em rgb(100,100,100);
 }
 
 .joinus-leftText {
@@ -52,7 +53,7 @@
 
 @media only screen and (max-width: 1200px) {
     #joinus {
-        height: 70vh;
+        height: auto;
     }
 
     #joinus-textSection {
@@ -73,26 +74,20 @@
 @media only screen and (max-width: 940px) {
     #joinus {
         background-position-x: 30%;
-        height: 70vh;
-    }
+        }
     
     #joinus-text {
         font-size: 1em;
     }
 
     .joinus-leftText {
-        font-size: 4em;
+        font-size: 3.5em;
     }
 }
 
 @media only screen and (max-width: 750px) {
-    #joinus {
-        height: auto;
-    }
-
     .joinus-flex {
         flex-direction: column;
-        margin: 1em 0em;
     }
 
     .joinus-leftText {
@@ -103,7 +98,7 @@
     }
 
     #joinus-flexFirst {
-        width: 80%;
+        width: 88%;
     }
 
     #joinus-text {
