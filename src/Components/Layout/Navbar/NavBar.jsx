@@ -19,7 +19,7 @@ export const NavBar = () => {
                 <NavPageLink linkData={{text: 'WORK WITH US', route: '/WhyVibe', submenu: null}} />
                 <NavPageLink linkData={{text: 'OFFERINGS', route: '/Offerings', submenu: null}} />
                 <NavPageLink linkData={{text: 'THE COLLECTIVE', route: '/Readers', submenu: null}} />
-                <NavPageLink linkData={{text: 'SHOP THE VIBE', route: '/Readers', submenu: null}} />
+                <NavPageLink linkData={{text: 'SHOP THE VIBE', route: '/Store', submenu: null}} />
             </ul>
             <div className="navbar-social-flex">
                 <Socials></Socials>
