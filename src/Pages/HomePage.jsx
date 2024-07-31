@@ -11,7 +11,7 @@ export default function HomePage() {
     const videoDivider = {
         id: 1,
         classname: 'divider-text',
-        headingText: ['FEEL THE VIBE']
+        headingText: ['THE VIBE']
     }
     const offeringsDividerData = {
         id: 1,

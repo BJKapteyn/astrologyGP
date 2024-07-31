@@ -1,8 +1,5 @@
 import { Subscribe } from './Subscribe/Subscribe';
-import facebook from '../../../Pics/Logos/facebook-48.png';
-import twitter from '../../../Pics/Logos/twitter-48.png';
-import instagram from '../../../Pics/Logos/instagram-48.png';
-import tiktok from '../../../Pics/Logos/tiktok-48.png';
+import { Socials } from '../../PageElements/Socials/Socials';
 import sublogo from '../../../Pics/Logos/VC--01.png'
 import './Footer.css';
 import '../../../App.css';
@@ -15,39 +12,13 @@ export const Footer = () => {
             <div className="footer-flexrow" id="footer-logo">
                 <img id="footer-image" src={sublogo} alt="Vibe Collective" />
             </div>
-            <div className="footer-flexrow" id="footer-links">
-                <div className="footer-item">
-                    <p className="footer-itemtext">CONSULTATIONS</p>
-                </div>
-                <div className="footer-item">
-                    <p className="footer-itemtext">ABOUT ME</p>
-                </div>
-                <div className="footer-item">
-                    <p className="footer-itemtext">FAQ</p>
-                </div>
-                <div className="footer-item">
-                    <p className="footer-itemtext">UPCOMING EVENTS</p>
-                </div>
-                <div className="footer-item">
-                    <p className="footer-itemtext">BLOG</p>
-                </div>
-                <div className='footer-item'>
-                    <p className="footer-itemtext">CONNECT</p>
-                </div>
+            <div className="footer-flexrow" id="footer-socials-contianer">
+
+                <Socials styleId={'footer-socials'}></Socials>
+
             </div>
-            <div className="footer-flexrow" id="footer-socials">
-                <div className="footer-social">
-                    <img src={twitter} alt="twitter" />
-                </div>
-                <div className="footer-social">
-                    <img src={facebook} alt="facebook" />
-                </div>
-                <div className="footer-social">
-                    <img src={instagram} alt="instagram" />
-                </div>
-                <div className="footer-social">
-                    <img src={tiktok} alt="tiktok" />
-                </div>
+            <div className="footer-flexrow">
+                <p className="footer-disclaimer">Disclaimer: Readings, classes, and events are intended for entertainment and personal growth purposes only. They are not a substitute for professional advice or counseling. Participation in these activities does not guarantee any specific outcomes. Individuals are responsible for their own decisions and actions.</p>
             </div>
             <div className="footer-flexrow" id="footer-rights">
                 <p className="footer-itemtext">THE VIBE COLLECTIVE 2024</p>

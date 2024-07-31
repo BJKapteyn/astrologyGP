@@ -1,3 +1,4 @@
+import '../../../App.css';
 import './ActionButton.css';
 
 // buttonSettings - settings used to define the button
@@ -30,7 +31,9 @@ export const ActionButton = ({ buttonSettings, callback = null }) => {
             id={buttonStyleId ?? ''}
             onClick={(event) => executeAction(event)}
             className="actionbutton-container">
+
             {buttonText}
+            
         </button>
     );
 } 

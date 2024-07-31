@@ -34,15 +34,29 @@
     min-height: 7em;
     border-top: .1em solid white;
     border-bottom: .1em solid white;
+    padding: 1em;
+}
+
+#footer-socials-contianer {
+    padding: 2em;
 }
 
 #footer-socials {
-    height: 3em;
-    padding: 2em;
+    height: 2em;
+    width: auto;
 }
 
 #footer-rights {
     height: 3em;
+    padding-bottom: 1em;
+}
+
+.footer-disclaimer {
+    padding: 1em;
+    font-size: .8em;
+    color: white;
+    text-align: center;
+    width: 80%;
 }
 
 .footer-social {

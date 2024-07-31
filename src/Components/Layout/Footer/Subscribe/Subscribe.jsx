@@ -9,14 +9,14 @@ export const Subscribe = () => {
     }
 
     return (
-        <section className="subscribe">
+        <section id="subscribe">
             <div className="subscribe-flex">
                 <div className="subscribe-flexitem">
-                    <h3 className="subscribe-newsletter">MONTHLY VIBE CHECK</h3>
+                    <h3 className="subscribe-newsletter">VIBE CHECK</h3>
                     <div className="subscribe-signupcontainer">
                         <div className="subscribe-subscribe-text">
                             <h4 className="subscribe-description">Subscribe to our monthly newsletter:</h4>
-                            <p className="subscribe-descriptiontext">Be the first to learn about classes, special offers, and events</p>
+                            <p className="subscribe-descriptiontext">Be the first to learn about special offers, seasonal classes, new services, and events.</p>
                         </div>
                         <div className="subscribe-button">
                             <input type="text" className="subscribe-textinput" id="submitemail" placeholder="Enter Your Email..."></input>
@@ -24,7 +24,7 @@ export const Subscribe = () => {
                             <ActionButton  buttonSettings={subscribeButtonSettings}></ActionButton>
                             
                         </div>
-                        <p className="subscribe-subtext">We respect your privacy, and your inbox*</p>
+                        <p className="subscribe-subtext">We respect your privacy and your inbox.</p>
                     </div>
                 </div>
             </div>
