@@ -17,11 +17,11 @@ export const Footer = () => {
                 <Socials styleId={'footer-socials'}></Socials>
 
             </div>
+            <div className="footer-flexrow">
+                <p className="footer-disclaimer">Disclaimer: Readings, classes, and events are intended for entertainment and personal growth purposes only. They are not a substitute for professional advice or counseling. Participation in these activities does not guarantee any specific outcomes. Individuals are responsible for their own decisions and actions.</p>
+            </div>
             <div className="footer-flexrow" id="footer-rights">
                 <p className="footer-itemtext">THE VIBE COLLECTIVE 2024</p>
-            </div>
-            <div className="footer-flexrow">
-                <p className="footer-disclaimer"></p>
             </div>
         </footer>
     )

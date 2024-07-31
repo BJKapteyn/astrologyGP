@@ -40,7 +40,7 @@
 .newscard-text,
 .newscard-text-title {
   text-align: left;
-  padding: 5%;
+  padding: 1%;
 }
 
 .newscard-crop {
@@ -183,7 +183,7 @@
   .newscard-text-container {
     font-size: .9em;
   }
-  .newscard-text-title, .newscard-text {
+  .newscard-text-title {
     padding: 1%;
   }
   .newscard-text {
