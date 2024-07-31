@@ -17,10 +17,12 @@
     text-align: center;
 }
 
-.subscribe {
+#subscribe {
     width: 100%;
     background-color: var(--main-accent-color);
-    padding: 5em 0em;
+    background-image: url('../../../../Pics/Backgrounds/Subscribe-background.jpg');
+    background-size: cover;
+    padding: 3em 0em;
 }
 
 .subscribe-header {

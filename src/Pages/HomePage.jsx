@@ -11,7 +11,7 @@ export default function HomePage() {
     const videoDivider = {
         id: 1,
         classname: 'divider-text',
-        headingText: ['FEEL THE VIBE']
+        headingText: ['THE VIBE']
     }
     const offeringsDividerData = {
         id: 1,
@@ -20,7 +20,7 @@ export default function HomePage() {
     }
 
     return (
-        <div className="scroll-snap">
+        <div id="homepage">
             <TitleCard titleData={titleCardData}></TitleCard>
             <TitleDivider></TitleDivider>
             <JoinUs></JoinUs>

@@ -1,29 +1,36 @@
 .meet-flex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    margin: auto;
     padding-top: 5em;
     height: 80vh;
     min-height: 530px;
 }
 
 .meet-flexitem {
-    width: 50%;
+    width: 100%;
     height: 85%;
 }
 
+.meet-button-container {
+    width: 100%;
+    text-align: center;
+    padding-top: 2em;
+}
+
 #meet-morebutton {
-    margin-left: 1em;
     width: fit-content;
+}
+
+#meet-morebutton:hover {
+    color: white
 }
 
 .meet-video {
     border: 0px;
     display: block;
-    width: 90%;
+    width: 80%;
     height: 100%;
+    max-width: 65em;
     margin: auto
 }
 
@@ -32,7 +39,8 @@
 }
 
 .meet-text {
-    padding-right: 1em;
+    font-size: 1.4em;
+    padding: 1em 1em 1.5em 0em;
 }
 
 .meet-heading {

@@ -1,7 +1,7 @@
 import { useMediaQuery } from 'react-responsive';
 import './NewsCard.css';
 
-export const NewsCard = ({newsCardData}) => {
+export const NewsCard = ({ newsCardData }) => {
     const imagePath = require('../../../Pics/' + newsCardData.image);
     const imageId = 'newscard-image' + newsCardData.id;
     const isMobile = useMediaQuery({ query: '(max-width: 750px)' });
@@ -14,11 +14,12 @@ export const NewsCard = ({newsCardData}) => {
 
     const text = (
         <div className="newscard-text-container">
-            {/* <div id="newscard-textCover"></div> this is for a fade to transparent at the bottom of the text if we need it */}
             <div className="newscard-crop">
                 <h3 className="newscard-text-title">{newsCardData.title}</h3>
                 <div className="newscard-text-crop">
                     <p className="newscard-text">{newsCardData.text}</p>
+                    {newsCardData.text2 && <p className="newscard-text">{newsCardData.text2}</p>}
+                    {newsCardData.text3 && <p className="newscard-text">{newsCardData.text3}</p>}
                 </div>
             </div>
         </div>
@@ -38,8 +39,6 @@ export const NewsCard = ({newsCardData}) => {
             {text}
         </div>
     );
-
-    
 
     return isMobile ? newsCardMobile : newsCard;
 }

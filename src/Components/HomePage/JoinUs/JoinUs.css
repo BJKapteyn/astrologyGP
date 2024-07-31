@@ -19,34 +19,35 @@
     width: 50%;
 }
 
+#joinus-flexFirst {
+    width: 40%;
+}
+
+#joinus-textSection {
+    padding-right: 3em;
+    width: 60%;
+}
+
+.joinus-leftText, #joinus-text, .joinus-title {
+    text-shadow: .5em .5em 2em black;
+}
+
 .joinus-leftText {
     color: var(--white-seethrough);
     text-align: left;
     width: 80%;
     margin: auto;
+    line-height: 1.5em;
 }
 
 #joinus-text {
+    font-size: 1.3em;
     color: white;
+    margin: .2em 0em;
 }
-
-
 
 #joinus-joinButton {
-    border: .1em solid;
-    border-color: white;
-    color: white;
-    padding: .1em 2em;
-    margin: 1em;
-    border-radius: .5em;
-    -webkit-border-radius: .5em;
-    -moz-border-radius: .5em;
-    -ms-border-radius: .5em;
-    -o-border-radius: .5em;
-}
-
-#joinus-joinbutton:hover {
-    border-color: var(--secondary-orange);
+    margin: 1em 0em;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -55,8 +56,13 @@
     }
 
     #joinus-textSection {
-        width: 42%;
+        width: 55%;
         margin: auto;
+    }
+
+    #joinus-text {
+        font-size: 1.2em;
+        padding: .1em 0em;
     }
 
     .joinus-leftText {
@@ -67,10 +73,11 @@
 @media only screen and (max-width: 940px) {
     #joinus {
         background-position-x: 30%;
+        height: 70vh;
     }
     
     #joinus-text {
-        font-size: 1.3em;
+        font-size: 1em;
     }
 
     .joinus-leftText {
@@ -85,23 +92,34 @@
 
     .joinus-flex {
         flex-direction: column;
+        margin: 1em 0em;
     }
 
     .joinus-leftText {
         font-size: 3.7em;
+        display: inline-block;
+        width: auto;
+        padding: .5em .3em .5em 0em;
     }
 
-    #joinus-text, #joinus-joinButton {
+    #joinus-flexFirst {
+        width: 80%;
+    }
+
+    #joinus-text {
         font-size: 1.1em;
     }
 
     .joinus-flexItem {
-        width: 100%;
+        width: 80%;
     }
 
     #joinus-textSection {
-        margin: 0px auto;
         width: 80%;
+    }
+
+    #joinus-heading {
+        padding-top: 1em;
     }
 }
 

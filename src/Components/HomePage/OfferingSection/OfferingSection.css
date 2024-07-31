@@ -16,6 +16,9 @@
 }
 
 .offering-section-flexbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border: .1em solid #c7b3ce;
     width: 29%;
     padding-bottom: 2em;
@@ -36,11 +39,11 @@
 }
 
 #offering-moonmountain {
-    background-image: url('../../../Pics/Landscapes/diary_darkened.jpg');
+    background-image: url('../../../Pics/Landscapes/mountainPool.png');
 }
 
 #offering-groupyoga {
-    background-image: url('../../../Pics/Landscapes/girlsInField_dark.jpg');
+    background-image: url('../../../Pics/Landscapes/girlsInField_dark.png');
     background-position-x: 30%;
 }
 
@@ -49,10 +52,13 @@
 }
 
 .offering-section-text-container {
-    padding: 2.5em 1em;
+    overflow: scroll;
+    height: 10em;
+    margin: 2.5em 0em;
 }
 .offering-section-text {
-    font-size: 1.3em;
+    font-size: 1.2em;
+    margin: 0em 1em;
 }
 
 .offering-section-image-container {
