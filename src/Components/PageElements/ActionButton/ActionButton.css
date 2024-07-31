@@ -6,11 +6,6 @@
     background-color: var(--secondary-orange);
     border: .1em solid var(--secondary-orange);
     border-color: var(--secondary-orange);
-    border-radius: .5em;
-    -webkit-border-radius: .5em;
-    -moz-border-radius: .5em;
-    -ms-border-radius: .5em;
-    -o-border-radius: .5em;
     transition: background-color 500ms, border-color 500ms;
     -webkit-transition: background-color 500ms, border-color 500ms;
     -moz-transition: background-color 500ms, border-color 500ms;

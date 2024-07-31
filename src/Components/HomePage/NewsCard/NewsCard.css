@@ -188,6 +188,7 @@
   }
   .newscard-text {
     line-height: 1.2em;
+    font-size: 1.1em;
   }
 }
 
@@ -216,6 +217,4 @@
   .newscard-text-title {
     padding: 1%;
   }
-
-
 }
