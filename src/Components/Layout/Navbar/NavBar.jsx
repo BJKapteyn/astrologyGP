@@ -1,10 +1,8 @@
 import { useMediaQuery } from "react-responsive";
 import { NavPageLink } from "./NavPageLink";
+import { Socials } from "../../PageElements/Socials/Socials";
 import { NavBarMobile } from "./Mobile/NavBarMobile";
 import yellowLogo from '../../../Pics/Logos/MainLogoYellow.svg';
-import {ReactComponent as FaceBook} from '../../../Pics/Logos/facebook_yellow.svg';
-import {ReactComponent as Instagram} from '../../../Pics/Logos/instagram_icon_yellow.svg'
-import {ReactComponent as Tiktok} from '../../../Pics/Logos/tiktok_yellow.svg';
 import '../../../App.css'
 import './NavBar.css';
 
@@ -24,15 +22,7 @@ export const NavBar = () => {
                 <NavPageLink linkData={{text: 'SHOP THE VIBE', route: '/Readers', submenu: null}} />
             </ul>
             <div className="navbar-social-flex">
-                <div className="navbar-social">
-                    <Instagram className="navbar-socialimage"></Instagram>
-                </div>
-                <div className="navbar-social">
-                    <Tiktok className="navbar-socialimage"></Tiktok>
-                </div>
-                <div className="navbar-social">
-                    <FaceBook className="navbar-socialimage"></FaceBook>
-                </div>
+                <Socials></Socials>
             </div>
         </nav>
     );

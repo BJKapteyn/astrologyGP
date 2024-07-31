@@ -1,0 +1,29 @@
+.socials-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.socials-flexitem {
+    width: auto;
+    padding: 0em .5em;
+}
+
+.socials-flexitem:hover {
+    cursor: pointer;
+}
+
+.socials-image {
+    width: 1.5em;
+    fill: #fde5b7;
+    fill: var(--secondary-orange);
+    transition: fill 500ms;
+    -webkit-transition: fill 500ms;
+    -moz-transition: fill 500ms;
+    -ms-transition: fill 500ms;
+    -o-transition: fill 500ms;
+}
+
+.socials-image:hover {
+    fill: var(--main-accent-color);
+}
