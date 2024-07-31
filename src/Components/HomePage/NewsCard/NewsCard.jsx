@@ -18,6 +18,8 @@ export const NewsCard = ({ newsCardData }) => {
                 <h3 className="newscard-text-title">{newsCardData.title}</h3>
                 <div className="newscard-text-crop">
                     <p className="newscard-text">{newsCardData.text}</p>
+                    {newsCardData.text2 && <p className="newscard-text">{newsCardData.text2}</p>}
+                    {newsCardData.text3 && <p className="newscard-text">{newsCardData.text3}</p>}
                 </div>
             </div>
         </div>
