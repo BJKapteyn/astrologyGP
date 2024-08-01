@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom';
-import { ActionButton } from '../../PageElements/ActionButton/ActionButton';
+import { VideoSection } from '../../PageElements/VideoSection/VideoSection';
 import './MeetCarly.css';
 
 export const MeetCarly = () => {
@@ -8,22 +7,9 @@ export const MeetCarly = () => {
         buttonStyleId: 'meet-morebutton',
         action: null
     }
+    const vidSource = 'https://vibecollectivevideos.blob.core.windows.net/vibevideos/TVC Welcome V2 CAP.mp4';
 
     return (
-        <section className="meet-flex">
-            <div className="meet-flexitem">
-                <iframe 
-                    className="meet-video"
-                    src="https://www.youtube.com/embed/videoseries?si=TkHSyUQp42M11451&amp;list=PL22DFF37B18C4F943&amp;origin=https://the-vibe-collective-2024.web.app"
-                    title="YouTube video player" 
-                    referrerPolicy="strict-origin-when-cross-origin" 
-                    allowFullScreen></iframe>
-            </div>
-            <div className="meet-button-container">
-                <Link to={'/WhyVibe'}>
-                    <ActionButton buttonSettings={buttonSettings}></ActionButton>
-                </Link>
-            </div>
-        </section>
+        <VideoSection videoSource={vidSource} buttonSettings={buttonSettings}></VideoSection>
     );
 }

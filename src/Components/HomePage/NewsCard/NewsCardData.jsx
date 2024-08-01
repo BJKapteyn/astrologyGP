@@ -2,7 +2,7 @@ export const NewsCardData = [
     {
         id: 1
         ,title: 'Welcome'
-        ,image: 'Logos/VC--02.png'
+        ,image: 'Logos/vibe_square.png'
         ,text: 'At The Vibe Collective, we empower individuals on their personal journeys with' + 
                 'insightful guidance and transformational experiences. Our diverse services include tarot ' +
                 'readings, astrology, mediumship, remote reiki, yoga, sound healing, and more. Each ' +
@@ -13,6 +13,7 @@ export const NewsCardData = [
         ,text3: 'The magic and knowledge you seek are already within you here to help you ' +
                 'harness and embrace them. Join us and discover the power within. '
         ,imageLeftSide: true
+        ,styleId: 'newscard-blurb1'
     },
     {
         id: 2
@@ -28,6 +29,7 @@ export const NewsCardData = [
                 'VIBE with us and discover the power within.'
         ,text3: null
         ,imageLeftSide: false
+        ,styleId: 'newscard-blurb2'
     },
     {
         id: 3
@@ -39,19 +41,6 @@ export const NewsCardData = [
                 'unique, and we\'re here to support you every step of the way. Ensuring a safe, ' +
                 'thoughtful, and transformative journey.'
         ,imageLeftSide: true
-    },
-    {
-        id: 4
-        ,title: 'Collective Open May 2024'
-        ,image: 'Portraits/portrait-moonBeach.png'
-        ,text: 'We are so excited to VIBE with you! /nPlease Join our waitlist or newsletter to be one of the first to join the collective and have a reading with one of our amazing collective readers.'
-        ,imageLeftSide: false
-    },
-    {
-        id: 5
-        ,title: 'Tarot Tales'
-        ,image: 'Portraits/portrait-womainField3.png'
-        ,text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde pariatur debitis sapiente animi cupiditate cumque ducimus tenetur aliquam excepturi incidunt blanditiis vel officia optio labore rerum, temporibus molestiae suscipit eveniet!'
-        ,imageLeftSide: true
-    },
+        ,styleId: 'newscard-blurb3'
+    }
 ]

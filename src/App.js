@@ -31,10 +31,10 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />}></Route>
           <Route path="/WhyVibe" element={<WhyVibePage />}></Route>
+          <Route path="/Readers" element={<ComingSoon comingSoonData={readersComingSoonData} />}></Route>
+          <Route path="/Store" element={<ComingSoon comingSoonData={storeComingSoonData} />}></Route>
+          <Route path="/Offerings" element={<ComingSoon comingSoonData={offeringsComingSoonData} />}></Route>
         </Route>
-        <Route path="/Readers" element={<ComingSoon comingSoonData={readersComingSoonData} />}></Route>
-        <Route path="/Store" element={<ComingSoon comingSoonData={storeComingSoonData} />}></Route>
-        <Route path="/Offerings" element={<ComingSoon comingSoonData={offeringsComingSoonData} />}></Route>
       </Routes>
     </div>
   );

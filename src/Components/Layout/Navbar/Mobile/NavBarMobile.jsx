@@ -35,6 +35,7 @@ export const NavBarMobile = () => {
             <NavPageLink linkData={{text: 'WORK WITH US', route: '/Readers', submenu: null}} />
             <NavPageLink linkData={{text: 'OFFERINGS', route: '/Offerings', submenu: null}} />
             <NavPageLink linkData={{text: 'CURRENT VIBE', route: '/WhyVibe', submenu: null}} />
+            <NavPageLink linkData={{text: 'SHOP THE VIBE', route: '/Store', submenu: null}} />
         </ul>
     );
 

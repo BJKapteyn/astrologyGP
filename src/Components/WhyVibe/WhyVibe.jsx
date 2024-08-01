@@ -1,8 +1,8 @@
 import { WhyVibeCardData } from './WhyVibeCardData.jsx';
 import { ValueCards } from './ValueCards.jsx';
 import { TitleCard } from '../PageElements/TitleCard/TitleCard.jsx';
-import { VideoSection } from './VideoSection/VideoSection.jsx';
 import { CareerSection } from './CareerSection/CareerSection.jsx';
+import { VideoSection } from '../PageElements/VideoSection/VideoSection.jsx';
 import backgroundImage from '../../Pics/Landscapes/moonFade.png';
 
 import './WhyVibe.css';
@@ -13,10 +13,12 @@ export const WhyVibe = () => {
         styleId: 'whyvibe-titlecard'
     };
 
+    const vidSource = 'https://vibecollectivevideos.blob.core.windows.net/vibevideos/Recruiting Video V1.mp4';
+
     return (
         <main className="whyvibe">
             <TitleCard titleData={titleData}></TitleCard>
-            <VideoSection></VideoSection>
+            <VideoSection videoSource={vidSource}></VideoSection>
             <CareerSection></CareerSection>
             <ValueCards cardDatas={WhyVibeCardData}></ValueCards>
         </main>
