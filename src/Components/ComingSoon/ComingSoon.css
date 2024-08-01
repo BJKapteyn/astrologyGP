@@ -9,7 +9,7 @@
 }
 
 .comingsoon-heading, .comingsoon-subtext {
-    text-shadow: 0em 0em 1em rgba(0,0,0,.5);
+    text-shadow: 0em 0em .2em rgba(0,0,0,.5);
     color: white;
 }
 
