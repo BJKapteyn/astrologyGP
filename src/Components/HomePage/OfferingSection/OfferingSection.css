@@ -52,12 +52,19 @@
 }
 
 .offering-section-text-container {
-    overflow: scroll;
-    height: 10em;
+    overflow: hidden;
+    height: 12em;
     margin: 2.5em 0em;
+    padding-right: 5px;
 }
+
+.offering-section-hidescroll {
+    overflow: auto;
+    padding-right: 15px;
+}
+
 .offering-section-text {
-    font-size: 1.2em;
+    font-size: 1em;
     margin: 0em 1em;
 }
 

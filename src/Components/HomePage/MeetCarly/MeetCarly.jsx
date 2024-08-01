@@ -12,12 +12,9 @@ export const MeetCarly = () => {
     return (
         <section className="meet-flex">
             <div className="meet-flexitem">
-                <iframe 
-                    className="meet-video"
-                    src="https://www.youtube.com/embed/videoseries?si=TkHSyUQp42M11451&amp;list=PL22DFF37B18C4F943&amp;origin=https://the-vibe-collective-2024.web.app"
-                    title="YouTube video player" 
-                    referrerPolicy="strict-origin-when-cross-origin" 
-                    allowFullScreen></iframe>
+                <video className="meet-video" controls>
+                    <source src="https://vibecollectivevideos.blob.core.windows.net/vibevideos/Recruiting Video V1.mp4" type="video/mp4" />
+                </video>
             </div>
             <div className="meet-button-container">
                 <Link to={'/WhyVibe'}>
