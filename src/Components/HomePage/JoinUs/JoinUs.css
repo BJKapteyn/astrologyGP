@@ -124,7 +124,19 @@
         background-position-x: 40%;
     }
 
+    
+    .joinus-leftText, #joinus-textSection {
+        text-align: center;
+        padding: .5em;
+    }
+    
     .joinus-leftText {
         font-size: 3em;
+        width: 100%;
+        padding: .2em 0em;
+    }
+
+    #joinus-text {
+        font-size: 1em;
     }
 }

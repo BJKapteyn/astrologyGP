@@ -17,9 +17,11 @@
 
 .newscard-image-container {
   display: inline-block;
+  background-position: 50% 50%;
+  background-size: cover;
   padding: 0em;
-  width: 50%;
   overflow: hidden;
+  min-height: 25em;
 }
 
 .newscard-image {
@@ -50,6 +52,7 @@
   align-items: center;
   width: 50%;
   scrollbar-width: none;
+  min-height: 30em;
 }
 
 .newscard-text-title {
@@ -158,6 +161,7 @@
 @media only screen and (max-width: 750px) {
   .newscard {
     flex-direction: column;
+    height: auto;
   }
   .newscard-text-container,
   .newscard-image-container {
@@ -166,5 +170,8 @@
   .newscard-text,
   .newscard-text-title {
     padding: 1%;
+  }
+  .newscard-text-container {
+    padding: 1em 0em;
   }
 }

@@ -7,13 +7,10 @@ import './NewsCard.css';
 export const NewsCard = ({ newscard }) => {
     const { id, title, image, text, text2, text3, styleId, imageLeftSide } = newscard;
     const imagePath = require('../../../Pics/' + image);
-    const imageId = 'newscard-image' + id;
-
     const isMobile = useMediaQuery({ query: '(max-width: 750px)' });
 
     const cardImage = (
-        <div className="newscard-image-container">
-            <img id={imageId} src={imagePath} alt={id} className="newscard-image" />
+        <div style={{backgroundImage: `url(${imagePath})`}} className="newscard-image-container">
         </div>
     );
 
