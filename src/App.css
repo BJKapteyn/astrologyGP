@@ -29,15 +29,15 @@
 }
 
 @font-face {
-  font-family: QuattrocentoSans;
-  src: url('./Fonts/QuattrocentoSans-Regular.ttf') format('truetype');
-  src: url('./Fonts//QuattrocentoSans-Regular.woff') format('woff');
-}
-
-@font-face {
   font-family: Futura;
   src: url('./Fonts/FuturaBook.ttf');
   src: url('./Fonts/FuturaBook.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Futura-bold;
+  src: url('./Fonts/FuturaStdBook.ttf');
+  src: url('./Fonts/FuturaStdBook.ttf') format('truetype');
 }
 
 html {
