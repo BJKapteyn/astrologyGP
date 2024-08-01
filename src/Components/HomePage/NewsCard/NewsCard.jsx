@@ -1,42 +1,44 @@
 import { useMediaQuery } from 'react-responsive';
+import { ReactComponent as EyeDrawing } from '../../../Pics/SvgDrawings/EYE-VECTOR.svg'
+
+import '../../../App.css';
 import './NewsCard.css';
 
-export const NewsCard = ({ newsCardData }) => {
-    const imagePath = require('../../../Pics/' + newsCardData.image);
-    const imageId = 'newscard-image' + newsCardData.id;
+export const NewsCard = ({ newscard }) => {
+    const { id, title, image, text, text2, text3, styleId, imageLeftSide } = newscard;
+    const imagePath = require('../../../Pics/' + image);
+    const imageId = 'newscard-image' + id;
+
     const isMobile = useMediaQuery({ query: '(max-width: 750px)' });
 
-    const image = (
+    const cardImage = (
         <div className="newscard-image-container">
-            <img id={imageId} src={imagePath} alt={newsCardData.id} className="newscard-image" />
+            <img id={imageId} src={imagePath} alt={id} className="newscard-image" />
         </div>
     );
 
-    const text = (
-        <div className="newscard-text-container">
-            <div className="newscard-crop">
-                <h3 className="newscard-text-title">{newsCardData.title}</h3>
-                <div className="newscard-text-crop">
-                    <p className="newscard-text">{newsCardData.text}</p>
-                    {newsCardData.text2 && <p className="newscard-text">{newsCardData.text2}</p>}
-                    {newsCardData.text3 && <p className="newscard-text">{newsCardData.text3}</p>}
-                </div>
-            </div>
+    const cardText = (
+        <div id={styleId} className="newscard-text-container">
+            <h3 className="newscard-text-title">{title}</h3>
+            <EyeDrawing className='newscard-eyedrawing'></EyeDrawing>
+            <p className="newscard-text">{text}</p>
+            {text2 && <p className="newscard-text">{text2}</p>}
+            {text3 && <p className="newscard-text">{text3}</p>}
         </div>
     );
 
     // Set order of image and text
     const newsCard = (
-        <div key={newsCardData.id} className="newscard">
-            {newsCardData.imageLeftSide ? image : text}
-            {newsCardData.imageLeftSide ? text : image}
+        <div key={id} className="newscard">
+            {imageLeftSide ? cardImage : cardText}
+            {imageLeftSide ? cardText : cardImage}
         </div>
     );
 
     const newsCardMobile = (
-        <div key={newsCardData.id} className="newscard">
-            {image}
-            {text}
+        <div key={id} className="newscard">
+            {cardImage}
+            {cardText}
         </div>
     );
 
