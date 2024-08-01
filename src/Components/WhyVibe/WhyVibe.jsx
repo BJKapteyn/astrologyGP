@@ -13,7 +13,7 @@ export const WhyVibe = () => {
         styleId: 'whyvibe-titlecard'
     };
 
-    const vidSource = ''
+    const vidSource = 'https://vibecollectivevideos.blob.core.windows.net/vibevideos/Recruiting Video V1.mp4';
 
     return (
         <main className="whyvibe">
