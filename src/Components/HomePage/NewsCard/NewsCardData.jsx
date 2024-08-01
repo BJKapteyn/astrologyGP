@@ -2,7 +2,7 @@ export const NewsCardData = [
     {
         id: 1
         ,title: 'Welcome'
-        ,image: 'Logos/VC--02.png'
+        ,image: 'Logos/vibe_square.png'
         ,text: 'At The Vibe Collective, we empower individuals on their personal journeys with' + 
                 'insightful guidance and transformational experiences. Our diverse services include tarot ' +
                 'readings, astrology, mediumship, remote reiki, yoga, sound healing, and more. Each ' +
