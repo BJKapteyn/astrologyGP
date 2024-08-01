@@ -13,12 +13,12 @@ export const WhyVibe = () => {
         styleId: 'whyvibe-titlecard'
     };
 
-    const videoSource = ''
+    const vidSource = ''
 
     return (
         <main className="whyvibe">
             <TitleCard titleData={titleData}></TitleCard>
-            <VideoSection videoSource={videoSource}></VideoSection>
+            <VideoSection videoSource={vidSource}></VideoSection>
             <CareerSection></CareerSection>
             <ValueCards cardDatas={WhyVibeCardData}></ValueCards>
         </main>

@@ -7,9 +7,9 @@ export const MeetCarly = () => {
         buttonStyleId: 'meet-morebutton',
         action: null
     }
-    const videoSource = 'https://vibecollectivevideos.blob.core.windows.net/vibevideos/Recruiting Video V1.mp4';
+    const vidSource = 'https://vibecollectivevideos.blob.core.windows.net/vibevideos/Recruiting Video V1.mp4';
 
     return (
-            <VideoSection vidSource={videoSource} buttonSettings={buttonSettings}></VideoSection>
+        <VideoSection videoSource={vidSource} buttonSettings={buttonSettings}></VideoSection>
     );
 }
