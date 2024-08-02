@@ -16,13 +16,13 @@ function App() {
   const storeComingSoonData = {
     heading: 'Check Back Soon!',
     subtext: 'The Vibe Shop will open its doors in Fall 2024! To stay updated on product launches and receive timely notifications, be sure to sign up for our email list.',
-    backgroundimage: 'yogaForest.png'
+    backgroundimage: 'purpleCrystals.png'
   };
 
   const offeringsComingSoonData = {
     heading: 'Check Back Soon!',
     subtext: 'Offerings are currently unavailable but will open October 2024. To stay informed about updates and receive notifications when bookings become available, please sign up for our email list. Thank you for your patience and future patronage!',
-    backgroundimage: 'yogaLivingRoom_dark.png'
+    backgroundimage: 'yogaSunrise_dark.png'
   };
 
   return (
@@ -31,10 +31,10 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />}></Route>
           <Route path="/WhyVibe" element={<WhyVibePage />}></Route>
+          <Route path="/Readers" element={<ComingSoon comingSoonData={readersComingSoonData} />}></Route>
+          <Route path="/Store" element={<ComingSoon comingSoonData={storeComingSoonData} />}></Route>
+          <Route path="/Offerings" element={<ComingSoon comingSoonData={offeringsComingSoonData} />}></Route>
         </Route>
-        <Route path="/Readers" element={<ComingSoon comingSoonData={readersComingSoonData} />}></Route>
-        <Route path="/Store" element={<ComingSoon comingSoonData={storeComingSoonData} />}></Route>
-        <Route path="/Offerings" element={<ComingSoon comingSoonData={offeringsComingSoonData} />}></Route>
       </Routes>
     </div>
   );

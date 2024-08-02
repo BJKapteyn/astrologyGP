@@ -53,19 +53,24 @@
 
 .offering-section-text-container {
     overflow: hidden;
-    height: 12em;
+    height: 14em;
     margin: 2.5em 0em;
-    padding-right: 5px;
+    cursor: ns-resize;
 }
 
-.offering-section-hidescroll {
+.offering-section-scrollhide {
+    display: inline-block;
+    position: relative;
+    padding-right: .5em;
+    width: 105%;
+    height: 100%;
     overflow: auto;
-    padding-right: 15px;
 }
 
 .offering-section-text {
     font-size: 1em;
     margin: 0em 1em;
+    padding-right: 1em;
 }
 
 .offering-section-image-container {
