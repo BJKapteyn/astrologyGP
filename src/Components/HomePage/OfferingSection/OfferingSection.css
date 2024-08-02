@@ -53,8 +53,9 @@
 
 .offering-section-text-container {
     overflow: hidden;
-    height: 14em;
-    margin: 2.5em 0em;
+    height: auto;
+    min-height: 12em;
+    margin: 2em 0em;
     cursor: ns-resize;
 }
 
