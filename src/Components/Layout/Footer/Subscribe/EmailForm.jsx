@@ -8,7 +8,7 @@ export const EmailForm = () => {
   const [apiResponse, setResponse] = useState(null);
   const statusText = {
     pleaseWait: 'Please Wait...',
-    success: 'Submission was a success!',
+    success: 'Submission was a success, Thank You!',
     failure: 'Something went wrong, please refresh and try again'
   }
   
