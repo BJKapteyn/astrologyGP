@@ -33,7 +33,7 @@ export const NewsCardData = [
     },
     {
         id: 3
-        ,title: 'The Path the Self-Discovery'
+        ,title: 'The Path to Self-Discovery'
         ,image: 'Landscapes/mountainPool.png'
         ,text: 'Embark on a journey of profound self-discovery with our offerings. We provide the tools ' +
                 'and experiences to help you explore your inner world, unlocking messages from within ' +
