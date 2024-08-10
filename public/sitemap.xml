@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <url>
+      <loc>http://www.thevibecollective.com/</loc>
+      <lastmod>2024-08-09</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1</priority>
+   </url>
+
+    <url>
+      <loc>http://www.thevibecollective.com/WhyVibe</loc>
+      <lastmod>2024-08-09</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+
+   <url>
+      <loc>http://www.thevibecollective.com/Offerings</loc>
+      <lastmod>2024-08-09</lastmod>
+      <changefreq>weekly</changefreq>
+   </url>
+
+   <url>
+      <loc>http://www.thevibecollective.com/Readers</loc>
+      <lastmod>2024-08-09</lastmod>
+      <changefreq>weekly</changefreq>
+   </url>
+
+    <url>
+      <loc>http://www.thevibecollective.com/Store</loc>
+      <lastmod>2024-08-09</lastmod>
+      <changefreq>weekly</changefreq>
+   </url>
+
+</urlset> 

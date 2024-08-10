@@ -13,6 +13,7 @@ export const JoinUs = () => {
     const midText = 'At The Vibe Collective, we don’t just offer jobs – we offer a career filled with growth, purpose, and ' +
                     'fulfillment. Join us in providing transformative readings and services in an inclusive, collaborative ' +
                     'environment.';
+                    
     const endText = 'At The Vibe, we believe in working together to enhance your professional experience while making a ' +
                     'positive impact on others. Our commitment to spreading the power, confidence, and guidance that an ' +
                     'impactful reading, session, class, or event provides is unwavering. We ensure our readers, practitioners ' +
