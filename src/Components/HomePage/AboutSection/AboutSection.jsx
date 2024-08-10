@@ -11,15 +11,11 @@ export const AboutSection = () => {
     const topCards = useRef(AboutCardData.slice(0, 4));
     const bottomCards = useRef(AboutCardData.slice(4, 8));
 
-    // const [selectedData, selectData] = useState(initialText);
-
-    // function handleClick(text) {
-    //     selectData(text);
-    // }
     return (
         <section className="aboutsection">
             <div className="aboutsection-flexcontainer">
                 {topCards.current.map((aboutCardData) => {
+
                     return (
                         <AboutCard setOutText={setText} key={aboutCardData.id} aboutCardDataa={aboutCardData} />
                     );
@@ -30,6 +26,7 @@ export const AboutSection = () => {
             </div>
             <div className="aboutsection-flexcontainer">
                 {bottomCards.current.map((aboutCardData) => {
+                    
                     return (
                         <AboutCard setOutText={setText} key={aboutCardData.id} aboutCardDataa={aboutCardData} />
                     );

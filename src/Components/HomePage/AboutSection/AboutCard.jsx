@@ -2,7 +2,6 @@ import '../../../App.css';
 import './AboutSection.css';
 
 export const AboutCard = ({aboutCardDataa, setOutText = () =>{}}) => {
-    debugger;   
 
     return (
         <div onMouseEnter={() => setOutText(aboutCardDataa.text)} id={'aboutCard' + aboutCardDataa.id} className="aboutsection-flexbox" key={aboutCardDataa.id}>
