@@ -20,7 +20,10 @@ export default function HomePage() {
     }
 
     return (
-        <div id="homepage">
+        <main id="homepage">
+            <meta name="author" content="Brad Kapteyn"></meta>
+            <meta name="description" content="The Vibe Collective is an online platform for metaphysical services, spiritual healing, and holistic wellness"></meta>
+            <meta name="keywords" content="The Vibe Collective, online metaphysical services, spiritual, healing, holistic wellness,"></meta>
             <TitleCard titleData={titleCardData}></TitleCard>
             <TitleDivider></TitleDivider>
             <JoinUs></JoinUs>
@@ -29,6 +32,6 @@ export default function HomePage() {
             <NewsCardSection></NewsCardSection>
             <SectionDivider dividerData={offeringsDividerData}></SectionDivider>
             <OfferingSection></OfferingSection>
-        </div>
+        </main>
     )
 }
