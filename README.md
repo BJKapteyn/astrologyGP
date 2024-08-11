@@ -25,7 +25,7 @@ CSS:
 
 
 JSX:
-    Pascel case .jsx files
+    Pascal case .jsx files
     Inside folder with the same name and css file
     
     Example JSX object: 
