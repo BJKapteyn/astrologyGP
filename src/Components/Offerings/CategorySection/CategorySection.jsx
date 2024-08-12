@@ -3,7 +3,7 @@ import { Items } from "../Items/Items";
 import { TitleCard } from "../../PageElements/TitleCard/TitleCard";
 import { SectionDivider } from "../../PageElements/SectionDivider/SectionDivider";
 import { OfferingCategory } from "../data/OfferingCategory";
-import backgroundImage from '../../../Pics/Landscapes/yogaLivingRoom_dark.png';
+import backgroundImage from '../../../Pics/Landscapes/jpeg/yogaLivingRoom_dark.jpg';
 import './Category.css';
 
 export const CategorySection = ({ productData }) => {
