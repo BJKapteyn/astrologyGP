@@ -1,4 +1,4 @@
-import backgroundPic from '../../../Pics/Landscapes/moonMountain.png'
+import backgroundPic from '../../../Pics/Landscapes/jpeg/moonMountain.jpg'
 
 export const titleCardData = {
         titleText: 'Metaphysical Services for Personal Wellbeing',

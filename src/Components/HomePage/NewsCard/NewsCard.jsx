@@ -1,6 +1,5 @@
 import { useMediaQuery } from 'react-responsive';
-import { ReactComponent as EyeDrawing } from '../../../Pics/SvgDrawings/EYE-VECTOR.svg'
-
+import { ReactComponent as EyeDrawing } from '../../../Pics/SvgDrawings/EYE-VECTOR.svg';
 import '../../../App.css';
 import './NewsCard.css';
 
@@ -10,8 +9,7 @@ export const NewsCard = ({ newscard }) => {
     const isMobile = useMediaQuery({ query: '(max-width: 750px)' });
 
     const cardImage = (
-        <div style={{backgroundImage: `url(${imagePath})`}} className="newscard-image-container">
-        </div>
+        <div style={{backgroundImage: `url(${imagePath})`}} className="newscard-image-container"></div>
     );
 
     const cardText = (
