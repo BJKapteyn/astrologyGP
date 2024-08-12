@@ -1,4 +1,5 @@
 import { ActionButton } from '../../PageElements/ActionButton/ActionButton';
+import { Link } from 'react-router-dom';
 import '../../../App.css';
 import './JoinUs.css';
 
@@ -32,7 +33,7 @@ export const JoinUs = () => {
                     <p id="joinus-text">{welcome}</p>
                     <p id="joinus-text">{midText}</p>
                     <p id="joinus-text">{endText}</p>
-                    <a href='#subscribe'><ActionButton buttonSettings={buttonSettings} /></a>
+                    <Link to={'/whyvibe'}><ActionButton buttonSettings={buttonSettings} /></Link>
                 </div>
             </div>
         </section>
