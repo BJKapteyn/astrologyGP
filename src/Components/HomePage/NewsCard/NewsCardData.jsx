@@ -18,7 +18,7 @@ export const NewsCardData = [
     {
         id: 2
         ,title: 'Our Approach'
-        ,image: 'Landscapes/floating.png'
+        ,image: 'Landscapes/jpeg/floating.jpg'
         ,text: 'At The Vibe Collective, we support your personal journey by putting the power back into ' +
                 'your hands. Leading with authenticity, our readings guide you, provide answers to your ' +
                 'most pressing questions, and uncover valuable insights into the energy around you and ' +
@@ -34,7 +34,7 @@ export const NewsCardData = [
     {
         id: 3
         ,title: 'The Path to Self-Discovery'
-        ,image: 'Landscapes/mountainPool.png'
+        ,image: 'Landscapes/jpeg/mountainPool.jpg'
         ,text: 'Embark on a journey of profound self-discovery with our offerings. We provide the tools ' +
                 'and experiences to help you explore your inner world, unlocking messages from within ' +
                 'and create connection with your spirit guides, angels, and ancestors. Your path is ' +

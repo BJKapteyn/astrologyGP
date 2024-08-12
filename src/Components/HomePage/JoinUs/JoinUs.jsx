@@ -16,7 +16,7 @@ export const JoinUs = () => {
                     
     const endText = 'At The Vibe, we believe in working together to enhance your professional experience while making a ' +
                     'positive impact on others. Our commitment to spreading the power, confidence, and guidance that an ' +
-                    'impactful reading, session, class, or event provides is unwavering. We ensure our readers, practitioners ' +
+                    'impactful reading, session, class, or event provides is unwavering. We ensure our readers, practitioners, and ' +
                     'teachers have the space, tools, training, and flexible schedules they need to deliver their best. ' +
                     'We invite authentic, mindful professionals to join us in building a global community of healers, readers,' +
                     'and practitioners. Come be a part of something truly special.';

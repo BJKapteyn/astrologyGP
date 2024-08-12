@@ -1,4 +1,4 @@
-import moonfade from '../../../Pics/Landscapes/moonFade.png'
+import moonfade from '../../../Pics/Landscapes/jpeg/moonFade.jpg'
 import './TitleSection.css';
 
 export const TitleSection = () => {
