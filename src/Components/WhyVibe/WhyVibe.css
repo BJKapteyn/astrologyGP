@@ -40,15 +40,15 @@
 }
 
 .valucard-titleContainer {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 7em;
 }
 
 .valuecard-title {
     font-size: 1.5em;
-    margin: 0em;
-    position: absolute;
-    bottom: 0;
+    margin: 0em .4em;
     width: 100%;
 }
 

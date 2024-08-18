@@ -8,7 +8,7 @@ export const ValueCards = ({cardDatas}) => {
         <div className="valuecards">
             {cardDatas.map(cardData => {
                 return (
-                    <ValueCard valueCardData={cardData}></ValueCard>
+                    <ValueCard key={cardData.id} valueCardData={cardData}></ValueCard>
                 );
             })}
         </div>
