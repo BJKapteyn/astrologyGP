@@ -9,7 +9,6 @@ export const JoinUs = () => {
         buttonStyleId: 'joinus-joinButton',
         action: null
     }
-    const welcome = 'Welcome to The Vibe Collective! ';
    
     const midText = 'At The Vibe Collective, we don’t just offer jobs – we offer a career filled with growth, purpose, and ' +
                     'fulfillment. Join us in providing transformative readings and services in an inclusive, collaborative ' +
@@ -30,7 +29,6 @@ export const JoinUs = () => {
                     <h1 className="joinus-leftText">WITH US</h1>
                 </div>
                 <div className="joinus-flexItem" id='joinus-textSection'>
-                    <p id="joinus-text">{welcome}</p>
                     <p id="joinus-text">{midText}</p>
                     <p id="joinus-text">{endText}</p>
                     <Link to={'/whyvibe'}><ActionButton buttonSettings={buttonSettings} /></Link>

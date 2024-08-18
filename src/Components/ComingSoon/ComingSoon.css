@@ -15,22 +15,18 @@
 }
 
 .comingsoon-heading {
-    font-size: 4em;
+    font-size: 2em;
+    margin-bottom: 0em;
 }
 
 .comingsoon-subtext {
     text-align: center;
-    font-size: 2em;
-    width: 50%;
+    font-size: 1em;
+    width: 30em;
     min-width: 15em;
 }
 
-@media only screen and (max-width: 680px), (max-height: 600px) {
-    .comingsoon-subtext {
-        font-size: 1.2em;
-    }
-
-    .comingsoon-heading {
-        font-size: 3em;
-    }
+.comingsoon-sparkle {
+    width: 10em;
+    height: auto;
 }
