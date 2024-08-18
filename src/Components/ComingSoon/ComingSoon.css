@@ -23,7 +23,7 @@
     text-align: center;
     font-size: 1em;
     width: 30em;
-    min-width: 15em;
+    max-width: 80%;
 }
 
 .comingsoon-sparkle {
