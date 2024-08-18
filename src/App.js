@@ -10,19 +10,19 @@ function App() {
   const readersComingSoonData = {
     heading: 'Check Back Soon!',
     subtext: 'If you\'re interested in being a part of The Vibe Collective team, please submit your resume and cover letter to info@thevibecollective.co. We look forward to hearing from you!',
-    backgroundimage: 'jpeg/girlsInField.jpg'
+    backgroundimage: 'jpeg/CHECK_BACK_Readers.jpg'
   };
-
+  
   const storeComingSoonData = {
     heading: 'Check Back Soon!',
     subtext: 'The Vibe Shop will open its doors in Fall 2024! To stay updated on product launches and receive timely notifications, be sure to sign up for our email list.',
-    backgroundimage: 'jpeg/purpleCrystals.jpg'
+    backgroundimage: 'jpeg/CHECK_BACK_store.jpg'
   };
-
+  
   const offeringsComingSoonData = {
     heading: 'Check Back Soon!',
     subtext: 'Offerings are currently unavailable but will open October 2024. To stay informed about updates and receive notifications when bookings become available, please sign up for our email list. Thank you for your patience and future patronage!',
-    backgroundimage: 'jpeg/yogaSunrise_dark.jpg'
+    backgroundimage: 'jpeg/CHECK_BACK_Offerings.jpg'
   };
 
   return (
