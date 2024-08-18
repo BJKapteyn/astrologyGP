@@ -26,11 +26,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    
+    width: 80%;
+    margin: auto;
 }
 
 .valuecard {
-    width: 18em;
+    flex: 0 0 30%;
+    min-width: 18em;
     border: .1em solid var(--secondary-orange);
     margin: 1em;
     display: flex;
@@ -55,7 +57,13 @@
 .valucard-text {
     height: 11em;
     text-align: center;
-    font-size: .8em;
+    font-size: 1em;
     padding: .7em;
+}
+
+@media only screen and (max-width: 1350px) {
+    .valuecards {
+        width: 90%;
+    }
 }
 
