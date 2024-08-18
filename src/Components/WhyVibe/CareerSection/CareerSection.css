@@ -1,14 +1,13 @@
 .careersection {
     padding-bottom: 2em;
-    background-color: #e9edf2;
+    background-color: rgb(185, 158, 197);
     text-align: center;
     margin: 2em 0em;
 }
 
 .career-title {
-    padding: 1em;
+    padding: 1em 1em .5em 1em;
     margin: 0em;
-    border-bottom: 1px solid black;
 }
 
 .career-textcontainer {
