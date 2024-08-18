@@ -1,24 +1,18 @@
-const metaTag = 'meta';
-const nameAttribute = 'name';
-const contentAttribute = 'content';
 
-export function addPageHeaderInfo(title, description = '', keywords = '', scriptSources = []) {
+// Use this utility to set the title tag, and meta description and keywords inside the <head> tag
+export function addPageHeaderInfo(description = '', keywords = '', title = 'TheVibeCollective', scriptSources = []) {
     const headTitle = title ?? 'The Vibe Collective';
 
-    let descriptionElement = document.createElement(metaTag);
-    descriptionElement.setAttribute(nameAttribute, 'description');
-    descriptionElement.setAttribute(contentAttribute, description);
+    let titleElement = document.querySelector('title');
+    let descriptionElement = document.querySelector(`meta[name=\'description\']`);
+    let keywordsElement = document.querySelector(`meta[name=\'keywords\']`);
 
-    let keywordsElement = document.createElement(metaTag);
-    keywordsElement.setAttribute(nameAttribute, 'keywords');
-    keywordsElement.setAttribute(contentAttribute, keywords);
+    titleElement.innerText = headTitle;
+    descriptionElement.setAttribute('content', description);
+    keywordsElement.setAttribute('content', keywords);
 
     if(scriptSources && scriptSources.length > 0)
         addScripts(scriptSources);
-
-    document.title = headTitle;
-    document.head.appendChild(descriptionElement);
-    document.head.appendChild(keywordsElement);
 }
 
 function addScripts(scripts) {

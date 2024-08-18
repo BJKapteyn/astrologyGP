@@ -25,7 +25,7 @@ export default function HomePage() {
         const descriptionText = 'The Vibe Collective is an online platform for metaphysical services, spiritual healing, and holistic wellness';
         const keywordsText = 'The Vibe Collective, online metaphysical services, spiritual, healing, holistic wellness, tarot readings, virtual spiritual consultations';
 
-        addPageHeaderInfo(null, descriptionText, keywordsText, null);
+        addPageHeaderInfo(descriptionText, keywordsText);
     });
 
     return (

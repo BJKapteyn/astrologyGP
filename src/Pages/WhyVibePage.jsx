@@ -8,7 +8,7 @@ export default function WhyVibePage() {
         const descriptionText = 'Join The Vibe Collective as an Astrology Medium or Tarot Reader';
         const keywordsText = 'The Vibe Collective, astrology, readers, mediums';
 
-        addPageHeaderInfo(null, descriptionText, keywordsText, null);
+        addPageHeaderInfo(descriptionText, keywordsText);
     });
 
     return (
