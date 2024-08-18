@@ -4,8 +4,8 @@ export function addPageHeaderInfo(description = '', keywords = '', title = 'TheV
     const headTitle = title ?? 'The Vibe Collective';
 
     let titleElement = document.querySelector('title');
-    let descriptionElement = document.querySelector(`meta[name=\'description\']`);
-    let keywordsElement = document.querySelector(`meta[name=\'keywords\']`);
+    let descriptionElement = document.querySelector(`meta[name='description']`);
+    let keywordsElement = document.querySelector(`meta[name='keywords']`);
 
     titleElement.innerText = headTitle;
     descriptionElement.setAttribute('content', description);
