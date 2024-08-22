@@ -35,10 +35,10 @@ export const CategorySection = ({ productData }) => {
             
             {OfferingCategory.map(category => {
                 return (
-                    <section key={category.Id} className="category-section">
-                        <SectionDivider dividerData={{headingText: category}}></SectionDivider>
+                    <section key={category.id} className="category-section">
+                        <SectionDivider dividerData={{headingText: category.name}}></SectionDivider>
 
-                        <Items key={category.Id} itemData={items}></Items>
+                        <Items itemData={items}></Items>
                     </section>
                 );
             })}
