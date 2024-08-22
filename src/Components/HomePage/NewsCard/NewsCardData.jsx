@@ -3,7 +3,7 @@ export const NewsCardData = [
         id: 1
         ,title: 'Welcome'
         ,image: 'Logos/vibe_square.png'
-        ,text: 'At The Vibe Collective, we empower individuals on their personal journeys with' + 
+        ,text: 'At The Vibe Collective, we empower individuals on their personal journeys with ' + 
                 'insightful guidance and transformational experiences. Our diverse services include tarot ' +
                 'readings, astrology, mediumship, remote reiki, yoga, sound healing, and more. Each ' +
                 'service, event, class, and product are curated to provide profound insights and support ' +
@@ -18,7 +18,7 @@ export const NewsCardData = [
     {
         id: 2
         ,title: 'Our Approach'
-        ,image: 'Landscapes/floating.png'
+        ,image: 'Landscapes/jpeg/floating.jpg'
         ,text: 'At The Vibe Collective, we support your personal journey by putting the power back into ' +
                 'your hands. Leading with authenticity, our readings guide you, provide answers to your ' +
                 'most pressing questions, and uncover valuable insights into the energy around you and ' +
@@ -26,20 +26,20 @@ export const NewsCardData = [
                 'we are committed to offering genuine, carefully crafted experiences.'
         ,text2: 'We support you through our curated shop, energetically aligned classes, and insightful ' +
                 'readings. This is magic for the new age, tailored to what works for YOU. Come raise your ' +
-                'VIBE with us and discover the power within.'
+                'VIBE with us and discover the power within. '
         ,text3: null
         ,imageLeftSide: false
         ,styleId: 'newscard-blurb2'
     },
     {
         id: 3
-        ,title: 'The Path the Self-Discovery'
-        ,image: 'Landscapes/mountainPool.png'
+        ,title: 'The Path to Self-Discovery'
+        ,image: 'Landscapes/jpeg/mountainPool.jpg'
         ,text: 'Embark on a journey of profound self-discovery with our offerings. We provide the tools ' +
                 'and experiences to help you explore your inner world, unlocking messages from within ' +
                 'and create connection with your spirit guides, angels, and ancestors. Your path is ' +
                 'unique, and we\'re here to support you every step of the way. Ensuring a safe, ' +
-                'thoughtful, and transformative journey.'
+                'thoughtful, and transformative journey. '
         ,imageLeftSide: true
         ,styleId: 'newscard-blurb3'
     }

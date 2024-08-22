@@ -10,7 +10,6 @@ export const NavPageLink = ({linkData}) => {
     let navLink;
 
     if(subMenu) {
-
         navLink = (
             <ul 
             onMouseEnter={() => setIsExpanded(true)}
@@ -22,8 +21,8 @@ export const NavPageLink = ({linkData}) => {
                 </li>
                 {isExpanded && subMenu.map((subMenu) => {
                     return (
-                        <li key={subMenu.id} className="navbar-submenu-children">
-                            <Link role="link" className="navbar-link" to={subMenu.route}>{subMenu.text}</Link>
+                        <li itemtype="http://schema.org/LocalBusiness" itemref="_name1" key={subMenu.id} className="navbar-submenu-children">
+                            <Link itemProp="url" role="link" className="navbar-link" to={subMenu.route}>{subMenu.text}</Link>
                         </li>
                     )
                 })}

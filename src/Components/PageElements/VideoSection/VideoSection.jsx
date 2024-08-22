@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ActionButton } from '../../PageElements/ActionButton/ActionButton';
-import logo from '../../../Pics/Logos/vibe_square.png';
+import logo from '../../../Pics/Logos/THE_VIBE_COLLECTIVE_SOCIAL_-02.jpg';
 import './VideoSection.css';
 
 export const VideoSection = ({ buttonSettings = null, videoSource }) => {

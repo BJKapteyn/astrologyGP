@@ -37,6 +37,9 @@ export default function Offerings() {
 
         return (
             <main>
+                {/* <meta name="author" content="Brad Kapteyn"></meta>
+                <meta name="description" content="Coming Soon, The Vibe Collective's products and services"></meta>
+                <meta name="keywords" content="The Vibe Collective, online metaphysical services"></meta> */}
                 <CategorySection productData={product} />
             </main>
         );
