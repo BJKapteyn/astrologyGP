@@ -4,6 +4,8 @@ import { ComingSoon } from './Components/ComingSoon/ComingSoon.jsx';
 import Layout from './Components/Layout/Layout.jsx';
 import HomePage from './Pages/HomePage.jsx';
 import WhyVibePage from './Pages/WhyVibePage.jsx';
+import Offerings from './Pages/Offerings.jsx';
+import ReadersPage from './Pages/ReadersPage.jsx';
 import './App.css';
 
 function App() {
@@ -31,9 +33,12 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />}></Route>
           <Route path="/WhyVibe" element={<WhyVibePage />}></Route>
-          <Route path="/Readers" element={<ComingSoon comingSoonData={readersComingSoonData} />}></Route>
+          <Route path="/Readers" element={<ReadersPage />}></Route>
           <Route path="/Store" element={<ComingSoon comingSoonData={storeComingSoonData} />}></Route>
-          <Route path="/Offerings" element={<ComingSoon comingSoonData={offeringsComingSoonData} />}></Route>
+          <Route path="/Offerings" element={<Offerings></Offerings>}></Route>
+          {/* <Route path="/Readers" element={<ComingSoon comingSoonData={readersComingSoonData} />}></Route>
+          <Route path="/Store" element={<ComingSoon comingSoonData={storeComingSoonData} />}></Route>
+          <Route path="/Offerings" element={<ComingSoon comingSoonData={offeringsComingSoonData} />}></Route> */}
         </Route>
       </Routes>
     </div>
