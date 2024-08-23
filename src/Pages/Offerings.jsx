@@ -4,12 +4,13 @@ import { useEffect, useState } from "react";
 
 // Page that shows all of the services and products
 export default function Offerings() {
-    const url = buildIt(x4tt116);
-    const [endpointUrl, setEndpointUrl] = useState(url);
-    const [product, setProductData] = useState(null);
+    const [endpointUrl, setEndpointUrl] = useState(null);
+    const [products, setProductData] = useState(null);
 
     useEffect(() => {
         let active = true;
+        let builtURL = `${process.env.REACT_APP_FUNCTIONS_URL}/getitems?code=${process.env.REACT_APP_GET_ITEMS}`
+        setEndpointUrl(builtURL);
 
         const getAllItems = async () => {
             await fetch(endpointUrl)
@@ -17,10 +18,7 @@ export default function Offerings() {
                 .then(data => {
                     if (active)
                         setProductData(data);
-                        setEndpointUrl(url);
                 });
-                
-            return product;
         }
 
         getAllItems();
@@ -30,17 +28,14 @@ export default function Offerings() {
         }
     });
 
-    if(!product || !Array.isArray(product)) {
+    if(!products || !Array.isArray(products)) {
 
-        return <p>loading</p>
+        return <span>Loading...</span>
     } else {
 
         return (
             <main>
-                {/* <meta name="author" content="Brad Kapteyn"></meta>
-                <meta name="description" content="Coming Soon, The Vibe Collective's products and services"></meta>
-                <meta name="keywords" content="The Vibe Collective, online metaphysical services"></meta> */}
-                <CategorySection productData={product} />
+                <CategorySection productData={products} />
             </main>
         );
     }
