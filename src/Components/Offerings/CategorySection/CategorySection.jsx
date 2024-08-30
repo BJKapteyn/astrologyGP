@@ -20,7 +20,7 @@ export const CategorySection = ({ productData }) => {
         if(productData.length >= 0) {
             productData.forEach(data => {
 
-                if(data?.Type === 'ITEM')
+                if(data?.type === 'ITEM')
                     itemData.push(data);
                 
             }, [productData]);

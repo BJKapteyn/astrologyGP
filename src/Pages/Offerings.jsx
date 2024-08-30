@@ -1,24 +1,24 @@
 import { CategorySection } from "../Components/Offerings/CategorySection/CategorySection";
-import { x4tt116, buildIt } from "../Data/Temp/temp";
 import { useEffect, useState } from "react";
 
 // Page that shows all of the services and products
 export default function Offerings() {
-    const [endpointUrl, setEndpointUrl] = useState(null);
+    const [endpointUrl, setEndpointUrl] = useState(`${process.env.REACT_APP_FUNCTIONS_URL}/getitems?code=${process.env.REACT_APP_GET_ITEMS}`);
     const [products, setProductData] = useState(null);
 
     useEffect(() => {
         let active = true;
-        let builtURL = `${process.env.REACT_APP_FUNCTIONS_URL}/getitems?code=${process.env.REACT_APP_GET_ITEMS}`
-        setEndpointUrl(builtURL);
 
         const getAllItems = async () => {
             await fetch(endpointUrl)
                 .then(response => response.json())
                 .then(data => {
-                    if (active)
+                    if (active){
                         setProductData(data);
-                });
+                        console.log(data);
+                    }
+                        
+                }).catch(err => console.log(err));
         }
 
         getAllItems();
@@ -26,7 +26,7 @@ export default function Offerings() {
         return () => {
             active = false;
         }
-    });
+    }, []);
 
     if(!products || !Array.isArray(products)) {
 
