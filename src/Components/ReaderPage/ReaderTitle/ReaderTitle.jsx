@@ -35,11 +35,10 @@ export const ReaderTitle = () => {
             <SectionDivider dividerData={tarotData}></SectionDivider>
             <div className="reader-terot">
                 <SquareBioCard></SquareBioCard>
-                <BioCards lowerBound={0} upperBound={6}></BioCards>
             </div>
             <SectionDivider dividerData={mediumData}></SectionDivider>
             <div id='reader-mediums' className="reader-terot">
-                <BioCards lowerBound={6} upperBound={10}></BioCards>
+                <BioCards lowerBound={0} upperBound={10}></BioCards>
             </div>
         </section>
     );
