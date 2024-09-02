@@ -1,6 +1,7 @@
 import { BioCards } from '../../PageElements/BioCard/BioCards.jsx';
 import { TitleCard } from '../../PageElements/TitleCard/TitleCard.jsx';
 import { SectionDivider } from '../../PageElements/SectionDivider/SectionDivider.jsx';
+import { SquareBioCard } from '../../PageElements/BioCard/SquareBioCard/SquareBioCard.jsx';
 import backgroundImageFile from '../../../Pics/Landscapes/girlsInField.png';
 import './ReaderTitle.css';
 
@@ -33,6 +34,7 @@ export const ReaderTitle = () => {
             </div>
             <SectionDivider dividerData={tarotData}></SectionDivider>
             <div className="reader-terot">
+                <SquareBioCard></SquareBioCard>
                 <BioCards lowerBound={0} upperBound={6}></BioCards>
             </div>
             <SectionDivider dividerData={mediumData}></SectionDivider>
