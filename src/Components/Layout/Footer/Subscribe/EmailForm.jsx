@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { buildIt2, x45tt1337 } from "../../../../Data/Temp/temp";
+import { buildAzureFunctionURL } from "../../../../Functions/azureFunctionsUtility";
 import './Subscribe.css';
 
 export const EmailForm = () => {
   const [emailText, setEmailText] = useState(<></>);
   const [formWasSubmitted, setFormWasSubmitted] = useState(false);
   const [apiResponse, setResponse] = useState(null);
+  
   const statusText = {
     pleaseWait: 'Please Wait...',
     success: 'Submission was a success, Thank You!',
@@ -14,7 +15,7 @@ export const EmailForm = () => {
   
   async function submitEmail() {
     setFormWasSubmitted(true);
-    const url = buildIt2(x45tt1337);
+    const url = buildAzureFunctionURL(process.env.REACT_APP_INSERT_EMAIL, "InsertCustomerEmail");
 
     const requestOptions = {
       method: 'POST',
@@ -24,7 +25,6 @@ export const EmailForm = () => {
     
     await fetch(url, requestOptions).then((response) => {
         setResponse(response);
-        console.log(response);
     });
   }
   

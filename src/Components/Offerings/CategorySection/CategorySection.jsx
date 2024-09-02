@@ -20,7 +20,7 @@ export const CategorySection = ({ productData }) => {
         if(productData.length >= 0) {
             productData.forEach(data => {
 
-                if(data?.Type === 'ITEM')
+                if(data?.type === 'ITEM')
                     itemData.push(data);
                 
             }, [productData]);
@@ -35,10 +35,10 @@ export const CategorySection = ({ productData }) => {
             
             {OfferingCategory.map(category => {
                 return (
-                    <section key={category.Id} className="category-section">
-                        <SectionDivider dividerData={{headingText: category}}></SectionDivider>
+                    <section key={category.id} className="category-section">
+                        <SectionDivider dividerData={{headingText: category.name}}></SectionDivider>
 
-                        <Items key={category.Id} itemData={items}></Items>
+                        <Items itemData={items}></Items>
                     </section>
                 );
             })}
