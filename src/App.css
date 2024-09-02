@@ -19,7 +19,7 @@
   font-family: bivoac-regular;
   src: url('./Fonts/Bivoac Reguler.woff');
   src: url('./Fonts/Bivoac Reguler.woff') format('woff'),
-    url('./Fonts/Bivoac Reguler.otf') format('opentype')
+       url('./Fonts/Bivoac Reguler.otf') format('opentype')
 }
 
 @font-face {

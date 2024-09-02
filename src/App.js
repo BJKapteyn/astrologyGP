@@ -35,7 +35,7 @@ function App() {
           <Route path="/WhyVibe" element={<WhyVibePage />}></Route>
           <Route path="/Readers" element={<ReadersPage />}></Route>
           <Route path="/Store" element={<ComingSoon comingSoonData={storeComingSoonData} />}></Route>
-          <Route path="/Offerings" element={<Offerings></Offerings>}></Route>
+          <Route path="/Offerings" element={<ComingSoon comingSoonData={offeringsComingSoonData} />}></Route>
           {/* <Route path="/Readers" element={<ComingSoon comingSoonData={readersComingSoonData} />}></Route>
           <Route path="/Store" element={<ComingSoon comingSoonData={storeComingSoonData} />}></Route>
           <Route path="/Offerings" element={<ComingSoon comingSoonData={offeringsComingSoonData} />}></Route> */}
