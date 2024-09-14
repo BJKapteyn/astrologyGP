@@ -4,7 +4,7 @@ import './BioCard.css';
 // cardData         - data to populate the card
 // callBackSelect   - call back function to select this card's data for the modal
 export const BioCard = ({cardData, callbackSelect})  => {
-    let imageSource = cardData.imageURL ? cardData.imageURL : require('../../../Pics/Headshots/' + cardData.image);
+    let imageSource = cardData.imageURL ? cardData.imageURL : require(`../../../Pics/Landscapes/jpeg/girlOnBeach.jpg`);
     
     return (
         <section onClick={() => callbackSelect(cardData)} className="biocard-flexbox" key={cardData.id}>
