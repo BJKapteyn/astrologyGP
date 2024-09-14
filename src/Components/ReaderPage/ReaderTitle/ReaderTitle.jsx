@@ -1,4 +1,3 @@
-import { BioCards } from '../../PageElements/BioCard/BioCards.jsx';
 import { TitleCard } from '../../PageElements/TitleCard/TitleCard.jsx';
 import { SectionDivider } from '../../PageElements/SectionDivider/SectionDivider.jsx';
 import { SquareBioCard } from '../../PageElements/BioCard/SquareBioCard/SquareBioCard.jsx';
@@ -13,11 +12,7 @@ export const ReaderTitle = () => {
     }
 
     const tarotData = {
-        headingText: 'Tarot Card Readers'
-    }
-
-    const mediumData = {
-        headingText: 'Mediums'
+        headingText: 'Meet The Collective'
     }
 
     const bridgeText = 'ARE YOU YEARNING TO RECONNECT WITH THE SOULS WHO HAVE TOUCHED YOUR HEART? BOOK A SESSION WITH US, AND ' +
@@ -35,10 +30,6 @@ export const ReaderTitle = () => {
             <SectionDivider dividerData={tarotData}></SectionDivider>
             <div className="reader-terot">
                 <SquareBioCard></SquareBioCard>
-            </div>
-            <SectionDivider dividerData={mediumData}></SectionDivider>
-            <div id='reader-mediums' className="reader-terot">
-                <BioCards lowerBound={0} upperBound={10}></BioCards>
             </div>
         </section>
     );
