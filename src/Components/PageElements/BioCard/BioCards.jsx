@@ -7,7 +7,7 @@ import { ExpandedCard } from "../ExpandedCard/ExpandedCard";
 // lowerBound inclusive and upperBound exclusive, it refers to the sliced portion of the data
 export const BioCards = ({lowerBound, upperBound}) => {
     const [bioData, selectBioData] = useState(null);
-    const data = useRef(CardInfoData);
+    const cardData = useRef(CardInfoData);
 
     // Deselects data for modal
     function deSelectBioCard() {
@@ -23,7 +23,7 @@ export const BioCards = ({lowerBound, upperBound}) => {
 
     function renderCards(sliceLowerBound = 0, sliceUpperBound = CardInfoData.length) {
 
-        return data.current.slice(sliceLowerBound, sliceUpperBound).map((card) => {
+        return cardData.current?.slice(sliceLowerBound, sliceUpperBound).map((card) => {
             
             return <BioCard
                         key={card.id} 
