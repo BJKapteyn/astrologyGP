@@ -5,11 +5,26 @@ import { Link } from 'react-router-dom';
 import './SignupSticky.css';
 import '../../../App.css';
 
+// pop up bar at the bottom of all pages for signing up for promotions
 export const SignupSticky = () => {
     const [signupSticky, setSignupSticky] = useState(<></>);
-    const logoSource = require('../../../Pics/Logos/MainLogoYellow.png');
+    const [timeoutIsComplete, setTimeoutIsComplete] = useState(false);
+    // const logoSource = require('../../../Pics/Logos/MainLogoYellow.png');
+
+    // const logo = (
+    //     <div className="signup-logocontainer">
+    //         <img src={logoSource} alt="The Vibe Collective Logo" className="signup-logo" />
+    //     </div>
+    // )
+
+    const signUpButtonSettings = {
+        buttonText: 'SIGN UP',
+        buttonStyleId: 'signup-signupbutton'
+    }
+
     const closeButtonSettings = {
-        buttonText: 'Sign Up'
+        buttonText: <CloseSticky />,
+        buttonStyleId: 'signup-closeButton'
     }
 
     function close() {
@@ -18,23 +33,28 @@ export const SignupSticky = () => {
 
     const singupStickyComponent = (
         <div className="signup-stickymain">
-            <div className="signup-logocontainer">
-                <img src={logoSource} alt="The Vibe Collective Logo" className="signup-logo" />
+            <div className="signup-link">
+                <Link target='_blank' to={'https://squareup.com/outreach/UurPKs/subscribe'}>
+                    <ActionButton buttonSettings={signUpButtonSettings}></ActionButton>
+                </Link>
             </div>
-            <div className="signup-text">
+            <div className="signup-textcontainer">
                 <p>Sign up now and recieve a 10% off coupon when our store opens in October 2024</p>
             </div>
-            <div className="signup-link">
-                <Link to={'https://squareup.com/outreach/UurPKs/subscribe'}><ActionButton buttonSettings={closeButtonSettings}></ActionButton></Link>
-            </div>
-            <div className="signup-close"><CloseSticky></CloseSticky></div>
+            <ActionButton buttonSettings={closeButtonSettings} callback={() => close()}></ActionButton>
         </div>
     );
 
+    // Set the amount of time before the bar appears
     useEffect(() => {
-        setTimeout(() => {
-            setSignupSticky(singupStickyComponent);
-        }, 1000);
+        let timeout = setTimeout(() => {
+            if(timeoutIsComplete === false) {
+                setSignupSticky(singupStickyComponent);
+                setTimeoutIsComplete(true);
+            }
+        }, 2000);
+
+        return () => clearTimeout(timeout);
     });
 
     return (

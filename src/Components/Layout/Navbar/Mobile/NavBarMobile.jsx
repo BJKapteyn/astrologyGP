@@ -9,7 +9,6 @@ import './NavBarMobile.css';
 
 export const NavBarMobile = () => {
     const [menuVisibility, setMenuVisibility] = useState(false);
-    
     const expanded = <MenuExpand></MenuExpand>;
     const retracted = <MenuRetract></MenuRetract>;
 
