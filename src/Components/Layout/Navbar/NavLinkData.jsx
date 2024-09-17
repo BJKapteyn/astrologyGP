@@ -16,7 +16,8 @@ export const NavLinkData = [
         id: 4,
         route: '/Offerings',
         text: 'Offerings',
-        subMenu: null//[
+        subMenu: null
+        //[
         //     {
         //         id: 6,
         //         route: '',
