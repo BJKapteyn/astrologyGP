@@ -33,7 +33,7 @@ export const SignupSticky = () => {
 
     const singupStickyComponent = (
         <div className="signup-stickymain">
-            <div className="signup-textcontainer">
+            <div id="signup-textcontainer">
                 <p>Sign up now and recieve a 10% off coupon when our store opens in October 2024</p>
             </div>
             <div className="signup-link">
@@ -41,7 +41,7 @@ export const SignupSticky = () => {
                     <ActionButton buttonSettings={signUpButtonSettings}></ActionButton>
                 </Link>
             </div>
-            <div className="signup-closecontainer">
+            <div id="signup-closecontainer">
                 <ActionButton buttonSettings={closeButtonSettings} callback={() => close()}></ActionButton>
             </div>
         </div>

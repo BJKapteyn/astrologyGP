@@ -16,17 +16,6 @@
 
 .signup-stickymain div {
     width: 33%;
-    text-align: center;
-}
-
-.signup-logocontainer {
-    padding-left: 1em;
-    height: 100%;
-    width: 100%;
-}
-
-.signup-logo {
-    height: 100%;
 }
 
 .signup-link {
@@ -38,16 +27,16 @@
     display: inline-block;
 }
 
-.signup-closecontainer {
+#signup-closecontainer {
     height: 100%;
-
+    text-align: right;
+    margin-right: 5em;
 }
 .signup-close {
     height: 100%;
-    padding-right: 1em;
 }
 
-.signup-textcontainer {
+#signup-textcontainer {
     text-align: center;
     padding: 1em;
     width: 100%;
@@ -73,7 +62,7 @@
     #signup-signupbutton {
         padding: .2em 1em;
     }
-    .signup-textcontainer {
+    #signup-textcontainer {
         font-size: .8em;
     }
 }
@@ -82,5 +71,13 @@
     #signup-signupbutton {
         font-size: 1em;
         padding: .2em .5em;
+    }
+    #signup-closecontainer {
+        width: 20%;
+        margin-right: 2em;
+    }
+    #signup-textcontainer {
+        width: 40%; 
+        font-size: .6em;
     }
 }
