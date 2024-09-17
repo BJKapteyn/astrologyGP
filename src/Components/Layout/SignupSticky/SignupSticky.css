@@ -14,9 +14,15 @@
     animation-fill-mode: forwards;
 }
 
+.signup-stickymain div {
+    width: 33%;
+    text-align: center;
+}
+
 .signup-logocontainer {
     padding-left: 1em;
     height: 100%;
+    width: 100%;
 }
 
 .signup-logo {
@@ -24,16 +30,18 @@
 }
 
 .signup-link {
-    width: 15em;
-    padding-left: 1em;
     text-align: center;
+    width: 100%;
 }
 
 #signup-signupbutton {
     display: inline-block;
-    padding-left: 1em;
 }
 
+.signup-closecontainer {
+    height: 100%;
+
+}
 .signup-close {
     height: 100%;
     padding-right: 1em;
@@ -42,6 +50,7 @@
 .signup-textcontainer {
     text-align: center;
     padding: 1em;
+    width: 100%;
 }   
 
 #signup-closeButton {
@@ -64,12 +73,12 @@
     #signup-signupbutton {
         padding: .2em 1em;
     }
-}
-
-@media only screen and (max-width: 510px) {
     .signup-textcontainer {
         font-size: .8em;
     }
+}
+
+@media only screen and (max-width: 510px) {
     #signup-signupbutton {
         font-size: 1em;
         padding: .2em .5em;

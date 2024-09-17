@@ -33,15 +33,17 @@ export const SignupSticky = () => {
 
     const singupStickyComponent = (
         <div className="signup-stickymain">
+            <div className="signup-textcontainer">
+                <p>Sign up now and recieve a 10% off coupon when our store opens in October 2024</p>
+            </div>
             <div className="signup-link">
                 <Link target='_blank' to={'https://squareup.com/outreach/UurPKs/subscribe'}>
                     <ActionButton buttonSettings={signUpButtonSettings}></ActionButton>
                 </Link>
             </div>
-            <div className="signup-textcontainer">
-                <p>Sign up now and recieve a 10% off coupon when our store opens in October 2024</p>
+            <div className="signup-closecontainer">
+                <ActionButton buttonSettings={closeButtonSettings} callback={() => close()}></ActionButton>
             </div>
-            <ActionButton buttonSettings={closeButtonSettings} callback={() => close()}></ActionButton>
         </div>
     );
 
