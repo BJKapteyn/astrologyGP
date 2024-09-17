@@ -54,28 +54,28 @@
     font-size: 1.2em;
     padding: .3em 1em;
     width: 6em;
-    border-color: var(--secondary-green);
 }
 
 #expandedcard-bookButton {
+    border-color: var(--secondary-green);
     background-color: var(--secondary-green);
     color: white;
-    border-top-right-radius: 0em;
-    border-bottom-right-radius: 0em;
 }
-#expandedcard-bookButton:hover, #expandedcard-closeButton:hover {
-    background-color: var(--secondary-orange);
-    border: .1em solid var(--secondary-orange);
+#expandedcard-bookButton:hover {
+    border-color: var(--secondary-green);
+    background-color: var(--secondary-green);
+    cursor: default;
 }
 
-#expandedcard-closeButton {
-    border-top-left-radius: 0em;
-    border-bottom-left-radius: 0em;
+#expandedcard-closeButton { 
     border-left: 0px;
-    color: var(--secondary-green);
+    color: white;
 }
 #expandedcard-closeButton:hover {
     color: white;
+    background-color: var(--main-accent-color);
+    border-color: var(--main-accent-color);
+
 }
 
 .expandedcard-description {
