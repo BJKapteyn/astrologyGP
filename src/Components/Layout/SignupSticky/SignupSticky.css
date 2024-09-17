@@ -14,34 +14,32 @@
     animation-fill-mode: forwards;
 }
 
-.signup-logocontainer {
-    padding-left: 1em;
-    height: 100%;
-}
-
-.signup-logo {
-    height: 100%;
+.signup-stickymain div {
+    width: 33%;
 }
 
 .signup-link {
-    width: 15em;
-    padding-left: 1em;
     text-align: center;
+    width: 100%;
 }
 
 #signup-signupbutton {
     display: inline-block;
-    padding-left: 1em;
 }
 
+#signup-closecontainer {
+    height: 100%;
+    text-align: right;
+    margin-right: 5em;
+}
 .signup-close {
     height: 100%;
-    padding-right: 1em;
 }
 
-.signup-textcontainer {
+#signup-textcontainer {
     text-align: center;
     padding: 1em;
+    width: 100%;
 }   
 
 #signup-closeButton {
@@ -64,14 +62,22 @@
     #signup-signupbutton {
         padding: .2em 1em;
     }
+    #signup-textcontainer {
+        font-size: .8em;
+    }
 }
 
 @media only screen and (max-width: 510px) {
-    .signup-textcontainer {
-        font-size: .8em;
-    }
     #signup-signupbutton {
         font-size: 1em;
         padding: .2em .5em;
+    }
+    #signup-closecontainer {
+        width: 20%;
+        margin-right: 2em;
+    }
+    #signup-textcontainer {
+        width: 40%; 
+        font-size: .6em;
     }
 }
