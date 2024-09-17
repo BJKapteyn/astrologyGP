@@ -1,0 +1,24 @@
+.signup-stickymain {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0em;
+    left: 0em;
+    width: 100%;
+    height: 5em;
+    background: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signup-logocontainer {
+    padding-left: 1em;
+}
+
+.signup-logo {
+    height: 100%;
+}
+
+.signup-close {
+    padding-right: 1em;
+}
