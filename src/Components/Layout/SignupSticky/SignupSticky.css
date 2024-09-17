@@ -1,0 +1,77 @@
+.signup-stickymain {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0em;
+    left: 0em;
+    width: 100%;
+    height: 5em;
+    background: white;
+    justify-content: space-between;
+    align-items: center;
+    animation-name: fadeIn;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+}
+
+.signup-logocontainer {
+    padding-left: 1em;
+    height: 100%;
+}
+
+.signup-logo {
+    height: 100%;
+}
+
+.signup-link {
+    width: 15em;
+    padding-left: 1em;
+    text-align: center;
+}
+
+#signup-signupbutton {
+    display: inline-block;
+    padding-left: 1em;
+}
+
+.signup-close {
+    height: 100%;
+    padding-right: 1em;
+}
+
+.signup-textcontainer {
+    text-align: center;
+    padding: 1em;
+}   
+
+#signup-closeButton {
+    height: 100%;
+    padding: 0px;
+    border: none;
+    fill: var(--secondary-orange);
+    background-color: white;
+    transition: fill 500ms;
+    -webkit-transition: fill 500ms;
+    -moz-transition: fill 500ms;
+    -ms-transition: fill 500ms;
+    -o-transition: fill 500ms;
+}
+#signup-closeButton:hover {
+    fill: var(--main-color);
+}
+
+@media only screen and (max-width: 1200px) {
+    #signup-signupbutton {
+        padding: .2em 1em;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    .signup-textcontainer {
+        font-size: .8em;
+    }
+    #signup-signupbutton {
+        font-size: 1em;
+        padding: .2em .5em;
+    }
+}
