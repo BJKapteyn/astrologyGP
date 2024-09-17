@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { ActionButton } from '../../../PageElements/ActionButton/ActionButton.jsx';
 import { NavPageLink } from '../NavPageLink.jsx';
-import { ReactComponent as  MenuExpand} from '../../../../Pics/Logos/MenuExpand.svg';
-import { ReactComponent as  MenuRetract} from '../../../../Pics/Logos/MenuRetract.svg';
+import { ReactComponent as MenuExpand} from '../../../../Pics/Logos/MenuExpand.svg';
+import { ReactComponent as MenuRetract} from '../../../../Pics/Logos/MenuRetract.svg';
 import yellowLogo from '../../../../Pics/Logos/MainLogoYellow.svg';
 import '../../../../App.css';
 import './NavBarMobile.css';

@@ -9,10 +9,14 @@
     background: white;
     justify-content: space-between;
     align-items: center;
+    animation-name: fadeIn;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
 }
 
 .signup-logocontainer {
     padding-left: 1em;
+    height: 100%;
 }
 
 .signup-logo {
@@ -21,4 +25,8 @@
 
 .signup-close {
     padding-right: 1em;
+}
+
+.signup-link {
+    height: 90%;
 }
