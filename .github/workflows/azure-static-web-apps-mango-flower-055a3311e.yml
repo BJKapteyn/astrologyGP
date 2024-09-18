@@ -19,7 +19,7 @@ jobs:
         with:
           submodules: true
           lfs: false
-          node_version: 16.x
+          node_version: 20.10.0
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
