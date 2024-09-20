@@ -10,7 +10,6 @@
     "@testing-library/user-event": "^14.5.2",
     "@types/react-transition-group": "^4.4.10",
     "env-cmd": "^10.1.0",
-    "nth-check": "^2.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-responsive": "^10.0.0",
