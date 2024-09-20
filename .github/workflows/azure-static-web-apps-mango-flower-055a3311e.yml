@@ -9,6 +9,12 @@ on:
     branches:
       - master
 
+env:
+  REACT_APP_FUNCTIONS_URL: ${{ secrets.REACT_APP_FUNCTIONS_URL }}
+  REACT_APP_GET_EMPLOYEE: ${{ secrets.REACT_APP_GET_EMPLOYEE }}
+  REACT_APP_GET_ITEMS: ${{ secrets.REACT_APP_GET_ITEMS }}
+  REACT_APP_INSERT_EMAIL: ${{ secrets.REACT_APP_INSERT_EMAIL }}
+
 jobs:
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
