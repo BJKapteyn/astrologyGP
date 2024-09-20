@@ -6,7 +6,7 @@ export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {
     const { 
             imageURL,
             name,
-            info,
+            sign,
             description} = productItem;
 
     const bookButtonSettings = {
@@ -28,7 +28,7 @@ export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {
             </div>
             <div className="expandedcard-info">
                 <h4 className="expandedcard-productname">{name}</h4>
-                <p className="expandedcard-infotext">{info}</p>
+                <p className="expandedcard-infotext">{sign}</p>
             </div>
             <div className="expandedcard-button">
 

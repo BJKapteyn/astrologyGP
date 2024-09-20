@@ -7,7 +7,7 @@
                 "image description description";
     border: .2em solid #ba9fc5;
     overflow: hidden;
-    height: 20em;
+    height: 25em;
 }
 
 .expandedcard-imageflex {
@@ -115,5 +115,15 @@
 
     .expandedcard-button {
         margin: 2%;
+    }
+
+    .expandedcard-image {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .expandedcard-image {
+        width: 100%;
     }
 }
