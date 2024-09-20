@@ -37,9 +37,9 @@ export const SquareBioCard = () => {
                                 imageURL: card.ImageURL,
                                 image: null,
                                 name: card.Name,
-                                sign: card?.Sign,
+                                sign: card.Sign,
                                 type: "Tarot Reader",
-                                email: card?.Email,
+                                email: card.Email,
                                 info: '$100 | 1hr',
                                 description: card.Description
                             };
@@ -58,8 +58,6 @@ export const SquareBioCard = () => {
             }
             getCardData();
         }, [cardData]);
-
-        
 
     return (
         <div className="biocard-flex-container">
