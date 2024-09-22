@@ -34,7 +34,7 @@ export const SignupSticky = () => {
     const singupStickyComponent = (
         <div className="signup-stickymain">
             <div id="signup-textcontainer">
-                <p>Sign up now and recieve a 10% off coupon when our offerings open in October</p>
+                <p>Sign up today and enjoy 10% off when our offerings open in October</p>
             </div>
             <div className="signup-link">
                 <Link target='_blank' to={'https://squareup.com/outreach/UurPKs/subscribe'}>
