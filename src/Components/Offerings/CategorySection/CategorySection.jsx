@@ -21,7 +21,7 @@ export const CategorySection = ({ productData }) => {
             productData.forEach(data => {
 
                 if(data?.type === 'ITEM')
-                    itemData.push(data);
+                    itemData?.push(data);
                 
             }, [productData]);
         }

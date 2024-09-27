@@ -7,10 +7,11 @@ import './Items.css';
 
 export const Items = ({ itemData: items }) => {
     const [modalData, setModalData] = useState(null);
+    const lorem = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam totam non qui quisquam consequatur rem sequi itaque vero eos, voluptas quia repudiandae quod ipsam accusantium ab vitae officiis, incidunt excepturi.'
+    
     function deselectData() {
         setModalData(null);
     }
-    const lorem = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam totam non qui quisquam consequatur rem sequi itaque vero eos, voluptas quia repudiandae quod ipsam accusantium ab vitae officiis, incidunt excepturi.'
 
     // Selects data for modal
     function selectData(item) {
@@ -32,7 +33,7 @@ export const Items = ({ itemData: items }) => {
             {items.map(item => {
                 
                 return (
-                    <Item key={item.ItemData.ItemId} callBackSelect={selectData} item={item.ItemData}></Item>
+                    <Item key={item?.ItemData.ItemId} callBackSelect={selectData} item={item?.ItemData}></Item>
                 );      
             })}
 
