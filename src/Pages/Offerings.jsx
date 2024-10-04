@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 // Page that shows all of the services and products
 export default function Offerings() {
     const [endpointUrl, setEndpointUrl] = useState(`${process.env.REACT_APP_FUNCTIONS_URL}/getitems?code=${process.env.REACT_APP_GET_ITEMS}`);
-    const [products, setProductData] = useState(null);
+    const [appointmentItems, setAppointmentItemData] = useState(null);
 
     useEffect(() => {
         let active = true;
@@ -14,7 +14,7 @@ export default function Offerings() {
                 .then(response => response.json())
                 .then(data => {
                     if (active){
-                        setProductData(data);
+                        setAppointmentItemData(data);
                         console.log(data);
                     }
                         
@@ -28,14 +28,14 @@ export default function Offerings() {
         }
     }, []);
 
-    if(!products || !Array.isArray(products)) {
+    if(!appointmentItems || !Array.isArray(appointmentItems)) {
 
         return <span>Loading...</span>
     } else {
 
         return (
             <main>
-                <CategorySection productData={products} />
+                <CategorySection appointmentItemData={appointmentItems} />
             </main>
         );
     }

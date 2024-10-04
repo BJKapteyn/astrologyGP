@@ -2,12 +2,11 @@ import { useEffect, useState } from "react";
 import { Items } from "../Items/Items";
 import { TitleCard } from "../../PageElements/TitleCard/TitleCard";
 import { SectionDivider } from "../../PageElements/SectionDivider/SectionDivider";
-import { OfferingCategory } from "../data/OfferingCategory";
 import backgroundImage from '../../../Pics/Landscapes/jpeg/yogaLivingRoom_dark.jpg';
 import './Category.css';
 
-export const CategorySection = ({ productData }) => {
-    const [items, setItems] = useState([]);
+export const CategorySection = ({ appointmentItemData }) => {
+    const [items, setItems] = useState(appointmentItemData);
     const categoryTitleCardData = {
         titleText: 'OFFERINGS',
         backgroundimage: backgroundImage, 
@@ -15,33 +14,20 @@ export const CategorySection = ({ productData }) => {
     }
 
     useEffect(() => {
-        let itemData = [];
-
-        if(productData.length >= 0) {
-            productData.forEach(data => {
-
-                if(data?.type === 'ITEM')
-                    itemData?.push(data);
-                
-            }, [productData]);
-        }
-        
-        setItems(itemData);
-    }, [productData]);
+        setItems(appointmentItemData);
+    }, [appointmentItemData]);
 
     return (
         <>
             <TitleCard titleData={categoryTitleCardData}></TitleCard>
             
-            {OfferingCategory.map(category => {
-                return (
-                    <section key={category.id} className="category-section">
-                        <SectionDivider dividerData={{headingText: category.name}}></SectionDivider>
+            
+            <section className="category-section">
+                <SectionDivider dividerData={{headingText: 'Our Offerings'}}></SectionDivider>
 
-                        <Items itemData={items}></Items>
-                    </section>
-                );
-            })}
+                <Items itemData={items}></Items>
+            </section>
+            
         </>
     );
 }

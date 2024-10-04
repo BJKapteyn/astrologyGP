@@ -16,7 +16,7 @@ export const Items = ({ itemData: items }) => {
     // Selects data for modal
     function selectData(item) {
         if(item != null) {
-            const itemDescription = item.description ? item.description : lorem;
+            const itemDescription = item.Description ? item.Description : lorem;
             let itemMap = {
                 name: item.Name,
                 info: '1 HR | $100',
@@ -27,13 +27,12 @@ export const Items = ({ itemData: items }) => {
         console.log(item);
     }
     
-    
     return (
         <div className="items-flex">
             {items.map(item => {
                 
                 return (
-                    <Item key={item?.ItemData.ItemId} callBackSelect={selectData} item={item?.ItemData}></Item>
+                    <Item key={item.ItemId} callBackSelect={selectData} itemData={item}></Item>
                 );      
             })}
 
