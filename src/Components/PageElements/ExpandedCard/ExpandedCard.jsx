@@ -3,11 +3,7 @@ import '../../../App.css';
 import './ExpandedCard.css';
 
 export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {
-    const { 
-            imageURL,
-            name,
-            sign,
-            description} = productItem;
+    const { imageURL, name, sign, description} = productItem;
 
     const bookButtonSettings = {
         buttonText: 'BOOK',
@@ -19,7 +15,7 @@ export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {
         buttonStyleId: 'expandedcard-closeButton'
     };
 
-    const imageSrc = imageURL ? imageURL : require(`../../../Pics/Landscapes/jpeg/girlOnBeach.jpg`);
+    const imageSrc = imageURL ? imageURL : require(`../../../Pics/Portraits/portrait-womanField2.png`);
 
     return (
         <div id={styleId} className="expandedcard-grid">

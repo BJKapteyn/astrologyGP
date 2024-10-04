@@ -7,15 +7,16 @@ import './Items.css';
 
 export const Items = ({ itemData: items }) => {
     const [modalData, setModalData] = useState(null);
+    const lorem = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam totam non qui quisquam consequatur rem sequi itaque vero eos, voluptas quia repudiandae quod ipsam accusantium ab vitae officiis, incidunt excepturi.'
+    
     function deselectData() {
         setModalData(null);
     }
-    const lorem = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam totam non qui quisquam consequatur rem sequi itaque vero eos, voluptas quia repudiandae quod ipsam accusantium ab vitae officiis, incidunt excepturi.'
 
     // Selects data for modal
     function selectData(item) {
         if(item != null) {
-            const itemDescription = item.description ? item.description : lorem;
+            const itemDescription = item.Description ? item.Description : lorem;
             let itemMap = {
                 name: item.Name,
                 info: '1 HR | $100',
@@ -26,13 +27,12 @@ export const Items = ({ itemData: items }) => {
         console.log(item);
     }
     
-    
     return (
         <div className="items-flex">
             {items.map(item => {
                 
                 return (
-                    <Item key={item.ItemData.ItemId} callBackSelect={selectData} item={item.ItemData}></Item>
+                    <Item key={item.ItemId} callBackSelect={selectData} itemData={item}></Item>
                 );      
             })}
 
