@@ -1,6 +1,7 @@
+import { Outlet } from "react-router-dom";
 import { NavBar } from "./Navbar/NavBar";
 import { Footer } from "./Footer/Footer";
-import { Outlet } from "react-router-dom";
+import { SignupSticky } from "./SignupSticky/SignupSticky";
 
 export default function Layout() {
 
@@ -8,6 +9,7 @@ export default function Layout() {
         <div>
             <NavBar></NavBar>
             <Outlet></Outlet>
+            <SignupSticky></SignupSticky>
             <Footer></Footer>
         </div>
     );

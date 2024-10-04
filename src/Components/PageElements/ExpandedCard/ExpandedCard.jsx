@@ -3,9 +3,10 @@ import '../../../App.css';
 import './ExpandedCard.css';
 
 export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {
-    const { image,
+    const { 
+            imageURL,
             name,
-            info,
+            sign,
             description} = productItem;
 
     const bookButtonSettings = {
@@ -14,11 +15,11 @@ export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {
     };
 
     const closeButtonSettings = {
-        buttonText: 'CLOSE',
+        buttonText: 'X',
         buttonStyleId: 'expandedcard-closeButton'
     };
 
-    const imageSrc = image ? require(`../../../Pics/Headshots/${image}`) : require(`../../../Pics/Landscapes/moonCrest.png`);
+    const imageSrc = imageURL ? imageURL : require(`../../../Pics/Landscapes/jpeg/girlOnBeach.jpg`);
 
     return (
         <div id={styleId} className="expandedcard-grid">
@@ -27,7 +28,7 @@ export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {
             </div>
             <div className="expandedcard-info">
                 <h4 className="expandedcard-productname">{name}</h4>
-                <p className="expandedcard-infotext">{info}</p>
+                <p className="expandedcard-infotext">{sign}</p>
             </div>
             <div className="expandedcard-button">
 

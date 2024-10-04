@@ -15,7 +15,7 @@ export const Testimonials = () => {
                         <div key={testimonial.id} className="testimonials-flex-item">
                             <div className="testimonials-header">
                                 <div className="testimonials-image-container">
-                                    <img alt={testimonial.name} className="testimonials-image" src={dataSource}></img>
+                                    <img alt={` ${testimonial.name}`} className="testimonials-image" src={dataSource}></img>
                                 </div>
                                 <h3 className="testimonials-name">{testimonial.name}</h3>
                             </div> 

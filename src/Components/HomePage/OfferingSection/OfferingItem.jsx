@@ -11,9 +11,7 @@ export const OfferingItem = ({ offeringItemData }) => {
                 <h3 className="offering-section-title">{title}</h3>
             </div>
             <div className="offering-section-text-container">
-                <div className="offering-section-scrollhide">
-                    <p className="offering-section-text">{text}</p>
-                </div>
+                <p className="offering-section-text">{text}</p>
             </div>
             <div className="offering-section-button-container">
                 <a href="#subscribe">

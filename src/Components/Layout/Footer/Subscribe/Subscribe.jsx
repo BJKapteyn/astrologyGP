@@ -1,12 +1,7 @@
-import { ActionButton } from '../../../PageElements/ActionButton/ActionButton';
+import { EmailForm } from './EmailForm';
 import './Subscribe.css';
 
 export const Subscribe = () => {
-    const subscribeButtonSettings = {
-        buttonText: 'Subscribe',
-        buttonStyleId: 'subscribe-subscribebutton',
-        action: () => {}
-    }
 
     return (
         <section id="subscribe">
@@ -18,12 +13,7 @@ export const Subscribe = () => {
                             <h4 className="subscribe-description">Subscribe to our monthly newsletter:</h4>
                             <p className="subscribe-descriptiontext">Be the first to learn about special offers, seasonal classes, new services, and events.</p>
                         </div>
-                        <div className="subscribe-button">
-                            <input type="text" className="subscribe-textinput" id="submitemail" placeholder="Enter Your Email..."></input>
-
-                            <ActionButton  buttonSettings={subscribeButtonSettings}></ActionButton>
-                            
-                        </div>
+                        <EmailForm></EmailForm>
                         <p className="subscribe-subtext">We respect your privacy and your inbox.</p>
                     </div>
                 </div>

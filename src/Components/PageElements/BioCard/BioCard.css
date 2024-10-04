@@ -51,7 +51,7 @@
 }
 
 .biocard-image-container {
-    height: 14em;
+    height: 20em;
     width: 100%;
     margin: auto;
     overflow: hidden;
@@ -75,7 +75,7 @@
 
 .biocard-button {
     position: absolute;
-    top: 54%;
+    top: 65%;
     font-size: 1.2em;
     right: 50%;
     transform: translate(50%, 0);

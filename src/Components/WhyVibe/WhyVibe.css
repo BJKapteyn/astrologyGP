@@ -1,5 +1,6 @@
 .whyvibe {
     margin: auto;
+    padding-bottom: 1em;
 }
 
 #whyvibe-titlecard {
@@ -26,11 +27,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    
+    width: 80%;
+    margin: auto;
 }
 
 .valuecard {
-    width: 18em;
+    flex: 0 0 30%;
+    min-width: 18em;
     border: .1em solid var(--secondary-orange);
     margin: 1em;
     display: flex;
@@ -40,22 +43,28 @@
 }
 
 .valucard-titleContainer {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 7em;
 }
 
 .valuecard-title {
     font-size: 1.5em;
-    margin: 0em;
-    position: absolute;
-    bottom: 0;
+    margin: 0em .4em;
     width: 100%;
 }
 
 .valucard-text {
     height: 11em;
     text-align: center;
-    font-size: .8em;
+    font-size: 1em;
     padding: .7em;
+}
+
+@media only screen and (max-width: 1350px) {
+    .valuecards {
+        width: 90%;
+    }
 }
 

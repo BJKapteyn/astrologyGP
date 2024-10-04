@@ -35,15 +35,15 @@
 }
 
 #offering-yogasunrise {
-    background-image: url('../../../Pics/Landscapes/yogaSunrise_dark.jpg');
+    background-image: url('../../../Pics/Landscapes/jpeg/yogaSunrise_dark.jpg');
 }
 
 #offering-moonmountain {
-    background-image: url('../../../Pics/Landscapes/mountainPool.png');
+    background-image: url('../../../Pics/Landscapes/jpeg/mountainPool.jpg');
 }
 
 #offering-groupyoga {
-    background-image: url('../../../Pics/Landscapes/girlsInField_dark.png');
+    background-image: url('../../../Pics/Landscapes/jpeg/girlsInField_dark.jpg');
     background-position-x: 30%;
 }
 
@@ -53,8 +53,9 @@
 
 .offering-section-text-container {
     overflow: hidden;
-    height: 14em;
-    margin: 2.5em 0em;
+    height: auto;
+    min-height: 12em;
+    margin: 2em 0em;
     cursor: ns-resize;
 }
 
