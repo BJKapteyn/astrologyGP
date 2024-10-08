@@ -1,6 +1,7 @@
 
 import { Routes, Route } from 'react-router-dom';
 import { ComingSoon } from './Components/ComingSoon/ComingSoon.jsx';
+import  { SingleOffering } from './Components/OfferingsPage/SingleOffering/SingleOffering.jsx';
 import Layout from './Components/Layout/Layout.jsx';
 import HomePage from './Pages/HomePage.jsx';
 import WhyVibePage from './Pages/WhyVibePage.jsx';
@@ -30,6 +31,7 @@ function App() {
           <Route path="/Readers" element={<ReadersPage />}></Route>
           <Route path="/Store" element={<ComingSoon comingSoonData={storeComingSoonData} />}></Route>
           <Route path="/Offerings" element={<Offerings />}></Route>
+          <Route path="/Offerings:singleOffering" element={<SingleOffering />}></Route>
         </Route>
       </Routes>
     </div>

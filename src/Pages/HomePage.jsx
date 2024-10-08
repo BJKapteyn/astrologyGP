@@ -30,9 +30,6 @@ export default function HomePage() {
 
     return (
         <main  id="homepage">
-            {/* <meta name="author" content="Brad Kapteyn"></meta>
-            <meta name="description" content="The Vibe Collective is an online platform for metaphysical services, spiritual healing, and holistic wellness"></meta>
-            <meta name="keywords" content="The Vibe Collective, online metaphysical services, spiritual, healing, holistic wellness, tarot readings, virtual spiritual consultations"></meta> */}
             <TitleCard titleData={titleCardData}></TitleCard>
             <TitleDivider></TitleDivider>
             <JoinUs></JoinUs>

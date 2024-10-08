@@ -13,8 +13,7 @@ export const Items = ({ itemData: items }) => {
         setModalData(null);
     }
 
-    // Selects data for modal
-    function selectData(item) {
+    function selectModalData(item) {
         if(item != null) {
             const itemDescription = item.Description ? item.Description : lorem;
             let itemMap = {
@@ -32,7 +31,7 @@ export const Items = ({ itemData: items }) => {
             {items.map(item => {
                 
                 return (
-                    <Item key={item.ItemId} callBackSelect={selectData} itemData={item}></Item>
+                    <Item key={item.ItemId} callBackSelect={selectModalData} itemData={item}></Item>
                 );      
             })}
 

@@ -1,4 +1,4 @@
-import { CategorySection } from "../Components/Offerings/CategorySection/CategorySection";
+import { CategorySection } from "../Components/OfferingsPage/CategorySection/CategorySection";
 import { useEffect, useState } from "react";
 
 // Page that shows all of the services and products
