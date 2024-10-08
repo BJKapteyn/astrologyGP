@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 // Page that shows all of the services and products
 export default function Offerings() {
-    const [endpointUrl, setEndpointUrl] = useState(`${process.env.REACT_APP_FUNCTIONS_URL}/getitems?code=${process.env.REACT_APP_GET_ITEMS}`);
+    const endpointUrl = `${process.env.REACT_APP_FUNCTIONS_URL}/getitems?code=${process.env.REACT_APP_GET_ITEMS}`;
     const [appointmentItems, setAppointmentItemData] = useState(null);
 
     useEffect(() => {
