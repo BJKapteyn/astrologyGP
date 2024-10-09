@@ -2,13 +2,12 @@ import { useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { TitleCard } from "../../PageElements/TitleCard/TitleCard.jsx";
 
-export const SingleOffering = ({ singleOfferingData }) => {
+export const SingleOffering = () => {
     const offeringData  = useLocation();
-    // const { category, backgroundImage } = singleOfferingData;
     const offeringTitleData = {
         titleText: offeringData.state.name,
         subText: null,
-        backgroundimage: null, //fix
+        backgroundimage: null, 
         styleId: 'singleoffering-titlecard'
     }
 
