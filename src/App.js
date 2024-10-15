@@ -25,7 +25,7 @@ function App() {
           <Route path="/Readers" element={<ReadersPage />}></Route>
           <Route path="/Store" element={<ComingSoon comingSoonData={storeComingSoonData} />}></Route>
           <Route path="/Offerings" element={<OfferingsPage />}></Route>
-          <Route path="/Offerings/:singleffering" element={<SingleOffering />}></Route>
+          <Route path="/Offerings/:singleoffering" element={<SingleOffering />}></Route>
         </Route>
       </Routes>
     </div>

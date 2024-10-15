@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Items } from "../Items/Items";
 import { TitleCard } from "../../PageElements/TitleCard/TitleCard";
 import { SectionDivider } from "../../PageElements/SectionDivider/SectionDivider";
@@ -5,6 +6,7 @@ import backgroundImage from '../../../Pics/Landscapes/jpeg/yogaLivingRoom_dark.j
 import './Category.css';
 
 export const CategorySection = ({ appointmentItemData }) => {
+    const appointmentItems = useRef(appointmentItemData);
     const categoryTitleCardData = {
         titleText: 'OFFERINGS',
         backgroundimage: backgroundImage, 
@@ -18,7 +20,7 @@ export const CategorySection = ({ appointmentItemData }) => {
             <section className="category-section">
                 <SectionDivider dividerData={{headingText: 'Our Offerings'}}></SectionDivider>
 
-                <Items itemData={appointmentItemData} />
+                <Items itemData={appointmentItems.current} />
             </section>
         </>
     );

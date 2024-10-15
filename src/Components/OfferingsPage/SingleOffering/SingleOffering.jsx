@@ -1,19 +1,34 @@
-import { useRef } from "react";
-import { useLocation } from "react-router-dom";
-import { TitleCard } from "../../PageElements/TitleCard/TitleCard.jsx";
+import { useRef, useEffect } from 'react';
+import { useLocation, useParams } from 'react-router-dom';
+import moon from '../../../Pics/Portraits/portrait-sunsetWaves.png';
+import './SingleOffering.css';
 
 export const SingleOffering = () => {
-    const offeringData  = useLocation();
-    const offeringTitleData = {
-        titleText: offeringData.state.name,
-        subText: null,
-        backgroundimage: null, 
-        styleId: 'singleoffering-titlecard'
+    let offeringData = useLocation();
+    const urlParams = useParams();
+    console.log(urlParams);
+
+    useEffect(() => {
+        localStorage.setItem(offeringData.name, offeringData);
+    }, []);
+
+    if(!offeringData) {
+        offeringData = localStorage.getItem(urlParams.singleoffering);
     }
 
     return (
-        <div className="singleoffer">
-            <TitleCard titleData={offeringTitleData}></TitleCard>
-        </div>
+        <main id="singleoffer">
+            <div className="singleoffer-imagecontainer">
+                <img id="singleoffer-image" src={moon} alt={offeringData.name} />
+            </div>
+            <div className="singleoffer-information">
+                <div id="singleoffer-name">
+                    
+                </div>
+                <div id="singleoffer-name"></div>
+                <div id="singleoffer-name"></div>
+                <div id="singleoffer-name"></div>
+            </div>
+        </main>
     )
 }

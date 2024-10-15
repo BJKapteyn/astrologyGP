@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Item } from './Item/Item';
 import { CardModal } from '../../PageElements/CardModal/CardModal';
 import { ExpandedCard } from '../../PageElements/ExpandedCard/ExpandedCard';
@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 export const Items = ({ itemData: items }) => {
     const [modalData, setModalData] = useState(null);
-    const [appointmentItems, setAppointmentItems] = useState(items);
+    const appointmentItems = useRef(items);
     const lorem = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam totam non qui quisquam consequatur rem sequi itaque vero eos, voluptas quia repudiandae quod ipsam accusantium ab vitae officiis, incidunt excepturi.'
     
     function deselectData() {
@@ -29,11 +29,11 @@ export const Items = ({ itemData: items }) => {
     
     return (
         <div className="items-flex">
-            {items.map(item => {
+            {appointmentItems.current.map(item => {
                 
                 return (
                     <Link to={`./${item.name}`} state={item}>
-                        <Item key={item.ItemId} callBackSelect={selectModalData} itemData={item}></Item>
+                        <Item key={item.id} callBackSelect={selectModalData} itemData={item}></Item>
                     </Link>
                 );      
             })}
