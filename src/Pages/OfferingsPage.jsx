@@ -1,9 +1,9 @@
-import { CategorySection } from "../Components/Offerings/CategorySection/CategorySection";
+import { CategorySection } from "../Components/OfferingsPage/CategorySection/CategorySection";
 import { useEffect, useState } from "react";
 
 // Page that shows all of the services and products
 export default function Offerings() {
-    const [endpointUrl, setEndpointUrl] = useState(`${process.env.REACT_APP_FUNCTIONS_URL}/getitems?code=${process.env.REACT_APP_GET_ITEMS}`);
+    const endpointUrl = `${process.env.REACT_APP_FUNCTIONS_URL}/getitems?code=${process.env.REACT_APP_GET_ITEMS}`;
     const [appointmentItems, setAppointmentItemData] = useState(null);
 
     useEffect(() => {
@@ -17,8 +17,8 @@ export default function Offerings() {
                         setAppointmentItemData(data);
                         console.log(data);
                     }
-                        
-                }).catch(err => console.log(err));
+                })
+                .catch(err => console.log(err));
         }
 
         getAllItems();
