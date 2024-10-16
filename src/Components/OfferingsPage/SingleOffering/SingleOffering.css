@@ -1,34 +1,50 @@
 #singleoffer {
-    display: grid;
-    grid-template-areas: "image description";
-    grid-template-columns: 50% 50%;
-    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 2em;
+    height: 35em;
 }
 
 .singleoffer-imagecontainer {
-    grid-area: image;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 50%;
 }
 
 #singleoffer-image {
     display: block;
     width: 80%;
-    height: 80%;
+    height: 100%;
+}
+
+.singleoffer-information-container {
+    width: 50%;
+    overflow: hidden;
 }
 
 .singleoffer-information {
-    grid-area: description;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    justify-items: center;
-    height: 80%;
-    width: 95%;
     text-align: left;
+    padding-right: 17px;
+    margin-bottom: 3em;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+}
+
+#singleoffer-name {
+    padding-bottom: 1.5em;
 }
 
 .singleoffer-variation, #singleoffer-descriptiontitle {
     border-top: 2px solid #686566;
+}
+
+.singleoffer-variation {
+    padding: 1.5em 0em;
+}
+
+#singleoffer-descriptiontitle {
+    padding: 1.5em 0em .5em 0em;
 }
