@@ -17,8 +17,8 @@ export default function Offerings() {
                         setAppointmentItemData(data);
                         console.log(data);
                     }
-                        
-                }).catch(err => console.log(err));
+                })
+                .catch(err => console.log(err));
         }
 
         getAllItems();
@@ -26,7 +26,7 @@ export default function Offerings() {
         return () => {
             active = false;
         }
-    }, []);
+    });
 
     if(!appointmentItems || !Array.isArray(appointmentItems)) {
 

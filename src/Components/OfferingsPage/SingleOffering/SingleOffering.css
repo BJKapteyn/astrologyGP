@@ -1,24 +1,34 @@
-#singleoffering-titlecard {
-    
-}
-
 #singleoffer {
     display: grid;
     grid-template-areas: "image description";
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 50% 50%;
+    height: auto;
 }
 
 .singleoffer-imagecontainer {
     grid-area: image;
-    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #singleoffer-image {
     display: block;
     width: 80%;
-    margin: auto;
+    height: 80%;
 }
 
 .singleoffer-information {
     grid-area: description;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-items: center;
+    height: 80%;
+    width: 95%;
+    text-align: left;
+}
+
+.singleoffer-variation, #singleoffer-descriptiontitle {
+    border-top: 2px solid #686566;
 }

@@ -19,6 +19,7 @@ export const Items = ({ itemData: items }) => {
         if(item != null) {
             const itemDescription = item.Description ? item.Description : lorem;
             let itemMap = {
+                id: item.Id,
                 name: item.Name,
                 info: '1 HR | $100',
                 description: itemDescription
@@ -32,8 +33,8 @@ export const Items = ({ itemData: items }) => {
             {appointmentItems.current.map(item => {
                 
                 return (
-                    <Link to={`./${item.name}`} state={item}>
-                        <Item key={item.id} callBackSelect={selectModalData} itemData={item}></Item>
+                    <Link key={item.id} to={`./${item.name}`} state={item}>
+                        <Item callBackSelect={selectModalData} itemData={item}></Item>
                     </Link>
                 );      
             })}
