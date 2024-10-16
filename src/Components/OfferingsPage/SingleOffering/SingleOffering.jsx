@@ -35,15 +35,20 @@ export const SingleOffering = () => {
             <div className="singleoffer-imagecontainer">
                 <img id="singleoffer-image" src={imageUrl} alt={offeringData.name.toUpperCase()} />
             </div>
-            <div className="singleoffer-information">
-                <p id="singleoffer-name">{offeringData.name.toUpperCase()}</p>
-                {offeringData.variations.map(variation => {
-                    return (
-                    <p className="singleoffer-variation">{variation.name.toUpperCase()}</p>
-                )
-                })}
-                <p id="singleoffer-descriptiontitle">DESCRIPTION</p>
-                <p id="singleoffer-description">{offeringData.description}</p>
+            <div className="singleoffer-information-container">
+                <div className="singleoffer-information">
+                    <p id="singleoffer-name">{offeringData.name.toUpperCase()}</p>
+                    {offeringData.variations.map(variation => {
+                        return (
+                        <p className="singleoffer-variation">{variation.name.toUpperCase()}</p>
+                    )
+                    })}
+                    <p id="singleoffer-descriptiontitle">DESCRIPTION</p>
+                    <p id="singleoffer-description">{offeringData.description}</p>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                </div>
             </div>
         </main>
     )
