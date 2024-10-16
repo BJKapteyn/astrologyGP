@@ -26,7 +26,7 @@ export default function Offerings() {
         return () => {
             active = false;
         }
-    });
+    }, []);
 
     if(!appointmentItems || !Array.isArray(appointmentItems)) {
 
