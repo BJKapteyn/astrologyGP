@@ -1,8 +1,9 @@
 #singleoffer {
+    max-width: 70em;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin: 2em;
+    margin: 2em auto;
     height: 35em;
 }
 
@@ -34,15 +35,35 @@
 }
 
 #singleoffer-name {
+    font-family: bivoac-regular;
     padding-bottom: 1.5em;
 }
 
-.singleoffer-variation, #singleoffer-descriptiontitle {
+.singleoffer-variation-container, #singleoffer-descriptiontitle {
     border-top: 2px solid #686566;
 }
 
-.singleoffer-variation {
-    padding: 1.5em 0em;
+.singleoffer-variation-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 3em;
+}
+
+.singleoffer-variation, #singleoffer-bookbutton {
+    display: inline-block;
+}
+
+#singleoffer-bookbutton {
+    display: inline-block;
+    font-size: 1.2em;    
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+#singleoffer-bookbutton:hover {
+    background-color: var(--secondary-orange);
+    border-color: var(--secondary-orange);
 }
 
 #singleoffer-descriptiontitle {
