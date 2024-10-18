@@ -51,8 +51,12 @@
 }
 
 .biocard-image-container {
-    height: 20em;
     width: 100%;
+    height: 100%;
+    height: auto;
+    display: block;
+    background-size: cover;
+    height: 20em;
     margin: auto;
     overflow: hidden;
 }
@@ -69,8 +73,10 @@
 
 .biocard-image {
     width: 100%;
+    height: 100%;
     height: auto;
     display: block;
+    background-size: cover;
 }
 
 .biocard-button {

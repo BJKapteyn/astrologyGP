@@ -39,8 +39,6 @@ export const SquareBioCard = () => {
                                 name: card.Name,
                                 sign: card.Sign,
                                 type: "Tarot Reader",
-                                email: card.Email,
-                                info: '$100 | 1hr',
                                 description: card.Description
                             };
 

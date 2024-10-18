@@ -8,8 +8,8 @@ export const BioCard = ({cardData, callbackSelect})  => {
     
     return (
         <section onClick={() => callbackSelect(cardData)} className="biocard-flexbox" key={cardData.id}>
-            <div className="biocard-image-container">
-                <img className="biocard-image" alt={cardData.description} src={imageSource}></img>
+            <div className="biocard-image-container" style={{backgroundImage: `url(${imageSource})`}}>
+                <div className="biocard-image" style={{backgroundImage: `url(${imageSource})`}}></div>
             </div>
             <p className="biocard-button">+</p>
             <div className="biocard-info-container">

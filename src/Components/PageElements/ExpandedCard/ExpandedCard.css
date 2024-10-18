@@ -100,7 +100,7 @@
     }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 750px) and (min-height: 700px) {
 
     .expandedcard-grid {
         height: 90vh;
@@ -125,5 +125,36 @@
 @media only screen and (max-width: 460px) {
     .expandedcard-image {
         width: 100%;
+    }
+}
+
+@media only screen and (max-height: 700px) {
+    .expandedcard-grid {
+        height: 90vh;
+        grid-template-columns: 30% 1fr 1fr;
+        grid-template-rows: 30% 1fr;
+        grid-template-areas: 
+                        "image info button"
+                        "description description description"
+    }
+
+    .expandedcard-image {
+        width: auto;
+        height: 100%;
+    }
+
+    .expandedcard-image-flex {
+        height: 100%;
+    }
+
+    .expandedcard-button {
+        font-size: .9em;
+    }
+
+
+    .expandedcard-description {
+        width: 95%;
+        overflow: auto;
+        margin-top: 3em;
     }
 }
