@@ -30,8 +30,8 @@ export const SingleOffering = () => {
 
     if(!offeringData) {
         const localData = localStorage.getItem(urlParam);
-        const localData2 = JSON.parse(localData);
-        setOfferingData(localData2);
+        const localDataJson = JSON.parse(localData);
+        setOfferingData(localDataJson);
         console.log(offeringData);
     }
     
@@ -41,8 +41,7 @@ export const SingleOffering = () => {
     return (
         <main id="singleoffer">
             <div className="singleoffer-imagecontainer">
-                <div className="singleoffer-image"></div>
-                <img id="singleoffer-image" src={imageUrl} alt={offeringData.name.toUpperCase()} />
+                <div id="singleoffer-image" style={{backgroundImage: `url(${imageUrl})`}}></div>
             </div>
             <div className="singleoffer-information-container">
                 <div className="singleoffer-information">

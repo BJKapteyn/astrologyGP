@@ -90,7 +90,7 @@
     display: inline-block;
     background-color: var(--main-color);
     color: white;
-    transition: background-color 1s;
+    transition: background-color 500ms;
 }
 
 #subscribe-subscribebutton:hover {

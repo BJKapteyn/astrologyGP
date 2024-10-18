@@ -12,5 +12,5 @@ export const Item = ({ itemData, callBackSelect }) => {
                 <h3 className="item-name">{itemData.name}</h3>
             </div>
         </div>
-    );      
+    );    
 }
