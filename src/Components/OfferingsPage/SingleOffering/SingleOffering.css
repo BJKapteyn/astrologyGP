@@ -96,7 +96,7 @@
     #singleoffer {
         margin-top: 0px;
         width: 100%;
-        height: 50em;
+        height: 60em;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -109,6 +109,11 @@
 
     .singleoffer-imagecontainer {
         height: 50%;
+        height: 60%;
+    }
+
+    .singleoffer-imagecontainer {
+        height: 40%;
         width: 100%;
     }
     #singleoffer-image {

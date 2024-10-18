@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useParams, Link } from 'react-router-dom';
 import { ActionButton } from '../../PageElements/ActionButton/ActionButton';
+import { LoadingIndicator } from '../../PageElements/LoadingIndicator/LoadingIndicator';
 import moon from '../../../Pics/Portraits/portrait-sunsetWaves.png';
 import '../../../App.css';
 import './SingleOffering.css';
-// 
+
 export const SingleOffering = () => {
     const [imageUrl, setImageUrl] = useState(moon);
     const [offeringData, setOfferingData] = useState(useLocation().state);
@@ -36,7 +37,7 @@ export const SingleOffering = () => {
     }
     
     if(!offeringData) {
-        return <p>loading</p>
+        return <LoadingIndicator />;
     }
     return (
         <main id="singleoffer">

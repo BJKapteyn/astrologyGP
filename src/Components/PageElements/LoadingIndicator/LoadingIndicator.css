@@ -1,0 +1,18 @@
+@keyframes fade {
+    0% {
+      color: black;
+    }
+    50% {
+      color: white;
+    }
+    100% {
+      color: black;
+    }
+  }
+  
+  .loading-text {
+    animation: fade 2s infinite;
+    text-align: center;
+    margin: 4em 0;
+    font-size: 2em;
+  }
