@@ -1,24 +1,24 @@
-.item {
-    cursor: pointer;
-    position: relative;
-    width: 20em;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 15em;
-    margin: 1em;
+.item-container {
+    margin: 0em 1em 2em 1em;
     box-shadow: 0em 0em 0em var(--secondary-orange), 0em 0em 0em var(--secondary-orange);
     transition: box-shadow 1s ease-out;
-    position: relative;
     -webkit-transition: box-shadow 1s ease-out;
     -moz-transition: box-shadow 1s ease-out;
     -ms-transition: box-shadow 1s ease-out;
     -o-transition: box-shadow 1s ease-out;
 }
 
-.item:hover {
+.item-container:hover {
+    box-shadow: .5em .5em 2em var(--secondary-orange), -.5em -.5em 2em var(--secondary-orange);
+}
 
+.item {
+    cursor: pointer;
+    width: 20em;
+    display: flex;
+    height: 20em;
+    background-position: 0em;
+    background-size: cover;
 }
 
 .item-header {
@@ -26,8 +26,8 @@
 }
 
 .item-name {
-    color: white;
-    font-size: 1.5em;
+    color: var(--main-color);
+    font-size: 1em;
 }
 
 .item-booknow {
