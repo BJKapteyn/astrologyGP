@@ -1,3 +1,13 @@
+.item-container {
+    margin: 0em 1em 2em 1em;
+    box-shadow: 0em 0em 0em var(--secondary-orange), 0em 0em 0em var(--secondary-orange);
+    transition: box-shadow 1s ease-out;
+    -webkit-transition: box-shadow 1s ease-out;
+    -moz-transition: box-shadow 1s ease-out;
+    -ms-transition: box-shadow 1s ease-out;
+    -o-transition: box-shadow 1s ease-out;
+}
+
 .item {
     cursor: pointer;
     position: relative;
