@@ -4,11 +4,11 @@ import { ActionButton } from '../../PageElements/ActionButton/ActionButton';
 import moon from '../../../Pics/Portraits/portrait-sunsetWaves.png';
 import '../../../App.css';
 import './SingleOffering.css';
-
 // 
 export const SingleOffering = () => {
     const [imageUrl, setImageUrl] = useState(moon);
     const [offeringData, setOfferingData] = useState(useLocation().state);
+
     const urlParam = useParams().singleoffering;
 
     const bookButtonSettings = {
@@ -22,11 +22,11 @@ export const SingleOffering = () => {
     }
 
     useEffect(() => {
-        if(offeringData.imageId) {
-            setImageUrl(offeringData.imageId);
+        if(offeringData.imageURL) {
+            setImageUrl(offeringData.imageURL);
         }
         
-    }, []);
+    }, [offeringData]);
 
     if(!offeringData) {
         const localData = localStorage.getItem(urlParam);
@@ -41,6 +41,7 @@ export const SingleOffering = () => {
     return (
         <main id="singleoffer">
             <div className="singleoffer-imagecontainer">
+                <div className="singleoffer-image"></div>
                 <img id="singleoffer-image" src={imageUrl} alt={offeringData.name.toUpperCase()} />
             </div>
             <div className="singleoffer-information-container">
