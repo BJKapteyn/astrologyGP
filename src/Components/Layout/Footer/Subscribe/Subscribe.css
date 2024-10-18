@@ -86,14 +86,11 @@
 }
 
 #subscribe-subscribebutton {
+    cursor: pointer;
     display: inline-block;
     background-color: var(--main-color);
     color: white;
-    border-radius: 0em;
-    -webkit-border-radius: 0em;
-    -moz-border-radius: 0em;
-    -ms-border-radius: 0em;
-    -o-border-radius: 0em;
+    transition: background-color 500ms;
 }
 
 #subscribe-subscribebutton:hover {
