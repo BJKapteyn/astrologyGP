@@ -14,7 +14,7 @@ export const VideoSection = ({ buttonSettings = null, videoSource }) => {
             </div>
             {buttonSettings && (
                 <div className="video-button-container">
-                    <Link to={'/WhyVibe'}>
+                    <Link to={'/Readers'}>
                         <ActionButton buttonSettings={buttonSettings}></ActionButton>
                     </Link>
                 </div>

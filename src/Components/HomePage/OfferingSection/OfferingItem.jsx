@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ActionButton } from "../../PageElements/ActionButton/ActionButton";
 import '../../../App.css';
 import './OfferingSection.css';
@@ -14,9 +15,7 @@ export const OfferingItem = ({ offeringItemData }) => {
                 <p className="offering-section-text">{text}</p>
             </div>
             <div className="offering-section-button-container">
-                <a href="#subscribe">
-                    <ActionButton buttonSettings={{buttonText: 'JOIN WAITLIST'}}></ActionButton>
-                </a>
+                    <Link to={'/Offerings'}><ActionButton buttonSettings={{buttonText: 'BOOK NOW'}}></ActionButton></Link>
             </div>
         </div>
     );
