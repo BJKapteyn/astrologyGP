@@ -15,9 +15,7 @@ export const OfferingItem = ({ offeringItemData }) => {
                 <p className="offering-section-text">{text}</p>
             </div>
             <div className="offering-section-button-container">
-                <a href="#subscribe">
-                    <Link to={'/Offerings'}><ActionButton buttonSettings={{buttonText: 'JOIN WAITLIST'}}></ActionButton></Link>
-                </a>
+                    <Link to={'/Offerings'}><ActionButton buttonSettings={{buttonText: 'BOOK NOW'}}></ActionButton></Link>
             </div>
         </div>
     );
