@@ -32,12 +32,12 @@ export default function HomePage() {
         <main  id="homepage">
             <TitleCard titleData={titleCardData}></TitleCard>
             <TitleDivider></TitleDivider>
-            <JoinUs></JoinUs>
             <MeetCarly></MeetCarly>
             <SectionDivider dividerData={videoDivider}></SectionDivider>
             <NewsCardSection></NewsCardSection>
             <SectionDivider dividerData={offeringsDividerData}></SectionDivider>
             <OfferingSection></OfferingSection>
+            <JoinUs></JoinUs>
         </main>
     )
 }
