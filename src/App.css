@@ -119,6 +119,12 @@ h4 {
   color: rgb(211, 211, 211);
 }
 
+#homepage {
+  max-width: 90em;
+  margin: auto;
+
+}
+
 /*                        Animations         */
 @keyframes fadeIn {
   from {
