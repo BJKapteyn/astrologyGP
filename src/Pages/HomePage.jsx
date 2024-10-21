@@ -29,7 +29,7 @@ export default function HomePage() {
     });
 
     return (
-        <main  id="homepage">
+        <main id="homepage">
             <TitleCard titleData={titleCardData}></TitleCard>
             <TitleDivider></TitleDivider>
             <JoinUs></JoinUs>
