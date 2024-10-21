@@ -1,21 +1,32 @@
-import { useRef } from 'react';
+import { useState } from 'react';
 import { Item } from './Item/Item';
+import { Link, useLocation } from 'react-router-dom';
+import { LoadingIndicator } from '../../PageElements/LoadingIndicator/LoadingIndicator';
 // import { CardModal } from '../../PageElements/CardModal/CardModal';
 // import { ExpandedCard } from '../../PageElements/ExpandedCard/ExpandedCard';
 import '../../../App.css';
 import './Items.css';
-import { Link } from 'react-router-dom';
 
 export const Items = ({ itemData: items }) => {
     // const [modalData, setModalData] = useState(null);
-    const appointmentItems = useRef(items);
+    const [serviceItems, setServiceItems] = useState(items);
+    // const [localItems, setLocalItems] = useState(useLocation());
+
+    if (serviceItems.state) {
+        setServiceItems(serviceItems.state);
+    }
+
+    if(serviceItems.items) {
+        setServiceItems(serviceItems.items);
+    }
+
     // const lorem = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam totam non qui quisquam consequatur rem sequi itaque vero eos, voluptas quia repudiandae quod ipsam accusantium ab vitae officiis, incidunt excepturi.'
     
     // function deselectData() {
     //     setModalData(null);
     // }
 
-    // function selectModalData(item) {
+    // function selectModalData(item) { 
     //     if(item != null) {
     //         const itemDescription = item.Description ? item.Description : lorem;
     //         let itemMap = {
@@ -27,17 +38,25 @@ export const Items = ({ itemData: items }) => {
     //         setModalData(itemMap);
     //     }
     // }
+
+    // skip on initial render
+    if(serviceItems.state)
+        return <LoadingIndicator />
     
     return (
         <div className="items-flex">
-            {appointmentItems.current.map(item => {
+            {serviceItems.map(item => {
                 if(item.category) {
-                    item = item.category;
+                    return (
+                        <Link key={item.category.id} to={`./${item.category.name}`} state={item.items}>
+                            <Item key={item.category.id} itemData={item.category}></Item>
+                        </Link>
+                    );
                 }
                 
                 return (
                     <Link key={item.id} to={`./${item.name}`} state={item}>
-                        <Item key={item.id} callBackSelect={null} itemData={item}></Item>
+                        <Item itemData={item}></Item>
                     </Link>
                 );      
             })}

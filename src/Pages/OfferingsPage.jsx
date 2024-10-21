@@ -1,4 +1,4 @@
-import { CategorySection } from '../Components/OfferingsPage/CategorySection/CategorySection';
+import { OfferingCategories } from '../Components/OfferingsPage/CategorySection/OfferingCategories';
 import { LoadingIndicator } from '../Components/PageElements/LoadingIndicator/LoadingIndicator';
 import { useEffect, useState } from 'react';
 
@@ -36,7 +36,7 @@ export default function Offerings() {
 
         return (
             <main>
-                <CategorySection serviceItemData={serviceItems} />
+                <OfferingCategories serviceItemData={serviceItems} />
             </main>
         );
     }

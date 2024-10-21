@@ -3,7 +3,7 @@ import { Items } from "../Items/Items";
 import { SectionDivider } from "../../PageElements/SectionDivider/SectionDivider";
 import './Category.css';
 
-export const CategorySection = ({ serviceItemData }) => {
+export const OfferingCategories = ({ serviceItemData }) => {
     const serviceItems = useRef(serviceItemData);
 
     return (
