@@ -3,18 +3,17 @@ import { Items } from "../Items/Items";
 import { SectionDivider } from "../../PageElements/SectionDivider/SectionDivider";
 import './Category.css';
 
-export const CategorySection = ({ serviceItemData }) => {
-    const serviceItems = useRef(serviceItemData);
+export const CategorizedOfferings = ({ appointmentItemData }) => {
+    const appointmentItems = useRef(appointmentItemData);
 
     return (
         <>
             <section className="category-section">
-                <SectionDivider dividerData={{headingText: 'Our Offerings'}}></SectionDivider>
+                <SectionDivider dividerData={{headingText: null}}></SectionDivider>
 
-                <Items itemData={serviceItems.current} />
+                <Items itemData={appointmentItems.current} />
             </section>
         </>
     );
 }
-
 

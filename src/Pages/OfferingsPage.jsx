@@ -4,9 +4,8 @@ import { useEffect, useState } from 'react';
 
 // Page that shows all of the services and products
 export default function Offerings() {
-    // const endpointUrl = `${process.env.REACT_APP_FUNCTIONS_URL}/GetServiceItems?code=${process.env.REACT_APP_GET_SERVICE_ITEMS}`;
-    const endpointUrl = `${process.env.REACT_APP_FUNCTIONS_URL}/GetItems?code=${process.env.REACT_APP_GET_ITEMS}`;
-    const [appointmentItems, setAppointmentItemData] = useState(null);
+    const endpointUrl = `${process.env.REACT_APP_FUNCTIONS_URL}/GetServiceItems?code=${process.env.REACT_APP_GET_SERVICE_ITEMS}`;
+    const [serviceItems, setServiceItemData] = useState(null);
 
     useEffect(() => {
         let active = true;
@@ -16,7 +15,7 @@ export default function Offerings() {
                 .then(response => response.json())
                 .then(data => {
                     if (active){
-                        setAppointmentItemData(data);
+                        setServiceItemData(data);
                         console.log(data);
                     }
                 })
@@ -30,14 +29,14 @@ export default function Offerings() {
         }
     }, []);
 
-    if(!appointmentItems || !Array.isArray(appointmentItems)) {
+    if(!serviceItems || !Array.isArray(serviceItems)) {
 
         return <LoadingIndicator />
     } else {
 
         return (
             <main>
-                <CategorySection appointmentItemData={appointmentItems} />
+                <CategorySection serviceItemData={serviceItems} />
             </main>
         );
     }
