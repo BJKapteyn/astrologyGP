@@ -49,7 +49,7 @@ export const SingleOffering = () => {
                     <p id="singleoffer-name">{offeringData.name.toUpperCase()}</p>
                     {offeringData.variations.map(variation => {
                         return (
-                            <div className="singleoffer-variation-container">
+                            <div key={variation.id} className="singleoffer-variation-container">
                                 <p className="singleoffer-variation">{variation.name.toUpperCase()}</p>
                                 <Link to={"https://the-vibe-collective.square.site/"}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>
                             </div>

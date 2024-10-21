@@ -2,10 +2,11 @@
 import { Routes, Route } from 'react-router-dom';
 import { ComingSoon } from './Components/ComingSoon/ComingSoon.jsx';
 import { SingleOffering } from './Components/OfferingsPage/SingleOffering/SingleOffering.jsx';
+import { CategorizedOfferings } from './Components/OfferingsPage/CategorySection/CategorizedOfferings.jsx';
 import Layout from './Components/Layout/Layout.jsx';
 import HomePage from './Pages/HomePage.jsx';
 import WhyVibePage from './Pages/WhyVibePage.jsx';
-import ReadersPage from './Pages/CollectivePage.jsx';
+import CollectivePage from './Pages/CollectivePage.jsx';
 import OfferingsPage from './Pages/OfferingsPage.jsx';
 import './App.css';
 
@@ -28,11 +29,12 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />}></Route>
           <Route path="/WhyVibe" element={<WhyVibePage />}></Route>
-          <Route path="/Readers" element={<ReadersPage />}></Route>
+          <Route path="/TheCollective" element={<CollectivePage />}></Route>
           <Route path="/Store" element={<ComingSoon comingSoonData={storeComingSoonData} />}></Route>
           <Route path="/CurrentVibe" element={<ComingSoon comingSoonData={currentVibeComingSoonData} />}></Route>
           <Route path="/Offerings" element={<OfferingsPage />}></Route>
-          <Route path="/Offerings/:singleoffering" element={<SingleOffering />}></Route>
+          <Route path="/Offerings/:offering" element={<CategorizedOfferings />}></Route>
+          <Route path="/Offerings/:offering/:singleoffering" element={<SingleOffering />}></Route>
         </Route>
       </Routes>
     </div>

@@ -7,7 +7,7 @@ export const Item = ({ itemData, callBackSelect }) => {
 
     return (
         <div className="item-container">
-            <div onClick={() => callBackSelect(itemData)} style={{backgroundImage: `url(${image})`}} className="item"></div>
+            <div style={{backgroundImage: `url(${image})`}} className="item"></div>
             <div className="item-header">
                 <h3 className="item-name">{itemData.name}</h3>
             </div>
