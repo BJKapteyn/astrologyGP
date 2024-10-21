@@ -6,7 +6,7 @@ import { CategorizedOfferings } from './Components/OfferingsPage/CategorySection
 import Layout from './Components/Layout/Layout.jsx';
 import HomePage from './Pages/HomePage.jsx';
 import WhyVibePage from './Pages/WhyVibePage.jsx';
-import ReadersPage from './Pages/ReadersPage.jsx';
+import ReadersPage from './Pages/CollectivePage.jsx';
 import OfferingsPage from './Pages/OfferingsPage.jsx';
 import './App.css';
 
