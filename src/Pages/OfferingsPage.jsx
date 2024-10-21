@@ -1,9 +1,11 @@
-import { CategorySection } from "../Components/OfferingsPage/CategorySection/CategorySection";
-import { useEffect, useState } from "react";
+import { CategorySection } from '../Components/OfferingsPage/CategorySection/CategorySection';
+import { LoadingIndicator } from '../Components/PageElements/LoadingIndicator/LoadingIndicator';
+import { useEffect, useState } from 'react';
 
 // Page that shows all of the services and products
 export default function Offerings() {
-    const endpointUrl = `${process.env.REACT_APP_FUNCTIONS_URL}/getitems?code=${process.env.REACT_APP_GET_ITEMS}`;
+    // const endpointUrl = `${process.env.REACT_APP_FUNCTIONS_URL}/GetServiceItems?code=${process.env.REACT_APP_GET_SERVICE_ITEMS}`;
+    const endpointUrl = `${process.env.REACT_APP_FUNCTIONS_URL}/GetItems?code=${process.env.REACT_APP_GET_ITEMS}`;
     const [appointmentItems, setAppointmentItemData] = useState(null);
 
     useEffect(() => {
@@ -30,7 +32,7 @@ export default function Offerings() {
 
     if(!appointmentItems || !Array.isArray(appointmentItems)) {
 
-        return <span>Loading...</span>
+        return <LoadingIndicator />
     } else {
 
         return (

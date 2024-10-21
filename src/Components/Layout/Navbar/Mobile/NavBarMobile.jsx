@@ -31,10 +31,11 @@ export const NavBarMobile = () => {
                 <img alt='The Vibe Collective' src={yellowLogo} className="navbar-logoMobile" />
             </li>
             <NavPageLink linkData={{text: 'HOME', route: '/', submenu: null}} />
-            <NavPageLink linkData={{text: 'WORK WITH US', route: '/WhyVibe', submenu: null}} />
             <NavPageLink linkData={{text: 'OFFERINGS', route: '/Offerings', submenu: null}} />
             <NavPageLink linkData={{text: 'THE COLLECTIVE', route: '/Readers', submenu: null}} />
             <NavPageLink linkData={{text: 'SHOP THE VIBE', route: '/Store', submenu: null}} />
+            <NavPageLink linkData={{text: 'CURRENT VIBE', route: '/CurrentVibe', submenu: null}} />
+            <NavPageLink linkData={{text: 'WORK WITH US', route: '/WhyVibe', submenu: null}} />
         </ul>
     );
 

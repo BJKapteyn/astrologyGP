@@ -17,9 +17,9 @@ export const WhyVibe = () => {
 
     return (
         <main className="whyvibe">
-            <TitleCard titleData={titleData}></TitleCard>
-            <VideoSection videoSource={vidSource}></VideoSection>
             <CareerSection></CareerSection>
+            <VideoSection videoSource={vidSource}></VideoSection>
+            <TitleCard titleData={titleData}></TitleCard>
             <ValueCards cardDatas={WhyVibeCardData}></ValueCards>
         </main>
     )
