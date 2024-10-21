@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Item } from './Item/Item';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { LoadingIndicator } from '../../PageElements/LoadingIndicator/LoadingIndicator';
 // import { CardModal } from '../../PageElements/CardModal/CardModal';
 // import { ExpandedCard } from '../../PageElements/ExpandedCard/ExpandedCard';
@@ -10,7 +10,6 @@ import './Items.css';
 export const Items = ({ itemData: items }) => {
     // const [modalData, setModalData] = useState(null);
     const [serviceItems, setServiceItems] = useState(items);
-    // const [localItems, setLocalItems] = useState(useLocation());
 
     if (serviceItems.state) {
         setServiceItems(serviceItems.state);

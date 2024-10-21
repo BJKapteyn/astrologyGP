@@ -6,7 +6,7 @@ import { CategorizedOfferings } from './Components/OfferingsPage/CategorySection
 import Layout from './Components/Layout/Layout.jsx';
 import HomePage from './Pages/HomePage.jsx';
 import WhyVibePage from './Pages/WhyVibePage.jsx';
-import ReadersPage from './Pages/CollectivePage.jsx';
+import CollectivePage from './Pages/CollectivePage.jsx';
 import OfferingsPage from './Pages/OfferingsPage.jsx';
 import './App.css';
 
@@ -29,7 +29,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />}></Route>
           <Route path="/WhyVibe" element={<WhyVibePage />}></Route>
-          <Route path="/Readers" element={<ReadersPage />}></Route>
+          <Route path="/TheCollective" element={<CollectivePage />}></Route>
           <Route path="/Store" element={<ComingSoon comingSoonData={storeComingSoonData} />}></Route>
           <Route path="/CurrentVibe" element={<ComingSoon comingSoonData={currentVibeComingSoonData} />}></Route>
           <Route path="/Offerings" element={<OfferingsPage />}></Route>
