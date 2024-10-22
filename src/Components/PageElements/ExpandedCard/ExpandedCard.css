@@ -22,6 +22,7 @@
 
 .expandedcard-image {
     width: 100%;
+    max-width: 15em;
     height: auto;
 }
 
@@ -62,9 +63,9 @@
     color: white;
 }
 #expandedcard-bookButton:hover {
-    border-color: var(--secondary-green);
-    background-color: var(--secondary-green);
-    cursor: default;
+    border-color: var(--main-accent-color);
+    background-color: var(--main-accent-color);
+    cursor: pointer;
 }
 
 #expandedcard-closeButton { 
