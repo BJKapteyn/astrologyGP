@@ -14,6 +14,7 @@ env:
   REACT_APP_GET_EMPLOYEE: ${{ secrets.REACT_APP_GET_EMPLOYEE }}
   REACT_APP_GET_ITEMS: ${{ secrets.REACT_APP_GET_ITEMS }}
   REACT_APP_INSERT_EMAIL: ${{ secrets.REACT_APP_INSERT_EMAIL }}
+  REACT_APP_GET_SERVICE_ITEMS: ${{ secrets.REACT_APP_GET_SERVICE_ITEMS }}
 
 jobs:
   build_and_deploy_job:
