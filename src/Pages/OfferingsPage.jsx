@@ -27,7 +27,7 @@ export default function Offerings() {
         return () => {
             active = false;
         }
-    }, []);
+    }, [endpointUrl]);
 
     if(!serviceItems || !Array.isArray(serviceItems)) {
 
