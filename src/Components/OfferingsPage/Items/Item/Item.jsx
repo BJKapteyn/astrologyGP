@@ -2,7 +2,7 @@ import '../../../../App.css';
 import './Item.css';
 import moon from '../../../../Pics/Landscapes/moonClouds.png';
 
-export const Item = ({ itemData, callBackSelect }) => {
+export const Item = ({ itemData }) => {
     const image = itemData.imageURL ?? moon;
 
     return (

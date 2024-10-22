@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ActionButton } from '../ActionButton/ActionButton';
 import '../../../App.css';
 import './ExpandedCard.css';
@@ -27,8 +28,7 @@ export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {
                 <p className="expandedcard-infotext">{sign}</p>
             </div>
             <div className="expandedcard-button">
-
-                <ActionButton buttonSettings={bookButtonSettings}></ActionButton>
+                <Link to={"https://the-vibe-collective.square.site/"}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>
                 <ActionButton callback={callBackDeselect} buttonSettings={closeButtonSettings}></ActionButton>
 
             </div> 
