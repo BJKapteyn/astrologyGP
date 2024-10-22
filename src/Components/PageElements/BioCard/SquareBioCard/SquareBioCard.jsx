@@ -3,7 +3,7 @@ import { buildAzureFunctionURL } from '../../../../Functions/azureFunctionsUtili
 import { BioCard } from "../BioCard";
 import { CardModal } from "../../CardModal/CardModal";
 import { LoadingIndicator } from '../../LoadingIndicator/LoadingIndicator.jsx'
-import { ExpandedCard } from "../../ExpandedCard/ExpandedCard";
+import { ExpandedCard } from "../ExpandedCard/ExpandedCard";
 import '../BioCard.css';
 
 export const SquareBioCard = () => {
