@@ -1,18 +1,29 @@
-@keyframes fade {
+@keyframes fadeloading {
     0% {
-      color: black;
+      color: rgb(241, 199, 97);
+      height: 2em;
     }
     50% {
-      color: white;
+      color: rgb(72, 31, 75);
+      height: 3em;
     }
     100% {
-      color: black;
+      color: rgb(241, 199, 97);
+      height: 2em;
     }
-  }
+}
+
+#loading-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15em;
+  width: 100%;
+  margin: auto;
+}
   
-  .loading-text {
-    animation: fade 2s infinite;
-    text-align: center;
-    margin: 4em 0;
-    font-size: 2em;
-  }
+#loading-text {
+  animation: fadeloading 2s infinite;
+  text-align: center;
+  font-size: 2em;
+}

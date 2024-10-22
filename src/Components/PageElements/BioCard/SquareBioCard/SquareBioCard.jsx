@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { buildAzureFunctionURL } from '../../../../Functions/azureFunctionsUtility';
 import { BioCard } from "../BioCard";
 import { CardModal } from "../../CardModal/CardModal";
+import { LoadingIndicator } from '../../LoadingIndicator/LoadingIndicator.jsx'
 import { ExpandedCard } from "../../ExpandedCard/ExpandedCard";
 import '../BioCard.css';
 
@@ -48,14 +49,19 @@ export const SquareBioCard = () => {
                         if(!cardData)
                             setCardData(bioCardData);
                     });
-                }
-
-                return () => {
-                    active = false;
-                }
             }
-            getCardData();
-        }, [cardData]);
+
+            return () => {
+                active = false;
+            }
+        }
+        getCardData();
+    }, [cardData]);
+
+    if(!cardData){
+        return <LoadingIndicator></LoadingIndicator>
+    }
+    
 
     return (
         <div className="biocard-flex-container">
