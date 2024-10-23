@@ -1,13 +1,14 @@
 .expandedcard-grid {
     display: grid;
     grid-template-columns: 35% 35% 1fr;
-    grid-template-rows: 30% 1fr;
+    grid-template-rows: 40% 1fr;
     grid-template-areas: 
                 "image info        button"
                 "image description description";
     border: .2em solid #ba9fc5;
     overflow: hidden;
     height: 25em;
+    max-height: 50em;
 }
 
 .expandedcard-imageflex {
@@ -37,7 +38,7 @@
 .expandedcard-productname {
     text-align: left;
     margin: auto;
-    padding-top: 9%;    
+    padding-top: .5em;    
 }
 
 .expandedcard-infotext {
@@ -79,6 +80,13 @@
 
 }
 
+#expandedcard-eye {
+    height: 2em;
+    fill: var(--main-accent-color);
+    width: 2em;
+    padding: .5em 0em .5em 1em;
+}
+
 .expandedcard-description {
     margin: 5% 2%;
     grid-area: description;
@@ -88,74 +96,84 @@
     padding-right: 4em;
 }
 
-@media only screen and (max-width: 900px) {
+
+@media only screen and (max-height: 500px){
+    .expandedcard-grid {
+        height: 95vh;
+        grid-template-areas: "image info button"
+                            "image description description"
+                            "image description description";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 35% 50% 1fr;
+        max-height: 45em;
+    }
+
     .expandedcard-imageflex {
-        align-items: baseline;
+        margin: 1em;
         height: 100%;
-        width: 70%;
-        margin: 2% auto;
-    }
-    .expandedcard-grid {
-        grid-template-columns: 35% 35% 1fr;
-        grid-template-rows: 35% 1fr;
-    }
-}
-
-@media only screen and (max-width: 750px) and (min-height: 700px) {
-
-    .expandedcard-grid {
-        height: 90vh;
-        grid-template-columns: 1fr;
-        grid-template-rows: 40% auto auto auto;
-        grid-template-areas: 
-                        "image"
-                        "info"
-                        "description"
-                        "button"
     }
 
     .expandedcard-button {
-        margin: 2%;
-    }
 
-    .expandedcard-image {
-        width: 70%;
     }
 }
 
-@media only screen and (max-width: 460px) {
-    .expandedcard-image {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-height: 700px) {
+@media only screen and (max-width: 500px) {
     .expandedcard-grid {
-        height: 90vh;
-        grid-template-columns: 30% 1fr 1fr;
-        grid-template-rows: 30% 1fr;
-        grid-template-areas: 
-                        "image info button"
-                        "description description description"
+        height: 95vh;
+        grid-template-areas: "image"
+                            "info"
+                            "description"
+                            "button";
+        grid-template-columns: 1fr;
+        grid-template-rows: 40% 20% 30% 1fr;
+    }
+
+    .expandedcard-productname {
+        padding-top: 0em;
     }
 
     .expandedcard-image {
+        padding: 1em 0em;
+        height: 100%;
         width: auto;
-        height: 100%;
     }
 
-    .expandedcard-image-flex {
+    .expandedcard-imageflex {
+        margin: 0em;
         height: 100%;
     }
+}
 
+/* 
+@media only screen and (max-height: 1000px) {
+    .expandedcard-grid {
+        height: 95vh;
+    }
+} */
+
+@media only screen and (max-width: 800px) and (min-width: 501px) {
     .expandedcard-button {
         font-size: .9em;
     }
 
+    .expandedcard-imageflex {
+        margin: .2em;
+        height: 100%;
+    }
 
-    .expandedcard-description {
-        width: 95%;
-        overflow: auto;
-        margin-top: 3em;
+    .expandedcard-image {
+        /* padding: .5em 0em; */
+        height: 100%;
+        width: auto;
+    }
+
+    .expandedcard-grid {
+        height: 95vh;
+        grid-template-areas: "image info"
+                            "description description"
+                            "button button";
+        grid-template-columns: 35% 1fr;
+        grid-template-rows: 40% 50% 1fr;
     }
 }

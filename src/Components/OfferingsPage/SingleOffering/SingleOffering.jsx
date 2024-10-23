@@ -33,9 +33,9 @@ export const SingleOffering = () => {
         const localData = localStorage.getItem(urlParam);
         const localDataJson = JSON.parse(localData);
         setOfferingData(localDataJson);
-        console.log(offeringData);
     }
-    
+
+
     if(!offeringData) {
         return <LoadingIndicator />;
     }
@@ -53,7 +53,7 @@ export const SingleOffering = () => {
                                 <p className="singleoffer-variation">{variation.name.toUpperCase()}</p>
                                 <Link to={"https://the-vibe-collective.square.site/"}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>
                             </div>
-                    )
+                        )
                     })}
                     <p id="singleoffer-descriptiontitle">DESCRIPTION</p>
                     <p id="singleoffer-description">{offeringData.description}</p>
