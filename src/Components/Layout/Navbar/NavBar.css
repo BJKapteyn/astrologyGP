@@ -33,6 +33,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
+    padding-left: 0px;
 }
 
 .navbar-logo-container {

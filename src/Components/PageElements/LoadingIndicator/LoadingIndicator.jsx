@@ -4,6 +4,8 @@ import './LoadingIndicator.css';
 
 export const LoadingIndicator = () => {
   return (
-    <p className="loading-text">Loading...</p>
+    <div id="loading-box">
+      <p id="loading-text">Loading Vibes...</p>
+    </div>
   );
 };

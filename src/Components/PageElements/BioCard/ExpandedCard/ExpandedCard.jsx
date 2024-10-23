@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import { ActionButton } from '../ActionButton/ActionButton';
-import '../../../App.css';
+import { ActionButton } from '../../ActionButton/ActionButton.jsx';
+import { ReactComponent as Eye } from '../../../../Pics/SvgDrawings/EYE-VECTOR.svg';
+import '../../../../App.css';
 import './ExpandedCard.css';
 
 export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {
@@ -16,7 +17,7 @@ export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {
         buttonStyleId: 'expandedcard-closeButton'
     };
 
-    const imageSrc = imageURL ? imageURL : require(`../../../Pics/Portraits/portrait-womanField2.png`);
+    const imageSrc = imageURL ? imageURL : require(`../../../../Pics/Portraits/portrait-womanField2.png`);
 
     return (
         <div id={styleId} className="expandedcard-grid">
@@ -25,6 +26,7 @@ export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {
             </div>
             <div className="expandedcard-info">
                 <h4 className="expandedcard-productname">{name}</h4>
+                <Eye id="expandedcard-eye" />
                 <p className="expandedcard-infotext">{sign}</p>
             </div>
             <div className="expandedcard-button">
