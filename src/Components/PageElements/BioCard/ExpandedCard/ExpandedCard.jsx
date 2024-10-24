@@ -5,7 +5,7 @@ import '../../../../App.css';
 import './ExpandedCard.css';
 
 export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {
-    const { imageURL, name, sign, description} = productItem;
+    const { imageURL, name, sign, description, threeWords, expertise } = productItem;
 
     const bookButtonSettings = {
         buttonText: 'BOOK',
@@ -28,11 +28,18 @@ export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {
                 <h4 className="expandedcard-productname">{name}</h4>
                 <Eye id="expandedcard-eye" />
                 <p className="expandedcard-infotext">{sign}</p>
+                <p className="expandedcard-infotext">
+                    Three words that describe me: 
+                    <span className="expandedcard-attribute"> {threeWords}</span>
+                </p>
+                <p className="expandedcard-infotext">
+                    Expertise: 
+                    <span className="expandedcard-attribute"> {expertise}</span>
+                </p>
             </div>
             <div className="expandedcard-button">
                 <Link to={"https://the-vibe-collective.square.site/"}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>
                 <ActionButton callback={callBackDeselect} buttonSettings={closeButtonSettings}></ActionButton>
-
             </div> 
             <div className="expandedcard-description">
                 <p className="expandedcard-text">{description}</p>
