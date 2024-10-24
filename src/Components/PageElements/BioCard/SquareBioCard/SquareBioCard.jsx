@@ -40,7 +40,9 @@ export const SquareBioCard = () => {
                                 name: card.Name,
                                 sign: card.Sign,
                                 type: "Tarot Reader",
-                                description: card.Description
+                                description: card.Description,
+                                threeWords: card.ThreeWordsToDescribe,
+                                expertise: card.Expertise
                             };
 
                             return bioCard;
