@@ -32,10 +32,12 @@ export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {
                     Three words that describe me: 
                     <span className="expandedcard-attribute"> {threeWords}</span>
                 </p>
-                <p className="expandedcard-infotext">
-                    Expertise: 
-                    <span className="expandedcard-attribute"> {expertise}</span>
-                </p>
+                {expertise && (
+                    <p className="expandedcard-infotext">
+                        Expertise: 
+                        <span className="expandedcard-attribute"> {expertise}</span>
+                    </p>
+                )}
             </div>
             <div className="expandedcard-button">
                 <Link to={"https://the-vibe-collective.square.site/"}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>
