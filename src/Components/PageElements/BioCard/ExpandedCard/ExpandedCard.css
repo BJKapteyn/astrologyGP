@@ -108,7 +108,7 @@
         grid-template-areas: "image info button"
                             "image description description"
                             "image description description";
-        grid-template-columns: 60% 1fr;
+        grid-template-columns: 60% 1fr 1fr;
         grid-template-rows: 35% 50% 1fr;
         max-height: 45em;
     }
@@ -155,6 +155,7 @@
                             "button";
         grid-template-columns: 1fr;
         grid-template-rows: 30% 30% 30% 1fr;
+        max-height: 55em;
     }
 
     .expandedcard-productname {
@@ -210,7 +211,7 @@
                             "description description"
                             "button button";
         grid-template-columns: 20% 1fr;
-        grid-template-rows: 40% 50% 1fr;
+        grid-template-rows: 50% 40% 1fr;
     }
 }
 /* 
