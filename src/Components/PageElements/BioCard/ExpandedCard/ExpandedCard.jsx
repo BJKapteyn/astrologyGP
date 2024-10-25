@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { ActionButton } from '../../ActionButton/ActionButton.jsx';
-import { ReactComponent as Eye } from '../../../../Pics/SvgDrawings/EYE-VECTOR.svg';
 import '../../../../App.css';
 import './ExpandedCard.css';
 
@@ -26,10 +25,9 @@ export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {
             </div>
             <div className="expandedcard-info">
                 <h4 className="expandedcard-productname">{name}</h4>
-                <Eye id="expandedcard-eye" />
+ 
                 <p className="expandedcard-infotext">{sign}</p>
                 <p className="expandedcard-infotext">
-                    Three words that describe me: 
                     <span className="expandedcard-attribute"> {threeWords}</span>
                 </p>
                 {expertise && (
