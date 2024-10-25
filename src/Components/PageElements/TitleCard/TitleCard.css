@@ -41,7 +41,7 @@
 @media only screen and (max-width: 910px) {
     .titleCard-container {
         background-position: 40% 20%;
-        background-size: 120%;
+        background-size: cover;
         height: 60vh;
     }
 

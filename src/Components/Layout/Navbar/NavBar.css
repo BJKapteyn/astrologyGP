@@ -27,6 +27,10 @@
     -o-transition: color 500ms;
 }
 
+.navbar-child {
+    width: 10em;
+}
+
 .navbar-main-nav {
     height: 10em;
     display: flex;
@@ -34,6 +38,7 @@
     justify-content: center;
     flex-wrap: nowrap;
     padding-left: 0px;
+    width: 100%;
 }
 
 .navbar-logo-container {

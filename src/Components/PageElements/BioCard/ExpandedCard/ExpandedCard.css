@@ -214,9 +214,3 @@
         grid-template-rows: 50% 40% 1fr;
     }
 }
-/* 
-@media only screen and (max-height: 400px) {
-    .expandedcard-grid {
-        grid-template-rows: 35% 35% 1fr;
-    }
-} */
