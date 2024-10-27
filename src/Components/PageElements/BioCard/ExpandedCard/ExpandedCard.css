@@ -16,7 +16,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 98%;
     margin: 1em .5em;
     overflow: hidden;
 }
@@ -212,5 +211,9 @@
                             "button button";
         grid-template-columns: 20% 1fr;
         grid-template-rows: 50% 40% 1fr;
+    }
+
+    .expandedcard-text {
+        padding-left: 2em;
     }
 }
