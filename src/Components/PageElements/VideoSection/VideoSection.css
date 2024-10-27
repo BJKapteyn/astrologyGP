@@ -9,6 +9,7 @@
     min-height: 530px;
     height: 20em;
     overflow-x: hidden;
+    max-width: 90em;
 }
 
 .video-flexitem {
