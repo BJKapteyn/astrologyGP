@@ -25,17 +25,14 @@ export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {
             </div>
             <div className="expandedcard-info">
                 <h4 className="expandedcard-productname">{name}</h4>
- 
-                <p className="expandedcard-infotext">{sign}</p>
-                <p className="expandedcard-infotext">
-                    <span className="expandedcard-attribute"> {threeWords}</span>
-                </p>
                 {expertise && (
                     <p className="expandedcard-infotext">
                         Expertise: 
                         <span className="expandedcard-attribute"> {expertise}</span>
                     </p>
                 )}
+                <p className="expandedcard-infotext">{threeWords}</p>
+                <p className="expandedcard-infotext">{sign}</p>
             </div>
             <div className="expandedcard-button">
                 <Link to={"https://the-vibe-collective.square.site/"}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>
