@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 // return Link with data or submenu if it exists
-export const NavPageLink = ({linkData}) => {
+export const NavPageLink = ({linkData, callBackSelectMenuVisibility}) => {
     const [isExpanded, setIsExpanded] = useState(false);
     const {text, route, subMenu} = linkData;
-    const link = <Link className="navbar-link" to={route}>{text}</Link>;
+    const setMenuVisibility = false;
+    const link = <Link onClick={() => callBackSelectMenuVisibility(setMenuVisibility)} className="navbar-link" to={route}>{text}</Link>;
 
     let navLink;
 
