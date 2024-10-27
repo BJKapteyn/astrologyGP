@@ -1,4 +1,3 @@
-import { ReactComponent as Eye } from '../../../Pics/SvgDrawings/EYE-VECTOR.svg';
 import '../../../App.css';
 import './BioCard.css';
 
