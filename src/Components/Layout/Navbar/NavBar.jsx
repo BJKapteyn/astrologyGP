@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import { NavPageLink } from "./NavPageLink";
 import { Socials } from "../../PageElements/Socials/Socials";
@@ -22,7 +23,9 @@ export const NavBar = () => {
                     <NavPageLink linkData={{text: 'THE COLLECTIVE', route: '/TheCollective', submenu: null}} />
                 </li>
                 <li className="navbar-logo-container">
-                    <img alt='Yellow main logo' src={yellowLogo} className="navbar-logo" />
+                    <Link to={'./'}>
+                        <img alt='Yellow main logo' src={yellowLogo} className="navbar-logo" />
+                    </Link>
                 </li>
                 <li className="navbar-child">
                     <NavPageLink linkData={{text: 'SHOP THE VIBE', route: '/Store', submenu: null}} />
