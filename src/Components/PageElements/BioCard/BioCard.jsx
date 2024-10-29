@@ -11,9 +11,13 @@ export const BioCard = ({cardData, callbackSelect})  => {
             <div className="biocard-image-container" style={{backgroundImage: `url(${imageSource})`}}>
                 <div className="biocard-image" style={{backgroundImage: `url(${imageSource})`}}></div>
             </div>
-            <p className="biocard-button">+</p>
             <div className="biocard-info-container">
+                <p className="biocard-button">+</p>
                 <h4 className="biocard-infoName">{cardData.name}</h4>
+                <p className="biocard-infoSign">{cardData.expertise}</p>
+                <p className="biocard-infoSign">
+                    <span className="expandedcard-attribute"> {cardData.threeWords}</span>
+                </p>
                 <p className="biocard-infoSign">{cardData.sign}</p>
             </div>
         </section>

@@ -1,0 +1,230 @@
+.expandedcard-grid {
+    display: grid;
+    grid-template-columns: 35% 35% 1fr;
+    grid-template-rows: 40% 1fr;
+    grid-template-areas: 
+                "image info        button"
+                "image description description";
+    border: .2em solid #ba9fc5;
+    overflow: hidden;
+    height: 95vh;
+    max-height: 38em;
+}
+
+.expandedcard-imageflex {
+    grid-area: image;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em .5em;
+    overflow: hidden;
+    max-width: 70em;
+}
+
+.expandedcard-image {
+    height: 90%;
+}
+
+.expandedcard-info {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.expandedcard-productname, .expandedcard-infotext {
+    padding-left: 2%;
+}
+
+.expandedcard-productname {
+    text-align: left;
+    padding-top: .5em;    
+    margin: 0px;
+}
+
+.expandedcard-infotext {
+    padding-top: .3em;
+}
+
+.expandedcard-button {
+    grid-area: button;
+    justify-self: center;
+    align-self: start;
+    margin-top: 1.5em;
+}
+
+#expandedcard-bookButton, #expandedcard-closeButton {
+    font-size: 1.2em;
+    padding: .3em 1em;
+    width: 6em;
+}
+
+#expandedcard-bookButton {
+    border-color: var(--secondary-green);
+    background-color: var(--secondary-green);
+    color: white;
+}
+#expandedcard-bookButton:hover {
+    border-color: var(--main-accent-color);
+    background-color: var(--main-accent-color);
+    cursor: pointer;
+}
+
+#expandedcard-closeButton { 
+    border-left: 0px;
+    color: white;
+}
+#expandedcard-closeButton:hover {
+    color: white;
+    background-color: var(--main-accent-color);
+    border-color: var(--main-accent-color);
+}
+
+#expandedcard-eye {
+    display: inline-block;
+    height: 2em;
+    fill: var(--main-accent-color);
+    width: 2em;
+    padding: .5em 0em .5em 1em;
+}
+
+.expandedcard-attribute {
+    color: var(--main-accent-color);
+}
+
+.expandedcard-description {
+    margin: 1em;
+    grid-area: description;
+    height: 80%;
+    overflow: auto;
+    width: 92%;
+    padding-right: 10em;
+}
+
+
+@media only screen and (max-height: 500px){
+    .expandedcard-grid {
+        height: 95vh;
+        grid-template-areas: "image info button"
+                            "image description description"
+                            "image description description";
+        grid-template-columns: 30% 1fr 1fr;
+        grid-template-rows: 45% 50% 1fr;
+        max-height: 45em;
+    }
+
+    .expandedcard-imageflex {
+        margin: 1em;
+        height: 93%;
+    }
+
+    .expandedcard-button {
+        margin: 1em 1em 0em 0em;
+    }
+
+    #expandedcard-eye {
+        height: 0em;
+        width: 0em;
+        padding: 0em;
+    }
+}
+
+@media only screen and (max-height: 400px){
+    .expandedcard-grid {
+        grid-template-rows: 60% 40% 1fr;
+    }
+
+    .expandedcard-description {
+        height: 70%;
+    }
+}
+
+@media only screen and (max-width: 1500px) and (max-height: 500px) {
+    .expandedcard-grid {
+        grid-template-columns: 25% 45% 1fr;
+        grid-template-rows: 50% 1fr 1fr;
+    }
+
+    .expandedcard-infotext {
+        padding-top: 0em;
+    }
+
+    .expandedcard-description {
+        height: 90%;
+        margin: 0px;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .expandedcard-grid {
+        height: 95vh;
+        grid-template-areas: "image"
+                            "info"
+                            "description"
+                            "button";
+        grid-template-columns: 1fr;
+        grid-template-rows: 30% 30% 30% 1fr;
+        max-height: 55em;
+    }
+
+    .expandedcard-productname {
+        padding-top: 0em;
+        width: auto;
+    }
+
+    .expandedcard-image {
+        padding: 1em 0em;
+        height: 100%;
+        width: auto;
+    }
+
+    .expandedcard-description {
+        height: 95%;
+    }
+
+    .expandedcard-imageflex {
+        margin: 0em;
+        height: 90%;
+    }
+
+    .expandedcard-button {
+        margin: 0em;
+        font-size: .7em;
+        align-self: center;
+    }
+
+    #expandedcard-eye {
+        padding: 0em 1em;
+    }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 501px) {
+    .expandedcard-button {
+        font-size: .9em;
+        margin: 0em;
+    }
+
+    .expandedcard-imageflex {
+        margin: .2em;
+        height: 95%;
+    }
+
+    .expandedcard-image {
+        height: 100%;
+        width: auto;
+    }
+
+    .expandedcard-grid {
+        height: 95vh;
+        grid-template-areas: "image info"
+                            "description description"
+                            "button button";
+        grid-template-columns: 25% 1fr;
+        grid-template-rows: 50% 40% 1fr;
+    }
+
+    .expandedcard-text {
+        padding-left: 1em;
+    }
+}

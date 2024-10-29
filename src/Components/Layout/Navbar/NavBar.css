@@ -27,12 +27,22 @@
     -o-transition: color 500ms;
 }
 
+.navbar-child {
+    width: 12em;
+}
+
 .navbar-main-nav {
     height: 10em;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
+    padding-left: 0px;
+    width: 100%;
+}
+
+.navbar-main-nav li {
+    width: 12em;
 }
 
 .navbar-logo-container {
