@@ -1,1 +1,1 @@
-export const buyButtonActivated = false;
+export const buyButtonActivated = true;

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useParams, Link } from 'react-router-dom';
+import { buyButtonActivated } from '../../../FeatureFlags/launchFeatures.js'
 import { ActionButton } from '../../PageElements/ActionButton/ActionButton';
 import { LoadingIndicator } from '../../PageElements/LoadingIndicator/LoadingIndicator';
 import { buildSingleOfferingURL } from '../../../Functions/urlBuilders';
@@ -63,7 +64,9 @@ export const SingleOffering = () => {
                         return (
                             <div key={variation.id+variation.name} className="singleoffer-variation-container">
                                 <p className="singleoffer-variation">{variation.name.toUpperCase()}</p>
-                                <Link target='_blank' to={squareOfferingURL}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>
+                                {buyButtonActivated ??
+                                    <Link target='_blank' to={squareOfferingURL}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>
+                                }
                             </div>
                         )
                     })}
