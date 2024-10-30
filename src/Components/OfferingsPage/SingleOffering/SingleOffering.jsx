@@ -64,7 +64,7 @@ export const SingleOffering = () => {
                         return (
                             <div key={variation.id+variation.name} className="singleoffer-variation-container">
                                 <p className="singleoffer-variation">{variation.name.toUpperCase()}</p>
-                                {buyButtonActivated ??
+                                {buyButtonActivated &&
                                     <Link target='_blank' to={squareOfferingURL}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>
                                 }
                             </div>

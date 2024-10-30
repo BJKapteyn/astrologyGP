@@ -23,6 +23,8 @@ function App() {
     backgroundimage: 'jpeg/CHECK_BACK_Offerings.jpg'
   };
 
+  localStorage.clear();
+
   return (
     <div className="App">
       <Routes>
