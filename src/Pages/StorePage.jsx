@@ -12,7 +12,6 @@ export default function StorePage() {
     const azureItemData = useGetAzureFunction(getProductItemsUrl);
 
     const storetitleSettings = {
-        classname: '',
         headingText: 'STORE'
     }
 

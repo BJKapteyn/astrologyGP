@@ -1,20 +1,21 @@
 .signup-stickymain {
     display: flex;
     flex-direction: column;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 50%;
     height: 15em;
-    margin-top: -7.5em;
-    margin-left: -25%;
     background: white;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    overflow: hidden;
     animation-name: fadeIn;
     animation-duration: 1000ms;
     animation-fill-mode: forwards;
-    z-index: 200;
+}
+
+.signup-graphiccontainer {
+    height: 3em;
+}
+#signup-eyegraphic {
+    fill: var(--main-accent-color);
 }
 
 .signup-link {
@@ -28,6 +29,9 @@
 
 #signup-closecontainer {
     height: 4em;
+    position: absolute;
+    top: 5%;
+    right: 1%;
 }
 .signup-close {
     height: 100%;
@@ -35,8 +39,8 @@
 
 #signup-textcontainer {
     text-align: center;
+    font-size: 1.5em;
     padding: 1em;
-    width: 100%;
 }   
 
 #signup-closeButton {
@@ -57,9 +61,10 @@
 
 @media only screen and (max-width: 600px) {
     .signup-stickymain {
-        width: 90%;
-        height: 90%;
-        margin-top: -45%;
-        margin-left: -45%;
+        height: auto;
+    }
+
+    .signup-link, .signup-graphiccontainer {
+        padding: 1em;
     }
 }

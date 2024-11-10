@@ -5,7 +5,7 @@ import { buildAzureFunctionURL } from '../Functions/urlBuilders.js';
 import { FunctionNames } from '../Enums/FunctionNames.js';
 import { useGetAzureFunction } from '../CustomHooks/useGetAzureFunction.jsx';
 
-// Page that shows all of the services and products
+// Page that shows all of the offered services
 export default function Offerings() {
     const endpointUrl = useRef(buildAzureFunctionURL(FunctionNames.GetServiceItems, process.env.REACT_APP_GET_SERVICE_ITEMS));
     const [serviceItems, setServiceItemData] = useState(null);

@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { ReactComponent as CloseSticky } from '../../../Pics/Logos/MenuRetract.svg';
-import { ActionButton } from '../../PageElements/ActionButton/ActionButton';
 import { Link } from 'react-router-dom';
+import { CardModal } from '../../PageElements/CardModal/CardModal';
+import { ReactComponent as Eye } from '../../../Pics/SvgDrawings/EYE-VECTOR.svg'
+import { ActionButton } from '../../PageElements/ActionButton/ActionButton';
 import './SignupSticky.css';
 import '../../../App.css';
 
@@ -9,13 +11,6 @@ import '../../../App.css';
 export const SignupSticky = () => {
     const [signupSticky, setSignupSticky] = useState(<></>);
     const [timeoutIsComplete, setTimeoutIsComplete] = useState(false);
-    // const logoSource = require('../../../Pics/Logos/MainLogoYellow.png');
-
-    // const logo = (
-    //     <div className="signup-logocontainer">
-    //         <img src={logoSource} alt="The Vibe Collective Logo" className="signup-logo" />
-    //     </div>
-    // )
 
     const signUpButtonSettings = {
         buttonText: 'SIGN UP',
@@ -32,19 +27,25 @@ export const SignupSticky = () => {
     }
 
     const singupStickyComponent = (
-        <div className="signup-stickymain">
-            <div id="signup-textcontainer">
-                <p>Sign up today and be the first to learn about special offers, seasonal classes, new services, and events.</p>
+        <CardModal callBackDeselect={() => close()}>
+            <div className="signup-stickymain">
+                <div className="signup-graphiccontainer">
+                    <Eye id="signup-eyegraphic"></Eye>
+                </div>
+                <div id="signup-textcontainer">
+                    <p>Sign up today and be the first to learn about special offers, seasonal classes, new services, and events.</p>
+                </div>
+                <div className="signup-link">
+                    <Link target='_blank' to={'https://squareup.com/outreach/UurPKs/subscribe'}>
+                        <ActionButton buttonSettings={signUpButtonSettings}></ActionButton>
+                    </Link>
+                </div>
+                <div id="signup-closecontainer">
+                    <ActionButton buttonSettings={closeButtonSettings} callback={() => close()}></ActionButton>
+                </div>
             </div>
-            <div className="signup-link">
-                <Link target='_blank' to={'https://squareup.com/outreach/UurPKs/subscribe'}>
-                    <ActionButton buttonSettings={signUpButtonSettings}></ActionButton>
-                </Link>
-            </div>
-            <div id="signup-closecontainer">
-                <ActionButton buttonSettings={closeButtonSettings} callback={() => close()}></ActionButton>
-            </div>
-        </div>
+        </CardModal>
+
     );
 
     // Set the amount of time before the bar appears
