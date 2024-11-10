@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useGetAzureFunction } from "../CustomHooks/useGetAzureFunction.jsx";
 import { FunctionNames } from "../Enums/FunctionNames.js";
 import { SectionDivider } from "../Components/PageElements/SectionDivider/SectionDivider";
@@ -8,8 +8,7 @@ import { buildAzureFunctionURL } from "../Functions/urlBuilders.js";
 
 export default function StorePage() {
     const [itemData, setItemData] = useState(null);
-    const getProductFunctionName = useRef(new FunctionNames().GetProductItems)
-    const getProductItemsUrl = buildAzureFunctionURL(getProductFunctionName.current, process.env.REACT_APP_GET_PRODUCT_ITEMS)
+    const getProductItemsUrl = buildAzureFunctionURL(FunctionNames.GetProductItems, process.env.REACT_APP_GET_PRODUCT_ITEMS)
     const azureItemData = useGetAzureFunction(getProductItemsUrl);
 
     const storetitleSettings = {
