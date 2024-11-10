@@ -1,2 +1,4 @@
-export const GetServiceItems = 'GetServiceItems';
-export const GetProductItems = 'GetProductItems';
+export function FunctionNames() {
+    this.GetServiceItems = 'GetServiceItems';
+    this.GetProductItems = 'GetProductItems';
+}
