@@ -1,28 +1,30 @@
 import { useState } from 'react';
-import { Item } from './Item/Item';
+import { Item } from './Item/Item.jsx';
 import { Link } from 'react-router-dom';
-import { LoadingIndicator } from '../../PageElements/LoadingIndicator/LoadingIndicator';
+import { LoadingIndicator } from '../LoadingIndicator/LoadingIndicator.jsx';
 import '../../../App.css';
 import './Items.css';
 
 export const Items = ({ itemData: items }) => {
-    const [serviceItems, setServiceItems] = useState(items);
+    const [productItems, setProductItems] = useState(items);
 
-    if (serviceItems.state) {
-        setServiceItems(serviceItems.state);
+    // Check for data coming from state
+    if (productItems.state) {
+        setProductItems(productItems.state);
     }
 
-    if(serviceItems.items) {
-        setServiceItems(serviceItems.items);
+    // Check for data coming from parent
+    if(productItems.items) {
+        setProductItems(productItems.items);
     }
 
-    // service items will be null on the first render
-    if(serviceItems.state)
+    // productItems will be null on the first render
+    if(productItems.state)
         return <LoadingIndicator />
     
     return (
         <div className="items-flex">
-            {serviceItems.map(item => {
+            {productItems.map(item => {
                 if(item.category) {
                     return (
                         <Link key={item.category.id} to={`./${item.category.name}`} state={item.items}>
@@ -37,12 +39,6 @@ export const Items = ({ itemData: items }) => {
                     </Link>
                 );      
             })}
-{/* 
-            {modalData && (
-                <CardModal callBackDeselect={deselectData}>
-                    <ExpandedCard styleId={'items-modal'} callBackDeselect={deselectData} productItem={modalData}></ExpandedCard>
-                </CardModal>
-            )} */}
         </div >
     );
 }

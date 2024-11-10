@@ -1,13 +1,15 @@
-import { TitleCard } from '../Components/PageElements/TitleCard/TitleCard'; 
+import { SectionDivider } from "../Components/PageElements/SectionDivider/SectionDivider";
 import { StoreCategories } from '../Components/StorePage/StoreCategories/StoreCategories.jsx';
 
 export const StorePage = () => {
     const storetitleSettings = {
-        titleText: '', subText, backgroundimage, styleId}
+        classname: '',
+        headingText: 'STORE'
+    }
 
     return (
         <div className="store-page">
-            <TitleCard />
+            <SectionDivider dividerData={storetitleSettings} />
             <StoreCategories />
         </div>
     );

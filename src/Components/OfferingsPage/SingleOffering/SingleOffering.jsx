@@ -8,6 +8,7 @@ import moon from '../../../Pics/Portraits/portrait-sunsetWaves.png';
 import '../../../App.css';
 import './SingleOffering.css';
 
+// View detailed offering information
 export const SingleOffering = () => {
     const defaultOfferingURL = 'https://the-vibe-collective.square.site/';
     const [imageUrl, setImageUrl] = useState(moon);
@@ -52,6 +53,7 @@ export const SingleOffering = () => {
     if(!offeringData) {
         return <LoadingIndicator />;
     }
+    
     return (
         <main id="singleoffer">
             <div className="singleoffer-imagecontainer">
