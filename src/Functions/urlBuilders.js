@@ -3,3 +3,9 @@ export function buildSingleOfferingURL(itemID) {
 
     return bookURL + itemID;
 }
+
+export function buildAzureFunctionURL(functionName, code) {
+    const functionURL = `${process.env.REACT_APP_FUNCTIONS_URL}/${functionName}?code=${code}`;
+
+    return functionURL;
+}

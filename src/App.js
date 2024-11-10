@@ -8,6 +8,7 @@ import HomePage from './Pages/HomePage.jsx';
 import WhyVibePage from './Pages/WhyVibePage.jsx';
 import CollectivePage from './Pages/CollectivePage.jsx';
 import OfferingsPage from './Pages/OfferingsPage.jsx';
+import StorePage from './Pages/StorePage.jsx';
 import './App.css';
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
     backgroundimage: 'jpeg/CHECK_BACK_Offerings.jpg'
   };
 
+  localStorage.clear();
+
   return (
     <div className="App">
       <Routes>
@@ -30,7 +33,9 @@ function App() {
           <Route index element={<HomePage />}></Route>
           <Route path="/WhyVibe" element={<WhyVibePage />}></Route>
           <Route path="/TheCollective" element={<CollectivePage />}></Route>
-          <Route path="/Store" element={<ComingSoon comingSoonData={storeComingSoonData} />}></Route>
+          <Route path="/Store" element={<StorePage />}></Route>
+          <Route path="/:storecategory" element={<ComingSoon comingSoonData={storeComingSoonData} />}></Route>
+          <Route path="/:storecategory/:storeitem" element={<ComingSoon comingSoonData={storeComingSoonData} />}></Route>
           <Route path="/CurrentVibe" element={<ComingSoon comingSoonData={currentVibeComingSoonData} />}></Route>
           <Route path="/Offerings" element={<OfferingsPage />}></Route>
           <Route path="/Offerings/:offering" element={<CategorizedOfferings />}></Route>

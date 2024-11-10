@@ -1,33 +1,19 @@
+import { useState, useRef } from 'react';
 import { OfferingCategories } from '../Components/OfferingsPage/CategorySection/OfferingCategories';
 import { LoadingIndicator } from '../Components/PageElements/LoadingIndicator/LoadingIndicator';
-import { useEffect, useState } from 'react';
+import { buildAzureFunctionURL } from '../Functions/urlBuilders.js';
+import { GetServiceItems } from '../Enums/FunctionNames.js';
+import { useGetAzureFunction } from '../CustomHooks/useGetAzureFunction.jsx';
 
 // Page that shows all of the services and products
 export default function Offerings() {
-    const endpointUrl = `${process.env.REACT_APP_FUNCTIONS_URL}/GetServiceItems?code=${process.env.REACT_APP_GET_SERVICE_ITEMS}`;
+    const endpointUrl = useRef(buildAzureFunctionURL(GetServiceItems, process.env.REACT_APP_GET_SERVICE_ITEMS));
     const [serviceItems, setServiceItemData] = useState(null);
+    const azureItems = useGetAzureFunction(endpointUrl.current);
 
-    useEffect(() => {
-        let active = true;
-
-        const getAllItems = async () => {
-            await fetch(endpointUrl)
-                .then(response => response.json())
-                .then(data => {
-                    if (active){
-                        setServiceItemData(data);
-                        console.log(data);
-                    }
-                })
-                .catch(err => console.log(err));
-        }
-
-        getAllItems();
-
-        return () => {
-            active = false;
-        }
-    }, [endpointUrl]);
+    if(azureItems && !serviceItems) {
+        setServiceItemData(azureItems)
+    }
 
     if(!serviceItems || !Array.isArray(serviceItems)) {
 

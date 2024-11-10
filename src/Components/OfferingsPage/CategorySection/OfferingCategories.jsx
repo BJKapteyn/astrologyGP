@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Items } from "../Items/Items";
+import { Items } from "../../PageElements/ItemCard/Items.jsx";
 import { SectionDivider } from "../../PageElements/SectionDivider/SectionDivider";
 import './Category.css';
 

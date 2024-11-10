@@ -1,6 +1,10 @@
 import './CardModal.css';
 import '../../../App.css';
 
+// Displays content in a modal with a darkened translucent background
+//      callBackDeselect: function to remove the modal
+//      children: jsx to display
+//      containerStyleId: custom display styling 
 export const CardModal = ({ callBackDeselect, children, containerStyleId}) => {
 
     return (

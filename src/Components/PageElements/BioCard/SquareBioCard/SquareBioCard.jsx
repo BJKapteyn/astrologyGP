@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { buildAzureFunctionURL } from '../../../../Functions/azureFunctionsUtility';
+import { buildAzureFunctionURL } from '../../../../Functions/urlBuilders.js';
 import { BioCard } from "../BioCard";
 import { CardModal } from "../../CardModal/CardModal";
 import { LoadingIndicator } from '../../LoadingIndicator/LoadingIndicator.jsx'
@@ -26,7 +26,7 @@ export const SquareBioCard = () => {
         let active = true;
 
         const getCardData = async () => {
-            let url = buildAzureFunctionURL(process.env.REACT_APP_GET_EMPLOYEE, "getemployees");
+            let url = buildAzureFunctionURL("getemployees", process.env.REACT_APP_GET_EMPLOYEE);
             
             if(active){
                 await fetch(url, {method: "GET"})

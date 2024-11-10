@@ -1,15 +1,15 @@
-import '../../../App.css';
-import './AboutSection.css';
+// import '../../../App.css';
+// import './AboutSection.css';
 
-export const AboutCard = ({aboutCardDataa, setOutText = () =>{}}) => {
+// export const AboutCard = ({aboutCardData, setOutText = () =>{}}) => {
 
-    return (
-        <div onMouseEnter={() => setOutText(aboutCardDataa.text)} id={'aboutCard' + aboutCardDataa.id} className="aboutsection-flexbox" key={aboutCardDataa.id}>
+//     return (
+//         <div onMouseEnter={() => setOutText(aboutCardData.text)} id={'aboutCard' + aboutCardData.id} className="aboutsection-flexbox" key={aboutCardData.id}>
 
-            <div className="aboutsection-image-container">
-                <img className="aboutsection-image" alt={aboutCardDataa.keywordText} src={require('../../../Pics/InfoCardPics/' + aboutCardDataa.image + '.jpg')}/>
-                <p className="aboutsection-keyword">{aboutCardDataa.keywordText}</p>
-            </div>
-        </div>
-    );
-}
+//             <div className="aboutsection-image-container">
+//                 <img className="aboutsection-image" alt={aboutCardData.keywordText} src={require('../../../Pics/InfoCardPics/' + aboutCardData.image + '.jpg')}/>
+//                 <p className="aboutsection-keyword">{aboutCardData.keywordText}</p>
+//             </div>
+//         </div>
+//     );
+// }

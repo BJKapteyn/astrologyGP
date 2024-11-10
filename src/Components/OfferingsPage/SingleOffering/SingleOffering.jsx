@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useParams, Link } from 'react-router-dom';
+import { buyButtonActivated } from '../../../FeatureFlags/launchFeatures.js'
 import { ActionButton } from '../../PageElements/ActionButton/ActionButton';
 import { LoadingIndicator } from '../../PageElements/LoadingIndicator/LoadingIndicator';
 import { buildSingleOfferingURL } from '../../../Functions/urlBuilders';
@@ -7,6 +8,7 @@ import moon from '../../../Pics/Portraits/portrait-sunsetWaves.png';
 import '../../../App.css';
 import './SingleOffering.css';
 
+// View detailed offering information
 export const SingleOffering = () => {
     const defaultOfferingURL = 'https://the-vibe-collective.square.site/';
     const [imageUrl, setImageUrl] = useState(moon);
@@ -51,6 +53,7 @@ export const SingleOffering = () => {
     if(!offeringData) {
         return <LoadingIndicator />;
     }
+    
     return (
         <main id="singleoffer">
             <div className="singleoffer-imagecontainer">
@@ -63,7 +66,9 @@ export const SingleOffering = () => {
                         return (
                             <div key={variation.id+variation.name} className="singleoffer-variation-container">
                                 <p className="singleoffer-variation">{variation.name.toUpperCase()}</p>
-                                <Link target='_blank' to={squareOfferingURL}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>
+                                {buyButtonActivated &&
+                                    <Link target='_blank' to={squareOfferingURL}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>
+                                }
                             </div>
                         )
                     })}
