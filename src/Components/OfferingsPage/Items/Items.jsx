@@ -23,26 +23,20 @@ export const Items = ({ itemData: items }) => {
     return (
         <div className="items-flex">
             {serviceItems.map(item => {
-                if(item.category) {
-                    return (
-                        <Link key={item.category.id} to={`./${item.category.name}`} state={item.items}>
-                            <Item key={item.category.id} itemData={item.category}></Item>
-                        </Link>
-                    );
-                }
+                // if(item.category) {
+                //     return (
+                //         <Link key={item.category.id} to={`./${item.category.name}`} state={item.items}>
+                //             <Item key={item.category.id} itemData={item.category}></Item>
+                //         </Link>
+                //     );
+                // }
                 
                 return (
-                    <Link key={item.id} to={`./${item.name}`} state={item}>
+                    <Link key={item.id} to={`./${item.name}-${item.id}`} state={item}>
                         <Item itemData={item}></Item>
                     </Link>
                 );      
             })}
-{/* 
-            {modalData && (
-                <CardModal callBackDeselect={deselectData}>
-                    <ExpandedCard styleId={'items-modal'} callBackDeselect={deselectData} productItem={modalData}></ExpandedCard>
-                </CardModal>
-            )} */}
         </div >
     );
 }

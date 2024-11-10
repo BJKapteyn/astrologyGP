@@ -1,11 +1,17 @@
+import { useEffect } from "react";
 import { SectionDivider } from "../Components/PageElements/SectionDivider/SectionDivider";
 import { StoreCategories } from '../Components/StorePage/StoreCategories/StoreCategories.jsx';
 
-export const StorePage = () => {
+export default function StorePage() {
+
     const storetitleSettings = {
         classname: '',
         headingText: 'STORE'
     }
+
+    useEffect(() => {
+        fetch()
+    })
 
     return (
         <div className="store-page">

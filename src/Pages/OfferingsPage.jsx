@@ -1,10 +1,12 @@
+import { useEffect, useState, useRef } from 'react';
 import { OfferingCategories } from '../Components/OfferingsPage/CategorySection/OfferingCategories';
 import { LoadingIndicator } from '../Components/PageElements/LoadingIndicator/LoadingIndicator';
-import { useEffect, useState } from 'react';
+import { buildAzureFunctionURL } from '../Functions/urlBuilders.js';
+import { GetServiceItems } from '../Enums/FunctionNames.js';
 
 // Page that shows all of the services and products
 export default function Offerings() {
-    const endpointUrl = `${process.env.REACT_APP_FUNCTIONS_URL}/GetServiceItems?code=${process.env.REACT_APP_GET_SERVICE_ITEMS}`;
+    const endpointUrl = useRef(buildAzureFunctionURL(GetServiceItems, process.env.REACT_APP_GET_SERVICE_ITEMS));
     const [serviceItems, setServiceItemData] = useState(null);
 
     useEffect(() => {
