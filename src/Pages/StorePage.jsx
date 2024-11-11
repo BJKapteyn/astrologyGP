@@ -8,7 +8,7 @@ import { buildAzureFunctionURL } from "../Functions/urlBuilders.js";
 
 export default function StorePage() {
     const [itemData, setItemData] = useState(null);
-    const getProductItemsUrl = buildAzureFunctionURL(FunctionNames.GetProductItems, process.env.REACT_APP_GET_PRODUCT_ITEMS)
+    const getProductItemsUrl = buildAzureFunctionURL(FunctionNames.GetCategoriesByCategoryId, process.env.REACT_APP_GET_CATEGORIES_BY_PARENT_ID)
     const azureItemData = useGetAzureFunction(getProductItemsUrl);
 
     const storetitleSettings = {
