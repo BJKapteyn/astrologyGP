@@ -33,7 +33,7 @@ export const SignupSticky = () => {
                     <Eye id="signup-eyegraphic"></Eye>
                 </div>
                 <div id="signup-textcontainer">
-                    <p>Sign up today and be the first to learn about special offers, seasonal classes, new services, and events.</p>
+                    <p>Subscribe for a chance to win a free 15-minute reading! Each week, one lucky winner is chosen. Get weekly updates and exclusive insights from The Vibe Collective!</p>
                 </div>
                 <div className="signup-link">
                     <Link target='_blank' to={'https://squareup.com/outreach/UurPKs/subscribe'}>
