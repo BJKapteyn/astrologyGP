@@ -1,9 +1,10 @@
+import { useRandomImageUrl } from '../../../../CustomHooks/useRandomImageUrl';
 import '../../../../App.css';
 import './Item.css';
-import moon from '../../../../Pics/Landscapes/moonClouds.png';
 
 export const Item = ({ itemData }) => {
-    const image = itemData.imageURL ?? moon;
+    const randomImage = useRandomImageUrl();
+    const image = itemData.imageURL ?? randomImage;
 
     return (
         <div className="item-container">
