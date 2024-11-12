@@ -16,7 +16,7 @@ export default function StorePage() {
         headingText: 'STORE'
     }
 
-    if(azureItemData && itemData === null) {
+    if(azureItemData && !itemData) {
         setItemData(azureItemData);
     }
 

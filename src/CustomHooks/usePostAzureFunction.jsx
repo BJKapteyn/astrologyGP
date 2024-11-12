@@ -26,8 +26,10 @@ export function usePostAzureFunction(endpointUrl, categoryId) {
                 })
                 .catch(err => console.debug(err));
         }
-
-        getAllItems();
+        
+        if(endpointUrl && categoryId) {
+            getAllItems();
+        }
 
         return () => {
             active = false;
