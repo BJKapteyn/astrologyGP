@@ -5,18 +5,16 @@ import { LoadingIndicator } from '../LoadingIndicator/LoadingIndicator.jsx';
 import '../../../App.css';
 import './Items.css';
 
+
 export const Items = ({ itemData: items }) => {
     const [productItems, setProductItems] = useState(items);
 
     // Check for data coming from state
     if (productItems.state) {
         setProductItems(productItems.state);
-    }
-
-    // Check for data coming from parent
-    if(productItems.items) {
+    } else if  (productItems.items) {// Check for data coming from parent
         setProductItems(productItems.items);
-    }
+    } 
 
     // productItems will be null on the first render
     if(productItems.state)
@@ -34,7 +32,7 @@ export const Items = ({ itemData: items }) => {
                 }
                 
                 return (
-                    <Link key={item.id} to={`./${item.name}`} state={item}>
+                    <Link key={item.id} to={`./${item.name}-${item.id}`} state={item}>
                         <Item itemData={item}></Item>
                     </Link>
                 );      
