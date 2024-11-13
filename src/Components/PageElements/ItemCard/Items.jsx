@@ -16,8 +16,8 @@ export const Items = ({ itemData: items }) => {
         setProductItems(productItems.items);
     } 
 
-    // productItems will be null on the first render
-    if(productItems.state)
+    // In case productItems is null on the first render
+    if(!productItems)
         return <LoadingIndicator />
     
     return (
