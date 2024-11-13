@@ -15,14 +15,10 @@ export const Items = ({ itemData: items }) => {
     } else if  (productItems.items) {// Check for data coming from parent
         setProductItems(productItems.items);
     } 
-
-    // In case productItems is null on the first render
-    if(!productItems)
-        return <LoadingIndicator />
     
     return (
         <div className="items-flex">
-            {productItems.map(item => {
+            {!productItems.state && productItems.map(item => {
                 if(item.category) {
                     return (
                         <Link key={item.category.id} to={`./${item.category.name}`} state={item.items}>
