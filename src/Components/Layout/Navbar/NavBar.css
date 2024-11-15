@@ -62,7 +62,13 @@
 }
 
 .navbar-submenu-drop {
-    position: absolute;
+    /* position: absolute; */
+}
+
+#navbar-submenu-mark {
+    fill: var(--main-accent-color);
+    width: 1em;
+    height: auto;
 }
 
 .navbar-social-flex {

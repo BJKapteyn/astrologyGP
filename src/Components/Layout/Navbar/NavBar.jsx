@@ -17,9 +17,6 @@ export const NavBar = () => {
                 {NavLinkData.slice(0, 3).map(navLinkData => {
                     return <NavPageLink linkData={navLinkData}></NavPageLink>
                 })}
-                {/* <NavPageLink linkData={{text: 'HOME', route: '/', submenu: null}} />
-                <NavPageLink linkData={{text: 'OFFERINGS', route: '/Offerings', submenu: null}} />
-                <NavPageLink linkData={{text: 'THE COLLECTIVE', route: '/TheCollective', submenu: null}} /> */}
                 <li className="navbar-logo-container">
                     <Link to={'./'}>
                         <img alt='Yellow main logo' src={yellowLogo} className="navbar-logo" />
@@ -28,9 +25,6 @@ export const NavBar = () => {
                 {NavLinkData.slice(3, 6).map(navLinkData => {
                     return <NavPageLink linkData={navLinkData}></NavPageLink>
                 })}
-                {/* <NavPageLink linkData={{text: 'SHOP THE VIBE', route: '/Store', submenu: null}} />
-                <NavPageLink linkData={{text: 'THE CURRENT VIBE', route: '/CurrentVibe', submenu: null}} />
-                <NavPageLink linkData={{text: 'WORK WITH US', route: '/WhyVibe', submenu: null}} /> */}
             </ul>
             <div className="navbar-social-flex">
                 <Socials></Socials>
