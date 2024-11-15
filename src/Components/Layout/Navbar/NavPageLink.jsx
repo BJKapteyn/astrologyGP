@@ -7,10 +7,15 @@ export const NavPageLink = ({linkData, callBackSelectMenuVisibility = () => {}})
     const {text, route, subMenu} = linkData;
     const setMenuVisibility = false;
     const link = <Link onClick={() => callBackSelectMenuVisibility(setMenuVisibility)} className="navbar-link" to={route}>{text}</Link>;
-
     let navLink;
 
+    
+
     if(subMenu) {
+        let subNavMark = 'v';
+        if(isExpanded) {
+            subNavMark = '^';
+        }
         navLink = (
             <ul 
             onMouseEnter={() => setIsExpanded(true)}
@@ -22,11 +27,12 @@ export const NavPageLink = ({linkData, callBackSelectMenuVisibility = () => {}})
                 </li>
                 {isExpanded && subMenu.map((subMenu) => {
                     return (
-                        <li itemtype="http://schema.org/LocalBusiness" itemref="_name1" key={subMenu.id} className="navbar-submenu-children">
+                        <li itemtype="http://schema.org/LocalBusiness" itemref="_name1" key={subMenu.id} className="navbar-submenu-drop">
                             <Link itemProp="url" role="link" className="navbar-link" to={subMenu.route}>{subMenu.text}</Link>
                         </li>
                     )
                 })}
+                <li className="navbar-submenu-children" id="navbar-submenu-mark">{subNavMark}</li>
             </ul>
         );
     } else {

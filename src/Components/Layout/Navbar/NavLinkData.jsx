@@ -3,19 +3,19 @@ export const NavLinkData = [
     {
         id: 1,
         route: '/',
-        text: 'Home',
+        text: 'HOME',
+        subMenu: null
+    },
+    {
+        id: 2,
+        route: '/TheCollective',
+        text: 'THE COLLECTIVE',
         subMenu: null
     },
     {
         id: 3,
-        route: '/Readers',
-        text: 'Work With Us',
-        subMenu: null
-    },
-    {
-        id: 4,
         route: '/Offerings',
-        text: 'Offerings',
+        text: 'OFFERINGS',
         subMenu: null
         //[
         //     {
@@ -61,9 +61,27 @@ export const NavLinkData = [
         // ]
     },
     {
+        id: 4,
+        route: '/Store',
+        text: 'SHOP THE VIBE',
+        subMenu: [
+            {
+                id: 0,
+                route: 'https://app.squareup.com/gift/MLNVK8WKMBMAA/order',
+                text: 'GIFT CARDS'
+            }
+        ]
+    },
+    {
         id: 5,
         route: '/News',
-        text: 'Current Vibe',
+        text: 'THE CURRENT VIBE',
+        subMenu: null
+    },
+    {
+        id: 6,
+        route: '/WhyVibe',
+        text: 'WORK WITH US',
         subMenu: null
     },
 ]

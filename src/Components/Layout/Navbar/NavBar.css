@@ -54,9 +54,15 @@
 
 .navbar-submenu {
     display: flex;
+    position: relative;
     align-items: center;
-    padding: 0px;
+    padding: unset;
+    margin: unset;
     flex-direction: column;
+}
+
+.navbar-submenu-drop {
+    position: absolute;
 }
 
 .navbar-social-flex {
