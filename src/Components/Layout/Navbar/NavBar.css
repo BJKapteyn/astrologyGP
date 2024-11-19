@@ -31,6 +31,10 @@
     width: 12em;
 }
 
+.navbar-submenu-arrow {
+    fill: var(--main-color);
+}
+
 .navbar-main-nav {
     height: 10em;
     display: flex;
@@ -53,6 +57,7 @@
 }
 
 .navbar-submenu {
+    background-color: white;
     display: flex;
     position: relative;
     align-items: center;
