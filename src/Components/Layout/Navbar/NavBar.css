@@ -32,7 +32,7 @@
 }
 
 .navbar-submenu-arrow {
-    fill: var(--main-color);
+    fill: var(--main-accent-color);
 }
 
 .navbar-main-nav {
@@ -66,12 +66,7 @@
     flex-direction: column;
 }
 
-.navbar-submenu-drop {
-    /* position: absolute; */
-}
-
 #navbar-submenu-mark {
-    fill: var(--main-accent-color);
     width: 1em;
     height: auto;
 }

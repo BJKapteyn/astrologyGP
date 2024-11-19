@@ -30,12 +30,12 @@ export const NavPageLink = ({linkData}) => {
         
         navLink = (
             <ul 
-            style={{position: displayStatus, top: '36%'}}
+            style={{position: displayStatus, top: '30%'}}
             onMouseEnter={() => handleSubmenuVisibility(true)}
             onMouseLeave={() => handleSubmenuVisibility(false)}
             className="navbar-submenu"
             >
-                <li onClick={() => handleSubmenuVisibility(true)} className="navbar-submenu-children" id="navbar-submenu-top">
+                <li onClick={() => handleSubmenuVisibility(true)} id="navbar-submenu-top">
                     {link}
                 </li>
                 {isExpanded && subMenu.map((subMenu) => {
