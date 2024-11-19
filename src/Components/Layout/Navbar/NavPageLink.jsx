@@ -17,10 +17,10 @@ export const NavPageLink = ({linkData}) => {
     if(subMenu) {
         let subNavMark = <DownArrow className="navbar-submenu-arrow" />;
         let displayStatus = 'relative';
-        
 
         if(isExpanded) {
             subNavMark = <UpArrow className="navbar-submenu-arrow" />;
+            // This will keep the submenu in place when expanded
             displayStatus = 'absolute';
         }
 
@@ -53,7 +53,7 @@ export const NavPageLink = ({linkData}) => {
     }
 
     return (
-        <li className="submenu-navbutton">
+        <li className="navbar-navbutton">
             {navLink}
         </li>
     );

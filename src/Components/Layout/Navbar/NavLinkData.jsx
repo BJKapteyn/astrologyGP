@@ -89,7 +89,7 @@ export const NavLinkData = [
     },
     {
         id: 5,
-        route: '/News',
+        route: '/CurrentVibe',
         text: 'THE CURRENT VIBE',
         subMenu: null
     },
