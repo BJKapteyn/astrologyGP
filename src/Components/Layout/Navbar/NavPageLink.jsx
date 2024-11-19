@@ -53,7 +53,7 @@ export const NavPageLink = ({linkData}) => {
     }
 
     return (
-        <li>
+        <li className="submenu-navbutton">
             {navLink}
         </li>
     );
