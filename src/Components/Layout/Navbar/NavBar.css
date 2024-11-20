@@ -67,6 +67,7 @@
     margin: unset;
     flex-direction: column;
     width: 100%;
+    transition: height 1000ms ease-out;
 }
 
 #navbar-submenu-mark {
@@ -133,5 +134,23 @@
 @media only screen and (max-width: 770px) and (min-width: 600px) {
     .navbar-link {
         font-size: .8em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar-submenu {
+        align-items: start;
+    }
+    .navbar-navbutton {
+        width: 15em;
+        height: auto;
+    }
+    .navbar-link, #navbar-submenu-mark {
+        display: inline-block;
+    }
+
+    .navbar-submenu-drop {
+        background: linear-gradient(90deg, rgba(198,171,210,1) 0%, rgba(255,255,255,1) 50%);
+        padding-left: 1em;
     }
 }

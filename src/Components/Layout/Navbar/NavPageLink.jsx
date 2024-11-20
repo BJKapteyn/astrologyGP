@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 import { ReactComponent as DownArrow } from '../../../Pics/SvgDrawings/CheveronDown.svg';
 import { ReactComponent as UpArrow } from '../../../Pics/SvgDrawings/CheveronUp.svg';
 import { useState } from "react";
 
 // return Link with data or optional submenu
 export const NavPageLink = ({linkData}) => {
+    const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
     const [isExpanded, setIsExpanded] = useState(false);
     const {text, route, subMenu} = linkData;
     let link = <Link className="navbar-link" to={route}>{text}</Link>;
@@ -16,37 +18,37 @@ export const NavPageLink = ({linkData}) => {
 
     if(subMenu) {
         let subNavMark = <DownArrow className="navbar-submenu-arrow" />;
-        let displayStatus = 'relative';
-
+        let displayStatus = 'none';
+        
         if(isExpanded) {
             subNavMark = <UpArrow className="navbar-submenu-arrow" />;
-            // This will keep the submenu in place when expanded
-            displayStatus = 'absolute';
+            displayStatus = 'block';
         }
-
+        
         if(!isExpanded) {
             link = <Link className="navbar-link">{text}</Link>;
         }
         
+        const arrow = <li onClick={() => handleSubmenuVisibility(!isExpanded)} className="navbar-submenu-children" id="navbar-submenu-mark">{subNavMark}</li>
         navLink = (
-                <ul 
-                style={{position: displayStatus}}
-                onMouseEnter={() => handleSubmenuVisibility(true)}
-                onMouseLeave={() => handleSubmenuVisibility(false)}
-                className="navbar-submenu"
-                >
-                    <li  onClick={() => handleSubmenuVisibility(true)} id="navbar-submenu-top">
-                        {link}
-                    </li>
-                    {isExpanded && subMenu.map((subMenu) => {
-                        return (
-                            <li onClick={() => handleSubmenuVisibility(true)} key={subMenu.id} className="navbar-submenu-drop">
-                                <Link itemProp="url" role="link" className="navbar-link" to={subMenu.route}>{subMenu.text}</Link>
-                            </li>
-                        )
-                    })}
-                    <li onClick={() => handleSubmenuVisibility(!isExpanded)} className="navbar-submenu-children" id="navbar-submenu-mark">{subNavMark}</li>
-                </ul>
+            <ul 
+            onMouseEnter={() => handleSubmenuVisibility(true)}
+            onMouseLeave={() => handleSubmenuVisibility(false)}
+            className="navbar-submenu"
+            >
+                <li onClick={() => handleSubmenuVisibility(true)} id="navbar-submenu-top">
+                    {link}
+                    {isMobile && arrow}
+                </li>
+                {subMenu.map((subMenu) => {
+                    return (
+                        <li style={{display: displayStatus}} onClick={() => handleSubmenuVisibility(true)} key={subMenu.id} className="navbar-submenu-drop">
+                            <Link itemProp="url" role="link" className="navbar-link" to={subMenu.route}>{subMenu.text}</Link>
+                        </li>
+                    )
+                })}
+                {!isMobile && arrow}
+            </ul>
         );
     } else {
         navLink = link;
