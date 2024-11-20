@@ -29,24 +29,24 @@ export const NavPageLink = ({linkData}) => {
         }
         
         navLink = (
-            <ul 
-            style={{position: displayStatus, top: '30%'}}
-            onMouseEnter={() => handleSubmenuVisibility(true)}
-            onMouseLeave={() => handleSubmenuVisibility(false)}
-            className="navbar-submenu"
-            >
-                <li onClick={() => handleSubmenuVisibility(true)} id="navbar-submenu-top">
-                    {link}
-                </li>
-                {isExpanded && subMenu.map((subMenu) => {
-                    return (
-                        <li onClick={() => handleSubmenuVisibility(true)} key={subMenu.id} className="navbar-submenu-drop">
-                            <Link itemProp="url" role="link" className="navbar-link" to={subMenu.route}>{subMenu.text}</Link>
-                        </li>
-                    )
-                })}
-                <li onClick={() => handleSubmenuVisibility(!isExpanded)} className="navbar-submenu-children" id="navbar-submenu-mark">{subNavMark}</li>
-            </ul>
+                <ul 
+                style={{position: displayStatus}}
+                onMouseEnter={() => handleSubmenuVisibility(true)}
+                onMouseLeave={() => handleSubmenuVisibility(false)}
+                className="navbar-submenu"
+                >
+                    <li  onClick={() => handleSubmenuVisibility(true)} id="navbar-submenu-top">
+                        {link}
+                    </li>
+                    {isExpanded && subMenu.map((subMenu) => {
+                        return (
+                            <li onClick={() => handleSubmenuVisibility(true)} key={subMenu.id} className="navbar-submenu-drop">
+                                <Link itemProp="url" role="link" className="navbar-link" to={subMenu.route}>{subMenu.text}</Link>
+                            </li>
+                        )
+                    })}
+                    <li onClick={() => handleSubmenuVisibility(!isExpanded)} className="navbar-submenu-children" id="navbar-submenu-mark">{subNavMark}</li>
+                </ul>
         );
     } else {
         navLink = link;

@@ -45,8 +45,10 @@
     width: 100%;
 }
 
-.submenu-navbutton {
+.navbar-navbutton {
     width: 12em;
+    height: 3em;
+    position: relative;
 }
 
 .navbar-logo-container {
@@ -64,6 +66,7 @@
     padding: unset;
     margin: unset;
     flex-direction: column;
+    width: 100%;
 }
 
 #navbar-submenu-mark {

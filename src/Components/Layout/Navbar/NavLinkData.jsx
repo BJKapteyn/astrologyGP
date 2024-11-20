@@ -69,21 +69,6 @@ export const NavLinkData = [
                 id: 0,
                 route: 'https://app.squareup.com/gift/MLNVK8WKMBMAA/order',
                 text: 'GIFT CARDS'
-            },
-            {
-                id: 1,
-                route: 'https://app.squareup.com/gift/MLNVK8WKMBMAA/order',
-                text: 'GIFT CARDS'
-            },
-            {
-                id: 2,
-                route: 'https://app.squareup.com/gift/MLNVK8WKMBMAA/order',
-                text: 'GIFT CARDS'
-            },
-            {
-                id: 3,
-                route: 'https://app.squareup.com/gift/MLNVK8WKMBMAA/order',
-                text: 'GIFT CARDS'
             }
         ]
     },
