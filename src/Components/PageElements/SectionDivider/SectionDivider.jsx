@@ -2,8 +2,8 @@ import { DividerGraphic } from './DividerGraphic/DividerGraphic';
 import '../../../App.css';
 import './SectionDivider.css';
 
-// Used as a title for the next page section
-export const SectionDivider = ({dividerData}) => {
+// Decorated title text for a major page section
+export const SectionDivider = ({ dividerData }) => {
     const {classname, headingText} = dividerData;
 
     return (

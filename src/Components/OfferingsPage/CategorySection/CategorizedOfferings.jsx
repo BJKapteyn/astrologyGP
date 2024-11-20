@@ -1,21 +1,22 @@
 import { useEffect, useRef, useState } from "react";
-import { Items } from "../Items/Items";
+import { useLocation } from "react-router-dom";
+import { Items } from "../../PageElements/ItemCard/Items.jsx";
 import { SectionDivider } from "../../PageElements/SectionDivider/SectionDivider";
 import './Category.css';
-import { useLocation } from "react-router-dom";
 
 // View after clicking an offering category
-export const CategorizedOfferings = ({ appointmentItemData }) => {
+export const CategorizedOfferings = () => {
     const appointmentItems = useRef(useLocation());
     const [heading, setHeading] = useState(null);
 
+    // Get heading from url
     useEffect(() => {
         if(appointmentItems?.current?.pathname && !heading) {
-            const paths = appointmentItems.current.pathname.split('/');
-            let title = paths[paths.length - 1];
-            title = title.replace(/%20/g, ' ');
+            const urlPathNames = appointmentItems.current.pathname.split('/');
+            let headingText = urlPathNames[urlPathNames.length - 1];
+            headingText = headingText.replace(/%20/g, ' ');
             
-            setHeading(title);
+            setHeading(headingText);
         } else if (!heading) {
             setHeading('Offering');
         }

@@ -104,6 +104,11 @@
 
     .singleoffer-information-container {
         width: 90%;
+        height: 50%;
+    }
+
+    .singleoffer-imagecontainer {
+        height: 50%;
         height: 60%;
     }
 
