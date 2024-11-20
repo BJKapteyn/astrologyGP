@@ -48,12 +48,10 @@ export const SingleOffering = () => {
         const localData = localStorage.getItem(urlParam);
         const localDataJson = JSON.parse(localData);
         setOfferingData(localDataJson);
-    }
-
-    if(!offeringData) {
+        
         return <LoadingIndicator />;
     }
-    
+
     return (
         <main id="singleoffer">
             <div className="singleoffer-imagecontainer">
