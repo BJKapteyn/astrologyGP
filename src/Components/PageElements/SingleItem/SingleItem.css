@@ -1,0 +1,122 @@
+#singleitem {
+    max-width: 70em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 2em auto;
+    height: 35em;
+}
+
+.singleitem-imagecontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+#singleitem-image {
+    display: block;
+    background-position: center;
+    background-size: cover;
+    width: 80%;
+    height: 100%;
+}
+
+.singleitem-information-container {
+    width: 45%;
+    overflow: hidden;
+}
+
+.singleitem-information {
+    text-align: left;
+    padding-right: 17px;
+    margin-bottom: 3em;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+}
+
+#singleitem-name {
+    font-family: bivoac-regular;
+    padding-bottom: 1.5em;
+}
+
+.singleitem-variation-container, #singleitem-descriptiontitle {
+    border-top: 2px solid #686566;
+}
+
+.singleitem-variation-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 3em;
+}
+
+.singleitem-variation, #singleitem-bookbutton {
+    display: inline-block;
+}
+
+#singleitem-bookbutton {
+    display: inline-block;
+    font-size: 1.2em;    
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+#singleitem-bookbutton:hover {
+    background-color: var(--secondary-orange);
+    border-color: var(--secondary-orange);
+}
+
+#singleitem-descriptiontitle {
+    padding: 1.5em 0em .5em 0em;
+}
+
+@media only screen and (max-width: 700px) {
+    #singleitem {
+        max-height: 100em;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .singleitem-imagecontainer {
+        width: 90%;
+        height: 50em;
+    }
+
+    .singleitem-information-container {
+        padding-top: 2em;
+        width: 70%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #singleitem {
+        margin-top: 0px;
+        width: 100%;
+        height: 60em;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .singleitem-information-container {
+        width: 90%;
+        height: 50%;
+    }
+
+    .singleitem-imagecontainer {
+        height: 50%;
+        height: 60%;
+    }
+
+    .singleitem-imagecontainer {
+        height: 40%;
+        width: 100%;
+    }
+    #singleitem-image {
+        width: 100%;
+    }
+}

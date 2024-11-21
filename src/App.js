@@ -1,8 +1,8 @@
 
 import { Routes, Route } from 'react-router-dom';
 import { ComingSoon } from './Components/ComingSoon/ComingSoon.jsx';
-import { SingleOffering } from './Components/OfferingsPage/SingleOffering/SingleOffering.jsx';
 import { CategorizedOfferings } from './Components/OfferingsPage/CategorySection/CategorizedOfferings.jsx';
+import { SingleItem } from './Components/PageElements/SingleItem/SingleItem.jsx';
 import Layout from './Components/Layout/Layout.jsx';
 import HomePage from './Pages/HomePage.jsx';
 import WhyVibePage from './Pages/WhyVibePage.jsx';
@@ -36,11 +36,11 @@ function App() {
           <Route path="/TheCollective" element={<CollectivePage />}></Route>
           <Route path="/Store" element={<StorePage />}></Route>
           <Route path="/Store/:storecategory" element={<StoreCategories />}></Route>
-          <Route path="/Store/:storecategory/:storeitem" element={<SingleOffering />}></Route>
+          <Route path="/Store/:storecategory/:storeitem" element={<SingleItem />}></Route>
           <Route path="/CurrentVibe" element={<ComingSoon comingSoonData={currentVibeComingSoonData} />}></Route>
           <Route path="/Offerings" element={<OfferingsPage />}></Route>
           <Route path="/Offerings/:offering" element={<CategorizedOfferings />}></Route>
-          <Route path="/Offerings/:offering/:singleoffering" element={<SingleOffering />}></Route>
+          <Route path="/Offerings/:offering/:singleoffering" element={<SingleItem />}></Route>
         </Route>
       </Routes>
     </div>
