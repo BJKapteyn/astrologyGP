@@ -36,7 +36,7 @@ function App() {
           <Route path="/CurrentVibe" element={<ComingSoon comingSoonData={currentVibeComingSoonData} />}></Route>
           <Route path="/Offerings" element={<OfferingsPage />}></Route>
           <Route path="/Offerings/:offering" element={<CategorizedOfferings />}></Route>
-          <Route path="/Offerings/:offering/:singleoffering" element={<SingleItem />}></Route>
+          <Route path="/Offerings/:offering/:singleoffering" element={<SingleItem needsVariation={true} />}></Route>
         </Route>
       </Routes>
     </div>
