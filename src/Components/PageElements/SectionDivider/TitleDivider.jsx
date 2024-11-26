@@ -2,7 +2,6 @@ import { DividerGraphic } from './DividerGraphic/DividerGraphic';
 import { useMediaQuery } from 'react-responsive';
 import '../../../App.css';
 import './SectionDivider.css';
-import { Link } from 'react-router-dom';
 
 export const TitleDivider = () => {
     const isTablet = useMediaQuery({query: '(min-width: 750px)'});
@@ -12,23 +11,19 @@ export const TitleDivider = () => {
             <div className="divider-titleGraphic">
                 <DividerGraphic needsFlip={true}></DividerGraphic>
             </div>
-            <Link className="divider-text divider-futura">ASTROLOGY</Link>
-
+            <h1 className="divider-text divider-futura">ASTROLOGY</h1>
             {isTablet && (
                 <div className="divider-titleGraphic">
                     <DividerGraphic isInBetween={true}></DividerGraphic>
                 </div>
             )}
-
-            <Link className="divider-text divider-futura divider-textglow">TAROT READINGS</Link>
-
+            <h1 className="divider-text divider-futura divider-textglow">TAROT READINGS</h1>
             {isTablet && (
                 <div className="divider-titleGraphic">
                     <DividerGraphic isInBetween={true}></DividerGraphic>
                 </div>
             )}
-
-            <Link className="divider-text divider-futura">MEDIUMSHIP</Link>
+            <h1 className="divider-text divider-futura">MEDIUMSHIP</h1>
             <div className="divider-titleGraphic">
                 <DividerGraphic></DividerGraphic>
             </div>
