@@ -14,8 +14,8 @@ export const NavPageLink = ({linkData, callBackSelectCloseMenu}) => {
     let link = <Link onClick={callBackSelectCloseMenu} className="navbar-link" to={route}>{text}</Link>;
     let navLink;
     
-    function handleSubmenuVisibility(isVisible) {
-        setIsExpanded(isVisible);
+    function handleSubmenuVisibility(isExpanded) {
+        setIsExpanded(isExpanded);
     }
 
     if(subMenu) {
@@ -28,7 +28,7 @@ export const NavPageLink = ({linkData, callBackSelectCloseMenu}) => {
         }
         
         if(!isExpanded) {
-            link = <Link onClick={callBackSelectCloseMenu} className="navbar-link">{text}</Link>;
+            link = <Link onClick={() => handleSubmenuVisibility(true)} className="navbar-link">{text}</Link>;
         }
         
         const arrow = <li onClick={() => handleSubmenuVisibility(!isExpanded)} className="navbar-submenu-children" id="navbar-submenu-mark">{subNavMark}</li>
@@ -38,10 +38,7 @@ export const NavPageLink = ({linkData, callBackSelectCloseMenu}) => {
             onMouseLeave={() => handleSubmenuVisibility(false)}
             className="navbar-submenu"
             >
-                <li id="navbar-submenu-top"
-                    onClick={() => {
-                        handleSubmenuVisibility(true)
-                    }}>
+                <li id="navbar-submenu-top">
                     {link}
                     {isMobile && arrow}
                 </li>
