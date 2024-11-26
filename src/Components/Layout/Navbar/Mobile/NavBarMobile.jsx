@@ -13,6 +13,10 @@ export const NavBarMobile = () => {
     const expanded = <MenuExpand></MenuExpand>;
     const retracted = <MenuRetract></MenuRetract>;
 
+    function closeMenu() {
+        setMenuVisibility(false);
+    }
+
     function getToggleButtonGraphic() {
         if(menuVisibility === true) {
             return retracted;
@@ -32,7 +36,7 @@ export const NavBarMobile = () => {
                 <img alt='The Vibe Collective' src={yellowLogo} className="navbar-logoMobile" />
             </li>
             {NavLinkData.map(navData => {
-                return <NavPageLink callBackSelectMenuVisibility={setMenuVisibility} linkData={navData} />
+                return <NavPageLink key={navData.id} callBackSelectCloseMenu={() => closeMenu()} linkData={navData} />
             })}
         </ul>
     );

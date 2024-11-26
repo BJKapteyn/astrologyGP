@@ -8,6 +8,7 @@
 }
 
 .divider-text { 
+    text-align: center;
     font-family: bivoac-regular;
     font-size: 3.1em;
     padding: .7em 0em;

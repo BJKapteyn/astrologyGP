@@ -15,7 +15,7 @@ export const NavBar = () => {
         <nav className='navbar'>
             <ul className="navbar-main-nav">
                 {NavLinkData.slice(0, 3).map(navLinkData => {
-                    return <NavPageLink id={navLinkData.id} linkData={navLinkData}></NavPageLink>
+                    return <NavPageLink key={navLinkData.id} linkData={navLinkData}></NavPageLink>
                 })}
                 <li className="navbar-logo-container">
                     <Link to={'./'}>
@@ -23,7 +23,7 @@ export const NavBar = () => {
                     </Link>
                 </li>
                 {NavLinkData.slice(3, 6).map(navLinkData => {
-                    return <NavPageLink id={navLinkData.id} linkData={navLinkData}></NavPageLink>
+                    return <NavPageLink key={navLinkData.id} linkData={navLinkData}></NavPageLink>
                 })}
             </ul>
             <div className="navbar-social-flex">

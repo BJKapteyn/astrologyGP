@@ -2,8 +2,9 @@ import { DividerGraphic } from './DividerGraphic/DividerGraphic';
 import { useMediaQuery } from 'react-responsive';
 import '../../../App.css';
 import './SectionDivider.css';
+import { Link } from 'react-router-dom';
 
-export const TitleDivider = ({dividerData}) => {
+export const TitleDivider = () => {
     const isTablet = useMediaQuery({query: '(min-width: 750px)'});
 
     return (
@@ -11,7 +12,7 @@ export const TitleDivider = ({dividerData}) => {
             <div className="divider-titleGraphic">
                 <DividerGraphic needsFlip={true}></DividerGraphic>
             </div>
-            <h1 className="divider-text divider-futura">ASTROLOGY</h1>
+            <Link className="divider-text divider-futura">ASTROLOGY</Link>
 
             {isTablet && (
                 <div className="divider-titleGraphic">
@@ -19,7 +20,7 @@ export const TitleDivider = ({dividerData}) => {
                 </div>
             )}
 
-            <h1 className="divider-text divider-futura divider-textglow">TAROT READINGS</h1>
+            <Link className="divider-text divider-futura divider-textglow">TAROT READINGS</Link>
 
             {isTablet && (
                 <div className="divider-titleGraphic">
@@ -27,7 +28,7 @@ export const TitleDivider = ({dividerData}) => {
                 </div>
             )}
 
-            <h1 className="divider-text divider-futura">MEDIUMSHIP</h1>
+            <Link className="divider-text divider-futura">MEDIUMSHIP</Link>
             <div className="divider-titleGraphic">
                 <DividerGraphic></DividerGraphic>
             </div>

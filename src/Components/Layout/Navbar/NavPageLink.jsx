@@ -4,12 +4,14 @@ import { ReactComponent as DownArrow } from '../../../Pics/SvgDrawings/CheveronD
 import { ReactComponent as UpArrow } from '../../../Pics/SvgDrawings/CheveronUp.svg';
 import { useState } from "react";
 
+// linkData - objects containing link display and behavior definition
+// callBackSelectMenuVisibility
 // return Link with data or optional submenu
-export const NavPageLink = ({linkData}) => {
+export const NavPageLink = ({linkData, callBackSelectCloseMenu}) => {
     const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
     const [isExpanded, setIsExpanded] = useState(false);
     const {text, route, subMenu} = linkData;
-    let link = <Link className="navbar-link" to={route}>{text}</Link>;
+    let link = <Link onClick={callBackSelectCloseMenu} className="navbar-link" to={route}>{text}</Link>;
     let navLink;
     
     function handleSubmenuVisibility(isVisible) {
@@ -26,7 +28,7 @@ export const NavPageLink = ({linkData}) => {
         }
         
         if(!isExpanded) {
-            link = <Link className="navbar-link">{text}</Link>;
+            link = <Link onClick={callBackSelectCloseMenu} className="navbar-link">{text}</Link>;
         }
         
         const arrow = <li onClick={() => handleSubmenuVisibility(!isExpanded)} className="navbar-submenu-children" id="navbar-submenu-mark">{subNavMark}</li>
@@ -36,14 +38,24 @@ export const NavPageLink = ({linkData}) => {
             onMouseLeave={() => handleSubmenuVisibility(false)}
             className="navbar-submenu"
             >
-                <li onClick={() => handleSubmenuVisibility(true)} id="navbar-submenu-top">
+                <li id="navbar-submenu-top"
+                    onClick={() => {
+                        handleSubmenuVisibility(true)
+                    }}>
                     {link}
                     {isMobile && arrow}
                 </li>
-                {subMenu.map((subMenu) => {
+                {subMenu.map(subMenuLink => {
                     return (
-                        <li style={{display: displayStatus}} onClick={() => handleSubmenuVisibility(true)} key={subMenu.id} className="navbar-submenu-drop">
-                            <Link itemProp="url" role="link" className="navbar-link" to={subMenu.route}>{subMenu.text}</Link>
+                        <li  
+                            style={{display: displayStatus}} 
+                            onMouseEnter={() => handleSubmenuVisibility(true)} 
+                            onMouseLeave={() => handleSubmenuVisibility(true)} 
+                            key={subMenuLink.id} 
+                            className="navbar-submenu-drop">
+
+                            <Link onClick={callBackSelectCloseMenu} itemProp="url" role="link" className="navbar-link" to={subMenuLink.route}>{subMenuLink.text}</Link>
+
                         </li>
                     )
                 })}
