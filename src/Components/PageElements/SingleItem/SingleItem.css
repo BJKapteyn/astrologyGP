@@ -1,4 +1,4 @@
-#singleoffer {
+#singleitem {
     max-width: 70em;
     display: flex;
     flex-direction: row;
@@ -7,14 +7,14 @@
     height: 35em;
 }
 
-.singleoffer-imagecontainer {
+.singleitem-imagecontainer {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50%;
 }
 
-#singleoffer-image {
+#singleitem-image {
     display: block;
     background-position: center;
     background-size: cover;
@@ -22,12 +22,12 @@
     height: 100%;
 }
 
-.singleoffer-information-container {
+.singleitem-information-container {
     width: 45%;
     overflow: hidden;
 }
 
-.singleoffer-information {
+.singleitem-information {
     text-align: left;
     padding-right: 17px;
     margin-bottom: 3em;
@@ -36,16 +36,16 @@
     height: 100%;
 }
 
-#singleoffer-name {
+#singleitem-name {
     font-family: bivoac-regular;
     padding-bottom: 1.5em;
 }
 
-.singleoffer-variation-container, #singleoffer-descriptiontitle {
+.singleitem-variation-container, #singleitem-descriptiontitle {
     border-top: 2px solid #686566;
 }
 
-.singleoffer-variation-container {
+.singleitem-variation-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -53,39 +53,39 @@
     height: 3em;
 }
 
-.singleoffer-variation, #singleoffer-bookbutton {
+.singleitem-variation, #singleitem-bookbutton {
     display: inline-block;
 }
 
-#singleoffer-bookbutton {
+#singleitem-bookbutton {
     display: inline-block;
     font-size: 1.2em;    
     background-color: var(--main-color);
     border-color: var(--main-color);
 }
-#singleoffer-bookbutton:hover {
+#singleitem-bookbutton:hover {
     background-color: var(--secondary-orange);
     border-color: var(--secondary-orange);
 }
 
-#singleoffer-descriptiontitle {
+#singleitem-descriptiontitle {
     padding: 1.5em 0em .5em 0em;
 }
 
 @media only screen and (max-width: 700px) {
-    #singleoffer {
+    #singleitem {
         max-height: 100em;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .singleoffer-imagecontainer {
+    .singleitem-imagecontainer {
         width: 90%;
         height: 50em;
     }
 
-    .singleoffer-information-container {
+    .singleitem-information-container {
         padding-top: 2em;
         width: 70%;
         height: auto;
@@ -93,7 +93,7 @@
 }
 
 @media only screen and (max-width: 500px) {
-    #singleoffer {
+    #singleitem {
         margin-top: 0px;
         width: 100%;
         height: 60em;
@@ -102,21 +102,21 @@
         align-items: center;
     }
 
-    .singleoffer-information-container {
+    .singleitem-information-container {
         width: 90%;
         height: 50%;
     }
 
-    .singleoffer-imagecontainer {
+    .singleitem-imagecontainer {
         height: 50%;
         height: 60%;
     }
 
-    .singleoffer-imagecontainer {
+    .singleitem-imagecontainer {
         height: 40%;
         width: 100%;
     }
-    #singleoffer-image {
+    #singleitem-image {
         width: 100%;
     }
 }

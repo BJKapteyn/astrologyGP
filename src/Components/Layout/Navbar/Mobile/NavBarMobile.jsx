@@ -3,6 +3,7 @@ import { ActionButton } from '../../../PageElements/ActionButton/ActionButton.js
 import { NavPageLink } from '../NavPageLink.jsx';
 import { ReactComponent as MenuExpand} from '../../../../Pics/Logos/MenuExpand.svg';
 import { ReactComponent as MenuRetract} from '../../../../Pics/Logos/MenuRetract.svg';
+import { NavLinkData } from '../NavLinkData.jsx';
 import yellowLogo from '../../../../Pics/Logos/MainLogoYellow.svg';
 import '../../../../App.css';
 import './NavBarMobile.css';
@@ -11,6 +12,10 @@ export const NavBarMobile = () => {
     const [menuVisibility, setMenuVisibility] = useState(false);
     const expanded = <MenuExpand></MenuExpand>;
     const retracted = <MenuRetract></MenuRetract>;
+
+    function closeMenu() {
+        setMenuVisibility(false);
+    }
 
     function getToggleButtonGraphic() {
         if(menuVisibility === true) {
@@ -30,12 +35,9 @@ export const NavBarMobile = () => {
             <li className="navbar-logoMobile">
                 <img alt='The Vibe Collective' src={yellowLogo} className="navbar-logoMobile" />
             </li>
-            <NavPageLink callBackSelectMenuVisibility={setMenuVisibility} linkData={{text: 'HOME', route: '/', submenu: null}} />
-            <NavPageLink callBackSelectMenuVisibility={setMenuVisibility} linkData={{text: 'OFFERINGS', route: '/Offerings', submenu: null}} />
-            <NavPageLink callBackSelectMenuVisibility={setMenuVisibility} linkData={{text: 'THE COLLECTIVE', route: '/TheCollective', submenu: null}} />
-            <NavPageLink callBackSelectMenuVisibility={setMenuVisibility} linkData={{text: 'SHOP THE VIBE', route: '/Store', submenu: null}} />
-            <NavPageLink callBackSelectMenuVisibility={setMenuVisibility} linkData={{text: 'CURRENT VIBE', route: '/CurrentVibe', submenu: null}} />
-            <NavPageLink callBackSelectMenuVisibility={setMenuVisibility} linkData={{text: 'WORK WITH US', route: '/WhyVibe', submenu: null}} />
+            {NavLinkData.map(navData => {
+                return <NavPageLink key={navData.id} callBackSelectCloseMenu={() => closeMenu()} linkData={navData} />
+            })}
         </ul>
     );
 

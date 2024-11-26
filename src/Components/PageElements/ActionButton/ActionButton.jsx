@@ -2,7 +2,7 @@ import '../../../App.css';
 import './ActionButton.css';
 
 // buttonSettings - settings used to define the button
-// callback       - used to change state of the parent component, will override the action even if the action is defined
+// callback       - used to change state of the parent component, will override the action even if the action is defined previously
 export const ActionButton = ({ buttonSettings, callback = null }) => {
     const {buttonText, buttonStyleId, action } = buttonSettings;
     

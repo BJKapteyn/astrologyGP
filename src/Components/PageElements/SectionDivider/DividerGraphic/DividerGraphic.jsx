@@ -5,7 +5,7 @@ import './DividerGraphic.css';
 //   This graphic defaults to the circle drawn on the right, and the line on the left. 
 //   true to flip it horizontally
 // isInBetween:
-//   true if the graphic is in between text
+//   true if you want the graphic to be in between each word in the text
 export const DividerGraphic = ({needsFlip = false, isInBetween = false}) => {
     const circleStyle = {
         fill: '#e4ba61',

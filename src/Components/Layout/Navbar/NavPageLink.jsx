@@ -1,32 +1,65 @@
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
+import { ReactComponent as DownArrow } from '../../../Pics/SvgDrawings/CheveronDown.svg';
+import { ReactComponent as UpArrow } from '../../../Pics/SvgDrawings/CheveronUp.svg';
 import { useState } from "react";
 
-// return Link with data or submenu if it exists
-export const NavPageLink = ({linkData, callBackSelectMenuVisibility = () => {}}) => {
+// linkData - objects containing link display and behavior definition
+// callBackSelectMenuVisibility
+// return Link with data or optional submenu
+export const NavPageLink = ({linkData, callBackSelectCloseMenu}) => {
+    const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
     const [isExpanded, setIsExpanded] = useState(false);
     const {text, route, subMenu} = linkData;
-    const setMenuVisibility = false;
-    const link = <Link onClick={() => callBackSelectMenuVisibility(setMenuVisibility)} className="navbar-link" to={route}>{text}</Link>;
-
+    let link = <Link onClick={callBackSelectCloseMenu} className="navbar-link" to={route}>{text}</Link>;
     let navLink;
+    
+    function handleSubmenuVisibility(isVisible) {
+        setIsExpanded(isVisible);
+    }
 
     if(subMenu) {
+        let subNavMark = <DownArrow className="navbar-submenu-arrow" />;
+        let displayStatus = 'none';
+        
+        if(isExpanded) {
+            subNavMark = <UpArrow className="navbar-submenu-arrow" />;
+            displayStatus = 'block';
+        }
+        
+        if(!isExpanded) {
+            link = <Link onClick={callBackSelectCloseMenu} className="navbar-link">{text}</Link>;
+        }
+        
+        const arrow = <li onClick={() => handleSubmenuVisibility(!isExpanded)} className="navbar-submenu-children" id="navbar-submenu-mark">{subNavMark}</li>
         navLink = (
             <ul 
-            onMouseEnter={() => setIsExpanded(true)}
-            onMouseLeave={() => setIsExpanded(false)}
+            onMouseEnter={() => handleSubmenuVisibility(true)}
+            onMouseLeave={() => handleSubmenuVisibility(false)}
             className="navbar-submenu"
             >
-                <li className="navbar-submenu-children" id="navbar-submenu-top">
+                <li id="navbar-submenu-top"
+                    onClick={() => {
+                        handleSubmenuVisibility(true)
+                    }}>
                     {link}
+                    {isMobile && arrow}
                 </li>
-                {isExpanded && subMenu.map((subMenu) => {
+                {subMenu.map(subMenuLink => {
                     return (
-                        <li itemtype="http://schema.org/LocalBusiness" itemref="_name1" key={subMenu.id} className="navbar-submenu-children">
-                            <Link itemProp="url" role="link" className="navbar-link" to={subMenu.route}>{subMenu.text}</Link>
+                        <li  
+                            style={{display: displayStatus}} 
+                            onMouseEnter={() => handleSubmenuVisibility(true)} 
+                            onMouseLeave={() => handleSubmenuVisibility(true)} 
+                            key={subMenuLink.id} 
+                            className="navbar-submenu-drop">
+
+                            <Link onClick={callBackSelectCloseMenu} itemProp="url" role="link" className="navbar-link" to={subMenuLink.route}>{subMenuLink.text}</Link>
+
                         </li>
                     )
                 })}
+                {!isMobile && arrow}
             </ul>
         );
     } else {
@@ -34,7 +67,7 @@ export const NavPageLink = ({linkData, callBackSelectMenuVisibility = () => {}})
     }
 
     return (
-        <li>
+        <li className="navbar-navbutton">
             {navLink}
         </li>
     );
