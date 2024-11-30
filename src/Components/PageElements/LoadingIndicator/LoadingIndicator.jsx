@@ -15,7 +15,7 @@ export const LoadingIndicator = ({ message }) => {
 
 		const timeout = setTimeout(() => {
 			setIsTimedOut(true);
-		}, 7000);
+		}, 12000);
 
 		return () => clearTimeout(timeout);
 	}, [message]);
