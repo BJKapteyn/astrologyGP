@@ -22,6 +22,12 @@ export const SingleItem = ({ needsVariation = false, itemLink = null}) => {
         buttonStyleId: 'singleitem-bookbutton',
         action: null
     }
+
+    const buyButtonSettings = {
+        buttonText: 'BUY NOW',
+        buttonStyleId: 'singleitem-bookbutton',
+        action: null
+    }
     
     if(!localStorage.getItem(urlParam)) {
         localStorage.setItem(itemData.name, JSON.stringify(itemData));
@@ -60,7 +66,7 @@ export const SingleItem = ({ needsVariation = false, itemLink = null}) => {
             <div className="singleitem-information-container">
                 <div className="singleitem-information">
                     <p id="singleitem-name">{itemData.name.toUpperCase()}</p>
-                    {!needsVariation && <Link target='_blank' to={"https://the-vibe-collective.square.site/shop/products/HUMYRU6WAPVQ54PYRR4FEUAZ"}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>}
+                    {!needsVariation && <Link target='_blank' to={"https://the-vibe-collective.square.site/shop/products/HUMYRU6WAPVQ54PYRR4FEUAZ"}><ActionButton buttonSettings={buyButtonSettings}></ActionButton></Link>}
                     {needsVariation && itemData.variations.map(variation => {
                         return (
                             <div key={variation.id+variation.name} className="singleitem-variation-container">
