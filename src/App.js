@@ -13,11 +13,6 @@ import './App.css';
 import { StoreCategories } from './Components/StorePage/StoreCategories/StoreCategories.jsx';
 
 function App() {
-  // const storeComingSoonData = {
-  //   heading: 'Check Back Soon!',
-  //   subtext: 'The Vibe Shop will open its doors in Fall 2024! To stay updated on product launches and receive timely notifications, be sure to sign up for our email list.',
-  //   backgroundimage: 'jpeg/CHECK_BACK_store.jpg'
-  // };
 
   const currentVibeComingSoonData = {
     heading: 'Check Back Soon!',

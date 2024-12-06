@@ -9,16 +9,15 @@ import './Items.css';
 export const Items = ({ itemData: items }) => {
     const [productItems, setProductItems] = useState(items);
 
-    // Check for data coming from state
+    // Check for data coming from browser state
     if (productItems.state) {
         setProductItems(productItems.state);
+
+        return <LoadingIndicator />
+        
     } else if  (productItems.items) {// Check for data coming from parent
         setProductItems(productItems.items);
     } 
-
-    // productItems will be null on the first render
-    if(productItems.state)
-        return <LoadingIndicator />
     
     return (
         <div className="items-flex">

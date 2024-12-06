@@ -35,7 +35,7 @@ export const StoreCategories = ({ squareStoreItems }) => {
     }, [azureURL, azureId, squareStoreItems]);
   
     if(!storeItems) {
-        return <LoadingIndicator></LoadingIndicator>
+        return <LoadingIndicator message={'Sorry nothing was found in that category'}></LoadingIndicator>
     }
     return (
         <section className="storecategories">
