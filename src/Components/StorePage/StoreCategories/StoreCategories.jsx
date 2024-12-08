@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from 'react';
 import { Items } from '../../PageElements/ItemCard/Items';
 import { LoadingIndicator } from '../../PageElements/LoadingIndicator/LoadingIndicator';
 import { FunctionNames } from '../../../Enums/FunctionNames';
+import { CategoryId } from '../../../Models/CategoryId';
 import { buildAzureFunctionURL } from '../../../Functions/urlBuilders';
 import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction';
 
@@ -14,7 +15,7 @@ export const StoreCategories = ({ squareStoreItems }) => {
     const urlParams = useRef(useLocation());
 
     // Get store data if nothing is passed from the parent
-    const getSquareStoreItems = usePostAzureFunction(azureURL, azureId);
+    const getSquareStoreItems = usePostAzureFunction(azureURL, new CategoryId(azureId));
     if(getSquareStoreItems && !storeItems){
         setStoreItems(getSquareStoreItems);
     }

@@ -23,10 +23,10 @@ export function useLocalData(key, timespanToCacheInMinutes, callBackGetData = ()
 
             // Check if time lapsed since last cache exceeds the desired cache time
             } else {
-                const millisecondsToSeconds = 1000;
-                const secondsToMinutes = 60;
+                const millisecondsInASecond = 1000;
+                const secondsInAMinute = 60;
                 
-                let minutesSinceDataCached = (currentTime - jsonData.time) / millisecondsToSeconds / secondsToMinutes;
+                let minutesSinceDataCached = (currentTime - jsonData.time) / millisecondsInASecond / secondsInAMinute;
 
                 if(minutesSinceDataCached >= timespanToCacheInMinutes) {
                     localStorage.removeItem(key);

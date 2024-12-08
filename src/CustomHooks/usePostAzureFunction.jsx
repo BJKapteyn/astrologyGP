@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function usePostAzureFunction(endpointUrl, categoryId) {
+export function usePostAzureFunction(endpointUrl, requestBody) {
     const [currentData, setCurrentData] = useState(null);
 
     useEffect(() => {
@@ -14,9 +14,7 @@ export function usePostAzureFunction(endpointUrl, categoryId) {
                       'Content-Type': 'application/json'
                     },
 
-                    body: JSON.stringify({
-                      Id: categoryId,
-                    })
+                    body: JSON.stringify(requestBody)
                 })
                 .then(response => response.json())
                 .then(responseData => {
@@ -27,14 +25,14 @@ export function usePostAzureFunction(endpointUrl, categoryId) {
                 .catch(err => console.debug(err));
         }
         
-        if(endpointUrl && categoryId) {
+        if(endpointUrl && requestBody) {
             getAllItems();
         }
 
         return () => {
             active = false;
         }
-    }, [endpointUrl, categoryId]);
+    }, [endpointUrl, requestBody]);
 
     return currentData;
 }
