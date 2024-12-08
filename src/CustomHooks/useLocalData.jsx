@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
 
-export function useLocalData(key, data, timespanToCacheInMinutes) {
-    const [isCachedDataVerified, setIsCachedDataVerified] = useState(false);
-    const [cachedItemData, setCachedItemData] = useState(null);
+// Gets and verifies local cache. A`ttempts to refresh the cache if verification fails
+//    key                      - Key to retrieve and check data cache
+//    timespanToCacheInMinutes - Amount of time until cache needs to be refreshed
+//    callBackGetData          - Callback function used to refresh cache
+export function useLocalData(key, timespanToCacheInMinutes, callBackGetData = () => {}) {
+    const [isCacheVerified, setIsCacheVerified] = useState(false);
+    const [cachedItemState, setCachedItemState] = useState(null);
 
     useEffect(() => {
         let cachedData = localStorage.getItem(key);
         let currentTime = Date.now();
-        let shouldResetData = false;
+        let shouldResetCache = false;
 
         if(cachedData) {
             let jsonData = JSON.parse(cachedData);
@@ -15,43 +19,48 @@ export function useLocalData(key, data, timespanToCacheInMinutes) {
             // Check if there is old data from before this hook was implemented
             if(!jsonData.time) {
                 localStorage.clear();
-                shouldResetData = true;
+                shouldResetCache = true;
 
             // Check if time lapsed since last cache exceeds the desired cache time
             } else {
-                const millisecondsInSecond = 1000;
-                const secondsInMinute = 60;
-                let minutesSinceDataCached = (currentTime - jsonData.time) / millisecondsInSecond / secondsInMinute;
+                const millisecondsToSeconds = 1000;
+                const secondsToMinutes = 60;
+                
+                let minutesSinceDataCached = (currentTime - jsonData.time) / millisecondsToSeconds / secondsToMinutes;
 
                 if(minutesSinceDataCached >= timespanToCacheInMinutes) {
                     localStorage.removeItem(key);
-                    shouldResetData = true;
+                    shouldResetCache = true;
 
                 } else {
-                    setIsCachedDataVerified(true);
+                    setIsCacheVerified(true);
                 }
             }
         }
 
-        if(shouldResetData) {
+        if(shouldResetCache) {
             cachedData = null;
         }
         
-        if(!cachedData && data) {
-            let dataToCacheLocally = {
-                time: currentTime,
-                itemData: data
+        if(!cachedData) {
+            let refreshedData = callBackGetData();
+
+            if(refreshedData) {
+                let dataToCache = {
+                    time: currentTime,
+                    itemData: refreshedData
+                }
+                localStorage.setItem(key, JSON.stringify(dataToCache));
+                setIsCacheVerified(true);
             }
-            localStorage.setItem(key, JSON.stringify(dataToCacheLocally));
-            setIsCachedDataVerified(true);
         }
 
-        if(isCachedDataVerified) {
-            setCachedItemData(cachedData);
+        if(isCacheVerified) {
+            setCachedItemState(cachedData);
         }
     
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [data])
+    }, [])
 
-    return cachedItemData;
+    return cachedItemState;
 }
