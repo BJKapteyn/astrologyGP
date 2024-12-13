@@ -11,16 +11,12 @@ import { useLocation } from 'react-router-dom';
 // Page that shows all of the offered services
 export default function Offerings() {
     const endpointUrl = useRef(buildAzureFunctionURL(FunctionNames.GetCategoriesByCategoryId, process.env.REACT_APP_GET_CATEGORIES_BY_CATEGORY_ID));
-    const [serviceItems, setServiceItemData] = useState(null);
     const categoryId = useRef(new CategoryId(ParentCategoryIds.Services));
     const urlParams = useRef(useLocation());
+    const [serviceItems, setServiceItemData] = useState(null);
     console.log(urlParams);
     // const azureItems = useGetAzureFunction(endpointUrl.current);
-    const azureItems = usePostAzureFunction(endpointUrl.current, categoryId.current);
-
-    // function getItemsCallback() {
-    //     let azureItems = useGetAzureFunction(endpointUrl.current)
-    // }
+    const azureItems = usePostAzureFunction(endpointUrl.current, categoryId.current, categoryId.current.Id);
 
     if(azureItems && !serviceItems) {
         setServiceItemData(azureItems)

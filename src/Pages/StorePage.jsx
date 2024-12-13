@@ -6,11 +6,13 @@ import { SectionDivider } from "../Components/PageElements/SectionDivider/Sectio
 import { StoreCategories } from '../Components/StorePage/StoreCategories/StoreCategories.jsx';
 import { LoadingIndicator } from "../Components/PageElements/LoadingIndicator/LoadingIndicator.jsx";
 import { buildAzureFunctionURL } from "../Functions/urlBuilders.js";
+import { CategoryId } from "../Models/CategoryId.js";
 
 export default function StorePage() {
     const [itemData, setItemData] = useState(null);
     const getCategoriesByCategoryIdURL = buildAzureFunctionURL(FunctionNames.GetCategoriesByCategoryId, process.env.REACT_APP_GET_CATEGORIES_BY_CATEGORY_ID)
-    const azureItemData = usePostAzureFunction(getCategoriesByCategoryIdURL, ParentCategoryIds.Products);
+    const categoryId = new CategoryId(ParentCategoryIds.Products);
+    const azureItemData = usePostAzureFunction(getCategoriesByCategoryIdURL, categoryId, categoryId.Id);
 
     const storetitleSettings = {
         headingText: 'STORE'
