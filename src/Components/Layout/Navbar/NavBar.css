@@ -120,7 +120,6 @@
     .navbar-link {
         font-size: 1em;
         padding: .5em 1.5em;
-
     }
 }
 
@@ -141,12 +140,19 @@
     .navbar-submenu {
         align-items: start;
     }
+
     .navbar-navbutton {
         width: 15em;
         height: auto;
     }
+
     .navbar-link, #navbar-submenu-mark {
         display: inline-block;
+    }
+
+    .navbar-link {
+        width: 10em;
+        text-align: left;
     }
 
     .navbar-submenu-drop {

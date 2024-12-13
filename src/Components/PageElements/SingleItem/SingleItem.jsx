@@ -9,7 +9,7 @@ import '../../../App.css';
 import './SingleItem.css';
 
 // View detailed item information
-export const SingleItem = ({ needsVariation = false, itemLink = null}) => {
+export const SingleItem = ({ needsVariation: hasVariation = false}) => {
     const defaultItemURL = 'https://the-vibe-collective.square.site/';
     const [imageUrl, setImageUrl] = useState(moon);
     const [itemData, setItemData] = useState(useLocation().state);
@@ -66,8 +66,8 @@ export const SingleItem = ({ needsVariation = false, itemLink = null}) => {
             <div className="singleitem-information-container">
                 <div className="singleitem-information">
                     <p id="singleitem-name">{itemData.name.toUpperCase()}</p>
-                    {!needsVariation && <Link target='_blank' to={"https://the-vibe-collective.square.site/shop/products/HUMYRU6WAPVQ54PYRR4FEUAZ"}><ActionButton buttonSettings={buyButtonSettings}></ActionButton></Link>}
-                    {needsVariation && itemData.variations.map(variation => {
+                    {!hasVariation && <Link target='_blank' to={"https://the-vibe-collective.square.site/shop/products/HUMYRU6WAPVQ54PYRR4FEUAZ"}><ActionButton buttonSettings={buyButtonSettings}></ActionButton></Link>}
+                    {hasVariation && itemData.variations.map(variation => {
                         return (
                             <div key={variation.id+variation.name} className="singleitem-variation-container">
                                 <p className="singleitem-variation">{variation.name.toUpperCase()}</p>
@@ -77,7 +77,7 @@ export const SingleItem = ({ needsVariation = false, itemLink = null}) => {
                             </div>
                         )
                     })}
-                    {itemData.description && <p id="singleitem-descriptiontitle">DESCRIPTION</p>}
+                    {itemData.description && (hasVariation ? <p id="singleitem-descriptiontitle">DESCRIPTION</p> : <p style={{borderTop: 'none'}} id="singleitem-descriptiontitle">DESCRIPTION</p>)}
                     {itemData.description && <p id="singleitem-description">{itemData.description}</p>}
                     <br></br>
                     <br></br>

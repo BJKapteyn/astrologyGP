@@ -30,8 +30,8 @@
 #signup-closecontainer {
     height: 4em;
     position: absolute;
-    top: 5%;
-    right: 1%;
+    top: 1em;
+    right: .5em;
 }
 .signup-close {
     height: 100%;
