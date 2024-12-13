@@ -7,26 +7,28 @@ import './Category.css';
 // View after clicking an offering category
 export const CategorizedOfferings = () => {
     const appointmentItems = useRef(useLocation());
-    const [heading, setHeading] = useState(null);
+    const [offeringName, setOfferingName] = useState(null);
 
     // Get heading from url
     useEffect(() => {
-        if(appointmentItems?.current?.pathname && !heading) {
+        if(appointmentItems?.current?.pathname && !offeringName) {
             const urlPathNames = appointmentItems.current.pathname.split('/');
-            let headingText = urlPathNames[urlPathNames.length - 1];
-            headingText = headingText.replace(/%20/g, ' ');
+            let uriParams = urlPathNames[urlPathNames.length - 1]?.split('-');
+            let name = uriParams[0];
+            let id = uriParams[1];
+            name = name.replace(/%20/g, ' ');
             
-            setHeading(headingText);
-        } else if (!heading) {
-            setHeading('Offering');
+            setOfferingName(name);
+        } else if (!offeringName) {
+            setOfferingName('Offering');
         }
 
-    }, [heading]);
+    }, [offeringName]);
 
     return (
         <>
             <section className="category-section">
-                <SectionDivider dividerData={{headingText: heading}}></SectionDivider>
+                <SectionDivider dividerData={{headingText: offeringName}}></SectionDivider>
 
                 <Items itemData={appointmentItems.current} />
             </section>
