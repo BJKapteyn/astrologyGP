@@ -1,3 +1,4 @@
-export function CategoryId(id) {
-    this.Id = id
+export function CategoryId(id, productType = null) {
+    this.Id = id;
+    this.ProductType = productType;
 } 

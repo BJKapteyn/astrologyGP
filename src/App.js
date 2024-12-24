@@ -3,6 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 import { ComingSoon } from './Components/ComingSoon/ComingSoon.jsx';
 import { CategorizedOfferings } from './Components/OfferingsPage/CategorySection/CategorizedOfferings.jsx';
 import { SingleItem } from './Components/PageElements/SingleItem/SingleItem.jsx';
+import { StoreCategories } from './Components/StorePage/StoreCategories/StoreCategories.jsx';
+import { ItemListByCategory } from './Components/PageElements/ItemListByCategory/ItemListByCategory.jsx';
 import Layout from './Components/Layout/Layout.jsx';
 import HomePage from './Pages/HomePage.jsx';
 import WhyVibePage from './Pages/WhyVibePage.jsx';
@@ -10,7 +12,6 @@ import CollectivePage from './Pages/CollectivePage.jsx';
 import OfferingsPage from './Pages/OfferingsPage.jsx';
 import StorePage from './Pages/StorePage.jsx';
 import './App.css';
-import { StoreCategories } from './Components/StorePage/StoreCategories/StoreCategories.jsx';
 
 function App() {
 
@@ -28,11 +29,11 @@ function App() {
           <Route path="/WhyVibe" element={<WhyVibePage />}></Route>
           <Route path="/TheCollective" element={<CollectivePage />}></Route>
           <Route path="/Store" element={<StorePage />}></Route>
-          <Route path="/Store/:storecategory" element={<StoreCategories />}></Route>
+          <Route path="/Store/:storecategory" element={<ItemListByCategory />}></Route>
           <Route path="/Store/:storecategory/:storeitem" element={<SingleItem />}></Route>
           <Route path="/CurrentVibe" element={<ComingSoon comingSoonData={currentVibeComingSoonData} />}></Route>
           <Route path="/Offerings" element={<OfferingsPage />}></Route>
-          <Route path="/Offerings/:offering" element={<CategorizedOfferings />}></Route>
+          <Route path="/Offerings/:offering" element={<ItemListByCategory />}></Route>
           <Route path="/Offerings/:offering/:singleoffering" element={<SingleItem hasVariation={true} />}></Route>
         </Route>
       </Routes>
