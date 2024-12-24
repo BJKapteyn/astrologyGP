@@ -11,7 +11,7 @@ export function usePostAzureFunction(endpointUrl, requestBody, localCacheKey = n
     const minutesToCacheData = 5;
     const localStorageData = useLocalData(localCacheKey, minutesToCacheData);
 
-    if(!currentData && localStorageData) {
+    if(!!currentData === false && localStorageData) {
         setCurrentData(localStorageData);
     }
 
@@ -44,7 +44,7 @@ export function usePostAzureFunction(endpointUrl, requestBody, localCacheKey = n
         return () => {
             active = false;
         }
-    }, [endpointUrl, requestBody, localStorageData, currentData]);
+    }, [endpointUrl, requestBody, localStorageData, currentData, localCacheKey]);
 
     if(!localStorageData && currentData && localCacheKey) {
         const localCache = new DataCache(currentData);

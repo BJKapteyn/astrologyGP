@@ -10,30 +10,29 @@ import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction'
 
 export const StoreCategories = ({ squareStoreItems }) => {
     const [azureURL, setAzureURL] = useState(null);
-    const [azureId, setAzureId] = useState(null);
     const [storeItems, setStoreItems] = useState(squareStoreItems);
+    const [categoryId, setCategoryId] = useState(null);
     const urlParams = useRef(useLocation());
 
     // Get store data if nothing is passed from the parent
-    const getSquareStoreItems = usePostAzureFunction(azureURL, new CategoryId(azureId));
+    const getSquareStoreItems = usePostAzureFunction(azureURL, categoryId, categoryId?.Id);
     if(getSquareStoreItems && !storeItems){
         setStoreItems(getSquareStoreItems);
     }
     
     useEffect(() => {
         if(!squareStoreItems){
-
             if(!azureURL) {
                 const url = buildAzureFunctionURL(FunctionNames.GetItemsByCategoryId, process.env.REACT_APP_GET_ITEMS_BY_CATEGORY_ID);
                 setAzureURL(url);
             }
-            if(!azureId) {
-                const paramARr = urlParams.current.pathname.split('/');
-                const id = paramARr[paramARr.length - 1].split('-')[1];
-                setAzureId(id);
+            if(!categoryId) {
+                const paramArray = urlParams.current.pathname.split('/');
+                const id = paramArray[paramArray.length - 1].split('-')[1];
+                setCategoryId(new CategoryId(id));
             }
         }
-    }, [azureURL, azureId, squareStoreItems]);
+    }, [azureURL, categoryId, squareStoreItems]);
   
     if(!storeItems) {
         return <LoadingIndicator message={'Sorry nothing was found in that category'}></LoadingIndicator>

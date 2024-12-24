@@ -15,7 +15,6 @@ export default function Offerings() {
     const urlParams = useRef(useLocation());
     const [serviceItems, setServiceItemData] = useState(null);
     console.log(urlParams);
-    // const azureItems = useGetAzureFunction(endpointUrl.current);
     const azureItems = usePostAzureFunction(endpointUrl.current, categoryId.current, categoryId.current.Id);
 
     if(azureItems && !serviceItems) {
