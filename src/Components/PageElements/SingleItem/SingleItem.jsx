@@ -9,7 +9,7 @@ import '../../../App.css';
 import './SingleItem.css';
 
 // View detailed item information
-export const SingleItem = ({ needsVariation: hasVariation = false}) => {
+export const SingleItem = ({ hasVariation = false}) => {
     const defaultItemURL = 'https://the-vibe-collective.square.site/';
     const [imageUrl, setImageUrl] = useState(moon);
     const [itemData, setItemData] = useState(useLocation().state);

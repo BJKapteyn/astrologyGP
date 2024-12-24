@@ -8,9 +8,9 @@ import { CategoryId } from '../../../Models/CategoryId';
 import { buildAzureFunctionURL } from '../../../Functions/urlBuilders';
 import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction';
 
-export const StoreCategories = ({ squareStoreItems }) => {
+export const ItemListByCategory = ({ itemList }) => {
     const [azureURL, setAzureURL] = useState(null);
-    const [storeItems, setStoreItems] = useState(squareStoreItems);
+    const [storeItems, setStoreItems] = useState(itemList);
     const [categoryId, setCategoryId] = useState(null);
     const urlParams = useRef(useLocation());
 
@@ -21,7 +21,7 @@ export const StoreCategories = ({ squareStoreItems }) => {
     }
     
     useEffect(() => {
-        if(!squareStoreItems){
+        if(!itemList){
             if(!azureURL) {
                 const url = buildAzureFunctionURL(FunctionNames.GetItemsByCategoryId, process.env.REACT_APP_GET_ITEMS_BY_CATEGORY_ID);
                 setAzureURL(url);
@@ -32,13 +32,13 @@ export const StoreCategories = ({ squareStoreItems }) => {
                 setCategoryId(new CategoryId(id));
             }
         }
-    }, [azureURL, categoryId, squareStoreItems]);
+    }, [azureURL, categoryId, itemList]);
   
     if(!storeItems) {
         return <LoadingIndicator message={'Sorry nothing was found in that category'}></LoadingIndicator>
     }
     return (
-        <section className="storecategories">
+        <section id="storecategories">
             <Items itemData={storeItems}></Items>
         </section>
     );
