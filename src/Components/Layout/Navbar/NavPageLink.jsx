@@ -46,6 +46,7 @@ export const NavPageLink = ({linkData, callBackSelectCloseMenu}) => {
                     return (
                         <li  
                             style={{display: displayStatus}} 
+                            onClick={() => handleSubmenuVisibility(false)}
                             onMouseEnter={() => handleSubmenuVisibility(true)} 
                             onMouseLeave={() => handleSubmenuVisibility(true)} 
                             key={subMenuLink.id} 

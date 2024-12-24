@@ -67,6 +67,11 @@ export const NavLinkData = [
         subMenu: [
             {
                 id: 0,
+                route: '/Store',
+                text: 'STORE'
+            },
+            {
+                id: 1,
                 route: 'https://app.squareup.com/gift/MLNVK8WKMBMAA/order',
                 text: 'GIFT CARDS'
             }
