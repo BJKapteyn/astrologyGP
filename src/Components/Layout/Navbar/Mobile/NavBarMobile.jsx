@@ -13,16 +13,17 @@ export const NavBarMobile = () => {
     const expanded = <MenuExpand></MenuExpand>;
     const retracted = <MenuRetract></MenuRetract>;
 
-    function closeMenu() {
-        setMenuVisibility(false);
-    }
-
+    
     function getToggleButtonGraphic() {
         if(menuVisibility === true) {
             return retracted;
         } else {
             return expanded;
         }
+    }
+
+    function closeMenu() {
+        setMenuVisibility(false);
     }
 
     const expandButtonSettings = {
@@ -42,9 +43,9 @@ export const NavBarMobile = () => {
     );
 
     return (
-        <div className="navbar-mobile">
+        <nav id="navbar-mobile">
             {menuVisibility === true && navbarShow}
             <ActionButton callback={() => setMenuVisibility(!menuVisibility)} buttonSettings={expandButtonSettings}></ActionButton>
-        </div>
+        </nav>
     );
 }

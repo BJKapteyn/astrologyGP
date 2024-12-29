@@ -12,7 +12,7 @@ export const NavBar = () => {
     const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
     
     const defaultNavBar = (
-        <nav className='navbar'>
+        <div className='navbar'>
             <ul className="navbar-main-nav">
                 {NavLinkData.slice(0, 3).map(navLinkData => {
                     return <NavPageLink key={navLinkData.id} linkData={navLinkData}></NavPageLink>
@@ -29,14 +29,14 @@ export const NavBar = () => {
             <div className="navbar-social-flex">
                 <Socials></Socials>
             </div>
-        </nav>
+        </div>
     );
 
     const navBar = isMobile ? <NavBarMobile></NavBarMobile> : defaultNavBar; 
     
     return (
-        <div>
+        <nav id="navbar-container">
             {navBar}
-        </div>
+        </nav>
     )
 }

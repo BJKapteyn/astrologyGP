@@ -4,7 +4,7 @@
     fill: var(--secondary-orange);
     background-color: rgba(0,0,0,0);
     border: none;
-    position: fixed;
+    position: absolute;
     padding: 0px;
     right: .5em;
     top: .5em;
@@ -16,6 +16,10 @@
     background: rgba(0,0,0,0);
     stroke: var(--main-color);
     fill: var(--main-color);
+}
+
+#navbar-mobile {
+    position: relative;
 }
 
 .navbar-mainMobile {
