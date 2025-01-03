@@ -24,13 +24,11 @@ export const CategorizedOfferings = () => {
     }, [heading]);
 
     return (
-        <>
-            <section className="category-section">
-                <SectionDivider dividerData={{headingText: heading}}></SectionDivider>
+        <section className="category-section">
+            <SectionDivider dividerData={{headingText: heading}}></SectionDivider>
 
-                <Items itemData={appointmentItems.current} />
-            </section>
-        </>
+            <Items itemData={appointmentItems.current} />
+        </section>
     );
 }
 

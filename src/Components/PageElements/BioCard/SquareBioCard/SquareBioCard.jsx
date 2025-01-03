@@ -34,7 +34,7 @@ export const SquareBioCard = () => {
                     .then(json => {
                         let bioCardData = json.map(card => {
                             let bioCard = {
-                                id: card.id,
+                                id: card.Id,
                                 imageURL: card.ImageURL,
                                 image: null,
                                 name: card.Name,
@@ -68,7 +68,7 @@ export const SquareBioCard = () => {
     return (
         <div className="biocard-flex-container">
             {cardData?.map(data => {
-                return <BioCard key={data.id} cardData={data} callbackSelect={selectBioCard}></BioCard>
+                return <BioCard key={data.Id} cardData={data} callbackSelect={selectBioCard}></BioCard>
             })}
             {bioData && (
                 <CardModal containerStyleId={'biocard-modal-container'} callBackDeselect={deSelectBioCard} >
