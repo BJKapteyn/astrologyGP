@@ -8,7 +8,7 @@ import { CategoryId } from '../../../Models/CategoryId';
 import { buildAzureFunctionURL } from '../../../Functions/urlBuilders';
 import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction';
 
-export const ItemListByCategory = ({ itemList }) => {
+export const ItemListByCategory = ({ itemList, productType = null }) => {
     const [azureURL, setAzureURL] = useState(null);
     const [storeItems, setStoreItems] = useState(itemList);
     const [categoryId, setCategoryId] = useState(null);
@@ -29,10 +29,11 @@ export const ItemListByCategory = ({ itemList }) => {
             if(!categoryId) {
                 const paramArray = urlParams.current.pathname.split('/');
                 const id = paramArray[paramArray.length - 1].split('-')[1];
-                setCategoryId(new CategoryId(id));
+
+                setCategoryId(new CategoryId(id, productType));
             }
         }
-    }, [azureURL, categoryId, itemList]);
+    }, [azureURL, categoryId, itemList, productType]);
   
     if(!storeItems) {
         return <LoadingIndicator message={'Sorry nothing was found in that category'}></LoadingIndicator>
