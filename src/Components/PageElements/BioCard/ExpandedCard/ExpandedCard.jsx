@@ -1,15 +1,23 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { buyButtonActivated } from '../../../../FeatureFlags/launchFeatures.js';
 import { ActionButton } from '../../ActionButton/ActionButton.jsx';
+import { buildSingleItemURL } from '../../../../Functions/urlBuilders.js';
 import '../../../../App.css';
 import './ExpandedCard.css';
 
 export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {
-    const { imageURL, name, sign, description, threeWords, expertise } = productItem;
+    const { imageURL, name, sign, description, threeWords, expertise, id } = productItem;
+    const [bookUrl, setBookUrl] = useState(buildSingleItemURL(id));
+
+    if(!!bookUrl === false) {
+        setBookUrl(buildSingleItemURL(id));
+    }
 
     const bookButtonSettings = {
         buttonText: 'BOOK',
-        buttonStyleId: 'expandedcard-bookButton'
+        buttonStyleId: 'expandedcard-bookButton',
+        action: null
     };
 
     const closeButtonSettings = {
@@ -36,7 +44,7 @@ export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {
                 <p className="expandedcard-infotext">{sign}</p>
             </div>
             <div className="expandedcard-button">
-                {buyButtonActivated && <Link to={"https://the-vibe-collective.square.site/"}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>}
+                {buyButtonActivated && <Link target='_blank' to={bookUrl}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>}
                 <ActionButton callback={callBackDeselect} buttonSettings={closeButtonSettings}></ActionButton>
             </div> 
             <div className="expandedcard-description">

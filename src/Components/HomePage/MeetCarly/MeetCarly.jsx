@@ -3,7 +3,7 @@ import './MeetCarly.css';
 
 export const MeetCarly = () => {
     const buttonSettings = {
-        buttonText: 'LEARN MORE',
+        buttonText: 'BOOK NOW',
         buttonStyleId: 'meet-morebutton',
         action: null
     }
