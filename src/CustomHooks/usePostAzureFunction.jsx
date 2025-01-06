@@ -8,7 +8,7 @@ import { DataCache } from "../Models/DataCache";
 //  localCacheKey (optional) - will cache the results locally if a key is provided
 export function usePostAzureFunction(endpointUrl, requestBody, localCacheKey = null) {
     const [currentData, setCurrentData] = useState(null);
-    const minutesToCacheData = 5;
+    const minutesToCacheData = 60;
     const localStorageData = useLocalData(localCacheKey, minutesToCacheData);
 
     if(!!currentData === false && localStorageData) {

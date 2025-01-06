@@ -7,6 +7,7 @@ import { FunctionNames } from '../../../Enums/FunctionNames';
 import { CategoryId } from '../../../Models/CategoryId';
 import { buildAzureFunctionURL } from '../../../Functions/urlBuilders';
 import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction';
+import { SingleItem } from '../SingleItem/SingleItem';
 
 export const ItemListByCategory = ({ itemList, productType = null }) => {
     const [azureURL, setAzureURL] = useState(null);
@@ -37,6 +38,10 @@ export const ItemListByCategory = ({ itemList, productType = null }) => {
   
     if(!storeItems) {
         return <LoadingIndicator message={'Sorry nothing was found in that category'}></LoadingIndicator>
+    }
+    // Go directly to the epanded view if there is only one item under the category
+    if(storeItems.length === 1) {
+        return <SingleItem itemData={storeItems[0]}></SingleItem>
     }
     return (
         <section id="storecategories">
