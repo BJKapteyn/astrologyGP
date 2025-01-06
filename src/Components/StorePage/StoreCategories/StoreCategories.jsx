@@ -7,6 +7,7 @@ import { FunctionNames } from '../../../Enums/FunctionNames';
 import { CategoryId } from '../../../Models/CategoryId';
 import { buildAzureFunctionURL } from '../../../Functions/urlBuilders';
 import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction';
+import { ProductTypes } from '../../../Enums/ProductTypes';
 
 export const StoreCategories = ({ squareStoreItems }) => {
     const [azureURL, setAzureURL] = useState(null);
@@ -29,7 +30,8 @@ export const StoreCategories = ({ squareStoreItems }) => {
             if(!categoryId) {
                 const paramArray = urlParams.current.pathname.split('/');
                 const id = paramArray[paramArray.length - 1].split('-')[1];
-                setCategoryId(new CategoryId(id));
+
+                setCategoryId(new CategoryId(id, ProductTypes.AppointmentsService));
             }
         }
     }, [azureURL, categoryId, squareStoreItems]);

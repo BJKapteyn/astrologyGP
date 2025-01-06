@@ -1,7 +1,11 @@
-export function buildSingleItemURL(itemID) {
-    const bookURL = 'https://book.squareup.com/appointments/ysiif4g893rlw0/location/LP1D86FB8MBJ9/services/';
+export function buildSingleItemURL(itemId) {
+    const bookUrl = 'https://book.squareup.com/appointments/ysiif4g893rlw0/location/LP1D86FB8MBJ9/services/';
 
-    return bookURL + itemID;
+    if(!itemId) {
+        return null;
+    }
+
+    return bookUrl + itemId;
 }
 
 export function buildAzureFunctionURL(functionName, code) {

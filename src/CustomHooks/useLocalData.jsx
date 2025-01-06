@@ -4,24 +4,20 @@ import { useState } from "react";
 //    key                      - Key to retrieve and check data cache
 //    timespanToCacheInMinutes - Amount of time until cache needs to be refreshed
 export function useLocalData(key, timespanToCacheInMinutes) {
-    const [cachedItemState, setCachedItemState] = useState(null);
-    const [isFirstRender, setIsFirstRender] = useState(true);
+    const [localCacheState, setLocalCacheState] = useState(null);
 
     if(!key) {
         return null;
     }
 
-    if(isFirstRender)
-        setIsFirstRender(false);
-
-    const cacheStateIsEmpty = !!cachedItemState === false;
-    let cachedData = localStorage.getItem(key);
+    const isCacheStateEmpty = !!localCacheState === false;
+    let localCache = localStorage.getItem(key);
     let isCacheVerified = false;
     
-    if(cachedData && cacheStateIsEmpty) {
+    if(localCache && isCacheStateEmpty) {
         let currentTime = Date.now();
-        let parsedData = JSON.parse(cachedData);
-        cachedData = parsedData.cache;
+        let parsedData = JSON.parse(localCache);
+        localCache = parsedData.cache;
 
         // Check if there is old data from before this hook was implemented
         if(!parsedData.time) {
@@ -44,12 +40,12 @@ export function useLocalData(key, timespanToCacheInMinutes) {
         }
     }
     
-    if(isCacheVerified && cacheStateIsEmpty) {
-        setCachedItemState(cachedData);
+    if(isCacheVerified && isCacheStateEmpty) {
+        setLocalCacheState(localCache);
     }
 
-    if(cachedData && isCacheVerified && isFirstRender)
-        return cachedData
+    if(localCache && isCacheVerified)
+        return localCache;
     
-    return cachedItemState;
+    return localCacheState;
 }
