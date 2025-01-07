@@ -6,6 +6,7 @@ import { socialLinks } from '../../../Data/Socials/socialLinks';
 import '../../../App.css';
 import './Socials.css';
 
+// Links to social media pages
 export const Socials = ({ styleId = null }) => {
     const styleid = styleId ?? '';
 

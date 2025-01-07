@@ -42,7 +42,7 @@ export const ItemListByCategory = ({ itemList, productType = null }) => {
     // Go directly to the epanded view if there is only one item under the category
     if(storeItems.length === 1) {
         return <SingleItem itemData={storeItems[0]}></SingleItem>
-    }
+    }   
     return (
         <section id="storecategories">
             <Items itemData={storeItems}></Items>

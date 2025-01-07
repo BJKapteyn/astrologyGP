@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import { OfferingCategories } from '../Components/OfferingsPage/CategorySection/OfferingCategories';
 import { LoadingIndicator } from '../Components/PageElements/LoadingIndicator/LoadingIndicator';
 import { buildAzureFunctionURL } from '../Functions/urlBuilders.js';
-import { ParentCategoryIds } from '../Enums/CategoryIds.js';
+import { ParentCategoryIds } from '../Enums/ParentCategoryIds.js';
 import { FunctionNames } from '../Enums/FunctionNames.js';
 import { usePostAzureFunction } from '../CustomHooks/usePostAzureFunction.jsx';
 import { CategoryId } from '../Models/CategoryId.js';

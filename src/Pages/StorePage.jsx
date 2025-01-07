@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ParentCategoryIds } from "../Enums/CategoryIds.js";
+import { ParentCategoryIds } from "../Enums/ParentCategoryIds.js";
 import { usePostAzureFunction } from "../CustomHooks/usePostAzureFunction.jsx";
 import { FunctionNames } from "../Enums/FunctionNames.js";
 import { SectionDivider } from "../Components/PageElements/SectionDivider/SectionDivider";
