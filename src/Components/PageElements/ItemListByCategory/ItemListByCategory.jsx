@@ -31,7 +31,7 @@ export const ItemListByCategory = ({ itemList, productType = null }) => {
                 const paramArray = urlParams.current.pathname.split('/');
                 const id = paramArray[paramArray.length - 1].split('-')[1];
 
-                setCategoryId(new CategoryId(id, productType));
+                setCategoryId(new CategoryId(id, productType, id));
             }
         }
     }, [azureURL, categoryId, itemList, productType]);

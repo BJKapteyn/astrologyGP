@@ -12,7 +12,7 @@ export const TitleDivider = () => {
             <div className="divider-titleGraphic">
                 <DividerGraphic needsFlip={true}></DividerGraphic>
             </div>
-            <Link  to={'http://localhost:3000/Offerings/Tarot-BO3VI3MRP5O4QUSPWJPHB7WJ'}>
+            <Link  to={'http://localhost:3000/Offerings/Astrology-SWLZ6MMXKJSRVKRNRVKXVQGJ'}>
                 <h1 className="divider-text divider-futura link-colorfade">ASTROLOGY</h1>
             </Link>
             {isTablet && (
@@ -28,7 +28,7 @@ export const TitleDivider = () => {
                     <DividerGraphic isInBetween={true}></DividerGraphic>
                 </div>
             )}
-            <Link to={'http://localhost:3000/Offerings/Tarot-BO3VI3MRP5O4QUSPWJPHB7WJ'}>
+            <Link to={'http://localhost:3000/Offerings/Mediumship-WBIUSSJV2DQ2TXNJVNWIT6A3'}>
                 <h1 className="divider-text divider-futura link-colorfade">MEDIUMSHIP</h1>
             </Link>
 

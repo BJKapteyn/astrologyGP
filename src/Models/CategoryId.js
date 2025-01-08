@@ -1,5 +1,5 @@
-export function CategoryId(id, productType = null, reportingCategory = null) {
+export function CategoryId(id, productType = null, reportingCategoryId = null) {
     this.Id = id;
     this.ProductType = productType;
-    this.ReportingCategory = reportingCategory;
+    this.ReportingCategoryId = reportingCategoryId;
 } 
