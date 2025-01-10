@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Navigate } from 'react-router-dom';
 import { useRef, useState, useEffect } from 'react';
 import { Items } from '../../PageElements/ItemCard/Items';
 import { LoadingIndicator } from '../../PageElements/LoadingIndicator/LoadingIndicator';
@@ -7,15 +7,14 @@ import { FunctionNames } from '../../../Enums/FunctionNames';
 import { CategoryId } from '../../../Models/CategoryId';
 import { buildAzureFunctionURL } from '../../../Functions/urlBuilders';
 import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction';
-import { SingleItem } from '../SingleItem/SingleItem';
 
-export const ItemListByCategory = ({ itemList, productType = null }) => {
+export const ItemListByCategory = ({ itemList = null, productType = null }) => {
     const [azureURL, setAzureURL] = useState(null);
     const [storeItems, setStoreItems] = useState(itemList);
     const [categoryId, setCategoryId] = useState(null);
     const urlParams = useRef(useLocation());
 
-    // Get store data if nothing is passed from the parent
+    // Get store data from azure if nothing is passed from the parent
     const itemsByCategoryId = usePostAzureFunction(azureURL, categoryId, categoryId?.Id);
     if(itemsByCategoryId && !storeItems){
         setStoreItems(itemsByCategoryId);
@@ -39,9 +38,10 @@ export const ItemListByCategory = ({ itemList, productType = null }) => {
     if(!storeItems) {
         return <LoadingIndicator message={'Sorry nothing was found in that category'}></LoadingIndicator>
     }
-    // Go directly to the epanded view if there is only one item under the category
+    // Go directly to the item view if there is only one item under the category
     if(storeItems.length === 1) {
-        return <SingleItem itemData={storeItems[0]}></SingleItem>
+        const uri = `./${storeItems[0].name}-${storeItems[0].id}`
+        return <Navigate to={uri} state={storeItems[0]}></Navigate>    
     }   
     return (
         <section id="storecategories">

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useLocation, useParams, Link } from 'react-router-dom';
+import { useLocation, useParams, Link, useNavigate } from 'react-router-dom';
 import { buyButtonActivated } from '../../../FeatureFlags/launchFeatures.js';
 import { ActionButton } from '../ActionButton/ActionButton.jsx';
 import { LoadingIndicator } from '../LoadingIndicator/LoadingIndicator.jsx';
@@ -14,8 +14,9 @@ export const SingleItem = ({ hasVariation = false}) => {
     const [imageUrl, setImageUrl] = useState(moon);
     const [itemData, setItemData] = useState(useLocation().state);
     const [squareItemURL, setSquareURL] = useState(defaultItemURL);
+    const navigate = useNavigate();
 
-    const urlParam = useParams().singleiteming;
+    const urlParam = useParams().singleitem;
 
     const bookButtonSettings = {
         buttonText: 'BOOK',
@@ -27,6 +28,12 @@ export const SingleItem = ({ hasVariation = false}) => {
         buttonText: 'BUY NOW',
         buttonStyleId: 'singleitem-bookbutton',
         action: null
+    }
+    
+    const backButtonSettings = {
+        buttonText: '<back',
+        buttonStyleId: 'singleItem-backbutton',
+        action: () => navigate(urlParam[0])
     }
     
     if(!localStorage.getItem(urlParam)) {
@@ -59,31 +66,34 @@ export const SingleItem = ({ hasVariation = false}) => {
     }
 
     return (
-        <main id="singleitem">
-            <div className="singleitem-imagecontainer">
-                <div id="singleitem-image" style={{backgroundImage: `url(${imageUrl})`}}></div>
-            </div>
-            <div className="singleitem-information-container">
-                <div className="singleitem-information">
-                    <p id="singleitem-name">{itemData.name.toUpperCase()}</p>
-                    {!hasVariation && <Link target='_blank' to={"https://the-vibe-collective.square.site/shop/products/HUMYRU6WAPVQ54PYRR4FEUAZ"}><ActionButton buttonSettings={buyButtonSettings}></ActionButton></Link>}
-                    {hasVariation && itemData.variations.map(variation => {
-                        return (
-                            <div key={variation.id+variation.name} className="singleitem-variation-container">
-                                <p className="singleitem-variation">{variation.name.toUpperCase()}</p>
-                                {buyButtonActivated &&
-                                    <Link target='_blank' to={squareItemURL}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>
-                                }
-                            </div>
-                        )
-                    })}
-                    {itemData.description && (hasVariation ? <p id="singleitem-descriptiontitle">DESCRIPTION</p> : <p style={{borderTop: 'none'}} id="singleitem-descriptiontitle">DESCRIPTION</p>)}
-                    {itemData.description && <p id="singleitem-description">{itemData.description}</p>}
-                    <br></br>
-                    <br></br>
-                    <br></br>
+        <div className="singleitem-buttondivider">
+            <main id="singleitem">
+                <div className="singleitem-imagecontainer">
+                    <div id="singleitem-image" style={{backgroundImage: `url(${imageUrl})`}}></div>
                 </div>
-            </div>
-        </main>
+                <div className="singleitem-information-container">
+                    <div className="singleitem-information">
+                        <p id="singleitem-name">{itemData.name.toUpperCase()}</p>
+                        {!hasVariation && <Link target='_blank' to={"https://the-vibe-collective.square.site/shop/products/HUMYRU6WAPVQ54PYRR4FEUAZ"}><ActionButton buttonSettings={buyButtonSettings}></ActionButton></Link>}
+                        {hasVariation && itemData.variations.map(variation => {
+                            return (
+                                <div key={variation.id+variation.name} className="singleitem-variation-container">
+                                    <p className="singleitem-variation">{variation.name.toUpperCase()}</p>
+                                    {buyButtonActivated &&
+                                        <Link target='_blank' to={squareItemURL}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>
+                                    }
+                                </div>
+                            )
+                        })}
+                        {itemData.description && (hasVariation ? <p id="singleitem-descriptiontitle">DESCRIPTION</p> : <p style={{borderTop: 'none'}} id="singleitem-descriptiontitle">DESCRIPTION</p>)}
+                        {itemData.description && <p id="singleitem-description">{itemData.description}</p>}
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                    </div>
+                </div>
+            </main>
+            <ActionButton buttonSettings={backButtonSettings}></ActionButton>
+        </div>
     )
 }
