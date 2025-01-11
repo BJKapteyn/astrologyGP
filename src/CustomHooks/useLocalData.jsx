@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 // Gets and verifies local cache
-//    key                      - Key to retrieve and check data cache
-//    timespanToCacheInMinutes - Amount of time until cache needs to be refreshed
+//    key:                       Key to retrieve and check data cache
+//    timespanToCacheInMinutes:  Amount of time until cache needs to be refreshed
 export function useLocalData(key, timespanToCacheInMinutes) {
     const [localCacheState, setLocalCacheState] = useState(null);
 

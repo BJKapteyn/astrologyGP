@@ -5,7 +5,7 @@ import { Items } from '../../PageElements/ItemCard/Items';
 import { LoadingIndicator } from '../../PageElements/LoadingIndicator/LoadingIndicator';
 import { FunctionNames } from '../../../Enums/FunctionNames';
 import { CategoryId } from '../../../Models/CategoryId';
-import { buildAzureFunctionURL } from '../../../Functions/urlBuilders';
+import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlBuilders';
 import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction';
 
 export const ItemListByCategory = ({ itemList = null, productType = null }) => {

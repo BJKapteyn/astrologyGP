@@ -13,3 +13,4 @@ export function buildAzureFunctionURL(functionName, code) {
 
     return functionURL;
 }
+

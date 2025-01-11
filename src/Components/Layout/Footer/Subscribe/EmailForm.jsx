@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { buildAzureFunctionURL } from "../../../../Functions/azureFunctionsUtility";
+import { buildAzureFunctionURL } from "../../../../UtilityFunctions/urlBuilders";
 import './Subscribe.css';
 
 export const EmailForm = () => {

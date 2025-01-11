@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { buyButtonActivated } from '../../../../FeatureFlags/launchFeatures.js';
 import { ActionButton } from '../../ActionButton/ActionButton.jsx';
-import { buildSingleItemURL } from '../../../../Functions/urlBuilders.js';
+import { buildSingleItemURL } from '../../../../UtilityFunctions/urlBuilders.js';
 import '../../../../App.css';
 import './ExpandedCard.css';
 

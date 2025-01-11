@@ -1,22 +1,25 @@
-import { useEffect, useState } from 'react';
-import { useLocation, useParams, Link, useNavigate } from 'react-router-dom';
+import { useEffect, useState, useRef } from 'react';
+import { useLocation, Link, useNavigate } from 'react-router-dom';
 import { buyButtonActivated } from '../../../FeatureFlags/launchFeatures.js';
 import { ActionButton } from '../ActionButton/ActionButton.jsx';
 import { LoadingIndicator } from '../LoadingIndicator/LoadingIndicator.jsx';
-import { buildSingleItemURL } from '../../../Functions/urlBuilders.js';
+import { buildSingleItemURL } from '../../../UtilityFunctions/urlBuilders.js';
+import { useLocalData } from '../../../CustomHooks/useLocalData.jsx';
 import moon from '../../../Pics/Portraits/portrait-sunsetWaves.png';
 import '../../../App.css';
 import './SingleItem.css';
 
 // View detailed item information
-export const SingleItem = ({ hasVariation = false}) => {
+//   rootPage:      the page to return to when the back button is clicked
+//   hasVariation:  whether the item has variations
+export const SingleItem = ({ rootPage, hasVariation = false}) => {
     const defaultItemURL = 'https://the-vibe-collective.square.site/';
     const [imageUrl, setImageUrl] = useState(moon);
     const [itemData, setItemData] = useState(useLocation().state);
     const [squareItemURL, setSquareURL] = useState(defaultItemURL);
+    const urlParams = useRef(useLocation());
     const navigate = useNavigate();
 
-    const urlParam = useParams().singleitem;
 
     const bookButtonSettings = {
         buttonText: 'BOOK',
@@ -31,14 +34,14 @@ export const SingleItem = ({ hasVariation = false}) => {
     }
     
     const backButtonSettings = {
-        buttonText: '<back',
+        buttonText: 'BACK',
         buttonStyleId: 'singleItem-backbutton',
-        action: () => navigate(urlParam[0])
+        action: () => navigate(rootPage)
     }
     
-    if(!localStorage.getItem(urlParam)) {
-        localStorage.setItem(itemData.name, JSON.stringify(itemData));
-    }
+    // if(!localStorage.getItem(urlParams)) {
+    //     localStorage.setItem(itemData.name, JSON.stringify(itemData));
+    // }
 
     useEffect(() => {
         if(itemData.imageURL) {
@@ -58,9 +61,9 @@ export const SingleItem = ({ hasVariation = false}) => {
     }, [squareItemURL, itemData])
 
     if(!itemData) {
-        const localData = localStorage.getItem(urlParam);
-        const localDataJson = JSON.parse(localData);
-        setItemData(localDataJson);
+        // const localData = localStorage.getItem(urlParam);
+        // const localDataJson = JSON.parse(localData);
+        // setItemData(localDataJson);
         
         return <LoadingIndicator />;
     }
