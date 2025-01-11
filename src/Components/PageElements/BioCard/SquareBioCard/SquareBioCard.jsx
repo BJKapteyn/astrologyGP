@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { buildAzureFunctionURL } from '../../../../UtilityFunctions/urlBuilders.js';
+import { buildAzureFunctionURL } from '../../../../UtilityFunctions/urlUtility.js';
 import { BioCard } from "../BioCard";
 import { CardModal } from "../../CardModal/CardModal";
 import { LoadingIndicator } from '../../LoadingIndicator/LoadingIndicator.jsx'

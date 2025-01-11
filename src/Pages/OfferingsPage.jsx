@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { OfferingCategories } from '../Components/OfferingsPage/CategorySection/OfferingCategories';
 import { LoadingIndicator } from '../Components/PageElements/LoadingIndicator/LoadingIndicator';
-import { buildAzureFunctionURL } from '../UtilityFunctions/urlBuilders.js';
+import { buildAzureFunctionURL } from '../UtilityFunctions/urlUtility.js';
 import { ParentCategoryIds } from '../Enums/ParentCategoryIds.js';
 import { FunctionNames } from '../Enums/FunctionNames.js';
 import { usePostAzureFunction } from '../CustomHooks/usePostAzureFunction.jsx';

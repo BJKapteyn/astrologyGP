@@ -3,7 +3,7 @@ import { useLocation, Link, useNavigate } from 'react-router-dom';
 import { buyButtonActivated } from '../../../FeatureFlags/launchFeatures.js';
 import { ActionButton } from '../ActionButton/ActionButton.jsx';
 import { LoadingIndicator } from '../LoadingIndicator/LoadingIndicator.jsx';
-import { buildSingleItemURL } from '../../../UtilityFunctions/urlBuilders.js';
+import { buildSingleItemURL } from '../../../UtilityFunctions/urlUtility.js';
 import { useLocalData } from '../../../CustomHooks/useLocalData.jsx';
 import moon from '../../../Pics/Portraits/portrait-sunsetWaves.png';
 import '../../../App.css';
