@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useLocalData } from "./useLocalData";
-import { DataCache } from "../Models/DataCache";
 
 // Makes a post request to azure function
 //  endpointUrl              - azure function endpoint
@@ -11,8 +10,8 @@ export function usePostAzureFunction(endpointUrl, requestBody, localCacheKey = n
     const minutesToCacheData = 60;
     const localStorageData = useLocalData(localCacheKey, minutesToCacheData);
 
-    if(!!currentData === false && localStorageData) {
-        setCurrentData(localStorageData);
+    if(!!currentData === false && localStorageData.cache) {
+        setCurrentData(localStorageData.cache);
     }
 
     useEffect(() => {
@@ -37,7 +36,7 @@ export function usePostAzureFunction(endpointUrl, requestBody, localCacheKey = n
                 .catch(err => console.debug(err));
         }
         
-        if(!currentData && !localStorageData && endpointUrl && requestBody) {
+        if(!currentData && !localStorageData.cache && endpointUrl && requestBody) {
             getAllItems();
         }
 
@@ -46,9 +45,8 @@ export function usePostAzureFunction(endpointUrl, requestBody, localCacheKey = n
         }
     }, [endpointUrl, requestBody, localStorageData, currentData, localCacheKey]);
 
-    if(!localStorageData && currentData && localCacheKey) {
-        const localCache = new DataCache(currentData);
-        localStorage.setItem(localCacheKey, JSON.stringify(localCache));
+    if(!localStorageData.cache && currentData && localCacheKey) {
+        localStorageData.setCache(currentData);
     }
 
     return currentData;

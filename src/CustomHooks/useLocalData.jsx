@@ -1,13 +1,21 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { DataCache } from "../Models/DataCache";
 
 // Gets and verifies local cache
 //    key:                       Key to retrieve and check data cache
 //    timespanToCacheInMinutes:  Amount of time until cache needs to be refreshed
 export function useLocalData(key, timespanToCacheInMinutes) {
     const [localCacheState, setLocalCacheState] = useState(null);
+    const cacheKey = useRef(key);
 
     if(!key) {
         return null;
+    }
+     
+    function setDataCache(data) {
+        const dataCache = new DataCache(data);
+        
+        localStorage.setItem(cacheKey.current, JSON.stringify(dataCache));
     }
 
     const isCacheStateEmpty = !!localCacheState === false;
@@ -43,9 +51,10 @@ export function useLocalData(key, timespanToCacheInMinutes) {
     if(isCacheVerified && isCacheStateEmpty) {
         setLocalCacheState(localCache);
     }
-
-    if(localCache && isCacheVerified)
-        return localCache;
     
-    return localCacheState;
+    const hookMembers = {
+        setCache: setDataCache,
+        cache: localCacheState
+    }
+    return hookMembers;
 }

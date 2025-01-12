@@ -5,7 +5,7 @@ import { Items } from '../../PageElements/ItemCard/Items';
 import { LoadingIndicator } from '../../PageElements/LoadingIndicator/LoadingIndicator';
 import { FunctionNames } from '../../../Enums/FunctionNames';
 import { CategoryId } from '../../../Models/CategoryId';
-import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlUtility';
+import { buildAzureFunctionURL, getItemIdFromUrlPath } from '../../../UtilityFunctions/urlUtility';
 import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction';
 
 export const ItemListByCategory = ({ itemList = null, productType = null }) => {
@@ -27,9 +27,7 @@ export const ItemListByCategory = ({ itemList = null, productType = null }) => {
                 setAzureURL(url);
             }
             if(!categoryId) {
-                const paramArray = urlParams.current.pathname.split('/');
-                const id = paramArray[paramArray.length - 1].split('-')[1];
-
+                const id = getItemIdFromUrlPath(urlParams.current.pathname);
                 setCategoryId(new CategoryId(id, productType, id));
             }
         }

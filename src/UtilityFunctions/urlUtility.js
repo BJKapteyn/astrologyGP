@@ -14,3 +14,10 @@ export function buildAzureFunctionURL(functionName, code) {
     return functionURL;
 }
 
+export function getItemIdFromUrlPath(path) {
+    const urlParts = path.split('/');
+    const itemInformation = urlParts[urlParts.length - 1];
+    const itemId = itemInformation.split('-')[1];
+
+    return itemId;
+}

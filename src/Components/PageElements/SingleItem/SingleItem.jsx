@@ -3,7 +3,7 @@ import { useLocation, Link, useNavigate } from 'react-router-dom';
 import { buyButtonActivated } from '../../../FeatureFlags/launchFeatures.js';
 import { ActionButton } from '../ActionButton/ActionButton.jsx';
 import { LoadingIndicator } from '../LoadingIndicator/LoadingIndicator.jsx';
-import { buildSingleItemURL } from '../../../UtilityFunctions/urlUtility.js';
+import { buildSingleItemURL, getItemIdFromUrlPath } from '../../../UtilityFunctions/urlUtility.js';
 import { useLocalData } from '../../../CustomHooks/useLocalData.jsx';
 import moon from '../../../Pics/Portraits/portrait-sunsetWaves.png';
 import '../../../App.css';
@@ -17,8 +17,11 @@ export const SingleItem = ({ rootPage, hasVariation = false}) => {
     const [imageUrl, setImageUrl] = useState(moon);
     const [itemData, setItemData] = useState(useLocation().state);
     const [squareItemURL, setSquareURL] = useState(defaultItemURL);
+    const timeToCacheData = 120;
     const urlParams = useRef(useLocation());
     const navigate = useNavigate();
+    const itemId = getItemIdFromUrlPath(urlParams.current.pathname);
+    const localData = useLocalData(itemId, timeToCacheData);
 
 
     const bookButtonSettings = {
