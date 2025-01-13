@@ -4,6 +4,7 @@ import { buyButtonActivated } from '../../../FeatureFlags/launchFeatures.js';
 import { ActionButton } from '../ActionButton/ActionButton.jsx';
 import { LoadingIndicator } from '../LoadingIndicator/LoadingIndicator.jsx';
 import { buildSingleItemURL, getItemIdFromUrlPath } from '../../../UtilityFunctions/urlUtility.js';
+import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction.jsx';
 import { useLocalData } from '../../../CustomHooks/useLocalData.jsx';
 import moon from '../../../Pics/Portraits/portrait-sunsetWaves.png';
 import '../../../App.css';
@@ -16,7 +17,7 @@ export const SingleItem = ({ rootPage, hasVariation = false}) => {
     const defaultItemURL = 'https://the-vibe-collective.square.site/';
     const [imageUrl, setImageUrl] = useState(moon);
     const [itemData, setItemData] = useState(useLocation().state);
-    const [squareItemURL, setSquareURL] = useState(defaultItemURL);
+    const [squareBookUrl, setSquareBookUrl] = useState(defaultItemURL);
     const timeToCacheData = 120;
     const urlParams = useRef(useLocation());
     const navigate = useNavigate();
@@ -47,21 +48,23 @@ export const SingleItem = ({ rootPage, hasVariation = false}) => {
     // }
 
     useEffect(() => {
-        if(itemData.imageURL) {
-            setImageUrl(itemData.imageURL);
-        }
+
         
     }, [itemData]);
 
     useEffect(() => {
         let active = true;
-        if(squareItemURL === defaultItemURL && itemData && active === true) {
+        if(squareBookUrl === defaultItemURL && !!itemData === true && active === true) {
             let squareSingleItemURL = buildSingleItemURL(itemData.id);
-            setSquareURL(squareSingleItemURL);
+            setSquareBookUrl(squareSingleItemURL);
+        }
+
+        if(itemData?.imageURL && active === true) {
+            setImageUrl(itemData.imageURL);
         }
 
         return () => active = false;
-    }, [squareItemURL, itemData])
+    }, [squareBookUrl, itemData])
 
     if(!itemData) {
         // const localData = localStorage.getItem(urlParam);
@@ -86,7 +89,7 @@ export const SingleItem = ({ rootPage, hasVariation = false}) => {
                                 <div key={variation.id+variation.name} className="singleitem-variation-container">
                                     <p className="singleitem-variation">{variation.name.toUpperCase()}</p>
                                     {buyButtonActivated &&
-                                        <Link target='_blank' to={squareItemURL}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>
+                                        <Link target='_blank' to={squareBookUrl}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>
                                     }
                                 </div>
                             )

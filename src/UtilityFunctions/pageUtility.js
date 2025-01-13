@@ -1,5 +1,5 @@
 
-// Use this utility to set the title tag, and meta description and keywords inside the <head> tag
+// Sets the title tag, and meta description and keywords inside the <head> tag
 export function addPageHeaderInfo(description = '', keywords = '', title = 'TheVibeCollective', scriptSources = []) {
     const headTitle = title ?? 'The Vibe Collective';
 
