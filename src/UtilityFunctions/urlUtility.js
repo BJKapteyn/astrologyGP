@@ -14,6 +14,12 @@ export function buildAzureFunctionURL(functionName, code) {
     return functionURL;
 }
 
+/**
+ * Extracts the item ID from a given URL path.
+ *
+ * @param {string} path - The URL path from which to extract the item ID.
+ * @returns {string} The extracted item ID.
+ */
 export function getItemIdFromUrlPath(path) {
     const urlParts = path.split('/');
     const itemInformation = urlParts[urlParts.length - 1];

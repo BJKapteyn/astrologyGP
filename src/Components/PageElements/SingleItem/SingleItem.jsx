@@ -6,6 +6,7 @@ import { LoadingIndicator } from '../LoadingIndicator/LoadingIndicator.jsx';
 import { buildSingleItemURL, getItemIdFromUrlPath } from '../../../UtilityFunctions/urlUtility.js';
 import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction.jsx';
 import { useLocalData } from '../../../CustomHooks/useLocalData.jsx';
+import { FunctionNames } from '../../../Enums/FunctionNames.js';
 import moon from '../../../Pics/Portraits/portrait-sunsetWaves.png';
 import '../../../App.css';
 import './SingleItem.css';
@@ -18,12 +19,12 @@ export const SingleItem = ({ rootPage, hasVariation = false}) => {
     const [imageUrl, setImageUrl] = useState(moon);
     const [itemData, setItemData] = useState(useLocation().state);
     const [squareBookUrl, setSquareBookUrl] = useState(defaultItemURL);
-    const timeToCacheData = 120;
     const urlParams = useRef(useLocation());
     const navigate = useNavigate();
-    const itemId = getItemIdFromUrlPath(urlParams.current.pathname);
+    const timeToCacheData = 120;
     const localData = useLocalData(itemId, timeToCacheData);
-
+    const usePostAzureFunctionData = usePostAzureFunction(FunctionNames.GetItemByItemId, {itemId: itemId});
+    const itemId = getItemIdFromUrlPath(urlParams.current.pathname);
 
     const bookButtonSettings = {
         buttonText: 'BOOK',
@@ -48,25 +49,23 @@ export const SingleItem = ({ rootPage, hasVariation = false}) => {
     // }
 
     useEffect(() => {
-
-        
-    }, [itemData]);
-
-    useEffect(() => {
         let active = true;
-        if(squareBookUrl === defaultItemURL && !!itemData === true && active === true) {
-            let squareSingleItemURL = buildSingleItemURL(itemData.id);
-            setSquareBookUrl(squareSingleItemURL);
-        }
 
-        if(itemData?.imageURL && active === true) {
-            setImageUrl(itemData.imageURL);
+        if(active === true) {
+            if(squareBookUrl === defaultItemURL && !!itemData === true) {
+                let squareSingleItemURL = buildSingleItemURL(itemData.id);
+                setSquareBookUrl(squareSingleItemURL);
+            }
+    
+            if(!!itemData?.imageURL === true) {
+                setImageUrl(itemData.imageURL);
+            }
         }
 
         return () => active = false;
     }, [squareBookUrl, itemData])
 
-    if(!itemData) {
+    if(!!itemData === false) {
         // const localData = localStorage.getItem(urlParam);
         // const localDataJson = JSON.parse(localData);
         // setItemData(localDataJson);

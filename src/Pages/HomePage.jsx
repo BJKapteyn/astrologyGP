@@ -7,7 +7,7 @@ import { MeetCarly } from '../Components/HomePage/MeetCarly/MeetCarly.jsx';
 import { NewsCardSection } from '../Components/HomePage/NewsCard/NewsCardSection.jsx';
 import { OfferingSection } from '../Components/HomePage/OfferingSection/OfferingSection.jsx';
 import { titleCardData } from '../Components/HomePage/TitleCard/TitleCardData.jsx';
-import { addPageHeaderInfo } from '../Functions/pageUtility.js';
+import { addPageHeaderInfo } from '../UtilityFunctions/pageUtility.js';
 
 export default function HomePage() {
     const videoDivider = {

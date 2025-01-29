@@ -9,8 +9,11 @@ export function usePostAzureFunction(endpointUrl, requestBody, localCacheKey = n
     const [currentData, setCurrentData] = useState(null);
     const minutesToCacheData = 60;
     const localStorageData = useLocalData(localCacheKey, minutesToCacheData);
+    const hasLocalCacheData = !!localStorageData?.cache;
+    const hasCurrentData = !!currentData;
+    const hasLocalCacheKey = !!localCacheKey;
 
-    if(!!currentData === false && localStorageData.cache) {
+    if(hasCurrentData === false && hasLocalCacheData) {
         setCurrentData(localStorageData.cache);
     }
 
@@ -35,17 +38,20 @@ export function usePostAzureFunction(endpointUrl, requestBody, localCacheKey = n
                 })
                 .catch(err => console.debug(err));
         }
+
+        const hasEndpointUrl = !!endpointUrl;
+        const hasRequestBody = !!requestBody;
         
-        if(!currentData && !localStorageData.cache && endpointUrl && requestBody) {
+        if(hasCurrentData === false && hasLocalCacheData === false && hasEndpointUrl && hasRequestBody) {
             getAllItems();
         }
 
         return () => {
             active = false;
         }
-    }, [endpointUrl, requestBody, localStorageData, currentData, localCacheKey]);
+    }, [endpointUrl, requestBody, localStorageData.cache, currentData, localCacheKey, hasCurrentData, hasLocalCacheData]);
 
-    if(!localStorageData.cache && currentData && localCacheKey) {
+    if(hasLocalCacheData === false && hasCurrentData && hasLocalCacheKey) {
         localStorageData.setCache(currentData);
     }
 
