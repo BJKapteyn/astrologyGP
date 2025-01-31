@@ -11,10 +11,12 @@ import './SingleItem.css';
 // View detailed item information
 export const SingleItem = ({ needsVariation: hasVariation = false}) => {
     const defaultItemURL = 'https://the-vibe-collective.square.site/';
+    const defaultBuyNowUrl = 'https://the-vibe-collective.square.site/shop/products/HUMYRU6WAPVQ54PYRR4FEUAZ';
     const [imageUrl, setImageUrl] = useState(moon);
     const [itemData, setItemData] = useState(useLocation().state);
     const [squareItemURL, setSquareURL] = useState(defaultItemURL);
-
+    const buyNowButton = itemData.buyNowLink ?? defaultBuyNowUrl;
+    
     const urlParam = useParams().singleiteming;
 
     const bookButtonSettings = {
@@ -66,7 +68,7 @@ export const SingleItem = ({ needsVariation: hasVariation = false}) => {
             <div className="singleitem-information-container">
                 <div className="singleitem-information">
                     <p id="singleitem-name">{itemData.name.toUpperCase()}</p>
-                    {!hasVariation && <Link target='_blank' to={"https://the-vibe-collective.square.site/shop/products/HUMYRU6WAPVQ54PYRR4FEUAZ"}><ActionButton buttonSettings={buyButtonSettings}></ActionButton></Link>}
+                    {!hasVariation && <Link target='_blank' to={buyNowButton}><ActionButton buttonSettings={buyButtonSettings}></ActionButton></Link>}
                     {hasVariation && itemData.variations.map(variation => {
                         return (
                             <div key={variation.id+variation.name} className="singleitem-variation-container">
