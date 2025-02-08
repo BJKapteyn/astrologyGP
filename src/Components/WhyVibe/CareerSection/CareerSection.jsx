@@ -3,7 +3,7 @@ import { ReactComponent as Eyeball } from '../../../Pics/SvgDrawings/EYE-VECTOR.
 import './CareerSection.css';
 
 export const CareerSection = () => {
-    const emailAddress = "hr@thevibecollective.co"
+    const emailAddress = "manager@thevibecollective.co"
 
     return(
         <section className="careersection">

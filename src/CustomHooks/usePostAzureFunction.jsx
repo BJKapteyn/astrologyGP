@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useLocalData } from "./useLocalData";
 
-// Makes a post request to azure function
-//  endpointUrl              - azure function endpoint
-//  requestBody              - object containing request body
+// Makes a post request to azure function 
+//  endpointUrl              - azure function endpoint (required)
+//  requestBody              - object containing request body (required)
 //  localCacheKey (optional) - will cache the results locally if a key is provided
 export function usePostAzureFunction(endpointUrl, requestBody, localCacheKey = null) {
     const [currentData, setCurrentData] = useState(null);
@@ -22,21 +22,21 @@ export function usePostAzureFunction(endpointUrl, requestBody, localCacheKey = n
 
         const getAllItems = async () => {
             await fetch(endpointUrl, {
-                    method: "post",
-                    headers: {
-                      'Accept': 'application/json',
-                      'Content-Type': 'application/json'
-                    },
+                method: "post",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
 
-                    body: JSON.stringify(requestBody)
-                })
-                .then(response => response.json())
-                .then(responseData => {
-                    if (active){
-                        setCurrentData(responseData);
-                    }
-                })
-                .catch(err => console.debug(err));
+                body: JSON.stringify(requestBody)
+            })
+            .then(response => response.json())
+            .then(responseData => {
+                if (active){
+                    setCurrentData(responseData);
+                }
+            })
+            .catch(err => console.debug(err));
         }
 
         const hasEndpointUrl = !!endpointUrl;
@@ -49,7 +49,7 @@ export function usePostAzureFunction(endpointUrl, requestBody, localCacheKey = n
         return () => {
             active = false;
         }
-    }, [endpointUrl, requestBody, localStorageData.cache, currentData, localCacheKey, hasCurrentData, hasLocalCacheData]);
+    }, [endpointUrl, requestBody, currentData, localCacheKey, hasCurrentData, hasLocalCacheData]);
 
     if(hasLocalCacheData === false && hasCurrentData && hasLocalCacheKey) {
         localStorageData.setCache(currentData);

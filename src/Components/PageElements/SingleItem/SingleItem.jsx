@@ -16,15 +16,15 @@ import './SingleItem.css';
 //   hasVariation:  whether the item has variations
 export const SingleItem = ({ rootPage, hasVariation = false}) => {
     const defaultItemURL = 'https://the-vibe-collective.square.site/';
+    const defaultBuyNowUrl = 'https://the-vibe-collective.square.site/shop/products/HUMYRU6WAPVQ54PYRR4FEUAZ';
     const [imageUrl, setImageUrl] = useState(moon);
     const [itemData, setItemData] = useState(useLocation().state);
     const [squareBookUrl, setSquareBookUrl] = useState(defaultItemURL);
+    const buyNowButton = itemData.buyNowLink ?? defaultBuyNowUrl;
     const urlParams = useRef(useLocation());
     const navigate = useNavigate();
-    const timeToCacheData = 120;
-    const localData = useLocalData(itemId, timeToCacheData);
-    const usePostAzureFunctionData = usePostAzureFunction(FunctionNames.GetItemByItemId, {itemId: itemId});
     const itemId = getItemIdFromUrlPath(urlParams.current.pathname);
+    const usePostAzureFunctionData = usePostAzureFunction(FunctionNames.GetItemByItemId, {itemId: itemId});
 
     const bookButtonSettings = {
         buttonText: 'BOOK',
@@ -43,11 +43,8 @@ export const SingleItem = ({ rootPage, hasVariation = false}) => {
         buttonStyleId: 'singleItem-backbutton',
         action: () => navigate(rootPage)
     }
-    
-    // if(!localStorage.getItem(urlParams)) {
-    //     localStorage.setItem(itemData.name, JSON.stringify(itemData));
-    // }
 
+    // If no data was passed from the previous page, 
     useEffect(() => {
         let active = true;
 
@@ -82,7 +79,7 @@ export const SingleItem = ({ rootPage, hasVariation = false}) => {
                 <div className="singleitem-information-container">
                     <div className="singleitem-information">
                         <p id="singleitem-name">{itemData.name.toUpperCase()}</p>
-                        {!hasVariation && <Link target='_blank' to={"https://the-vibe-collective.square.site/shop/products/HUMYRU6WAPVQ54PYRR4FEUAZ"}><ActionButton buttonSettings={buyButtonSettings}></ActionButton></Link>}
+                        {!hasVariation && <Link target='_blank' to={buyNowButton}><ActionButton buttonSettings={buyButtonSettings}></ActionButton></Link>}
                         {hasVariation && itemData.variations.map(variation => {
                             return (
                                 <div key={variation.id+variation.name} className="singleitem-variation-container">
