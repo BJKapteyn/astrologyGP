@@ -15,7 +15,7 @@ export const SingleItem = ({ needsVariation: hasVariation = false}) => {
     const [imageUrl, setImageUrl] = useState(moon);
     const [itemData, setItemData] = useState(useLocation().state);
     const [squareItemURL, setSquareURL] = useState(defaultItemURL);
-    const buyNowButton = itemData.buyNowLink ?? defaultBuyNowUrl;
+    const buyNowButton = itemData.buyNowLink === null ? defaultBuyNowUrl : itemData.buyNowLink;
     
     const urlParam = useParams().singleiteming;
 
