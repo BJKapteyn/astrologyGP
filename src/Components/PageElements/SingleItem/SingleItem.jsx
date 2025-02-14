@@ -5,8 +5,8 @@ import { ActionButton } from '../ActionButton/ActionButton.jsx';
 import { LoadingIndicator } from '../LoadingIndicator/LoadingIndicator.jsx';
 import { buildSingleItemURL, getItemIdFromUrlPath } from '../../../UtilityFunctions/urlUtility.js';
 import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction.jsx';
-import { useLocalData } from '../../../CustomHooks/useLocalData.jsx';
 import { FunctionNames } from '../../../Enums/FunctionNames.js';
+import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlUtility.js';
 import moon from '../../../Pics/Portraits/portrait-sunsetWaves.png';
 import '../../../App.css';
 import './SingleItem.css';
@@ -17,14 +17,21 @@ import './SingleItem.css';
 export const SingleItem = ({ rootPage, hasVariation = false}) => {
     const defaultItemURL = 'https://the-vibe-collective.square.site/';
     const defaultBuyNowUrl = 'https://the-vibe-collective.square.site/shop/products/HUMYRU6WAPVQ54PYRR4FEUAZ';
+
     const [imageUrl, setImageUrl] = useState(moon);
     const [itemData, setItemData] = useState(useLocation().state);
     const [squareBookUrl, setSquareBookUrl] = useState(defaultItemURL);
+    
     const buyNowButton = itemData.buyNowLink ?? defaultBuyNowUrl;
     const urlParams = useRef(useLocation());
     const navigate = useNavigate();
     const itemId = getItemIdFromUrlPath(urlParams.current.pathname);
-    const usePostAzureFunctionData = usePostAzureFunction(FunctionNames.GetItemByItemId, {itemId: itemId});
+    const functionUrl = buildAzureFunctionURL(FunctionNames.GetItemByItemId, process.env.REACT_APP_GET_ITEM_BY_ITEM_ID);
+    const usePostAzureFunctionData = usePostAzureFunction(functionUrl, {itemId: itemId});
+
+    if(!!itemData === false && !!usePostAzureFunctionData === true) {
+        setItemData(usePostAzureFunctionData);
+    }
 
     const bookButtonSettings = {
         buttonText: 'BOOK',
@@ -44,17 +51,18 @@ export const SingleItem = ({ rootPage, hasVariation = false}) => {
         action: () => navigate(rootPage)
     }
 
-    // If no data was passed from the previous page, 
+    // If no data were passed from the previous page, 
     useEffect(() => {
         let active = true;
 
-        if(active === true) {
+        if(active) {
             if(squareBookUrl === defaultItemURL && !!itemData === true) {
                 let squareSingleItemURL = buildSingleItemURL(itemData.id);
                 setSquareBookUrl(squareSingleItemURL);
             }
-    
-            if(!!itemData?.imageURL === true) {
+
+            let hasImageUrl = !!itemData?.imageURL;
+            if(hasImageUrl) {
                 setImageUrl(itemData.imageURL);
             }
         }
@@ -63,9 +71,6 @@ export const SingleItem = ({ rootPage, hasVariation = false}) => {
     }, [squareBookUrl, itemData])
 
     if(!!itemData === false) {
-        // const localData = localStorage.getItem(urlParam);
-        // const localDataJson = JSON.parse(localData);
-        // setItemData(localDataJson);
         
         return <LoadingIndicator />;
     }
