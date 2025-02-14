@@ -14,8 +14,12 @@ export const SingleItem = ({ needsVariation: hasVariation = false}) => {
     const defaultBuyNowUrl = 'https://the-vibe-collective.square.site/shop/products/HUMYRU6WAPVQ54PYRR4FEUAZ';
     const [imageUrl, setImageUrl] = useState(moon);
     const [itemData, setItemData] = useState(useLocation().state);
+    const [buyNowLink, setBuyNowLink] = useState(itemData.buyNowLink);
     const [squareItemURL, setSquareURL] = useState(defaultItemURL);
-    const buyNowButton = itemData.buyNowLink === null ? defaultBuyNowUrl : itemData.buyNowLink;
+
+    if(!!itemData.buyNowLink === false && !!buyNowLink === false) {
+        setBuyNowLink(defaultBuyNowUrl);
+    }
     
     const urlParam = useParams().singleiteming;
 
@@ -68,7 +72,7 @@ export const SingleItem = ({ needsVariation: hasVariation = false}) => {
             <div className="singleitem-information-container">
                 <div className="singleitem-information">
                     <p id="singleitem-name">{itemData.name.toUpperCase()}</p>
-                    {!hasVariation && <Link target='_blank' to={buyNowButton}><ActionButton buttonSettings={buyButtonSettings}></ActionButton></Link>}
+                    {!hasVariation && <Link target='_blank' to={buyNowLink}><ActionButton buttonSettings={buyButtonSettings}></ActionButton></Link>}
                     {hasVariation && itemData.variations.map(variation => {
                         return (
                             <div key={variation.id+variation.name} className="singleitem-variation-container">
