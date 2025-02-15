@@ -11,7 +11,7 @@ import moon from '../../../Pics/Portraits/portrait-sunsetWaves.png';
 import '../../../App.css';
 import './SingleItem.css';
 
-// View detailed item information
+// View detailed item information and book/buy now link 
 //   rootPage:      the page to return to when the back button is clicked
 //   hasVariation:  whether the item has variations
 export const SingleItem = ({ rootPage, hasVariation = false}) => {
@@ -20,14 +20,18 @@ export const SingleItem = ({ rootPage, hasVariation = false}) => {
 
     const [imageUrl, setImageUrl] = useState(moon);
     const [itemData, setItemData] = useState(useLocation().state);
-    const [squareBookUrl, setSquareBookUrl] = useState(defaultItemURL);
-    
-    const buyNowButton = itemData.buyNowLink ?? defaultBuyNowUrl;
+    const [buyNowLink, setBuyNowLink] = useState(itemData.buyNowLink);
+    const [squareItemURL, setSquareURL] = useState(defaultItemURL);
     const urlParams = useRef(useLocation());
-    const navigate = useNavigate();
     const itemId = getItemIdFromUrlPath(urlParams.current.pathname);
     const functionUrl = buildAzureFunctionURL(FunctionNames.GetItemByItemId, process.env.REACT_APP_GET_ITEM_BY_ITEM_ID);
     const usePostAzureFunctionData = usePostAzureFunction(functionUrl, {itemId: itemId});
+    const navigate = useNavigate();
+    
+    if(!!itemData.buyNowLink === false && !!buyNowLink === false) {
+
+        setBuyNowLink(defaultBuyNowUrl);
+    }
 
     if(!!itemData === false && !!usePostAzureFunctionData === true) {
         setItemData(usePostAzureFunctionData);
@@ -51,14 +55,14 @@ export const SingleItem = ({ rootPage, hasVariation = false}) => {
         action: () => navigate(rootPage)
     }
 
-    // If no data were passed from the previous page, 
+    // If no data is passed from the previous page, fetch it from the API
     useEffect(() => {
         let active = true;
 
         if(active) {
-            if(squareBookUrl === defaultItemURL && !!itemData === true) {
+            if(squareItemURL === defaultItemURL && !!itemData === true) {
                 let squareSingleItemURL = buildSingleItemURL(itemData.id);
-                setSquareBookUrl(squareSingleItemURL);
+                setSquareURL(squareSingleItemURL);
             }
 
             let hasImageUrl = !!itemData?.imageURL;
@@ -68,7 +72,7 @@ export const SingleItem = ({ rootPage, hasVariation = false}) => {
         }
 
         return () => active = false;
-    }, [squareBookUrl, itemData])
+    }, [buyNowLink, itemData, squareItemURL])
 
     if(!!itemData === false) {
         
@@ -76,12 +80,33 @@ export const SingleItem = ({ rootPage, hasVariation = false}) => {
     }
 
     return (
-        <div className="singleitem-buttondivider">
-            <main id="singleitem">
-                <div className="singleitem-imagecontainer">
-                    <div id="singleitem-image" style={{backgroundImage: `url(${imageUrl})`}}></div>
+        <main id="singleitem">
+            <div className="singleitem-imagecontainer">
+                <div id="singleitem-image" style={{backgroundImage: `url(${imageUrl})`}}></div>
+            </div>
+            <div className="singleitem-information-container">
+                <div className="singleitem-information">
+                    <p id="singleitem-name">{itemData.name.toUpperCase()}</p>
+                    {!hasVariation && <Link target='_blank' to={buyNowLink}><ActionButton buttonSettings={buyButtonSettings}></ActionButton></Link>}
+                    {hasVariation && itemData.variations.map(variation => {
+                        return (
+                            <div key={variation.id+variation.name} className="singleitem-variation-container">
+                                <p className="singleitem-variation">{variation.name.toUpperCase()}</p>
+                                {buyButtonActivated &&
+                                    <Link target='_blank' to={squareItemURL}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>
+                                }
+                            </div>
+                        )
+                    })}
+                    {itemData.description && (hasVariation ? <p id="singleitem-descriptiontitle">DESCRIPTION</p> : <p style={{borderTop: 'none'}} id="singleitem-descriptiontitle">DESCRIPTION</p>)}
+                    {itemData.description && <p id="singleitem-description">{itemData.description}</p>}
+                    <br></br>
+                    <br></br>
+                    <br></br>
                 </div>
-                <div className="singleitem-information-container">
+                <ActionButton buttonSettings={backButtonSettings}></ActionButton>
+            </div>
+                {/* <div className="singleitem-information-container">
                     <div className="singleitem-information">
                         <p id="singleitem-name">{itemData.name.toUpperCase()}</p>
                         {!hasVariation && <Link target='_blank' to={buyNowButton}><ActionButton buttonSettings={buyButtonSettings}></ActionButton></Link>}
@@ -101,9 +126,7 @@ export const SingleItem = ({ rootPage, hasVariation = false}) => {
                         <br></br>
                         <br></br>
                     </div>
-                </div>
-            </main>
-            <ActionButton buttonSettings={backButtonSettings}></ActionButton>
-        </div>
+                </div> */}
+        </main>
     )
 }

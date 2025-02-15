@@ -15,7 +15,7 @@ export const EmailForm = () => {
   
   async function submitEmail() {
     setFormWasSubmitted(true);
-    const url = buildAzureFunctionURL(process.env.REACT_APP_INSERT_EMAIL, "InsertCustomerEmail");
+    const url = buildAzureFunctionURL("InsertCustomerEmail", process.env.REACT_APP_INSERT_EMAIL);
 
     const requestOptions = {
       method: 'POST',
