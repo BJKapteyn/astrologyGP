@@ -3,7 +3,7 @@ import { useLocation, Link, useNavigate } from 'react-router-dom';
 import { buyButtonActivated } from '../../../FeatureFlags/launchFeatures.js';
 import { ActionButton } from '../ActionButton/ActionButton.jsx';
 import { LoadingIndicator } from '../LoadingIndicator/LoadingIndicator.jsx';
-import { buildSingleServiceItemURL, getItemIdFromUrlPath } from '../../../UtilityFunctions/urlUtility.js';
+import { getItemIdFromUrlPath } from '../../../UtilityFunctions/urlUtility.js';
 import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction.jsx';
 import { FunctionNames } from '../../../Enums/FunctionNames.js';
 import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlUtility.js';
@@ -15,20 +15,18 @@ import './SingleItem.css';
 //   rootPage:      the page to return to when the back button is clicked
 //   hasVariation:  whether the item has variations
 export const SingleItem = ({ rootPage, hasVariation = false}) => {
-    // const defaultItemURL = 'https://the-vibe-collective.square.site/';
     const defaultBuyNowUrl = 'https://the-vibe-collective.square.site/shop/products/HUMYRU6WAPVQ54PYRR4FEUAZ';
 
     const [imageUrl, setImageUrl] = useState(moon);
     const [itemData, setItemData] = useState(useLocation().state);
     const [buyNowLink, setBuyNowLink] = useState(itemData?.buyNowLink);
-    // const [squareItemURL, setSquareURL] = useState(defaultItemURL);
     const urlParams = useRef(useLocation());
     const itemId = getItemIdFromUrlPath(urlParams.current.pathname);
     const functionUrl = buildAzureFunctionURL(FunctionNames.GetItemByItemId, process.env.REACT_APP_GET_ITEM_BY_ITEM_ID);
-    const usePostAzureFunctionData = usePostAzureFunction(functionUrl, {itemId: itemId});
+    const usePostAzureFunctionData = usePostAzureFunction(functionUrl, {Id: itemId});
     const navigate = useNavigate();
     
-    if(!!itemData.buyNowLink === false && !!buyNowLink === false) {
+    if(!!itemData?.buyNowLink === false && !!buyNowLink === false) {
         setBuyNowLink(defaultBuyNowUrl);
     }
 
@@ -101,27 +99,6 @@ export const SingleItem = ({ rootPage, hasVariation = false}) => {
                 </div>
                 <ActionButton buttonSettings={backButtonSettings}></ActionButton>
             </div>
-                {/* <div className="singleitem-information-container">
-                    <div className="singleitem-information">
-                        <p id="singleitem-name">{itemData.name.toUpperCase()}</p>
-                        {!hasVariation && <Link target='_blank' to={buyNowButton}><ActionButton buttonSettings={buyButtonSettings}></ActionButton></Link>}
-                        {hasVariation && itemData.variations.map(variation => {
-                            return (
-                                <div key={variation.id+variation.name} className="singleitem-variation-container">
-                                    <p className="singleitem-variation">{variation.name.toUpperCase()}</p>
-                                    {buyButtonActivated &&
-                                        <Link target='_blank' to={squareBookUrl}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>
-                                    }
-                                </div>
-                            )
-                        })}
-                        {itemData.description && (hasVariation ? <p id="singleitem-descriptiontitle">DESCRIPTION</p> : <p style={{borderTop: 'none'}} id="singleitem-descriptiontitle">DESCRIPTION</p>)}
-                        {itemData.description && <p id="singleitem-description">{itemData.description}</p>}
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                    </div>
-                </div> */}
         </main>
     )
 }

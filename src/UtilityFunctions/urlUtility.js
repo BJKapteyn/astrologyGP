@@ -21,9 +21,10 @@ export function buildAzureFunctionURL(functionName, code) {
  * @returns {string} The extracted item ID.
  */
 export function getItemIdFromUrlPath(path) {
-    const urlParts = path.split('/');
-    const itemInformation = urlParts[urlParts.length - 1];
-    const itemId = itemInformation.split('-')[1];
+    const urlPaths = path.split('/');
+    const itemUri = urlPaths[urlPaths.length - 1];
+    const uriItemInformation = itemUri.split('-');
+    const itemId = uriItemInformation[uriItemInformation.length - 1];
 
     return itemId;
 }
