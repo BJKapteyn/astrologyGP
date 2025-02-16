@@ -33,7 +33,7 @@ function App() {
           <Route path="/CurrentVibe" element={<ComingSoon comingSoonData={currentVibeComingSoonData} />}></Route>
           <Route path="/Offerings" element={<OfferingsPage />}></Route>
           <Route path="/Offerings/:offering" element={<ItemListByCategory productType={ProductTypes.AppointmentsService} />}></Route>
-          <Route path="/Offerings/:offering/:singleoffering" element={<SingleItem hasVariation={true} />}></Route>
+          <Route path="/Offerings/:offering/:singleoffering" element={<SingleItem isService={true} hasVariation={true} />}></Route>
         </Route>
       </Routes>
     </div>
