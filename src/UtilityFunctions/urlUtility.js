@@ -1,4 +1,4 @@
-export function buildSingleItemURL(itemId) {
+export function buildSingleServiceItemURL(itemId) {
     const bookUrl = 'https://book.squareup.com/appointments/ysiif4g893rlw0/location/LP1D86FB8MBJ9/services/';
 
     if(!itemId) {
