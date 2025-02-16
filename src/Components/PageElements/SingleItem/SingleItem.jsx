@@ -1,23 +1,38 @@
-import { useEffect, useState } from 'react';
-import { useLocation, useParams, Link } from 'react-router-dom';
+import { useEffect, useState, useRef } from 'react';
+import { useLocation, Link, useNavigate } from 'react-router-dom';
 import { buyButtonActivated } from '../../../FeatureFlags/launchFeatures.js';
 import { ActionButton } from '../ActionButton/ActionButton.jsx';
 import { LoadingIndicator } from '../LoadingIndicator/LoadingIndicator.jsx';
-import { buildSingleItemURL } from '../../../Functions/urlBuilders.js';
+import { getItemIdFromUrlPath } from '../../../UtilityFunctions/urlUtility.js';
+import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction.jsx';
+import { FunctionNames } from '../../../Enums/FunctionNames.js';
+import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlUtility.js';
 import moon from '../../../Pics/Portraits/portrait-sunsetWaves.png';
 import '../../../App.css';
 import './SingleItem.css';
 
-// View detailed item information
-export const SingleItem = ({ needsVariation: hasVariation = false}) => {
-    const defaultItemURL = 'https://the-vibe-collective.square.site/';
+// View detailed item information and book/buy now link 
+//   rootPage:      the page to return to when the back button is clicked
+//   hasVariation:  whether the item has variations
+export const SingleItem = ({ rootPage, hasVariation = false}) => {
     const defaultBuyNowUrl = 'https://the-vibe-collective.square.site/shop/products/HUMYRU6WAPVQ54PYRR4FEUAZ';
+
     const [imageUrl, setImageUrl] = useState(moon);
     const [itemData, setItemData] = useState(useLocation().state);
-    const [squareItemURL, setSquareURL] = useState(defaultItemURL);
-    const buyNowButton = itemData.buyNowLink ?? defaultBuyNowUrl;
+    const [buyNowLink, setBuyNowLink] = useState(itemData?.buyNowLink);
+    const urlParams = useRef(useLocation());
+    const itemId = getItemIdFromUrlPath(urlParams.current.pathname);
+    const functionUrl = buildAzureFunctionURL(FunctionNames.GetItemByItemId, process.env.REACT_APP_GET_ITEM_BY_ITEM_ID);
+    const usePostAzureFunctionData = usePostAzureFunction(functionUrl, {Id: itemId});
+    const navigate = useNavigate();
     
-    const urlParam = useParams().singleiteming;
+    if(!!itemData?.buyNowLink === false && !!buyNowLink === false) {
+        setBuyNowLink(defaultBuyNowUrl);
+    }
+
+    if(!!itemData === false && !!usePostAzureFunctionData === true) {
+        setItemData(usePostAzureFunctionData);
+    }
 
     const bookButtonSettings = {
         buttonText: 'BOOK',
@@ -31,31 +46,28 @@ export const SingleItem = ({ needsVariation: hasVariation = false}) => {
         action: null
     }
     
-    if(!localStorage.getItem(urlParam)) {
-        localStorage.setItem(itemData.name, JSON.stringify(itemData));
+    const backButtonSettings = {
+        buttonText: 'BACK',
+        buttonStyleId: 'singleItem-backbutton',
+        action: () => navigate(rootPage)
     }
 
-    useEffect(() => {
-        if(itemData.imageURL) {
-            setImageUrl(itemData.imageURL);
-        }
-        
-    }, [itemData]);
-
+    // If no data is passed from the previous page, fetch it from the API
     useEffect(() => {
         let active = true;
-        if(squareItemURL === defaultItemURL && itemData && active === true) {
-            let squareSingleItemURL = buildSingleItemURL(itemData.id);
-            setSquareURL(squareSingleItemURL);
+
+        if(active) {
+            let hasImageUrl = !!itemData?.imageURL;
+
+            if(hasImageUrl) {
+                setImageUrl(itemData.imageURL);
+            }
         }
 
         return () => active = false;
-    }, [squareItemURL, itemData])
+    }, [buyNowLink, itemData])
 
-    if(!itemData) {
-        const localData = localStorage.getItem(urlParam);
-        const localDataJson = JSON.parse(localData);
-        setItemData(localDataJson);
+    if(!!itemData === false) {
         
         return <LoadingIndicator />;
     }
@@ -68,13 +80,13 @@ export const SingleItem = ({ needsVariation: hasVariation = false}) => {
             <div className="singleitem-information-container">
                 <div className="singleitem-information">
                     <p id="singleitem-name">{itemData.name.toUpperCase()}</p>
-                    {!hasVariation && <Link target='_blank' to={buyNowButton}><ActionButton buttonSettings={buyButtonSettings}></ActionButton></Link>}
+                    {!hasVariation && <Link target='_blank' to={buyNowLink}><ActionButton buttonSettings={buyButtonSettings}></ActionButton></Link>}
                     {hasVariation && itemData.variations.map(variation => {
                         return (
                             <div key={variation.id+variation.name} className="singleitem-variation-container">
                                 <p className="singleitem-variation">{variation.name.toUpperCase()}</p>
                                 {buyButtonActivated &&
-                                    <Link target='_blank' to={squareItemURL}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>
+                                    <Link target='_blank' to={buyNowLink}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>
                                 }
                             </div>
                         )
@@ -85,6 +97,7 @@ export const SingleItem = ({ needsVariation: hasVariation = false}) => {
                     <br></br>
                     <br></br>
                 </div>
+                <ActionButton buttonSettings={backButtonSettings}></ActionButton>
             </div>
         </main>
     )

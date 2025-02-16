@@ -122,8 +122,19 @@ h4 {
 #homepage {
   max-width: 90em;
   margin: auto;
-
 }
+
+.link-colorfade {
+  color: var(--main-color);
+  transition: color .5s;
+  -webkit-transition: color .5s;
+  -moz-transition: color .5s;
+  -ms-transition: color .5s;
+  -o-transition: color .5s;
+}
+.link-colorfade:hover {
+  color: var(--main-accent-color);
+} 
 
 /*                        Animations         */
 @keyframes fadeIn {

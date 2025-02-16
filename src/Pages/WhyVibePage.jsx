@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { addPageHeaderInfo } from "../Functions/pageUtility";
+import { addPageHeaderInfo } from "../UtilityFunctions/pageUtility";
 import { WhyVibe } from "../Components/WhyVibe/WhyVibe";
 
 export default function WhyVibePage() {

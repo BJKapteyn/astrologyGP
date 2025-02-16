@@ -7,6 +7,15 @@
     height: 35em;
 }
 
+.singleitem-buttondivider {
+    text-align: center;
+}
+
+#singleItem-backbutton {
+    font-size: 1em;
+    margin-bottom: 2em;
+}
+
 .singleitem-imagecontainer {
     display: flex;
     align-items: center;

@@ -1,57 +1,60 @@
-import { useEffect, useState } from "react";
+import { useState, useRef } from "react";
+import { DataCache } from "../Models/DataCache";
 
-export function useLocalData(key, data, timespanToCacheInMinutes) {
-    const [isCachedDataVerified, setIsCachedDataVerified] = useState(false);
-    const [cachedItemData, setCachedItemData] = useState(null);
+// Gets and verifies local cache
+//    key:                       Key to retrieve and check data cache
+//    timespanToCacheInMinutes:  Amount of time until cache needs to be refreshed
+export function useLocalData(key, timespanToCacheInMinutes) {
+    const [localCacheState, setLocalCacheState] = useState(null);
+    const cacheKey = useRef(key);
 
-    useEffect(() => {
-        let cachedData = localStorage.getItem(key);
-        let currentTime = Date.now();
-        let shouldResetData = false;
-
-        if(cachedData) {
-            let jsonData = JSON.parse(cachedData);
-
-            // Check if there is old data from before this hook was implemented
-            if(!jsonData.time) {
-                localStorage.clear();
-                shouldResetData = true;
-
-            // Check if time lapsed since last cache exceeds the desired cache time
-            } else {
-                const millisecondsInSecond = 1000;
-                const secondsInMinute = 60;
-                let minutesSinceDataCached = (currentTime - jsonData.time) / millisecondsInSecond / secondsInMinute;
-
-                if(minutesSinceDataCached >= timespanToCacheInMinutes) {
-                    localStorage.removeItem(key);
-                    shouldResetData = true;
-
-                } else {
-                    setIsCachedDataVerified(true);
-                }
-            }
-        }
-
-        if(shouldResetData) {
-            cachedData = null;
-        }
+    if(!key) {
+        return null;
+    }
+     
+    function setDataCache(data) {
+        const dataCache = new DataCache(data);
         
-        if(!cachedData && data) {
-            let dataToCacheLocally = {
-                time: currentTime,
-                itemData: data
-            }
-            localStorage.setItem(key, JSON.stringify(dataToCacheLocally));
-            setIsCachedDataVerified(true);
-        }
+        localStorage.setItem(cacheKey.current, JSON.stringify(dataCache));
+    }
 
-        if(isCachedDataVerified) {
-            setCachedItemData(cachedData);
-        }
+    const isCacheStateEmpty = !!localCacheState === false;
+    let localCache = localStorage.getItem(key);
+    let isCacheVerified = false;
     
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [data])
+    if(localCache && isCacheStateEmpty) {
+        let currentTime = Date.now();
+        let parsedData = JSON.parse(localCache);
+        localCache = parsedData.cache;
 
-    return cachedItemData;
+        // Check if there is old data from before this hook was implemented
+        if(!parsedData.time) {
+            localStorage.clear();
+
+        // Check if time lapsed since last cache exceeds the desired cache time
+        } else {
+            const millisecondsInASecond = 1000;
+            const secondsInAMinute = 60;
+            
+            let minutesSinceDataCached = (currentTime - parsedData.time) / millisecondsInASecond / secondsInAMinute;
+            let isTimeLapsed = minutesSinceDataCached >= timespanToCacheInMinutes
+
+            if(isTimeLapsed) {
+                localStorage.removeItem(key);
+            }
+            if(!isTimeLapsed) {
+                isCacheVerified = true;
+            }
+        }
+    }
+    
+    if(isCacheVerified && isCacheStateEmpty) {
+        setLocalCacheState(localCache);
+    }
+    
+    const hookMembers = {
+        setCache: setDataCache,
+        cache: localCacheState
+    }
+    return hookMembers;
 }

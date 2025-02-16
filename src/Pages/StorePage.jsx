@@ -1,16 +1,18 @@
 import { useState } from "react";
-import { ParentCategoryIds } from "../Enums/CategoryIds.js";
+import { ParentCategoryIds } from "../Enums/ParentCategoryIds.js";
 import { usePostAzureFunction } from "../CustomHooks/usePostAzureFunction.jsx";
 import { FunctionNames } from "../Enums/FunctionNames.js";
 import { SectionDivider } from "../Components/PageElements/SectionDivider/SectionDivider";
 import { StoreCategories } from '../Components/StorePage/StoreCategories/StoreCategories.jsx';
 import { LoadingIndicator } from "../Components/PageElements/LoadingIndicator/LoadingIndicator.jsx";
-import { buildAzureFunctionURL } from "../Functions/urlBuilders.js";
+import { buildAzureFunctionURL } from "../UtilityFunctions/urlUtility.js";
+import { CategoryId } from "../Models/CategoryId.js";
 
 export default function StorePage() {
     const [itemData, setItemData] = useState(null);
     const getCategoriesByCategoryIdURL = buildAzureFunctionURL(FunctionNames.GetCategoriesByCategoryId, process.env.REACT_APP_GET_CATEGORIES_BY_CATEGORY_ID)
-    const azureItemData = usePostAzureFunction(getCategoriesByCategoryIdURL, ParentCategoryIds.Products);
+    const categoryId = new CategoryId(ParentCategoryIds.Products);
+    const azureItemData = usePostAzureFunction(getCategoriesByCategoryIdURL, categoryId, categoryId.Id);
 
     const storetitleSettings = {
         headingText: 'STORE'

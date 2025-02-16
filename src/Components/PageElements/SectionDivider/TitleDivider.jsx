@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { DividerGraphic } from './DividerGraphic/DividerGraphic';
 import { useMediaQuery } from 'react-responsive';
 import '../../../App.css';
@@ -11,19 +12,26 @@ export const TitleDivider = () => {
             <div className="divider-titleGraphic">
                 <DividerGraphic needsFlip={true}></DividerGraphic>
             </div>
-            <h1 className="divider-text divider-futura">ASTROLOGY</h1>
+            <Link  to={'http://localhost:3000/Offerings/Astrology-SWLZ6MMXKJSRVKRNRVKXVQGJ'}>
+                <h1 className="divider-text divider-futura link-colorfade">ASTROLOGY</h1>
+            </Link>
             {isTablet && (
                 <div className="divider-titleGraphic">
                     <DividerGraphic isInBetween={true}></DividerGraphic>
                 </div>
             )}
-            <h1 className="divider-text divider-futura divider-textglow">TAROT READINGS</h1>
+            <Link to={'http://localhost:3000/Offerings/Tarot-BO3VI3MRP5O4QUSPWJPHB7WJ'}>
+                <h1 className="divider-text divider-futura divider-textglow link-colorfade">TAROT READINGS</h1>
+            </Link>
             {isTablet && (
                 <div className="divider-titleGraphic">
                     <DividerGraphic isInBetween={true}></DividerGraphic>
                 </div>
             )}
-            <h1 className="divider-text divider-futura">MEDIUMSHIP</h1>
+            <Link to={'http://localhost:3000/Offerings/Mediumship-WBIUSSJV2DQ2TXNJVNWIT6A3'}>
+                <h1 className="divider-text divider-futura link-colorfade">MEDIUMSHIP</h1>
+            </Link>
+
             <div className="divider-titleGraphic">
                 <DividerGraphic></DividerGraphic>
             </div>
