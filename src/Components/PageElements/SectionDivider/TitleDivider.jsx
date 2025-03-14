@@ -28,10 +28,17 @@ export const TitleDivider = () => {
                     <DividerGraphic isInBetween={true}></DividerGraphic>
                 </div>
             )}
+            <Link to={'http://localhost:3000/Offerings/Life%20Coaching-YBBDQEGFZ52IACA5CUXB2GEM/Empowerment%20Strategy%20Session-CBTEGWQKT4J4TGZJT4PEKCJR'}>
+                <h1 className="divider-text divider-futura divider-textglow link-colorfade">EMPOWERMENT STRATEGY</h1>
+            </Link>
+            {isTablet && (
+                <div className="divider-titleGraphic">
+                    <DividerGraphic isInBetween={true}></DividerGraphic>
+                </div>
+            )}
             <Link to={'http://localhost:3000/Offerings/Mediumship-WBIUSSJV2DQ2TXNJVNWIT6A3'}>
                 <h1 className="divider-text divider-futura link-colorfade">MEDIUMSHIP</h1>
             </Link>
-
             <div className="divider-titleGraphic">
                 <DividerGraphic></DividerGraphic>
             </div>
