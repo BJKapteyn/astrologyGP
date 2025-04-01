@@ -14,11 +14,11 @@ export const BioCard = ({cardData, callbackSelect})  => {
             <div className="biocard-info-container">
                 <p className="biocard-button">+</p>
                 <h4 className="biocard-infoName">{cardData.name}</h4>
-                <p className="biocard-infoSign">{cardData.expertise}</p>
-                <p className="biocard-infoSign">
+                {/* <p className="biocard-infoSign">{cardData.expertise}</p> */}
+                {/* <p className="biocard-infoSign">
                     <span className="expandedcard-attribute"> {cardData.threeWords}</span>
-                </p>
-                <p className="biocard-infoSign">{cardData.sign}</p>
+                </p> */}
+                {/* <p className="biocard-infoSign">{cardData.sign}</p> */}
             </div>
         </section>
     );

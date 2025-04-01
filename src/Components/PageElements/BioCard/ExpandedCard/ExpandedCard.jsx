@@ -39,8 +39,8 @@ export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {
                         <span className="expandedcard-attribute"> {expertise}</span>
                     </p>
                 )}
-                <p className="expandedcard-infotext">{threeWords}</p>
-                <p className="expandedcard-infotext">{sign}</p>
+                {/* <p className="expandedcard-infotext">{threeWords}</p> */}
+                {/* <p className="expandedcard-infotext">{sign}</p> */}
             </div>
             <div className="expandedcard-button">
                 {buyButtonActivated && <Link target='_blank' to={bookUrl}><ActionButton buttonSettings={bookButtonSettings}></ActionButton></Link>}
