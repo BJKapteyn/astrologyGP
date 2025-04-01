@@ -46,10 +46,9 @@ export const SquareBioCard = () => {
                                 image: null,
                                 name: card.name,
                                 sign: card.sign,
-                                type: "Tarot Reader",
-                                description: card.description,
-                                threeWords: null,
-                                expertise: null
+                                description: card.description
+                                // threeWords: null,
+                                // expertise: null
                             };
 
                             return bioCard;
@@ -67,7 +66,7 @@ export const SquareBioCard = () => {
 
         getCardData();
 
-    }, [cardData]);
+    }, [cardData, randomImage]);
 
     if(!cardData){
         return <LoadingIndicator></LoadingIndicator>

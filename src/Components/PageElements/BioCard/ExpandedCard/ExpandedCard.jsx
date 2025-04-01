@@ -2,16 +2,16 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { buyButtonActivated } from '../../../../FeatureFlags/launchFeatures.js';
 import { ActionButton } from '../../ActionButton/ActionButton.jsx';
-import { buildSingleServiceItemURL } from '../../../../UtilityFunctions/urlUtility.js';
+import { buildTeamMemberBookingURL } from '../../../../UtilityFunctions/urlUtility.js';
 import '../../../../App.css';
 import './ExpandedCard.css';
 
 export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {
-    const { imageURL, name, sign, description, threeWords, expertise, id } = productItem;
-    const [bookUrl, setBookUrl] = useState(buildSingleServiceItemURL(id));
+    const { imageURL, name, description, expertise, id } = productItem;
+    const [bookUrl, setBookUrl] = useState(buildTeamMemberBookingURL(id));
 
     if(!!bookUrl === false) {
-        setBookUrl(buildSingleServiceItemURL(id));
+        setBookUrl(buildTeamMemberBookingURL(id));
     }
 
     const bookButtonSettings = {
