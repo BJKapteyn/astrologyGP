@@ -4,4 +4,5 @@ export const FunctionNames =  {
     GetCategoriesByCategoryId: 'GetCategoriesByCategoryId',
     GetItemsByCategoryId: 'GetItemsByCategoryId',
     GetItemByItemId: 'GetItemByItemId',
+    GetAllTeamMembers: 'GetAllTeamMembers'
 }

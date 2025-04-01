@@ -1,11 +1,23 @@
-export function buildSingleServiceItemURL(itemId) {
-    const bookUrl = 'https://book.squareup.com/appointments/ysiif4g893rlw0/location/LP1D86FB8MBJ9/services/';
-
-    if(!itemId) {
+function buildUrlWithId(baseUrl, id) {
+    if (!id) {
         return null;
     }
 
-    return bookUrl + itemId;
+    return baseUrl + id;
+}
+
+export function buildSingleServiceItemURL(itemId) {
+    const singleServiceItemUrl = 'https://book.squareup.com/appointments/ysiif4g893rlw0/location/LP1D86FB8MBJ9/services/';
+    const bookUrl = buildUrlWithId(singleServiceItemUrl, itemId);
+
+    return bookUrl;
+}
+
+export function buildTeamMemberBookingURL(itemId) {
+    const teamMemberBookingUrl = 'https://book.squareup.com/appointments/ysiif4g893rlw0/location/LP1D86FB8MBJ9/services?buttonTextColor=c6abd2&color=c6abd2&locale=en&referrer=so&team_member_id=';
+    const bookUrl = buildUrlWithId(teamMemberBookingUrl, itemId);
+
+    return bookUrl;
 }
 
 export function buildAzureFunctionURL(functionName, code) {

@@ -4,11 +4,14 @@ import { BioCard } from "../BioCard";
 import { CardModal } from "../../CardModal/CardModal";
 import { LoadingIndicator } from '../../LoadingIndicator/LoadingIndicator.jsx'
 import { ExpandedCard } from "../ExpandedCard/ExpandedCard";
+import { FunctionNames } from "../../../../Enums/FunctionNames.js";
+import { useRandomImageUrl } from "../../../../CustomHooks/useRandomImageUrl.jsx";
 import '../BioCard.css';
 
 export const SquareBioCard = () => {
     const [cardData, setCardData] = useState(null);
     const [bioData, setBioData] = useState(null);
+    const randomImage = useRandomImageUrl();
     
     // Deselects data for modal
     function deSelectBioCard() {
@@ -26,29 +29,32 @@ export const SquareBioCard = () => {
         let active = true;
 
         const getCardData = async () => {
-            let url = buildAzureFunctionURL("getemployees", process.env.REACT_APP_GET_EMPLOYEE);
+            let url = buildAzureFunctionURL(FunctionNames.GetAllTeamMembers, process.env.REACT_APP_GET_ALL_TEAM_MEMBERS);
             
             if(active){
                 await fetch(url, {method: "GET"})
                     .then(response => response.json())
                     .then(json => {
                         let bioCardData = json.map(card => {
+                            if(!!card.imageURL === false) {
+                                card.imageURL = randomImage;
+                            }
+
                             let bioCard = {
-                                id: card.Id,
-                                imageURL: card.ImageURL,
+                                id: card.id,
+                                imageURL: card.imageURL,
                                 image: null,
-                                name: card.Name,
-                                sign: card.Sign,
-                                type: "Tarot Reader",
-                                description: card.Description,
-                                threeWords: card.ThreeWordsToDescribe,
-                                expertise: card.Expertise
+                                name: card.name,
+                                sign: card.sign,
+                                description: card.description
+                                // threeWords: null,
+                                // expertise: null
                             };
 
                             return bioCard;
                         });
 
-                        if(!cardData)
+                        if(!!cardData === false)
                             setCardData(bioCardData);
                     });
             }
@@ -57,18 +63,19 @@ export const SquareBioCard = () => {
                 active = false;
             }
         }
+
         getCardData();
-    }, [cardData]);
+
+    }, [cardData, randomImage]);
 
     if(!cardData){
         return <LoadingIndicator></LoadingIndicator>
     }
-    
 
     return (
         <div className="biocard-flex-container">
             {cardData?.map(data => {
-                return <BioCard key={data.Id} cardData={data} callbackSelect={selectBioCard}></BioCard>
+                return <BioCard key={data.id} cardData={data} callbackSelect={selectBioCard}></BioCard>
             })}
             {bioData && (
                 <CardModal containerStyleId={'biocard-modal-container'} callBackDeselect={deSelectBioCard} >
