@@ -78,10 +78,17 @@ export const NavLinkData = [
         ]
     },
     {
-        id: 5,
-        route: '/CurrentVibe',
-        text: 'THE CURRENT VIBE',
-        subMenu: null
+        id: 7,
+        route: '/EventCalendar',
+        text: 'EVENT CALENDAR',
+        submenu: [
+            {
+                id: 5,
+                route: '/CurrentVibe',
+                text: 'THE CURRENT VIBE',
+                subMenu: null
+            }
+        ]
     },
     {
         id: 6,

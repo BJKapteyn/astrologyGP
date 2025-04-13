@@ -10,6 +10,7 @@ import WhyVibePage from './Pages/WhyVibePage.jsx';
 import CollectivePage from './Pages/CollectivePage.jsx';
 import OfferingsPage from './Pages/OfferingsPage.jsx';
 import StorePage from './Pages/StorePage.jsx';
+import EventCalendarPage from './Pages/EventCalendarPage.jsx';
 import './App.css';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="/Store/:storecategory" element={<ItemListByCategory />}></Route>
           <Route path="/Store/:storecategory/:storeitem" element={<SingleItem />}></Route>
           <Route path="/CurrentVibe" element={<ComingSoon comingSoonData={currentVibeComingSoonData} />}></Route>
+          <Route path="/EventCalendar" element={<EventCalendarPage />}></Route>
           <Route path="/Offerings" element={<OfferingsPage />}></Route>
           <Route path="/Offerings/:offering" element={<ItemListByCategory productType={ProductTypes.AppointmentsService} />}></Route>
           <Route path="/Offerings/:offering/:singleoffering" element={<SingleItem isService={true} hasVariation={true} />}></Route>
