@@ -1,4 +1,5 @@
 import { Calendar, momentLocalizer } from 'react-big-calendar';
+import './EventCalendar.css'
 import moment from 'moment';
 import '../../../../node_modules/react-big-calendar/lib/css/react-big-calendar.css'; 
 
@@ -20,8 +21,7 @@ export const EventCalendar = () => {
 
     return (
         <div className="event-calendar-page">
-            <h1>Event Calendar</h1>
-            {calendar}
+                {calendar}
         </div>
     );
 };
