@@ -1,5 +1,4 @@
-.event-calendar-page {
-    margin: auto;
-    height: 50em;
-    max-width: 60em;
+.event-calendar {
+    min-height: 500px;
+    height: 500px;
 }
