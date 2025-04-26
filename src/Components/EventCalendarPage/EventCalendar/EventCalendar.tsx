@@ -10,27 +10,21 @@ interface EventCalendarProps {
 }
 
 export const EventCalendar: React.FC<EventCalendarProps> = ({ events, callbackSelect }) => {
-        const calendarLocalizer: DateLocalizer = momentLocalizer(moment);
+    const calendarLocalizer: DateLocalizer = momentLocalizer(moment);
 
-        const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[] | null>(events);
+    const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[] | null>(events);
 
-        if(!calendarEvents && !events) {
-            setCalendarEvents([
-                {
-                    title: 'Long Event',
-                    start: moment(new Date(2025, 3, 7)).toDate(),
-                    end: moment(new Date(2025, 3, 11)).toDate(),
-                    allDay: true,
-                    resource: null
-                }
-            ]);
-        }
+    if(!!calendarEvents === false && !!events) {
+        setCalendarEvents(events);
+    }
     
     return (
         <div className="event-calendar">
             <Calendar localizer={calendarLocalizer}
                 events={calendarEvents ?? []} 
-                showAllEvents={true}
+                onSelectEvent={(event) => {
+                    callbackSelect(event);
+                }}
             />
         </div>
     );

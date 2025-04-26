@@ -3,24 +3,26 @@ import {  Event as CalendarEvent } from 'react-big-calendar';
 import { EventDetail } from '../EventDetail/EventDetail';
 import { EventCalendar } from '../EventCalendar/EventCalendar';
 import { useRandomImageUrl } from 'CustomHooks/useRandomImageUrl';
-import * as eventData from '../data/calendarEvents.json';
+import * as eventDataJson from '../data/calendarEvents.json';
 
-export const EventView: React.FC = () => {
+export const EventCalendarView: React.FC = () => {
     const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[] | null>(null);
     const [eventDetail, setEventDetail] = useState<CalendarEvent | null>(null);
     const isEventSelected: boolean = !!eventDetail;
-    const randomImage = useRandomImageUrl();
+    const randomImage: string | null = useRandomImageUrl();
 
     function callbackSetEventDetail(calendarEventDetails: CalendarEvent) {
         setEventDetail(calendarEventDetails);
     }
 
     useEffect(() => {
-        if(calendarEvents === null) {
-            const events: CalendarEvent[] = eventData.events.map((event) => {
+        if(!!calendarEvents === false && !!randomImage) {
+            let eventData = JSON.parse(JSON.stringify(eventDataJson));
+            const events: CalendarEvent[] = eventData.events.map((event: any) => {
                 let eventResources = {
-                    description: event.resource,
-                    imageURL: randomImage
+                    description: event.resource.description,
+                    imageURL: event.resource.imageUrl,
+                    eventTitle: event.resource.eventName
                 }
 
                 return {
@@ -30,7 +32,7 @@ export const EventView: React.FC = () => {
                     allDay: true,
                     resource: eventResources,
                 } as CalendarEvent;
-            })
+            });
             
             setCalendarEvents(events);
         }
@@ -38,22 +40,23 @@ export const EventView: React.FC = () => {
 
     return (
         <div>
-            <div className="flex flex-col gap-4">
+            <div className="event-calendar-calendar">
                 <EventCalendar events={calendarEvents} callbackSelect={callbackSetEventDetail} />
-
             </div>
-            {isEventSelected ? 
-                (<EventDetail
-                    name="Test Selected Event"
-                    description={eventDetail?.resource.description}
-                    imageURL={eventDetail?.resource.imageURL} 
-                />) : 
-                (<EventDetail
-                    name="Sample Event"
-                    description="This is a description of the sample event."
-                    imageURL="https://via.placeholder.com/150"
-                />)
-            }
+            <div className='event-calendar-detail'>
+                {isEventSelected ? 
+                    (<EventDetail
+                        name={eventDetail?.resource?.eventTitle}
+                        description={eventDetail?.resource?.description}
+                        imageURL={eventDetail?.resource?.imageURL} 
+                    />) : 
+                    (<EventDetail
+                        name="Sample Event"
+                        description="This is a description of the sample event."
+                        imageURL="https://via.placeholder.com/150"
+                    />)
+                }
+            </div>
         </div>
     );
 };
