@@ -1,8 +1,7 @@
-import {  Calendar, momentLocalizer, DateLocalizer, Event as CalendarEvent } from 'react-big-calendar';     
+import {  Calendar, momentLocalizer, DateLocalizer, Event as CalendarEvent } from 'react-big-calendar';   
 import { useState } from 'react';
 import './EventCalendar.css'
 import moment from 'moment';
-import '../../../../node_modules/react-big-calendar/lib/css/react-big-calendar.css';
 
 interface EventCalendarProps {
     events: CalendarEvent[] | null;
