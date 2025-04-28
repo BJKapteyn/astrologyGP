@@ -1,7 +1,10 @@
-import {  Calendar, momentLocalizer, DateLocalizer, Event as CalendarEvent } from 'react-big-calendar';   
+// import '../../../../node_modules/react-big-calendar/lib/sass/variables.scss'
+import {  Calendar, momentLocalizer, DateLocalizer, Event as CalendarEvent } from 'react-big-calendar';  
+import './BigCalendarScssVariableOverride.scss'; // Import the SCSS file to override variables
+import '../../../../node_modules/react-big-calendar/lib/sass/styles.scss';
 import { useState } from 'react';
-import './EventCalendar.css'
 import moment from 'moment';
+import './EventCalendar.css'
 
 interface EventCalendarProps {
     events: CalendarEvent[] | null;
