@@ -11,7 +11,7 @@ import CollectivePage from './Pages/CollectivePage.jsx';
 import OfferingsPage from './Pages/OfferingsPage.jsx';
 import StorePage from './Pages/StorePage.jsx';
 import EventCalendarPage from './Pages/EventCalendarPage.jsx';
-import './App.css';
+import './App.scss';
 
 function App() {
 

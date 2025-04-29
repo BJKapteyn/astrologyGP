@@ -1,34 +1,14 @@
-// @use '../../../../node_modules/react-big-calendar/lib/sass/styles.scss' with (
-//     $event-bg: red,
-//     $event-border: red,
-//     $event-outline: red,
-//     $event-color: red,
-//     $event-border-radius: 5px,
-//     $event-padding: 2px 5px,
-//     $event-zindex: 4,
-
-//     $calendar-border: red,
-//     $cell-border: red,
-
-//     $border-color: red,
-// );
-
-$event-bg: red;
-$event-border: red;
-$event-outline: red;
-$event-color: red;
+$event-bg: blue;
+$event-border: blue;
+$event-outline: blue;
+$event-color: blue;
 $event-border-radius: 5px;
 $event-padding: 2px 5px;
 $event-zindex: 4;
 
-$calendar-border: red;
-$cell-border: red;
+$calendar-border: blue;
+$cell-border: blue;
 
-$border-color: red;
+$border-color: blue;
 
-// Each calendar segment is 1/7th.
-
-
-@import '../../../../node_modules/react-big-calendar/lib/sass/styles';
-
-// @import '../../../../node_modules/react-big-calendar/lib/sass/event.scss';   
+@import "~react-big-calendar/lib/sass/styles.scss";

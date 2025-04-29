@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { buyButtonActivated } from '../../../../FeatureFlags/launchFeatures.js';
 import { ActionButton } from '../../ActionButton/ActionButton.jsx';
 import { buildTeamMemberBookingURL } from '../../../../UtilityFunctions/urlUtility.js';
-import '../../../../App.css';
+import '../../../../App.scss';
 import './ExpandedCard.css';
 
 export const ExpandedCard = ({ productItem, callBackDeselect, styleId }) => {

@@ -8,7 +8,7 @@ import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction.
 import { FunctionNames } from '../../../Enums/FunctionNames.js';
 import { buildAzureFunctionURL, buildSingleServiceItemURL } from '../../../UtilityFunctions/urlUtility.js';
 import moon from '../../../Pics/Portraits/portrait-sunsetWaves.png';
-import '../../../App.css';
+import '../../../App.scss';
 import './SingleItem.css';
 
 // View detailed item information and book/buy now link 

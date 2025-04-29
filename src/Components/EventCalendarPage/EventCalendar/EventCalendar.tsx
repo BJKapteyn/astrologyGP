@@ -1,10 +1,7 @@
-// import '../../../../node_modules/react-big-calendar/lib/sass/variables.scss'
-import {  Calendar, momentLocalizer, DateLocalizer, Event as CalendarEvent } from 'react-big-calendar';  
-import './BigCalendarScssVariableOverride.scss'; // Import the SCSS file to override variables
-import '../../../../node_modules/react-big-calendar/lib/sass/styles.scss';
 import { useState } from 'react';
+import {  Calendar, momentLocalizer, DateLocalizer, Event as CalendarEvent } from 'react-big-calendar';  
 import moment from 'moment';
-import './EventCalendar.css'
+import './EventCalendar.css';
 
 interface EventCalendarProps {
     events: CalendarEvent[] | null;
@@ -19,6 +16,9 @@ export const EventCalendar: React.FC<EventCalendarProps> = ({ events, callbackSe
     if(!!calendarEvents === false && !!events) {
         setCalendarEvents(events);
     }
+    
+    require('./BigCalendarScssVariableOverride.scss');
+    
     
     return (
         <div className="event-calendar">

@@ -1,5 +1,5 @@
 import './CardModal.css';
-import '../../../App.css';
+import '../../../App.scss';
 
 // Displays content in a modal with a darkened translucent background
 //      callBackDeselect: function to remove the modal

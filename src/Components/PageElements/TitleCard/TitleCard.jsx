@@ -1,4 +1,4 @@
-import '../../../App.css';
+import '../../../App.scss';
 import './TitleCard.css';
 
 export function TitleCard({ titleData }) {

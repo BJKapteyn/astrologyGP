@@ -5,6 +5,7 @@ import { EventCalendar } from '../EventCalendar/EventCalendar';
 import { useRandomImageUrl } from 'CustomHooks/useRandomImageUrl';
 import * as eventDataJson from '../data/calendarEvents.json';
 
+
 export const EventCalendarView: React.FC = () => {
     const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[] | null>(null);
     const [eventDetail, setEventDetail] = useState<CalendarEvent | null>(null);

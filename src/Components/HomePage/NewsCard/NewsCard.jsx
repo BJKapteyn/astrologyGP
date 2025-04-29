@@ -1,6 +1,6 @@
 import { useMediaQuery } from 'react-responsive';
 import { ReactComponent as EyeDrawing } from '../../../Pics/SvgDrawings/EYE-VECTOR.svg';
-import '../../../App.css';
+import '../../../App.scss';
 import './NewsCard.css';
 
 export const NewsCard = ({ newscard }) => {

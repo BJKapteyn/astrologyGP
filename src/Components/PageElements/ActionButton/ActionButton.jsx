@@ -1,4 +1,4 @@
-import '../../../App.css';
+import '../../../App.scss';
 import './ActionButton.css';
 
 // buttonSettings - settings used to define the button

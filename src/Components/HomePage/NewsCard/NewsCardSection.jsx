@@ -1,6 +1,6 @@
 import { NewsCards } from './NewsCards.jsx';
 import './NewsCard.css';
-import '../../../App.css';
+import '../../../App.scss';
 
 export const NewsCardSection = () => {
     return (

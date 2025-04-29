@@ -1,5 +1,5 @@
 import { DividerGraphic } from './DividerGraphic/DividerGraphic';
-import '../../../App.css';
+import '../../../App.scss';
 import './SectionDivider.css';
 
 // Decorated title text for a major page section
