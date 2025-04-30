@@ -23,6 +23,7 @@ export const EventCalendar: React.FC<EventCalendarProps> = ({ events, callbackSe
     return (
         <div className="event-calendar">
             <Calendar localizer={calendarLocalizer}
+                date={calendarDate}
                 events={calendarEvents ?? []} 
                 views={toolbarViews.current}
                 onSelectEvent={(event) => {

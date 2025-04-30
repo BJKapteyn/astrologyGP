@@ -36,3 +36,25 @@
     background-color: var(--main-accent-color);
     color: white;
 }
+
+.rbc-btn-group {
+    position: absolute;
+    left: .5em;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+}
+.rbc-btn-group button{
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    transition: background-color .5s ease-out, border-color .5 ease-out;
+    -webkit-transition: background-color .5s ease-out, border-color .5 ease-out;
+    -moz-transition: background-color .5s ease-out, border-color .5 ease-out;
+    -ms-transition: background-color .5s ease-out, border-color .5 ease-out;
+    -o-transition: background-color .5s ease-out, border-color .5 ease-out;
+}
