@@ -1,14 +1,19 @@
-$event-bg: blue;
-$event-border: blue;
-$event-outline: blue;
-$event-color: blue;
-$event-border-radius: 5px;
-$event-padding: 2px 5px;
+// $time-selection-bg-color: rgb(198, 171, 210);
+
+$event-bg: rgb(72, 31, 75);
+$event-border: rgb(72, 31, 75);
+$event-outline: rgb(72, 31, 75);
+$event-color: white;
+$event-border-radius: 0px;
+$event-padding: .2em .5em;
 $event-zindex: 4;
 
-$calendar-border: blue;
-$cell-border: blue;
+$calendar-border: rgb(72, 31, 75);
+$cell-border: rgb(198, 171, 210);
 
-$border-color: blue;
+$border-color: rgb(72, 31, 75);
+
+$today-highlight-bg: rgb(255, 246, 225);
 
 @import "~react-big-calendar/lib/sass/styles.scss";
+@import "./EventCalendar.scss";

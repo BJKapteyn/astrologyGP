@@ -42,7 +42,9 @@ export const EventCalendarView: React.FC = () => {
     return (
         <div>
             <div className="event-calendar-calendar">
-                <EventCalendar events={calendarEvents} callbackSelect={callbackSetEventDetail} />
+                <EventCalendar
+                    events={calendarEvents} 
+                    callbackSelect={callbackSetEventDetail} />
             </div>
             <div className='event-calendar-detail'>
                 {isEventSelected ? 

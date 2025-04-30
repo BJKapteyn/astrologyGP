@@ -1,0 +1,38 @@
+.event-calendar {
+    margin: auto;
+    min-height: 500px;
+    height: 70vh;
+    max-width: 100em;
+}
+
+ .rbc-event-content, .rbc-header {
+     font-family: Futura;
+}
+    
+.rbc-toolbar-label {
+    font-family: bivoac-regular;
+    color: var(--secondary-orange)
+}
+
+.rbc-header {
+    padding: .5em 3px;
+    color: var(--main-color);
+    font-size: 100%;
+}
+
+.rbc-button-link {
+    color: var(--main-accent-color);
+    font-size: 1em;
+}
+
+.rbc-event {
+    transition: background-color .5s ease-out;
+    -webkit-transition: background-color .5s ease-out;
+    -moz-transition: background-color .5s ease-out;
+    -ms-transition: background-color .5s ease-out;
+    -o-transition: background-color .5s ease-out;
+}
+.rbc-event:hover {
+    background-color: var(--main-accent-color);
+    color: white;
+}
