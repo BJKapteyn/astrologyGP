@@ -10,6 +10,7 @@ interface EventCalendarProps {
 export const EventCalendar: React.FC<EventCalendarProps> = ({ events, callbackSelect }) => {
     const calendarLocalizer: DateLocalizer = momentLocalizer(moment);
     const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[] | null>(events);
+    const [calendarDate, setCalendarDate] = useState<Date>(new Date());
     const toolbarViews = useRef<ViewsProps>({month: true, week: false, day: false});
 
 
@@ -26,6 +27,9 @@ export const EventCalendar: React.FC<EventCalendarProps> = ({ events, callbackSe
                 views={toolbarViews.current}
                 onSelectEvent={(event) => {
                     callbackSelect(event);
+                }}
+                onNavigate={(date) => {
+                    setCalendarDate(date);
                 }}
             />
         </div>
