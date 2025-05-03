@@ -1,3 +1,4 @@
+import './EventDetail.css'
 
 interface EventDetailProps {
   name: string;
@@ -7,9 +8,10 @@ interface EventDetailProps {
 
 export const EventDetail: React.FC<EventDetailProps> = ({ name, description, imageURL }) => {
   return (
-    <div className="flex items-start">
-      <img src={imageURL} alt={name} className="w-1/3 h-auto object-cover" />
-      <div className="ml-0">
+    <div className="event-detail-flex">
+      <img className='hide' alt={name} />
+      <div style={{backgroundImage: `url(${imageURL})`}} className="event-detail-item" />
+      <div className="event-detail-item">
         <h2 className="text-lg font-bold">{name}</h2>
         <p className="text-sm text-gray-700">{description}</p>
       </div>

@@ -1,6 +1,14 @@
-.event-detail {
+.event-detail-flex {
+  margin: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  height: auto;
   gap: 1rem;
+  width: 100%;  
+}
+
+.event-detail-item {
+  height: auto;
+  width: 50%;
 }

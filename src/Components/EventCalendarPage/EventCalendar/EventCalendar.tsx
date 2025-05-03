@@ -21,7 +21,7 @@ export const EventCalendar: React.FC<EventCalendarProps> = ({ events, callbackSe
     require('./BigCalendarScssVariableOverride.scss');
 
     return (
-        <div className="event-calendar">
+        <div className="event-calendar-bigcalendar">
             <Calendar localizer={calendarLocalizer}
                 date={calendarDate}
                 events={calendarEvents ?? []} 

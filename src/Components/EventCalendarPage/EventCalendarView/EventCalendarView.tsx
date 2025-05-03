@@ -3,9 +3,10 @@ import {  Event as CalendarEvent } from 'react-big-calendar';
 import { EventDetail } from '../EventDetail/EventDetail';
 import { EventCalendar } from '../EventCalendar/EventCalendar';
 import { useRandomImageUrl } from 'CustomHooks/useRandomImageUrl';
+import './EventCalendarView.css';
 import * as eventDataJson from '../data/calendarEvents.json';
 
-
+// Functionality and display for the Event Calendar page.
 export const EventCalendarView: React.FC = () => {
     const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[] | null>(null);
     const [eventDetail, setEventDetail] = useState<CalendarEvent | null>(null);
@@ -22,7 +23,7 @@ export const EventCalendarView: React.FC = () => {
             const events: CalendarEvent[] = eventData.events.map((event: any) => {
                 let eventResources = {
                     description: event.resource.description,
-                    imageURL: event.resource.imageUrl,
+                    imageURL: event.resource.imageUrl ?? randomImage,
                     eventTitle: event.resource.eventName
                 }
 
@@ -40,26 +41,22 @@ export const EventCalendarView: React.FC = () => {
     }, [calendarEvents, randomImage]);
 
     return (
-        <div>
-            <div className="event-calendar-calendar">
-                <EventCalendar
-                    events={calendarEvents} 
-                    callbackSelect={callbackSetEventDetail} />
-            </div>
-            <div className='event-calendar-detail'>
-                {isEventSelected ? 
-                    (<EventDetail
-                        name={eventDetail?.resource?.eventTitle}
-                        description={eventDetail?.resource?.description}
-                        imageURL={eventDetail?.resource?.imageURL} 
-                    />) : 
-                    (<EventDetail
-                        name="Sample Event"
-                        description="This is a description of the sample event."
-                        imageURL="https://via.placeholder.com/150"
-                    />)
-                }
-            </div>
+        <div className="event-calendar">
+            <EventCalendar
+                events={calendarEvents} 
+                callbackSelect={callbackSetEventDetail} />
+            {isEventSelected ? 
+                (<EventDetail
+                    name={eventDetail?.resource?.eventTitle}
+                    description={eventDetail?.resource?.description}
+                    imageURL={eventDetail?.resource?.imageURL} 
+                />) : 
+                (<EventDetail
+                    name="Sample Event"
+                    description="This is a description of the sample event."
+                    imageURL="https://via.placeholder.com/150"
+                />)
+            }
         </div>
     );
 };

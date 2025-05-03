@@ -1,4 +1,6 @@
-// $time-selection-bg-color: rgb(198, 171, 210);
+// Scss variable overrides for react-big-calendar. Check node modules for more variables that can be overridden
+// They need to be imported before the big calendar style sheet
+
 $date-selection-bg-color: rgb(198, 171, 210);
 
 $event-bg: rgb(72, 31, 75);

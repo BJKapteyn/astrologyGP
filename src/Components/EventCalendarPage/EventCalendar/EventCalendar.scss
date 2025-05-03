@@ -1,8 +1,9 @@
-.event-calendar {
+.event-calendar-bigcalendar {
     margin: auto;
     min-height: 500px;
     height: 70vh;
     max-width: 100em;
+    width: 100%;
 }
 
  .rbc-event-content, .rbc-header {
@@ -11,7 +12,8 @@
     
 .rbc-toolbar-label {
     font-family: bivoac-regular;
-    color: var(--secondary-orange)
+    color: var(--secondary-orange);
+    font-size: 1.5em;
 }
 
 .rbc-toolbar {
