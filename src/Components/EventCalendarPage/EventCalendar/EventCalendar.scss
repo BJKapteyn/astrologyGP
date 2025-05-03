@@ -14,6 +14,10 @@
     color: var(--secondary-orange)
 }
 
+.rbc-toolbar {
+    position: relative;
+}
+
 .rbc-header {
     padding: .5em 3px;
     color: var(--main-color);
@@ -39,7 +43,7 @@
 
 .rbc-btn-group {
     position: absolute;
-    left: .5em;
+    left: 0em;
     border-radius: 0px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;

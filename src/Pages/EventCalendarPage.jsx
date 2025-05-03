@@ -7,7 +7,7 @@ export default function EventCalendarPage() {
     return (
         <div className="event-calendar-main">
             {/* <h1>Event Calendar Page</h1> */}
-            <SectionDivider dividerData={{ headingText: 'Event Calendar Page'}} />
+            <SectionDivider dividerData={{ headingText: 'Event Calendar'}} />
             <EventCalendarView />
         </div>
     );
