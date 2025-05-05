@@ -1,3 +1,5 @@
+import { SingleItem } from '../../PageElements/SingleItem/SingleItem';
+import { ItemData } from 'Models/Interfaces/ItemData';
 import './EventDetail.css'
 
 interface EventDetailProps {
@@ -7,8 +9,19 @@ interface EventDetailProps {
 }
 
 export const EventDetail: React.FC<EventDetailProps> = ({ name, description, imageURL }) => {
+
+  const itemData: ItemData = {
+    id: '1',
+    description: description,
+    name: name,
+    imageURL: imageURL,
+    buyNowLink: '',
+    variations: [],
+  };
+
   return (
     <div className="event-detail-flex">
+      <SingleItem itemData={itemData}  />
       <img className='hide' alt={name} />
       <div style={{backgroundImage: `url(${imageURL})`}} className="event-detail-item" />
       <div className="event-detail-item">

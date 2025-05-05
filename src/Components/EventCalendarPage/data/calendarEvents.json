@@ -35,6 +35,18 @@
                 "description": "Description for Event 1",
                 "eventTitle": "Group Yoga"
             }
+        },
+        {
+            "id": 4,
+            "title": "MENOPAUSE VENT SESH",
+            "start": "2025-05-14T19:00:00",
+            "end": "2025-05-14T22:00:00",
+            "isAllDay": false,
+            "resource": {
+                "imageUrl": "https://items-images-production.s3.us-west-2.amazonaws.com/files/e33ea48a5b1a9a08b574e1ff6bca54a3f08f1e08/original.png",
+                "description": "Menopause Vent Sesh (Online Event): Real Talk, Real Support Welcome to a space where you don’t have to hold it all together. This virtual gathering is for women going through menopause who are tired of feeling alone, confused, or just plain over it. Whether you're dealing with hot flashes, anxiety, sleep issues, weird supplements, or mood swings that come out of nowhere.",
+                "eventTitle": "MENOPAUSE VENT SESH"
+            }
         }
     ]
 }
