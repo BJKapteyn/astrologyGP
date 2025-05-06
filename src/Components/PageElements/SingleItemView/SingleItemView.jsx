@@ -11,7 +11,7 @@ import './SingleItemView.css';
 // View detailed item information and book/buy now link 
 //   rootPage:      the page to return to when the back button is clicked
 //   hasVariation:  whether the item has variations
-export const SingleItemView = ({ rootPage, hasVariation = false, isService = false, purchaseButtonText = null}) => {
+export const SingleItemView = ({ isService = false, purchaseButtonText = null}) => {
     const defaultBuyNowUrl = 'https://the-vibe-collective.square.site/shop/products/HUMYRU6WAPVQ54PYRR4FEUAZ';
     const [itemData, setItemData] = useState(useLocation().state);
     const [purchaseLink, setPurchaseLink] = useState(itemData?.buyNowLink);
@@ -30,31 +30,28 @@ export const SingleItemView = ({ rootPage, hasVariation = false, isService = fal
     
     if(!!itemData?.buyNowLink === false && !!purchaseLink === false) {
         if(isService) {
-            setPurchaseLink(buildSingleServiceItemURL(itemId));
+            itemData.buyNowLink = buildSingleServiceItemURL(itemId);
         }
         else {
-            setPurchaseLink(defaultBuyNowUrl);
+            itemData.buyNowLink = defaultBuyNowUrl;
         }
     }
 
-    if(!!isService) {
+    if(!!isService && !!purchaseLink === false) {
         const serviceBuyNowLink = createServiceBuyNowLink();
         setPurchaseLink(serviceBuyNowLink);
     }
 
     // Use API data if no data passed from previous page
-    if(!!itemData === false && !!itemResponseData === true) {
+    if(!!itemData === false && !!itemResponseData === true) 
         setItemData(itemResponseData);
-    }
 
-    if(!!itemData === false) {
-        
+    if(!!itemData === false) 
         return <LoadingIndicator />;
-    }
-
+    
     return (
         <main id="single-item-view">
-            <SingleItem itemData={itemData} defaultBuyNowURL={defaultBuyNowUrl}></SingleItem>
+            <SingleItem isService={isService} itemData={itemData} defaultBuyNowURL={defaultBuyNowUrl}></SingleItem>
         </main>
     );
 }

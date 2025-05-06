@@ -10,9 +10,9 @@ import purpleCrystals from '../Pics/Landscapes/jpeg/purpleCrystals.jpg';
 import findSign from '../Pics/Landscapes/jpeg/findSign.jpg';
 
 export function useRandomImageUrl() {
-    const [selectedImage, setSelectedImage] = useState(null);
     const imageArray = useRef([diary, girlOnBeach, floating, moonCrest, nightMoon, purpleCrystals, findSign, candles, purpleGeode]);
     const randomIndex = useRef(Math.floor(Math.random() * imageArray.current.length));
+    const [selectedImage, setSelectedImage] = useState(imageArray.current[randomIndex.current]);
 
     useEffect(() => {
         if(!selectedImage) 

@@ -52,9 +52,9 @@ export const EventCalendarView: React.FC = () => {
                     imageURL={eventDetail?.resource?.imageURL} 
                 />) : 
                 (<EventDetail
-                    name="Sample Event"
-                    description="This is a description of the sample event."
-                    imageURL="https://via.placeholder.com/150"
+                    name=""
+                    description="Select an event to see details"
+                    imageURL=""
                 />)
             }
         </div>
