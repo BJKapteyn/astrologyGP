@@ -11,7 +11,6 @@ interface SingleItemProps {
     defaultBuyNowURL?: string;
     purchaseButtonText?: string;
     printVariationBuyButtons?: boolean;
-
 }
 
 export const SingleItem: React.FC<SingleItemProps> = ({ 
@@ -23,15 +22,16 @@ export const SingleItem: React.FC<SingleItemProps> = ({
     const [purchaseLink, setPurchaseLink] = useState(itemData?.buyNowLink);
     const hasVariation: boolean = !!itemData?.variations; 
     const imageUrl: string | null = useRandomImageUrl();
-
-    if(!!purchaseLink === false && !!itemData?.buyNowLink) {
-        setPurchaseLink(defaultBuyNowURL);
-    }
-
     const purchaseButtonSettings = {
         buttonText: purchaseButtonText,
         buttonStyleId: 'singleitem-bookbutton',
         action: null
+    }
+    
+    
+
+    if(!!purchaseLink === false && !!itemData?.buyNowLink) {
+        setPurchaseLink(defaultBuyNowURL);
     }
 
     if(!itemData) {
@@ -63,6 +63,5 @@ export const SingleItem: React.FC<SingleItemProps> = ({
                 </div>
             </div>
         </section>
-
     );
 };
