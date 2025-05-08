@@ -19,28 +19,29 @@ export const SingleItem: React.FC<SingleItemProps> = ({
         purchaseButtonText = 'BUY NOW', 
     }) => {
 
-    const [purchaseLink, setPurchaseLink] = useState(itemData?.buyNowLink);
-    const [imageUrl, setImageUrl] = useState(itemData?.imageURL);
-    const hasVariation: boolean = !!itemData.variations === true && itemData.variations.length > 0; 
+    const [purchaseLink, setPurchaseLink] = useState(defaultBuyNowURL);
     const randomImageUrl = useRandomImageUrl();
+    const [imageUrl, setImageUrl] = useState(randomImageUrl);
+    const hasVariation: boolean = !!itemData.variations === true && itemData.variations.length > 0; 
+    let currentImageURL = imageUrl;
+    let currentPurchaseLink = purchaseLink;
     const purchaseButtonSettings = {
         buttonText: purchaseButtonText,
         buttonStyleId: 'singleitem-bookbutton',
         action: null
     }
 
-    if(!!imageUrl === false && !!itemData?.imageURL === false) {
-        setImageUrl(randomImageUrl ?? '');
+    if(itemData?.imageURL && currentImageURL !== itemData?.imageURL) {
+        setImageUrl(itemData?.imageURL);
     }
 
-    if(!!purchaseLink === false && !!itemData?.buyNowLink) {
-        setPurchaseLink(defaultBuyNowURL);
+    if(itemData?.imageURL && currentPurchaseLink !== itemData?.buyNowLink) {
+        setPurchaseLink((itemData?.buyNowLink));
     }
 
     if(!itemData) {
         return <LoadingIndicator />;
     }
-
     return (
          <section id="singleitem">
             <div className="singleitem-imagecontainer">
