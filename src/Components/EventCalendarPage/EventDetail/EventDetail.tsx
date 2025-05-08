@@ -2,7 +2,7 @@ import { SingleItem } from '../../PageElements/SingleItem/SingleItem';
 import { ItemData } from 'Models/Types/types';
 import { CalendarEvent } from 'Models/Types/types';
 import './EventDetail.css'
-import { useEffect, useCallback, useState } from 'react';
+import { useCallback } from 'react';
 
 interface EventDetailProps {
   eventData?: CalendarEvent;
@@ -33,12 +33,6 @@ export const EventDetail: React.FC<EventDetailProps> = ({ eventData }) => {
   return (
     <div className="event-detail-flex">
       {eventData && <SingleItem itemData={convertedItemData}  />}
-      {/* <img className='hide' alt={name} />
-      <div style={{backgroundImage: `url(${imageURL})`}} className="event-detail-item" />
-      <div className="event-detail-item">
-        <h2 className="text-lg font-bold">{name}</h2>
-        <p className="text-sm text-gray-700">{description}</p>
-      </div> */}
     </div>
   );
 };

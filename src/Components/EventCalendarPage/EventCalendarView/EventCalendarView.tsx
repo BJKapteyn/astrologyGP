@@ -45,7 +45,7 @@ export const EventCalendarView: React.FC = () => {
             <EventCalendar
                 events={calendarEvents} 
                 callbackSelect={callbackSetEventDetail} />
-                {eventDetail && <EventDetail eventData={eventDetail}/>} 
+                {eventDetail ? <EventDetail eventData={eventDetail} /> : <h4 className="event-calendar-no-event">Select an event for more details</h4>} 
         </div>
     );
 };
