@@ -1,5 +1,6 @@
 .event-calendar {
-    width: 100em;
+    width: 80%;
+    min-width: 20em;
     height: auto;
     margin: auto;
 }
