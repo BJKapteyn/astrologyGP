@@ -9,31 +9,34 @@
             "resource": {
                 "imageUrl": "https://example.com/image1.jpg",
                 "description": "Description for Event 1",
-                "eventName": "Group Yoga"
+                "eventName": "Group Yoga",
+                "buyNowLink": ""
             }
         },
         {
             "id": 2,
-            "title": "Event 2",
+            "title": "Group Support Chat",
             "start": "2025-04-04T14:00:00",
             "end": "2025-04-10T16:00:00",
             "isAllDay": true,
             "resource": {
                 "imageUrl": "https://example.com/image1.jpg",
                 "description": "Description for Event 1",
-                "eventTitle": "Group Yoga"
+                "eventName": "Group Yoga",
+                "buyNowLink": ""
             }
         },
         {
             "id": 3,
-            "title": "Another Event",
+            "title": "Group Yoga 2",
             "start": "2025-04-20T14:00:00",
             "end": "2025-04-26T16:00:00",
             "isAllDay": true,
             "resource": {
                 "imageUrl": "https://example.com/image1.jpg",
                 "description": "Description for Event 1",
-                "eventTitle": "Group Yoga"
+                "eventName": "Group Yoga",
+                "buyNowLink": ""
             }
         },
         {
@@ -43,9 +46,10 @@
             "end": "2025-05-14T22:00:00",
             "isAllDay": false,
             "resource": {
-                "imageUrl": "https://items-images-production.s3.us-west-2.amazonaws.com/files/e33ea48a5b1a9a08b574e1ff6bca54a3f08f1e08/original.png",
+                "imageUrl": "https://items-images-production.s3.us-west-2.amazonaws.com/files/3a789ab84c1440a98fea1dc170b12ada95cfd095/original.png",
                 "description": "Menopause Vent Sesh (Online Event): Real Talk, Real Support Welcome to a space where you don’t have to hold it all together. This virtual gathering is for women going through menopause who are tired of feeling alone, confused, or just plain over it. Whether you're dealing with hot flashes, anxiety, sleep issues, weird supplements, or mood swings that come out of nowhere.",
-                "eventTitle": "MENOPAUSE VENT SESH"
+                "eventName": "MENOPAUSE VENT SESH",
+                "buyNowLink": "https://the-vibe-collective.square.site/product/menopause-vent-sesh/36"
             }
         }
     ]

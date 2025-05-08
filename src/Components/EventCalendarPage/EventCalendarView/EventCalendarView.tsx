@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import {  Event as CalendarEvent } from 'react-big-calendar';
+import { CalendarEvent } from 'Models/Types/types';
 import { EventDetail } from '../EventDetail/EventDetail';
 import { EventCalendar } from '../EventCalendar/EventCalendar';
 import { useRandomImageUrl } from 'CustomHooks/useRandomImageUrl';
@@ -10,7 +10,6 @@ import * as eventDataJson from '../data/calendarEvents.json';
 export const EventCalendarView: React.FC = () => {
     const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[] | null>(null);
     const [eventDetail, setEventDetail] = useState<CalendarEvent | null>(null);
-    const isEventSelected: boolean = !!eventDetail;
     const randomImage: string | null = useRandomImageUrl();
 
     function callbackSetEventDetail(calendarEventDetails: CalendarEvent) {
@@ -24,7 +23,8 @@ export const EventCalendarView: React.FC = () => {
                 let eventResources = {
                     description: event.resource.description,
                     imageURL: event.resource.imageUrl ?? randomImage,
-                    eventTitle: event.resource.eventName
+                    eventName: event.resource.eventName,
+                    buyNowLink: event.resource.buyNowLink
                 }
 
                 return {
@@ -45,18 +45,7 @@ export const EventCalendarView: React.FC = () => {
             <EventCalendar
                 events={calendarEvents} 
                 callbackSelect={callbackSetEventDetail} />
-            {isEventSelected ? 
-                (<EventDetail
-                    name={eventDetail?.resource?.eventTitle}
-                    description={eventDetail?.resource?.description}
-                    imageURL={eventDetail?.resource?.imageURL} 
-                />) : 
-                (<EventDetail
-                    name=""
-                    description="Select an event to see details"
-                    imageURL=""
-                />)
-            }
+                {eventDetail && <EventDetail eventData={eventDetail}/>} 
         </div>
     );
 };

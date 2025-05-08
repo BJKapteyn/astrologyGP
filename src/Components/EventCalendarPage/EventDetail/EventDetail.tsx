@@ -1,28 +1,38 @@
 import { SingleItem } from '../../PageElements/SingleItem/SingleItem';
-import { ItemData } from 'Models/Interfaces/ItemData';
+import { ItemData } from 'Models/Types/types';
+import { CalendarEvent } from 'Models/Types/types';
 import './EventDetail.css'
+import { useEffect, useCallback, useState } from 'react';
 
 interface EventDetailProps {
-  name: string;
-  description: string;
-  imageURL: string;
-  buyNowLink?: string;
+  eventData?: CalendarEvent;
+  // itemData: ItemData;
+  // name: string;
+  // description: string;
+  // imageURL: string;
+  // buyNowLink?: string;
 }
 
-export const EventDetail: React.FC<EventDetailProps> = ({ name, description, imageURL, buyNowLink = '' }) => {
+export const EventDetail: React.FC<EventDetailProps> = ({ eventData }) => {
+  let convertedItemData : ItemData | null = null;
+  const eventDataToItemData = useCallback((calendarEvent: CalendarEvent) : ItemData => { 
+    const itemData: ItemData = {
+      id: '1',
+      description: calendarEvent?.resource?.description,
+      name: calendarEvent?.resource?.eventName,
+      imageURL: calendarEvent?.resource?.imageURL,
+      buyNowLink: calendarEvent?.resource?.buyNowLink,
+      variations: [],
+    }
 
-  const itemData: ItemData = {
-    id: '1',
-    description: description,
-    name: name,
-    imageURL: imageURL,
-    buyNowLink: buyNowLink,
-    variations: [],
-  };
+    return itemData;
+  }, [])
+
+  convertedItemData = eventDataToItemData(eventData as CalendarEvent);
 
   return (
     <div className="event-detail-flex">
-      <SingleItem itemData={itemData}  />
+      {eventData && <SingleItem itemData={convertedItemData}  />}
       {/* <img className='hide' alt={name} />
       <div style={{backgroundImage: `url(${imageURL})`}} className="event-detail-item" />
       <div className="event-detail-item">

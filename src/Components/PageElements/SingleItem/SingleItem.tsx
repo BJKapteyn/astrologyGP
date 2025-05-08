@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ItemData } from "Models/Interfaces/ItemData";
+import { ItemData } from "Models/Types/types";
 import { Link } from "react-router-dom";
 import { useRandomImageUrl } from "CustomHooks/useRandomImageUrl";
 import { ActionButton } from "Components/PageElements/ActionButton/ActionButton";
@@ -21,7 +21,7 @@ export const SingleItem: React.FC<SingleItemProps> = ({
 
     const [purchaseLink, setPurchaseLink] = useState(itemData?.buyNowLink);
     const [imageUrl, setImageUrl] = useState(itemData?.imageURL);
-    const hasVariation: boolean = !!itemData?.variations; 
+    const hasVariation: boolean = !!itemData.variations === true && itemData.variations.length > 0; 
     const randomImageUrl = useRandomImageUrl();
     const purchaseButtonSettings = {
         buttonText: purchaseButtonText,

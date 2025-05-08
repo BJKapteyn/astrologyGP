@@ -1,3 +1,5 @@
+import { Event } from "react-big-calendar";
+
 export interface ItemData {
     id: string;
     description: string;
@@ -6,3 +8,6 @@ export interface ItemData {
     buyNowLink: string;
     variations: ItemData[];
 }
+
+// Avoid using event as a name
+export interface CalendarEvent extends Event {}
