@@ -68,10 +68,14 @@
 
 @media only screen and (max-width: 768px) {
     .rbc-btn-group {
-        position: relative;
+        position: relative !important;
     }
     .rbc-toolbar {
         flex-direction: column-reverse;
+    }
 
+    .event-calendar-bigcalendar {
+        width: 100%;
+        height: 100vh;
     }
 }

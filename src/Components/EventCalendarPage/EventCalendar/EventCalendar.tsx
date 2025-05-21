@@ -13,7 +13,6 @@ export const EventCalendar: React.FC<EventCalendarProps> = ({ events, callbackSe
     const [calendarDate, setCalendarDate] = useState<Date>(new Date());
     const toolbarViews = useRef<ViewsProps>({month: true, week: false, day: false});
 
-
     if(!!calendarEvents === false && !!events) {
         setCalendarEvents(events);
     }
