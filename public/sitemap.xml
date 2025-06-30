@@ -4,33 +4,39 @@
 
    <url>
       <loc>https://thevibecollective.co/</loc>
-      <lastmod>2024-08-09</lastmod>
+      <lastmod>2025-05-09</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1</priority>
    </url>
 
     <url>
       <loc>https://thevibecollective.co/WhyVibe</loc>
-      <lastmod>2024-08-09</lastmod>
+      <lastmod>2025-05-08</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.6</priority>
    </url>
 
    <url>
       <loc>https://thevibecollective.co/Offerings</loc>
-      <lastmod>2024-08-09</lastmod>
+      <lastmod>2025-05-08</lastmod>
       <changefreq>weekly</changefreq>
    </url>
 
    <url>
-      <loc>https://thevibecollective.co/Readers</loc>
-      <lastmod>2024-08-09</lastmod>
+      <loc>https://thevibecollective.co/TheCollective</loc>
+      <lastmod>2025-05-08</lastmod>
       <changefreq>weekly</changefreq>
    </url>
 
     <url>
       <loc>https://thevibecollective.co/Store</loc>
-      <lastmod>2024-08-09</lastmod>
+      <lastmod>2025-05-08</lastmod>
+      <changefreq>weekly</changefreq>
+   </url>
+
+   <url>
+      <loc>https://thevibecollective.co/Store</loc>
+      <lastmod>2025-05-08</lastmod>
       <changefreq>weekly</changefreq>
    </url>
 

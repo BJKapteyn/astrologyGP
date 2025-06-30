@@ -1,6 +1,6 @@
 
 // Sets the title tag, and meta description and keywords inside the <head> tag
-export function addPageHeaderInfo(description = '', keywords = '', title = 'TheVibeCollective', scriptSources = []) {
+export function addPageHeaderInfo(description = '', keywords = '', title = 'TheVibeCollective', scriptSources = [], ) {
     const headTitle = title ?? 'The Vibe Collective';
 
     let titleElement = document.querySelector('title');
@@ -13,6 +13,13 @@ export function addPageHeaderInfo(description = '', keywords = '', title = 'TheV
 
     if(scriptSources && scriptSources.length > 0)
         addScripts(scriptSources);
+}
+
+export function addGoogleCanonical(url) {
+    let canonicalLinkElement = document.querySelector(`link[name='googleCanonical']`);
+    if (canonicalLinkElement) {
+        canonicalLinkElement.setAttribute('href', url);
+    }
 }
 
 function addScripts(scripts) {
