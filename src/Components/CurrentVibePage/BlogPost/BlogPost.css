@@ -1,0 +1,14 @@
+/* BlogPost.css */
+.blogpost-container {}
+
+.blogpost-title {}
+
+.blogpost-meta {}
+
+.blogpost-author {}
+
+.blogpost-date {}
+
+.blogpost-content {
+    margin-top: 1rem;
+}
