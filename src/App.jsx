@@ -15,12 +15,6 @@ import './App.css';
 
 function App() {
 
-  const currentVibeComingSoonData = {
-    heading: 'Check Back Soon!',
-    subtext: 'Introducing The Current Vibe – a dedicated space for energy insights, highlights from The Vibe Shop, thought-provoking articles, practical magic tips, and more! Launching in November 2024, this page will keep you connected and inspired. Sign up for our email list to stay updated and never miss out!',
-    backgroundimage: 'jpeg/CHECK_BACK_Offerings.jpg'
-  };
-
   return (
     <div className="App">
       <Routes>
@@ -31,7 +25,6 @@ function App() {
           <Route path="/Store" element={<StorePage />}></Route>
           <Route path="/Store/:storecategory" element={<ItemListByCategory />}></Route>
           <Route path="/Store/:storecategory/:storeitem" element={<SingleItem />}></Route>
-          <Route path="/CurrentVibe" element={<ComingSoon comingSoonData={currentVibeComingSoonData} />}></Route>
           <Route path="/Offerings" element={<OfferingsPage />}></Route>
           <Route path="/Offerings/:offering" element={<ItemListByCategory productType={ProductTypes.AppointmentsService} />}></Route>
           <Route path="/Offerings/:offering/:singleoffering" element={<SingleItem isService={true} hasVariation={true} />}></Route>

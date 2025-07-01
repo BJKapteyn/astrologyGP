@@ -1,21 +1,30 @@
-import React from 'react';
-import BlogPost from '../BlogPost/BlogPost';
-import * as Posts from './blogPosts.json'
+import React, { useState } from 'react';
+import BlogPost from '../BlogPost/BlogPost.tsx';
+import { LoadingIndicator } from '../../PageElements/LoadingIndicator/LoadingIndicator.jsx';
+import Posts from './blogPosts.json'
 import { Blog } from '../../../Types/ProjectTypes';
 import './BlogSection.css';
 
-type BlogSectionProps = {
-    blogs: Blog[];
-};
+export const BlogSection: React.FC = () => {
+    const [blogposts, setBlogPosts] = useState<Blog[] | null>(null);
 
-const BlogSection: React.FC<BlogSectionProps> = () => {
-    return (
+    if(!blogposts) {
+        const postsArray: Blog[] = JSON.parse(JSON.stringify(Posts));
+
+        setBlogPosts(postsArray as Blog[]);
+    }
+
+    const blogSection = (
         <div className="blogsection" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-            {Posts.map((blog) => (
-                <BlogPost key={blog.id} blog={blog} />
-            ))}
+            {blogposts?.map(blogData => {
+                return <BlogPost key={blogData.id} blog={blogData} />
+            })}
         </div>
+    )
+
+    return (
+        <>
+            {blogposts ? blogSection : <LoadingIndicator />}
+        </>
     );
 };
-
-export default BlogSection;

@@ -1,8 +1,10 @@
+import { BlogSection } from '../Components/CurrentVibePage/BlogSection/BlogSection.tsx';
+
 
 function CurrentVibePage() {
     return (
         <div>
-            <h1>Current Vibe Page</h1>
+            <BlogSection />
         </div>
     );
 }
