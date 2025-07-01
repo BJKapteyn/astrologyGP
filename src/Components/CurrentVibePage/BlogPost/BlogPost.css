@@ -5,7 +5,16 @@
     border-radius: 8px;
 }
 
-.blogpost-title {}
+.blogpost-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.blogpost-title {
+    
+}
 
 .blogpost-meta {}
 

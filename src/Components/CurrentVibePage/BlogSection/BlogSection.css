@@ -1,0 +1,13 @@
+.blogsection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+@media (max-width: 600px) {
+    .blogsection {
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+}

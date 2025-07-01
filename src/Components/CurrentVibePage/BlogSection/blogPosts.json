@@ -1,0 +1,42 @@
+[
+    {
+        "id": "1",
+        "title": "Understanding Your Rising Sign",
+        "author": "Jane Doe",
+        "date": "2024-06-01",
+        "content": "Your rising sign, also known as the ascendant, is the zodiac sign that was rising on the eastern horizon at the time of your birth. It influences your outward personality and how others perceive you.",
+        "imageUrl": ""
+    },
+    {
+        "id": "2",
+        "title": "Mercury Retrograde Survival Guide",
+        "author": "Alex Smith",
+        "date": "2024-05-20",
+        "content": "Mercury retrograde is often blamed for communication mishaps and travel delays. Learn how to navigate this period with mindfulness and patience.",
+        "imageUrl": ""
+    },
+    {
+        "id": "3",
+        "title": "Full Moon Rituals for Manifestation",
+        "author": "Priya Patel",
+        "date": "2024-06-10",
+        "content": "Harness the energy of the full moon to set intentions and manifest your desires. Discover simple rituals you can perform at home.",
+        "imageUrl": ""
+    },
+    {
+        "id": "4",
+        "title": "Astrology and Relationships: Venus in Your Chart",
+        "author": "Carlos Rivera",
+        "date": "2024-05-28",
+        "content": "Venus represents love and attraction in your birth chart. Find out what your Venus sign says about your romantic style.",
+        "imageUrl": ""
+    },
+    {
+        "id": "5",
+        "title": "Saturn Return: Embracing Change",
+        "author": "Emily Chen",
+        "date": "2024-06-15",
+        "content": "The Saturn return marks a major turning point in your life, often bringing challenges and growth. Learn how to embrace this transformative period.",
+        "imageUrl": ""
+    }
+]
