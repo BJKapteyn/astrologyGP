@@ -89,4 +89,10 @@ export const NavLinkData = [
         text: 'WORK WITH US',
         subMenu: null
     },
+    {
+        id: 7,
+        route: '/CurrentVibe',
+        text: 'CURRENT VIBE',
+        subMenu: null
+    },
 ]
