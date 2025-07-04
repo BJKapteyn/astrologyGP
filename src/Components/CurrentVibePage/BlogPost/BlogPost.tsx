@@ -1,5 +1,6 @@
 import { Blog } from '../../../Types/ProjectTypes';
 import { useRandomImageUrl } from '../../../CustomHooks/useRandomImageUrl';
+import './BlogPost.css';
 
 type BlogPostProps = {
     blog: Blog;
@@ -8,6 +9,7 @@ type BlogPostProps = {
 const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
     const randomImageUrl = useRandomImageUrl();
     const imageUrl = blog.imageUrl || randomImageUrl;
+
     return (
         <div className="blogpost-container">
             <div
@@ -18,13 +20,13 @@ const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
                     backgroundPosition: 'center',
                 }}
             >
-                <h2 className="blogpost-title">{blog.title}</h2>
+                <h3 className="blogpost-title">{blog.title}</h3>
                 <p className="blogpost-meta">
                     <strong className="blogpost-author">{blog.author}</strong>
                     <em className="blogpost-date">{blog.date}</em>
                 </p>
             </div>
-            <div className="blogpost-content">{blog.content}</div>
+            <p className="blogpost-content">{blog.content}</p>
         </div>
     );
 };

@@ -1,6 +1,5 @@
 
 import { Routes, Route } from 'react-router-dom';
-import { ComingSoon } from './Components/ComingSoon/ComingSoon.jsx';
 import { SingleItem } from './Components/PageElements/SingleItem/SingleItem.jsx';
 import { ItemListByCategory } from './Components/PageElements/ItemListByCategory/ItemListByCategory.jsx';
 import { ProductTypes } from './Enums/ProductTypes.js';
