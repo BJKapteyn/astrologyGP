@@ -7,8 +7,8 @@ type BlogPostProps = {
 };
 
 export const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
-    const randomImageUrl = useRandomImageUrl();
-    const imageUrl = blog.imageUrl || randomImageUrl;
+    const randomImageUrl = useRandomImageUrl(true); // Use the alternative image array for blog posts
+    const imageUrl = blog.imageUrl || randomImageUrl;   
 
     return (
         <div className="blogpost-container">

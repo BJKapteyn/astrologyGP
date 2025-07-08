@@ -3,6 +3,7 @@
     border: 1px solid #ccc;
     padding: 1rem;
     width: 80%;
+    max-width: 70em;
 }
 
 .blogpost-header {
@@ -43,5 +44,10 @@
     .blogpost-header {
         height: auto;
     }
+
+    .blogpost-title {
+        font-size: 1.8em;
+        margin: 1em;
+    }   
     
 }
