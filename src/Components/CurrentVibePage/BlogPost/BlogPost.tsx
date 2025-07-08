@@ -6,7 +6,7 @@ type BlogPostProps = {
     blog: Blog;
 };
 
-const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
+export const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
     const randomImageUrl = useRandomImageUrl();
     const imageUrl = blog.imageUrl || randomImageUrl;
 
@@ -30,5 +30,3 @@ const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
         </div>
     );
 };
-
-export default BlogPost;

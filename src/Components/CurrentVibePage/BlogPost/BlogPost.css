@@ -38,3 +38,10 @@
     margin-left: .5em;
     margin-top: 1rem;
 }
+
+@media (max-width: 600px) {
+    .blogpost-header {
+        height: auto;
+    }
+    
+}

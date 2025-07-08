@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { LoadingIndicator } from '../../PageElements/LoadingIndicator/LoadingIndicator.jsx';
 import { Blog } from '../../../Types/ProjectTypes';
-// import { SectionDivider } from '../../PageElements/SectionDivider/SectionDivider.jsx';
-import { ReactComponent as Sparkle } from '../../../Pics/SvgDrawings/sparkle.svg'
-import BlogPost from '../BlogPost/BlogPost.tsx';
+import { ReactComponent as Sparkle } from '../../../Pics/SvgDrawings/sparkle.svg';
+import { BlogPost } from '../BlogPost/BlogPost.tsx';
 import Posts from './blogPosts.json'
 import './BlogSection.css';
 
