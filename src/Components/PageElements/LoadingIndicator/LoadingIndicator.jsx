@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import '../../../App.css';
+import '../../../App.scss';
 import './LoadingIndicator.css';
 
-export const LoadingIndicator = ({ message = "" }) => {
+export const LoadingIndicator = ({ message = "Oh no something went wrong, refresh the page or try again later! Sorry!" }) => {
 	const [isTimedOut, setIsTimedOut] = useState(false);
 	const [timedOutMessage, setTimedOutMessage] = useState(
 		'Sorry something went wrong, refresh or try again later'

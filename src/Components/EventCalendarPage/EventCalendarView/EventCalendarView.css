@@ -1,0 +1,13 @@
+.event-calendar {
+    width: 80%;
+    min-width: 20em;
+    height: auto;
+    margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .event-calendar {
+        width: 100%;
+    }
+}

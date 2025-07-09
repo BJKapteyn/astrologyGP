@@ -1,4 +1,4 @@
-// import '../../../App.css';
+// import '../../../App.scss';
 // import './AboutSection.css';
 
 // export const AboutCard = ({aboutCardData, setOutText = () =>{}}) => {

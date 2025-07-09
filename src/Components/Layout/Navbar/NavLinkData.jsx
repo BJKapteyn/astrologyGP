@@ -78,10 +78,17 @@ export const NavLinkData = [
         ]
     },
     {
-        id: 5,
-        route: '/CurrentVibe',
-        text: 'THE CURRENT VIBE',
-        subMenu: null
+        id: 7,
+        route: '/EventCalendar',
+        text: 'EVENT CALENDAR',
+        subMenu: [
+            {
+                id: 0,
+                route: '/CurrentVibe',
+                text: 'THE CURRENT VIBE',
+                subMenu: null
+            }
+        ]
     },
     {
         id: 6,
@@ -89,10 +96,5 @@ export const NavLinkData = [
         text: 'WORK WITH US',
         subMenu: null
     },
-    {
-        id: 7,
-        route: '/CurrentVibe',
-        text: 'CURRENT VIBE',
-        subMenu: null
-    },
+    
 ]

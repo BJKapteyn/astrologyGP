@@ -16,7 +16,7 @@ CSS:
     Class naming: 'componentname-classname' this will avoid having the same name across .css files 
         
     All compontent css should go in the associated component file
-    All animations should go in App.css 
+    All animations should go in App.scss 
 
     Elements on the body of the page should be centered at 80% at full screen
 

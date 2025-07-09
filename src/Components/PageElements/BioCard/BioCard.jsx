@@ -1,4 +1,4 @@
-import '../../../App.css';
+import '../../../App.scss';
 import './BioCard.css';
 
 // cardData         - data to populate the card

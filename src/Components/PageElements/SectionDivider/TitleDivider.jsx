@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { DividerGraphic } from './DividerGraphic/DividerGraphic';
 import { useMediaQuery } from 'react-responsive';
-import '../../../App.css';
+import '../../../App.scss';
 import './SectionDivider.css';
 
 export const TitleDivider = () => {

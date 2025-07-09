@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 
-export const useIsElementInView = (options) => {
+
+
+export const useIsElementInView = (options: IntersectionObserverInit)=> {
   const [isInView, setIsInView] = useState(false);
   const targetElementRef = useRef<HTMLDivElement>(null);
   // Initialize the ref to null, which will be assigned to the target element later

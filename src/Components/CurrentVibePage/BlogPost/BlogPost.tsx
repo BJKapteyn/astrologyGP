@@ -2,7 +2,7 @@ import { useEffect,useState } from 'react';
 import { animated, useSpring } from 'react-spring';
 import { Blog } from '../../../Types/ProjectTypes';
 import { useRandomImageUrl } from '../../../CustomHooks/useRandomImageUrl';
-import { useIsElementInView } from '../../../CustomHooks/useIsElementInView.tsx';
+import { useIsElementInView } from '../../../CustomHooks/useIsElementInView';
 import './BlogPost.css';
 
 type BlogPostProps = {
