@@ -10,6 +10,8 @@ import './BlogSection.css';
 
 export const BlogSection: React.FC = () => {
     const [blogposts, setBlogPosts] = useState<Blog[] | null>(null);
+ 
+
     // const dividerData = {
     //     headingText: 'CURRENT VIBE'
     // }'

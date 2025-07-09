@@ -15,16 +15,14 @@ import starTree from '../Pics/Landscapes/jpeg/adrianlang-startree.jpg';
 import northernlights from '../Pics/Landscapes/jpeg/tobiasbjorkli-northernlights.jpg';
 import aurora from '../Pics/Landscapes/jpeg/tristan-pokornyi-aurora.jpg';
 
-export function useRandomImageUrl(useAltArray = false) {
+export function useRandomImageUrl() {
     const [selectedImage, setSelectedImage] = useState(null);
-    const imageArray = useRef([diary, girlOnBeach, floating, moonCrest, nightMoon, purpleCrystals, findSign, candles, purpleGeode]);
-    const imageArray2 = useRef([mountainStar, starSpiral, starTree, northernlights, aurora]);
-    const imageArrayRef = useRef(useAltArray ? imageArray2.current : imageArray.current);
-    const randomIndex = useRef(Math.floor(Math.random() * imageArrayRef.current.length));
+    const imageArray = useRef([diary, girlOnBeach, floating, moonCrest, nightMoon, purpleCrystals, findSign, candles, purpleGeode, mountainStar, starSpiral, starTree, northernlights, aurora]);
+    const randomIndex = useRef(Math.floor(Math.random() * imageArray.current.length));
 
     useEffect(() => {
         if(!selectedImage) 
-            setSelectedImage(imageArrayRef.current[randomIndex.current]);
+            setSelectedImage(imageArray.current[randomIndex.current]);
 
     }, [selectedImage])
 
