@@ -5,7 +5,7 @@ import { Socials } from "../../PageElements/Socials/Socials";
 import { NavBarMobile } from "./Mobile/NavBarMobile";
 import { NavLinkData } from "./NavLinkData";
 import yellowLogo from '../../../Pics/Logos/MainLogoYellow.svg';
-import '../../../App.css'
+import '../../../App.scss'
 import './NavBar.css';
 
 export const NavBar = () => {

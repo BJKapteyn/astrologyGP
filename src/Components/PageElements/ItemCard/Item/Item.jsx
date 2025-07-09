@@ -1,5 +1,5 @@
 import { useRandomImageUrl } from '../../../../CustomHooks/useRandomImageUrl';
-import '../../../../App.css';
+import '../../../../App.scss';
 import './Item.css';
 
 export const Item = ({ itemData }) => {
