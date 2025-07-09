@@ -34,24 +34,22 @@ export const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
     })
 
     return (
-        <>
-            <animated.div ref={targetElementRef} style={styles} className="blogpost-container">
-                <div
-                    className="blogpost-header"
-                    style={{
-                        backgroundImage: `url(${imageUrl})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                    }}
-                    >
-                    <h3 className="blogpost-title">{blog.title}</h3>
-                    <p className="blogpost-meta">
-                        <strong className="blogpost-author">{blog.author}</strong>
-                        <em className="blogpost-date">{blog.date}</em>
-                    </p>
-                </div>
-                <p className="blogpost-content">{blog.content}</p>
-            </animated.div>
-        </>
+        <animated.div ref={targetElementRef} style={styles} className="blogpost-container">
+            <div
+                className="blogpost-header"
+                style={{
+                    backgroundImage: `url(${imageUrl})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
+                >
+                <h3 className="blogpost-title">{blog.title}</h3>
+                <p className="blogpost-meta">
+                    <strong className="blogpost-author">{blog.author}</strong>
+                    <em className="blogpost-date">{blog.date}</em>
+                </p>
+            </div>
+            <p className="blogpost-content">{blog.content}</p>
+        </animated.div>
     );
 };
