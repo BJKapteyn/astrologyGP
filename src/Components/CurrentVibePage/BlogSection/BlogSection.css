@@ -1,8 +1,7 @@
 .blogsection {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding: 2rem 0;
+    padding-bottom: 2em;;
 }
 
 #blogsection-titlecard {
@@ -23,9 +22,3 @@
     fill: var(--main-accent-color);
 }
 
-@media (max-width: 600px) {
-    .blogsection {
-        gap: 1rem;
-        padding: 1rem 0;
-    }
-}

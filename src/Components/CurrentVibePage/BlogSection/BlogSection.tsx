@@ -16,7 +16,7 @@ export const BlogSection: React.FC = () => {
     //     headingText: 'CURRENT VIBE'
     // }'
     const titleConfiguration = {
-        titleText: 'Astrology Blog',
+        titleText: 'Current Vibe',
         backgroundimage: StarSpiral, 
         styleId: 'blogsection-titlecard',
     };
@@ -35,7 +35,7 @@ export const BlogSection: React.FC = () => {
             {/* <SectionDivider dividerData={dividerData} /> */}
             <TitleCard titleData={titleConfiguration} />
             <Sparkle className="blogsection-sparkle" />
-            <p className="blogsection-subtext">Welcome to our astrology blog, where we explore the stars, signs, and celestial patterns that shape our lives and personalities.</p>
+            <p className="blogsection-subtext">Welcome to a place for reflection, curiosity, and connection. Whether you're exploring patterns in your life or just looking for a fresh perspective, you'll find thoughtful insights and gentle guidance to help you navigate your journey—one day at a time.</p>
             <Sparkle className="blogsection-sparkle" />
             {blogposts?.map(blogData => {
                 return <BlogPost key={blogData.id} blog={blogData} />
