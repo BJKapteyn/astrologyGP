@@ -6,7 +6,8 @@ import { LoadingIndicator } from '../LoadingIndicator/LoadingIndicator.jsx';
 import { getItemIdFromUrlPath } from '../../../UtilityFunctions/urlUtility.js';
 import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction.jsx';
 import { FunctionNames } from '../../../Enums/FunctionNames.js';
-import { buildAzureFunctionURL, buildSingleServiceItemURL } from '../../../UtilityFunctions/urlUtility.js';
+import { ParentCategoryIds } from '../../../Enums/ParentCategoryIds.js';
+import { buildAzureFunctionURL, buildSingleServiceItemURL, buildCalendarEventBuyUrl } from '../../../UtilityFunctions/urlUtility.js';
 import moon from '../../../Pics/Portraits/portrait-sunsetWaves.png';
 import '../../../App.css';
 import './SingleItem.css';
@@ -14,21 +15,26 @@ import './SingleItem.css';
 // View detailed item information and book/buy now link 
 //   rootPage:      the page to return to when the back button is clicked
 //   hasVariation:  whether the item has variations
-export const SingleItem = ({ rootPage, hasVariation = false, isService = false}) => {
+//   isService:     whether the item is a service (used to determine the booking URL)
+export const SingleItem = ({ rootPage, hasVariation = false, isService = false }) => {
     const defaultBuyNowUrl = 'https://the-vibe-collective.square.site/shop/products/HUMYRU6WAPVQ54PYRR4FEUAZ';
 
     const [imageUrl, setImageUrl] = useState(moon);
     const [itemData, setItemData] = useState(useLocation().state);
-    const [purchaseLink, setPurchaseLink] = useState(itemData?.buyNowLink);
+    const [purchaseLink, setPurchaseLink] = useState(itemData?.buyNowLink ?? defaultBuyNowUrl);
     const urlParams = useRef(useLocation());
     const itemId = getItemIdFromUrlPath(urlParams.current.pathname);
     const functionUrl = buildAzureFunctionURL(FunctionNames.GetItemByItemId, process.env.REACT_APP_GET_ITEM_BY_ITEM_ID);
     const usePostAzureFunctionData = usePostAzureFunction(functionUrl, {Id: itemId});
     const navigate = useNavigate();
+    const eventCategoryId = ParentCategoryIds.Events;
     
     if(!!itemData?.buyNowLink === false && !!purchaseLink === false) {
         if(isService) {
             setPurchaseLink(buildSingleServiceItemURL(itemId));
+        }
+        else if(itemData?.reportingCategoryId === eventCategoryId) {
+            setPurchaseLink(buildCalendarEventBuyUrl(itemData.name, itemId, itemData.categoryId));
         }
         else {
             setPurchaseLink(defaultBuyNowUrl);
