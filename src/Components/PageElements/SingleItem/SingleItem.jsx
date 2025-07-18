@@ -18,10 +18,9 @@ import './SingleItem.css';
 //   isService:     whether the item is a service (used to determine the booking URL)
 export const SingleItem = ({ rootPage, hasVariation = false, isService = false }) => {
     const defaultBuyNowUrl = 'https://the-vibe-collective.square.site/shop/products/HUMYRU6WAPVQ54PYRR4FEUAZ';
-
     const [imageUrl, setImageUrl] = useState(moon);
     const [itemData, setItemData] = useState(useLocation().state);
-    const [purchaseLink, setPurchaseLink] = useState(itemData?.buyNowLink ?? defaultBuyNowUrl);
+    const [purchaseLink, setPurchaseLink] = useState(itemData?.buyNowLink);
     const urlParams = useRef(useLocation());
     const itemId = getItemIdFromUrlPath(urlParams.current.pathname);
     const functionUrl = buildAzureFunctionURL(FunctionNames.GetItemByItemId, process.env.REACT_APP_GET_ITEM_BY_ITEM_ID);
