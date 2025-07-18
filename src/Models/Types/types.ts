@@ -9,5 +9,12 @@ export interface ItemData {
     variations: ItemData[];
 }
 
-// Avoid using event as a name
-export interface CalendarEvent extends Event {}
+// Name change for consistency with CalendarEvent
+export interface CalendarEvent extends Event {
+    resource?: {
+        buyNowLink?: string | null;
+        eventName?: string;
+        imageURL?: string;
+        description?: string;
+    };
+}
