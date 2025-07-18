@@ -35,7 +35,7 @@ export const SingleItem: React.FC<SingleItemProps> = ({
         setImageUrl(itemData?.imageURL);
     }
 
-    if(itemData?.imageURL && currentPurchaseLink !== itemData?.buyNowLink) {
+    if(itemData?.buyNowLink && currentPurchaseLink !== itemData?.buyNowLink) {
         setPurchaseLink((itemData?.buyNowLink));
     }
 
