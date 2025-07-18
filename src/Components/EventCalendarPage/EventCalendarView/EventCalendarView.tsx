@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { CalendarEvent } from 'Models/Types/types';
 import { EventDetail } from '../EventDetail/EventDetail';
 import { EventCalendar } from '../EventCalendar/EventCalendar';
 import { useRandomImageUrl } from 'CustomHooks/useRandomImageUrl';
+import { EventCalendarMobile } from '../EventCalendarMobile/EventCalendarMobile';
 import './EventCalendarView.css';
 import * as eventDataJson from '../data/calendarEvents.json';
 
@@ -11,6 +13,7 @@ export const EventCalendarView: React.FC = () => {
     const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[] | null>(null);
     const [eventDetail, setEventDetail] = useState<CalendarEvent | null>(null);
     const randomImage: string | null = useRandomImageUrl();
+    const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
 
     function callbackSetEventDetail(calendarEventDetails: CalendarEvent) {
         setEventDetail(calendarEventDetails);
@@ -40,12 +43,21 @@ export const EventCalendarView: React.FC = () => {
         }
     }, [calendarEvents, randomImage]);
 
-    return (
+    const eventCalendar = (
         <div className="event-calendar">
             <EventCalendar
-                events={calendarEvents} 
+                events={calendarEvents}
                 callbackSelect={callbackSetEventDetail} />
-                {eventDetail ? <EventDetail eventData={eventDetail} /> : <h4 className="event-calendar-no-event">Select an event for more details</h4>} 
+            { eventDetail ? <EventDetail eventData={eventDetail} /> : <h4 className="event-calendar-no-event">Select an event for more details</h4>}
+        </div>
+    )
+
+    return (
+        <div className="event-calendar">
+            {isMobile 
+                ? <EventCalendarMobile events={calendarEvents} />
+                : eventCalendar
+            }
         </div>
     );
 };

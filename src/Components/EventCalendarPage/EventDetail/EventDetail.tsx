@@ -1,8 +1,8 @@
+import { useCallback } from 'react';
 import { SingleItem } from '../../PageElements/SingleItem/SingleItem';
 import { ItemData } from 'Models/Types/types';
 import { CalendarEvent } from 'Models/Types/types';
 import './EventDetail.css'
-import { useCallback } from 'react';
 
 interface EventDetailProps {
   eventData?: CalendarEvent;
@@ -14,14 +14,14 @@ interface EventDetailProps {
 }
 
 export const EventDetail: React.FC<EventDetailProps> = ({ eventData }) => {
-  let convertedItemData : ItemData | null = null;
-  const eventDataToItemData = useCallback((calendarEvent: CalendarEvent) : ItemData => { 
+  let convertedItemData: ItemData | null = null;
+  const eventDataToItemData = useCallback((calendarEvent: CalendarEvent): ItemData => {
     const itemData: ItemData = {
       id: '1',
-      description: calendarEvent?.resource?.description,
-      name: calendarEvent?.resource?.eventName,
-      imageURL: calendarEvent?.resource?.imageURL,
-      buyNowLink: calendarEvent?.resource?.buyNowLink,
+      description: calendarEvent?.resource?.description ?? '',
+      name: calendarEvent?.resource?.eventName ?? '',
+      imageURL: calendarEvent?.resource?.imageURL ?? '',
+      buyNowLink: calendarEvent?.resource?.buyNowLink ?? '',
       variations: [],
     }
 
@@ -32,7 +32,7 @@ export const EventDetail: React.FC<EventDetailProps> = ({ eventData }) => {
 
   return (
     <div className="event-detail-flex">
-      {eventData && <SingleItem itemData={convertedItemData}  />}
+      {eventData && <SingleItem itemData={convertedItemData} />}
     </div>
   );
 };
