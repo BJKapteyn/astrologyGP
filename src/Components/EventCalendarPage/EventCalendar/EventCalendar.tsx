@@ -17,7 +17,7 @@ export const EventCalendar: React.FC<EventCalendarProps> = ({ events, callbackSe
         setCalendarEvents(events);
     }
     
-    // require('./BigCalendarScssVariableOverride.scss');
+    require('./BigCalendarScssVariableOverride.scss');
     require('./EventCalendar.scss');
 
     return (

@@ -1,25 +1,25 @@
-// // Scss variable overrides for react-big-calendar. Check node modules for more variables that can be overridden
-// // They need to be imported before the big calendar style sheet
+// Scss variable overrides for react-big-calendar. Check node modules for more variables that can be overridden
+// They need to be imported before the big calendar style sheet
 
-// $date-selection-bg-color: rgb(198, 171, 210);
+$date-selection-bg-color: rgb(198, 171, 210);
 
-// $event-bg: rgb(72, 31, 75);
-// $event-border: rgb(72, 31, 75);
-// $event-outline: rgb(72, 31, 75);
-// $event-color: white;
-// $event-border-radius: 0px;
-// $event-padding: .2em .5em;
-// $event-zindex: 4;
+$event-bg: rgb(72, 31, 75);
+$event-border: rgb(72, 31, 75);
+$event-outline: rgb(72, 31, 75);
+$event-color: white;
+$event-border-radius: 0px;
+$event-padding: .2em .5em;
+$event-zindex: 4;
 
-// $btn-color: rgb(72, 31, 75);
-// $btn-bg: #fff;
-// $btn-border: rgb(72, 31, 75);
+$btn-color: rgb(72, 31, 75);
+$btn-bg: #fff;
+$btn-border: rgb(72, 31, 75);
 
-// $calendar-border: rgb(72, 31, 75);
-// $cell-border: rgb(198, 171, 210);
+$calendar-border: rgb(72, 31, 75);
+$cell-border: rgb(198, 171, 210);
 
-// $border-color: rgb(72, 31, 75);
+$border-color: rgb(72, 31, 75);
 
-// $today-highlight-bg: rgb(255, 246, 225);
+$today-highlight-bg: rgb(255, 246, 225);
 
-// // @import "~react-big-calendar/lib/sass/styles.scss";
+@import "~react-big-calendar/lib/sass/styles.scss";
