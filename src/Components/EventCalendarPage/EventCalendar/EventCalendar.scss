@@ -7,7 +7,7 @@
 }
 
  .rbc-event-content, .rbc-header {
-     font-family: Futura;
+     font-family: Futura !important;
 }
     
 .rbc-toolbar-label {
@@ -22,16 +22,17 @@
 
 .rbc-header {
     padding: .5em 3px;
-    color: var(--main-color);
+    color: var(--main-color) !important;
     font-size: 100%;
 }
 
 .rbc-button-link {
-    color: var(--main-accent-color);
+    color: var(--main-accent-color) !important;
     font-size: 1em;
 }
 
 .rbc-event {
+    background-color: var(--main-color) !important;
     transition: background-color .5s ease-out;
     -webkit-transition: background-color .5s ease-out;
     -moz-transition: background-color .5s ease-out;
@@ -39,7 +40,7 @@
     -o-transition: background-color .5s ease-out;
 }
 .rbc-event:hover {
-    background-color: var(--main-accent-color);
+    background-color: var(--main-accent-color) !important;
     color: white;
 }
 
@@ -53,7 +54,8 @@
     -o-border-radius: 0px;
 }
 .rbc-btn-group button{
-    font-family: bivoac-regular;
+    font-family: bivoac-regular !important;
+    color: var(--main-color) !important;
     border-radius: 0px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
