@@ -10,12 +10,15 @@ import CollectivePage from './Pages/CollectivePage.jsx';
 import OfferingsPage from './Pages/OfferingsPage.jsx';
 import StorePage from './Pages/StorePage.jsx';
 import CurrentVibePage from './Pages/CurrentVibePage.jsx';
+import { Login } from './Components/Login/Login.tsx';
 import './App.css';
+import { Edit } from './Components/EditPage/Edit.tsx';
 
 function App() {
 
   return (
     <div className="App">
+      
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />}></Route>
@@ -28,6 +31,8 @@ function App() {
           <Route path="/Offerings/:offering" element={<ItemListByCategory productType={ProductTypes.AppointmentsService} />}></Route>
           <Route path="/Offerings/:offering/:singleoffering" element={<SingleItem isService={true} hasVariation={true} />}></Route>
           <Route path="/CurrentVibe" element={<CurrentVibePage />}></Route>
+          <Route path="/admin" element={<Login />}></Route>
+          <Route path="/edit" element={<Edit />}></Route>
         </Route>
       </Routes>
     </div>
