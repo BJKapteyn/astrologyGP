@@ -24,7 +24,7 @@ export const BlogSection: React.FC = () => {
     if(!blogposts) {
         let postsArray: Blog[] = JSON.parse(JSON.stringify(Posts)) as Blog[];
         postsArray.sort((post1, post2) => {
-            return new Date(post2.date).getTime() - new Date(post1.date).getTime();
+            return new Date(post2.PublishDate).getTime() - new Date(post1.PublishDate).getTime();
         })
 
         setBlogPosts(postsArray);

@@ -6,7 +6,7 @@ export const EditButtons: React.FC = () => {
 
   return (
     <div className="edit-buttons">
-      <Link to={'./'}><ActionButton buttonSettings={{ buttonText: 'Blog Posts'}}></ActionButton></Link>
+      <Link to={'./editBlogForm'}><ActionButton buttonSettings={{ buttonText: 'Blog Posts'}}></ActionButton></Link>
     </div> 
   );
 }

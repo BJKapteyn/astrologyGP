@@ -33,9 +33,9 @@ function App() {
           <Route path="/CurrentVibe" element={<CurrentVibePage />}></Route>
           <Route path="/admin" element={<Login />}></Route>
         </Route>
-        <Route path="/edit">
+        <Route path="edit">
           <Route index element={<EditPage />}></Route>
-          <Route path="/EditBlogForm" element={<CreateBlogForm />}></Route>
+          <Route path="editBlogForm" element={<CreateBlogForm />}></Route>
         </Route>
       </Routes>
     </div>

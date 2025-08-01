@@ -20,7 +20,7 @@ export const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
         }
     }, [isElementInView]);
 
-    const imageUrl = blog.imageUrl || randomImageUrl;
+    const imageUrl = blog.ImageUrl || randomImageUrl;
     const styles = useSpring({
         config: { duration: 800 },
         from: {
@@ -43,13 +43,13 @@ export const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
                     backgroundPosition: 'center',
                 }}
                 >
-                <h3 className="blogpost-title">{blog.title}</h3>
+                <h3 className="blogpost-title">{blog.Title}</h3>
                 <p className="blogpost-meta">
-                    <strong className="blogpost-author">{blog.author}</strong>
-                    <em className="blogpost-date">{blog.date}</em>
+                    <strong className="blogpost-author">{blog.Author}</strong>
+                    <em className="blogpost-date">{blog.PublishDate}</em>
                 </p>
             </div>
-            <p className="blogpost-content">{blog.content}</p>
+            <p className="blogpost-content">{blog.Content}</p>
         </animated.div>
     );
 };
