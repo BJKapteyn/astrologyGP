@@ -19,7 +19,7 @@ export const CreateBlogForm: React.FC<CreateBlogFormProps> = ({ blog = {} as Blo
               'Accept': 'application/json',
               'Content-Type': 'application/json'
           },
-          body: JSON.stringify(requestBody)
+          body: requestBody
       })
       .then(response => {
         if(response.ok) {
@@ -34,7 +34,7 @@ export const CreateBlogForm: React.FC<CreateBlogFormProps> = ({ blog = {} as Blo
   const handleSubmit = async (formEvent: React.FormEvent<HTMLFormElement>) => {
     formEvent.preventDefault();
     blogData.PublishDate = blogData?.PublishDate ?? new Date().toISOString().split('T')[0]; // Set default publish date if not provided
-    await getAllItems(endpoint, JSON.stringify(blogData, (key, value) => capitalize(key, value)));
+    await getAllItems(endpoint, JSON.stringify(blogData));
     console.log("Form submitted:", blogData);
   };
 
@@ -55,15 +55,15 @@ export const CreateBlogForm: React.FC<CreateBlogFormProps> = ({ blog = {} as Blo
     </div>
   );
 }
-function capitalize(key, value) {
-  if (value && typeof value === 'object') {
-    var replacement = {};
-    for (var k in value) {
-      if (Object.hasOwnProperty.call(value, k)) {
-        replacement[k && k.charAt(0).toUpperCase() + k.substring(1)] = value[k];
-      }
-    }
-    return replacement;
-  }
-  return value;
-}
+// function capitalize(key, value) {
+//   if (value && typeof value === 'object') {
+//     var replacement = {};
+//     for (var k in value) {
+//       if (Object.hasOwnProperty.call(value, k)) {
+//         replacement[k && k.charAt(0).toUpperCase() + k.substring(1)] = value[k];
+//       }
+//     }
+//     return replacement;
+//   }
+//   return value;
+// }
