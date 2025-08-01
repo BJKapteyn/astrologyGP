@@ -6,27 +6,6 @@ interface CreateBlogFormProps {
   blog: Blog | null; // Allow blog to be null for creating a new blog
 }
 
-<<<<<<< HEAD
-export const CreateBlogForm = ({BlogPost = null}) => {
-  return (
-    <div className="edit-form">
-      <h1>Create Blog Form</h1>
-      <form>
-        {/* Form elements will go here */}
-        <label htmlFor="exampleInput">Example Input:</label>
-        <input type="text" id="exampleInput" name="exampleInput" />
-        <label htmlFor="exampleInput">Example Input:</label>
-        <input type="text" id="exampleInput" name="exampleInput" />
-        <label htmlFor="exampleInput">Example Input:</label>
-        <input type="text" id="exampleInput" name="exampleInput" />
-        <label htmlFor="exampleInput">Example Input:</label>
-        <input type="text" id="exampleInput" name="exampleInput" />
-        <button type="submit">Submit</button>
-      </form>
-      {/* Add form elements here */}
-    </div>
-  );
-=======
 export const CreateBlogForm: React.FC<CreateBlogFormProps> = ({ blog = null }) => {
   const [blogData, setBlogData] = useState<Blog | null>(blog);
 
@@ -54,5 +33,4 @@ export const CreateBlogForm: React.FC<CreateBlogFormProps> = ({ blog = null }) =
             {/* Add form elements here */}
         </div>
     );
->>>>>>> blog
 }
