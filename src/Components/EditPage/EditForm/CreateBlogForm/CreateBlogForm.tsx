@@ -3,7 +3,7 @@ interface CreateBlogFormProps {
   // Define any props needed for the CreateBlogForm component     
 }
 
-export const CreateBlogForm = ({}) => {
+export const CreateBlogForm = ({BlogPost = null}) => {
   return (
     <div className="edit-form">
       <h1>Create Blog Form</h1>

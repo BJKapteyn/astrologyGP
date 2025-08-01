@@ -4,15 +4,16 @@ import { ComingSoon } from './Components/ComingSoon/ComingSoon.jsx';
 import { SingleItem } from './Components/PageElements/SingleItem/SingleItem.jsx';
 import { ItemListByCategory } from './Components/PageElements/ItemListByCategory/ItemListByCategory.jsx';
 import { ProductTypes } from './Enums/ProductTypes.js';
+import { CreateBlogForm } from './Components/EditPage/EditForm/CreateBlogForm/CreateBlogForm.tsx';
 import Layout from './Components/Layout/Layout.jsx';
 import HomePage from './Pages/HomePage.jsx';
 import WhyVibePage from './Pages/WhyVibePage.jsx';
 import CollectivePage from './Pages/CollectivePage.jsx';
 import OfferingsPage from './Pages/OfferingsPage.jsx';
 import StorePage from './Pages/StorePage.jsx';
+import EditPage from './Pages/EditPage.tsx';
 import { Login } from './Components/Login/Login.tsx';
 import './App.css';
-import { Edit } from './Components/EditPage/Edit.tsx';
 
 function App() {
 
@@ -38,7 +39,10 @@ function App() {
           <Route path="/Offerings/:offering" element={<ItemListByCategory productType={ProductTypes.AppointmentsService} />}></Route>
           <Route path="/Offerings/:offering/:singleoffering" element={<SingleItem isService={true} hasVariation={true} />}></Route>
           <Route path="/admin" element={<Login />}></Route>
-          <Route path="/edit" element={<Edit />}></Route>
+        </Route>
+        <Route path="/edit">
+          <Route index element={<EditPage />}></Route>
+          <Route path="/EditBlogForm" element={<CreateBlogForm />}></Route>
         </Route>
       </Routes>
     </div>
