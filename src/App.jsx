@@ -3,7 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 import { SingleItem } from './Components/PageElements/SingleItem/SingleItem.jsx';
 import { ItemListByCategory } from './Components/PageElements/ItemListByCategory/ItemListByCategory.jsx';
 import { ProductTypes } from './Enums/ProductTypes.js';
-import { CreateBlogForm } from './Components/EditPage/EditForm/CreateBlogForm/CreateBlogForm.tsx';
+import { CreateBlogForm } from './Components/EditPage/CreateBlogForm/CreateBlogForm.tsx';
+import { EditBlog } from './Components/EditPage/EditBlog/EditBlog.tsx';
 import Layout from './Components/Layout/Layout.jsx';
 import HomePage from './Pages/HomePage.jsx';
 import WhyVibePage from './Pages/WhyVibePage.jsx';
@@ -35,7 +36,9 @@ function App() {
         </Route>
         <Route path="edit">
           <Route index element={<EditPage />}></Route>
-          <Route path="editBlogForm" element={<CreateBlogForm />}></Route>
+          <Route path="editBlog" element={<EditBlog />}>
+            <Route path=":blogId" element={<CreateBlogForm />}></Route>
+          </Route>
         </Route>
       </Routes>
     </div>

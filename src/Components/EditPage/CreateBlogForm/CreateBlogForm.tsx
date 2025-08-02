@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Blog } from '../../../../Types/ProjectTypes';
-import { buildAzureFunctionURL } from '../../../../UtilityFunctions/urlUtility';
+import { Blog } from '../../../Types/ProjectTypes';
+import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlUtility';
 import './CreateBlogForm.css'
 
 interface CreateBlogFormProps {
@@ -37,7 +37,7 @@ export const CreateBlogForm: React.FC<CreateBlogFormProps> = ({ blog = {} as Blo
 
   const handleSubmit = async (formEvent: React.FormEvent<HTMLFormElement>) => {
     formEvent.preventDefault();
-    blogData.PublishDate = blogData?.PublishDate ?? new Date().toISOString().split('T')[0]; // Set default publish date if not provided
+    blogData.PublishDate = blogData?.PublishDate ?? new Date().toLocaleString().split('T')[0]; 
     setLoadingText("Submitting blog post...");
 
     let upsertResponse: Response = await getAllItems(endpoint, JSON.stringify(blogData));
@@ -63,7 +63,7 @@ export const CreateBlogForm: React.FC<CreateBlogFormProps> = ({ blog = {} as Blo
         <label htmlFor="author">Author:</label>
         <input required onChange={element => blogData.Author = element.target.value} type="text" id="author" name="author" defaultValue={blogData?.Author || ''} />
         <label htmlFor="publishDate">Publish Date</label>
-        <input required onChange={element => blogData.PublishDate = element.target.value} type="date" id="publishDate" name="publishDate" defaultValue={blogData?.PublishDate || new Date(Date.now()).toISOString().split('T')[0]} />
+        <input required onChange={element => blogData.PublishDate = element.target.value} type="date" id="publishDate" name="publishDate" defaultValue={blogData?.PublishDate || new Date(Date.now()).toLocaleDateString().split('T')[0]} />
         { loadingText ? <p>{loadingText}</p> : <button type="submit">Submit</button> }
       </form>
     </div>

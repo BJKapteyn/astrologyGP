@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { useLocalData } from "./useLocalData";
 
-// Makes a post request to azure function 
+// Makes a post request to azure function. The results can be cached locally.
 //  endpointUrl              - azure function endpoint (required)
 //  requestBody              - object containing request body (required)
 //  localCacheKey (optional) - will cache the results locally if a key is provided
+// returns: data returned from cache or API call
 export function usePostAzureFunction(endpointUrl, requestBody, localCacheKey = null) {
     const [currentData, setCurrentData] = useState(null);
     const minutesToCacheData = 60;
