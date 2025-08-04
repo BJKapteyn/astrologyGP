@@ -36,9 +36,8 @@ function App() {
         </Route>
         <Route path="edit">
           <Route index element={<EditPage />}></Route>
-          <Route path="editBlog" element={<EditBlog />}>
-            <Route path=":blogId" element={<CreateBlogForm />}></Route>
-          </Route>
+          <Route path="editBlog" element={<EditBlog />}></Route>
+          <Route path="editBlog/:blogId" element={<CreateBlogForm />}></Route>
         </Route>
       </Routes>
     </div>
