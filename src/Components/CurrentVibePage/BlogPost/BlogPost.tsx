@@ -12,15 +12,16 @@ type BlogPostProps = {
 export const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
     const randomImageUrl = useRandomImageUrl();
     const [isElementInView, targetElementRef] : [boolean, React.RefObject<HTMLDivElement>] = useIsElementInView({ threshold: 0.4 });
-    const [hasElementAnimated, setHasElementAnimated] = useState(false);
+    const [isAnimationComplete, setIsAnimationComplete] = useState(false);
+    const [dateString] = useState(new Date(blog.PublishDate).toLocaleDateString().split('T')[0]);
 
     useEffect(() => {
         if (isElementInView) {
-            setHasElementAnimated(true);
+            setIsAnimationComplete(true);
         }
     }, [isElementInView]);
 
-    const imageUrl = blog.imageUrl || randomImageUrl;
+    const imageUrl = blog.ImageUrl || randomImageUrl;
     const styles = useSpring({
         config: { duration: 800 },
         from: {
@@ -28,7 +29,7 @@ export const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
             y: '6%',
         },
         to: {
-            opacity: hasElementAnimated ? '100%' : '0%',
+            opacity: isAnimationComplete ? '100%' : '0%',
             y: '0%',
         },
     })
@@ -43,13 +44,13 @@ export const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
                     backgroundPosition: 'center',
                 }}
                 >
-                <h3 className="blogpost-title">{blog.title}</h3>
+                <h3 className="blogpost-title">{blog.Title}</h3>
                 <p className="blogpost-meta">
-                    <strong className="blogpost-author">{blog.author}</strong>
-                    <em className="blogpost-date">{blog.date}</em>
+                    <strong className="blogpost-author">{blog.Author}</strong>
+                    <em className="blogpost-date">{dateString}</em>
                 </p>
             </div>
-            <p className="blogpost-content">{blog.content}</p>
+            <p className="blogpost-content">{blog.Content}</p>
         </animated.div>
     );
 };

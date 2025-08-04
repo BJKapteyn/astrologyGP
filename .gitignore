@@ -13,6 +13,8 @@
 
 # production
 /build
+.env.development
+.env.production
 .env
 
 # misc

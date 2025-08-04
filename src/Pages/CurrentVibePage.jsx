@@ -3,9 +3,7 @@ import { BlogSection } from '../Components/CurrentVibePage/BlogSection/BlogSecti
 
 function CurrentVibePage() {
     return (
-        <div>
-            <BlogSection />
-        </div>
+        <BlogSection />
     );
 }
 
