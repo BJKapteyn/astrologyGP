@@ -44,9 +44,11 @@ export const BlogSection: React.FC = () => {
             <Sparkle className="blogsection-sparkle" />
             <p className="blogsection-subtext">Welcome to a place for reflection, curiosity, and connection. Whether you're exploring patterns in your life or just looking for a fresh perspective, you'll find thoughtful insights and gentle guidance to help you navigate your journey—one day at a time.</p>
             <Sparkle className="blogsection-sparkle" />
-            {externalBlogPosts ? externalBlogPosts?.map(blogData => {
+            {externalBlogPosts ? 
+            externalBlogPosts?.map(blogData => {
                 return <BlogPost key={blogData.id} blog={blogData} />
-            }) : <LoadingIndicator />}
+            }) : 
+            <LoadingIndicator />}
             {/* {blogposts?.map(blogData => {
                 return <BlogPost key={blogData.id} blog={blogData} />
             })} */}
