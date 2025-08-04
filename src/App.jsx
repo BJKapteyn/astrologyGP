@@ -1,7 +1,6 @@
 
 import { Routes, Route } from 'react-router-dom';
 import { SingleItemView } from './Components/PageElements/SingleItemView/SingleItemView.jsx';
-// import { SingleItem } from './Components/PageElements/SingleItem/SingleItem.jsx';
 import { ItemListByCategory } from './Components/PageElements/ItemListByCategory/ItemListByCategory.jsx';
 import { ProductTypes } from './Enums/ProductTypes.js';
 import { CreateBlogForm } from './Components/EditPage/CreateBlogForm/CreateBlogForm.tsx';

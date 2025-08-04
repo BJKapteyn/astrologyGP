@@ -1,4 +1,4 @@
-import { EditButtons } from '../Components/EditPage/EditButtons/EditButtons.tsx';
+import { EditButtons } from '../Components/EditPage/EditButtons/EditButtons';
 
 export default function EditPage() {
 
