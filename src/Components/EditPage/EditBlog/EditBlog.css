@@ -1,0 +1,10 @@
+.edit-blog-post {
+    position: relative;
+}
+
+.edit-blog-link {
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    text-decoration: none;
+}
