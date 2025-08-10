@@ -40,3 +40,8 @@
 .blog-edit-form button:hover {
   background-color: #0056b3;
 }
+
+.blog-delete-button {
+  background-color: red;
+  color: white;
+}

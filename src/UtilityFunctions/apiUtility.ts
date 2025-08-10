@@ -1,0 +1,21 @@
+export const sendAPIPost = async (endpointUrl: string, requestBody: string): Promise<Response> => {
+    let postResponse: Response = {} as Response;
+
+    await fetch(endpointUrl, {
+      method: "post",
+      headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+      },
+      body: requestBody
+    })
+    .then(response => {
+      console.debug("Response received:", response);
+      postResponse = response;
+      return response.json();
+    })
+    .then(data => console.log("Data received:", data))
+    .catch(err => console.debug(err));
+
+    return postResponse;
+}

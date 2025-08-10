@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Blog } from '../../../Types/ProjectTypes';
 import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlUtility';
+import { sendAPIPost } from '../../../UtilityFunctions/apiUtility.ts';
 import './CreateBlogForm.css'
 
 interface CreateBlogFormProps {
@@ -11,33 +12,12 @@ interface CreateBlogFormProps {
 export const CreateBlogForm: React.FC<CreateBlogFormProps> = ({ blog = {} as Blog }) => {
   const [blogData, setBlogData] = useState<Blog>(blog);
   const [loadingText, setLoadingText] = useState<string | null>(null);
-  const endpoint = buildAzureFunctionURL('UpsertBlogPost', process.env.REACT_APP_UPSERT_BLOG)
+  const upsertEndpoint = buildAzureFunctionURL('UpsertBlogPost', process.env.REACT_APP_UPSERT_BLOG);
+  const deleteEndpoint = buildAzureFunctionURL('DeleteBlogPost', process.env.REACT_APP_DELETE_BLOG_POST_BY_ID);
   const location = useLocation();
 
   if(location.state && location.state.id !== blogData.id) {
     setBlogData(location.state as Blog);
-  }
-
-  const upsertItem = async (endpointUrl: string, requestBody: string): Promise<Response> => {
-    let upsertResponse: Response = {} as Response;
-
-    await fetch(endpointUrl, {
-      method: "post",
-      headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-      },
-      body: requestBody
-    })
-    .then(response => {
-      console.debug("Response received:", response);
-      upsertResponse = response;
-      return response.json();
-    })
-    .then(data => console.log("Data received:", data))
-    .catch(err => console.debug(err));
-
-    return upsertResponse;
   }
 
   function getDate() {
@@ -52,10 +32,10 @@ export const CreateBlogForm: React.FC<CreateBlogFormProps> = ({ blog = {} as Blo
 
   const handleSubmit = async (formEvent: React.FormEvent<HTMLFormElement>) => {
     formEvent.preventDefault();
-    blogData.PublishDate = blogData?.PublishDate ?? new Date().toLocaleString().split('T')[0]; 
+    blogData.PublishDate = blogData?.PublishDate ?? new Date().toISOString().split('T')[0]; 
     setLoadingText("Submitting blog post...");
 
-    let upsertResponse: Response = await upsertItem(endpoint, JSON.stringify(blogData));
+    let upsertResponse: Response = await sendAPIPost(upsertEndpoint, JSON.stringify(blogData));
 
     if (upsertResponse.ok) {
       setLoadingText(null);
@@ -65,6 +45,21 @@ export const CreateBlogForm: React.FC<CreateBlogFormProps> = ({ blog = {} as Blo
         alertMessage = 'Blog post created successfully!';
       
       alert(alertMessage);
+      window.location.reload();
+    }
+    console.log("Form submitted:", blogData);
+  };
+
+  const handleDelete = async (formEvent: React.FormEvent<HTMLFormElement>, blogId: string) => {
+    formEvent.preventDefault();
+    setLoadingText("Deleting blog post...");
+
+    let deleteResponse: Response = await sendAPIPost(deleteEndpoint, JSON.stringify({ id: blogId }));
+
+    if (deleteResponse.ok) {
+      setLoadingText(null);
+      alert('Blog post deleted successfully!');
+      setBlogData({} as Blog);
       window.location.reload();
     }
     console.log("Form submitted:", blogData);
@@ -83,6 +78,11 @@ export const CreateBlogForm: React.FC<CreateBlogFormProps> = ({ blog = {} as Blo
         <input required onChange={element => blogData.PublishDate = new Date(element.target.value)} type="date" id="publishDate" name="publishDate" defaultValue={new Date(getDate()).toISOString().split('T')[0]} />
         { loadingText ? <p>{loadingText}</p> : <button type="submit">Submit</button> }
       </form>
+      { blogData?.id && 
+        <form onSubmit={(event) => handleDelete(event, blogData.id)}>
+          { loadingText ? <p>{loadingText}</p> : <button className="blog-delete-button" type="submit">Delete</button> }
+        </form>
+      }
     </div>
   );
 }
