@@ -2,9 +2,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ActionButton } from "../../PageElements/ActionButton/ActionButton";
 import { useGetAzureFunction } from "../../../CustomHooks/useGetAzureFunction";
+import { LoadingIndicator } from "../../PageElements/LoadingIndicator/LoadingIndicator";
 import { buildAzureFunctionURL } from "../../../UtilityFunctions/urlUtility";
-import '../EditButtons/EditButtons.css';
 import { Blog } from "../../../Types/ProjectTypes";
+import '../EditButtons/EditButtons.css';
 
 export const EditBlog: React.FC = () => {
     // const endpointUrl = process.env.REACT_APP_GET_ALL_BLOG_POSTS
@@ -25,7 +26,8 @@ export const EditBlog: React.FC = () => {
                 <ActionButton buttonSettings={{ buttonText: 'New Blog Post' }}></ActionButton>
             </Link>
             <h3>Edit Existing</h3>
-            {blogPosts && blogPosts.map((blogPost: Blog) => {
+            {blogPosts ? 
+                blogPosts.map((blogPost: Blog) => {
                 return (
                     <div className="edit-blog-post" key={blogPost.id}>
                         <h4>{blogPost.Title}</h4>
@@ -34,7 +36,10 @@ export const EditBlog: React.FC = () => {
                         </Link>
                     </div>
                 );
-            })}
+            }) : 
+            (
+                <LoadingIndicator message="No Blog Posts Found" />
+            )}
         </div>
     );
 };

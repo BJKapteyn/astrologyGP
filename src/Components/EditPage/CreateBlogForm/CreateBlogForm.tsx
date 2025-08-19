@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Blog } from '../../../Types/ProjectTypes';
 import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlUtility';
 import { sendAPIPost } from '../../../UtilityFunctions/apiUtility.ts';
@@ -16,12 +16,13 @@ export const CreateBlogForm: React.FC<CreateBlogFormProps> = ({ blog = {} as Blo
   const upsertEndpoint = buildAzureFunctionURL('UpsertBlogPost', process.env.REACT_APP_UPSERT_BLOG);
   const deleteEndpoint = buildAzureFunctionURL('DeleteBlogPostById', process.env.REACT_APP_DELETE_BLOG_POST_BY_ID);
   const location = useLocation();
+  const navigate = useNavigate();
 
   if(location.state && location.state.id !== blogData.id) {
     setBlogData(location.state as Blog);
   }
 
-  function getDate() {
+  function getBlogPublishDate() {
     let publishDate: string;
     if (blogData?.PublishDate) {
       publishDate = new Date(blogData.PublishDate).toLocaleString().split(',')[0];
@@ -61,7 +62,8 @@ export const CreateBlogForm: React.FC<CreateBlogFormProps> = ({ blog = {} as Blo
       setDeleteLoadingText(null);
       alert('Blog post deleted successfully!');
       setBlogData({} as Blog);
-      window.location.reload();
+
+      navigate(-1);
     }
     console.log("Form submitted:", blogData);
   };
@@ -107,7 +109,7 @@ export const CreateBlogForm: React.FC<CreateBlogFormProps> = ({ blog = {} as Blo
           type="date"
           id="publishDate"
           name="publishDate"
-          defaultValue={new Date(getDate()).toISOString().split('T')[0]}
+          defaultValue={new Date(getBlogPublishDate()).toISOString().split('T')[0]}
         />
         {loadingText ? (
           <p className="blog-edit-form__loading">{loadingText}</p>
