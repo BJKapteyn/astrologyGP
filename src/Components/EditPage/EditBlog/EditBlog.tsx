@@ -8,10 +8,10 @@ import { Blog } from "../../../Types/ProjectTypes";
 
 export const EditBlog: React.FC = () => {
     // const endpointUrl = process.env.REACT_APP_GET_ALL_BLOG_POSTS
-    const getAllBlogPostsUrl = buildAzureFunctionURL('GetAllBlogPosts', process.env.REACT_APP_GET_ALL_BLOG_POSTS);
+    const getAllBlogPostsEndpoint = buildAzureFunctionURL('GetAllBlogPosts', process.env.REACT_APP_GET_ALL_BLOG_POSTS);
     const [blogPosts, setBlogPosts] = useState<Blog[] | null>(null);
     
-    const blogData = useGetAzureFunction(getAllBlogPostsUrl);
+    const blogData = useGetAzureFunction(getAllBlogPostsEndpoint);
 
     if (!!blogData && !!blogPosts === false) {
         setBlogPosts(blogData);

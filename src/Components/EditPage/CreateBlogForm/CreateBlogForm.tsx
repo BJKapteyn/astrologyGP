@@ -12,8 +12,9 @@ interface CreateBlogFormProps {
 export const CreateBlogForm: React.FC<CreateBlogFormProps> = ({ blog = {} as Blog }) => {
   const [blogData, setBlogData] = useState<Blog>(blog);
   const [loadingText, setLoadingText] = useState<string | null>(null);
+  const [deleteLoadingText, setDeleteLoadingText] = useState<string | null>(null);
   const upsertEndpoint = buildAzureFunctionURL('UpsertBlogPost', process.env.REACT_APP_UPSERT_BLOG);
-  const deleteEndpoint = buildAzureFunctionURL('DeleteBlogPost', process.env.REACT_APP_DELETE_BLOG_POST_BY_ID);
+  const deleteEndpoint = buildAzureFunctionURL('DeleteBlogPostById', process.env.REACT_APP_DELETE_BLOG_POST_BY_ID);
   const location = useLocation();
 
   if(location.state && location.state.id !== blogData.id) {
@@ -50,14 +51,14 @@ export const CreateBlogForm: React.FC<CreateBlogFormProps> = ({ blog = {} as Blo
     console.log("Form submitted:", blogData);
   };
 
-  const handleDelete = async (formEvent: React.FormEvent<HTMLFormElement>, blogId: string) => {
+  const handleDelete = async (formEvent: React.FormEvent<HTMLFormElement>, blogId: string, blogPartitionKey: string) => {
     formEvent.preventDefault();
-    setLoadingText("Deleting blog post...");
+    setDeleteLoadingText("Deleting blog post...");
 
-    let deleteResponse: Response = await sendAPIPost(deleteEndpoint, JSON.stringify({ id: blogId }));
+    let deleteResponse: Response = await sendAPIPost(deleteEndpoint, JSON.stringify({ id: blogId, partitionKey: blogPartitionKey }));
 
     if (deleteResponse.ok) {
-      setLoadingText(null);
+      setDeleteLoadingText(null);
       alert('Blog post deleted successfully!');
       setBlogData({} as Blog);
       window.location.reload();
@@ -66,23 +67,63 @@ export const CreateBlogForm: React.FC<CreateBlogFormProps> = ({ blog = {} as Blo
   };
 
   return (
-    <div className="blog-edit-form" >
-      <h1>Create Blog Form</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="title">Title:</label>
-        <input required onChange={element => blogData.Title = element.target.value} type="text" id="title" name="title" defaultValue={blogData?.Title || ''} />
-        <textarea required onChange={element => blogData.Content = element.target.value} id="content" name="content" defaultValue={blogData?.Content || ''} />
-        <label htmlFor="author">Author:</label>
-        <input required onChange={element => blogData.Author = element.target.value} type="text" id="author" name="author" defaultValue={blogData?.Author || ''} />
-        <label htmlFor="publishDate">Publish Date</label>
-        <input required onChange={element => blogData.PublishDate = new Date(element.target.value)} type="date" id="publishDate" name="publishDate" defaultValue={new Date(getDate()).toISOString().split('T')[0]} />
-        { loadingText ? <p>{loadingText}</p> : <button type="submit">Submit</button> }
+    <div className="blog-edit-form">
+      <h1 className="blog-edit-form__title">Create Blog Form</h1>
+      <form className="blog-edit-form__form" onSubmit={handleSubmit}>
+        <label className="blog-edit-form__label" htmlFor="title">Title:</label>
+        <input
+          className="blog-edit-form__input"
+          required
+          onChange={element => blogData.Title = element.target.value}
+          type="text"
+          id="title"
+          name="title"
+          defaultValue={blogData?.Title || ''}
+        />
+        <label className="blog-edit-form__label" htmlFor="content">Content:</label>
+        <textarea
+          className="blog-edit-form__textarea"
+          required
+          onChange={element => blogData.Content = element.target.value}
+          id="content"
+          name="content"
+          defaultValue={blogData?.Content || ''}
+        />
+        <label className="blog-edit-form__label" htmlFor="author">Author:</label>
+        <input
+          className="blog-edit-form__input"
+          required
+          onChange={element => blogData.Author = element.target.value}
+          type="text"
+          id="author"
+          name="author"
+          defaultValue={blogData?.Author || ''}
+        />
+        <label className="blog-edit-form__label" htmlFor="publishDate">Publish Date</label>
+        <input
+          className="blog-edit-form__input"
+          required
+          onChange={element => blogData.PublishDate = new Date(element.target.value)}
+          type="date"
+          id="publishDate"
+          name="publishDate"
+          defaultValue={new Date(getDate()).toISOString().split('T')[0]}
+        />
+        {loadingText ? (
+          <p className="blog-edit-form__loading">{loadingText}</p>
+        ) : (
+          <button className="blog-edit-form__submit" type="submit">Submit</button>
+        )}
       </form>
-      { blogData?.id && 
-        <form onSubmit={(event) => handleDelete(event, blogData.id)}>
-          { loadingText ? <p>{loadingText}</p> : <button className="blog-delete-button" type="submit">Delete</button> }
+      {blogData?.id && (
+        <form className="blog-edit-form__delete-form" onSubmit={(event) => handleDelete(event, blogData.id, blogData.PublishDate.toString())}>
+          {deleteLoadingText ? (
+            <p className="blog-edit-form__loading">{deleteLoadingText}</p>
+          ) : (
+            <button className="blog-edit-form__delete-button" type="submit">Delete</button>
+          )}
         </form>
-      }
+      )}
     </div>
   );
 }
