@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Blog } from '../../../Types/ProjectTypes';
 import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlUtility';
-import { sendAPIPost } from '../../../UtilityFunctions/apiUtility.ts';
+import { sendAPIPost } from '../../../UtilityFunctions/apiUtility';
 import './CreateBlogForm.css'
 
 interface CreateBlogFormProps {
@@ -70,7 +70,7 @@ export const CreateBlogForm: React.FC<CreateBlogFormProps> = ({ blog = {} as Blo
 
   return (
     <div className="blog-edit-form">
-      <h1 className="blog-edit-form__title">Create Blog Form</h1>
+      <h1 className="blog-edit-form__title">Create/Edit Blog</h1>
       <form className="blog-edit-form__form" onSubmit={handleSubmit}>
         <label className="blog-edit-form__label" htmlFor="title">Title:</label>
         <input
