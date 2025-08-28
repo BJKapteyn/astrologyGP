@@ -56,11 +56,11 @@
 .rbc-btn-group button{
     font-family: bivoac-regular !important;
     color: var(--main-color) !important;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    -ms-border-radius: 0px !important;
+    -o-border-radius: 0px !important;
     transition: background-color .5s ease-out, border-color .5 ease-out;
     -webkit-transition: background-color .5s ease-out, border-color .5 ease-out;
     -moz-transition: background-color .5s ease-out, border-color .5 ease-out;
