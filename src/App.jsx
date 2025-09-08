@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { SingleItemView } from './Components/PageElements/SingleItemView/SingleItemView.jsx';
 import { ItemListByCategory } from './Components/PageElements/ItemListByCategory/ItemListByCategory.jsx';
 import { ProductTypes } from './Enums/ProductTypes.js';
-import { CreateBlogForm } from './Components/EditPage/CreateBlogForm/CreateBlogForm.tsx';
+import { EditBlogForm } from './Components/EditPage/EditBlogForm/EditBlogForm.tsx';
 import { EditBlog } from './Components/EditPage/EditBlog/EditBlog.tsx';
 import Layout from './Components/Layout/Layout.jsx';
 import HomePage from './Pages/HomePage.jsx';
@@ -39,7 +39,9 @@ function App() {
         <Route path="edit">
           <Route index element={<EditPage />}></Route>
           <Route path="editBlog" element={<EditBlog />}></Route>
-          <Route path="editBlog/:blogId" element={<CreateBlogForm />}></Route>
+          <Route path="editBlog/:blogId" element={<EditBlogForm />}></Route>
+          <Route path="editCalendarEvent" element={<EditBlog />}></Route>
+          <Route path="editCalendarEvent/:calendarEventId" element={<EditBlogForm />}></Route>
         </Route>
       </Routes>
     </div>

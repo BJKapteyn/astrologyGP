@@ -3,18 +3,19 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { Blog } from '../../../Types/ProjectTypes';
 import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlUtility';
 import { sendAPIPost } from '../../../UtilityFunctions/apiUtility';
-import './CreateBlogForm.css'
+import './EditBlogForm.css'
+import { FunctionNames } from 'Enums/FunctionNames';
 
-interface CreateBlogFormProps {
+interface EditBlogFormProps {
   blog: Blog; 
 }
 
-export const CreateBlogForm: React.FC<CreateBlogFormProps> = ({ blog = {} as Blog }) => {
+export const EditBlogForm: React.FC<EditBlogFormProps> = ({ blog = {} as Blog }) => {
   const [blogData, setBlogData] = useState<Blog>(blog);
   const [loadingText, setLoadingText] = useState<string | null>(null);
   const [deleteLoadingText, setDeleteLoadingText] = useState<string | null>(null);
-  const upsertEndpoint = buildAzureFunctionURL('UpsertBlogPost', process.env.REACT_APP_UPSERT_BLOG);
-  const deleteEndpoint = buildAzureFunctionURL('DeleteBlogPostById', process.env.REACT_APP_DELETE_BLOG_POST_BY_ID);
+  const upsertEndpoint = buildAzureFunctionURL(FunctionNames.UpsertBlogPost, process.env.REACT_APP_UPSERT_BLOG);
+  const deleteEndpoint = buildAzureFunctionURL(FunctionNames.DeleteBlogPostById, process.env.REACT_APP_DELETE_BLOG_POST_BY_ID);
   const location = useLocation();
   const navigate = useNavigate();
 

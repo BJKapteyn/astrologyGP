@@ -7,6 +7,7 @@ export const EditButtons: React.FC = () => {
   return (
     <div className="edit-buttons">
       <Link to={'./editBlog'}><ActionButton buttonSettings={{ buttonText: 'Blog Posts'}}></ActionButton></Link>
+      <Link to={'./editCalendarEvent'}><ActionButton buttonSettings={{ buttonText: 'Calendar Events'}}></ActionButton></Link>
     </div> 
   );
 }

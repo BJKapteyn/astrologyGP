@@ -6,10 +6,10 @@ import { LoadingIndicator } from "../../PageElements/LoadingIndicator/LoadingInd
 import { buildAzureFunctionURL } from "../../../UtilityFunctions/urlUtility";
 import { Blog } from "../../../Types/ProjectTypes";
 import '../EditButtons/EditButtons.css';
+import { FunctionNames } from "Enums/FunctionNames";
 
 export const EditBlog: React.FC = () => {
-    // const endpointUrl = process.env.REACT_APP_GET_ALL_BLOG_POSTS
-    const getAllBlogPostsEndpoint = buildAzureFunctionURL('GetAllBlogPosts', process.env.REACT_APP_GET_ALL_BLOG_POSTS);
+    const getAllBlogPostsEndpoint = buildAzureFunctionURL(FunctionNames.GetAllBlogPosts, process.env.REACT_APP_GET_ALL_BLOG_POSTS);
     const [blogPosts, setBlogPosts] = useState<Blog[] | null>(null);
     
     const blogData = useGetAzureFunction(getAllBlogPostsEndpoint);
