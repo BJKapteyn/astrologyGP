@@ -6,3 +6,14 @@ export type Blog = {
     Content: string;
     ImageUrl?: string;
 };
+
+export type CalendarEvent = {
+    id: string;
+    EventName: string;
+    EventDescription: string;
+    StartDate: Date;
+    EndDate?: Date;
+    EventOrganizerName?: string;
+    BannerImageUrl?: string;
+    PriceInUSD: number;
+}
