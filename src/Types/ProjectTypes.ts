@@ -16,4 +16,5 @@ export type CalendarEvent = {
     EventOrganizerName?: string;
     BannerImageUrl?: string;
     PriceInUSD: number;
+    SquareEventId?: string;
 }

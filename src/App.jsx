@@ -5,6 +5,9 @@ import { ItemListByCategory } from './Components/PageElements/ItemListByCategory
 import { ProductTypes } from './Enums/ProductTypes.js';
 import { EditBlogForm } from './Components/EditPage/EditBlogForm/EditBlogForm.tsx';
 import { EditBlog } from './Components/EditPage/EditBlog/EditBlog.tsx';
+import { Login } from './Components/Login/Login.tsx';
+import { EditCalendarEvent } from 'Components/EditPage/EditCalendarEvent/EditCalendarEvent.tsx';
+import { EditCalendarEventForm } from 'Components/EditPage/EditCalendarEvent/EditCalendarEventForm/EditCalendarEventForm.tsx';
 import Layout from './Components/Layout/Layout.jsx';
 import HomePage from './Pages/HomePage.jsx';
 import WhyVibePage from './Pages/WhyVibePage.jsx';
@@ -14,7 +17,6 @@ import StorePage from './Pages/StorePage.jsx';
 import EventCalendarPage from './Pages/EventCalendarPage.jsx';
 import CurrentVibePage from './Pages/CurrentVibePage.jsx';
 import EditPage from './Pages/EditPage.tsx';
-import { Login } from './Components/Login/Login.tsx';
 import './App.scss';
 
 function App() {
@@ -40,8 +42,8 @@ function App() {
           <Route index element={<EditPage />}></Route>
           <Route path="editBlog" element={<EditBlog />}></Route>
           <Route path="editBlog/:blogId" element={<EditBlogForm />}></Route>
-          <Route path="editCalendarEvent" element={<EditBlog />}></Route>
-          <Route path="editCalendarEvent/:calendarEventId" element={<EditBlogForm />}></Route>
+          <Route path="editCalendarEvent" element={<EditCalendarEvent />}></Route>
+          <Route path="editCalendarEvent/:calendarEventId" element={<EditCalendarEventForm />}></Route>
         </Route>
       </Routes>
     </div>

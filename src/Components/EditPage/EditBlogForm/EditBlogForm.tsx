@@ -3,8 +3,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { Blog } from '../../../Types/ProjectTypes';
 import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlUtility';
 import { sendAPIPost } from '../../../UtilityFunctions/apiUtility';
-import './EditBlogForm.css'
 import { FunctionNames } from 'Enums/FunctionNames';
+import './EditBlogForm.css'
 
 interface EditBlogFormProps {
   blog: Blog; 
@@ -19,7 +19,7 @@ export const EditBlogForm: React.FC<EditBlogFormProps> = ({ blog = {} as Blog })
   const location = useLocation();
   const navigate = useNavigate();
 
-  if(location.state && location.state.id !== blogData.id) {
+  if (location.state && location.state.id !== blogData.id) {
     setBlogData(location.state as Blog);
   }
 
@@ -71,11 +71,11 @@ export const EditBlogForm: React.FC<EditBlogFormProps> = ({ blog = {} as Blog })
 
   return (
     <div className="blog-edit-form">
-      <h1 className="blog-edit-form__title">Create/Edit Blog</h1>
-      <form className="blog-edit-form__form" onSubmit={handleSubmit}>
-        <label className="blog-edit-form__label" htmlFor="title">Title:</label>
+      <h1 className="blog-edit-form-title">Create/Edit Blog</h1>
+      <form className="blog-edit-form-form" onSubmit={handleSubmit}>
+        <label className="blog-edit-form-label" htmlFor="title">Title:</label>
         <input
-          className="blog-edit-form__input"
+          className="blog-edit-form-input"
           required
           onChange={element => blogData.Title = element.target.value}
           type="text"
@@ -83,18 +83,18 @@ export const EditBlogForm: React.FC<EditBlogFormProps> = ({ blog = {} as Blog })
           name="title"
           defaultValue={blogData?.Title || ''}
         />
-        <label className="blog-edit-form__label" htmlFor="content">Content:</label>
+        <label className="blog-edit-form-label" htmlFor="content">Content:</label>
         <textarea
-          className="blog-edit-form__textarea"
+          className="blog-edit-form-textarea"
           required
           onChange={element => blogData.Content = element.target.value}
           id="content"
           name="content"
           defaultValue={blogData?.Content || ''}
         />
-        <label className="blog-edit-form__label" htmlFor="author">Author:</label>
+        <label className="blog-edit-form-label" htmlFor="author">Author:</label>
         <input
-          className="blog-edit-form__input"
+          className="blog-edit-form-input"
           required
           onChange={element => blogData.Author = element.target.value}
           type="text"
@@ -102,9 +102,9 @@ export const EditBlogForm: React.FC<EditBlogFormProps> = ({ blog = {} as Blog })
           name="author"
           defaultValue={blogData?.Author || ''}
         />
-        <label className="blog-edit-form__label" htmlFor="publishDate">Publish Date</label>
+        <label className="blog-edit-form-label" htmlFor="publishDate">Publish Date</label>
         <input
-          className="blog-edit-form__input"
+          className="blog-edit-form-input"
           required
           onChange={element => blogData.PublishDate = new Date(element.target.value)}
           type="date"
@@ -113,17 +113,18 @@ export const EditBlogForm: React.FC<EditBlogFormProps> = ({ blog = {} as Blog })
           defaultValue={new Date(getBlogPublishDate()).toISOString().split('T')[0]}
         />
         {loadingText ? (
-          <p className="blog-edit-form__loading">{loadingText}</p>
+          <p className="blog-edit-form-loading">{loadingText}</p>
         ) : (
-          <button className="blog-edit-form__submit" type="submit">Submit</button>
+          <button className="blog-edit-form-submit" type="submit">Submit</button>
         )}
       </form>
+
       {blogData?.id && (
-        <form className="blog-edit-form__delete-form" onSubmit={(event) => handleDelete(event, blogData.id, blogData.PublishDate.toString())}>
+        <form className="blog-edit-form-delete-form" onSubmit={(event) => handleDelete(event, blogData.id, blogData.PublishDate.toString())}>
           {deleteLoadingText ? (
-            <p className="blog-edit-form__loading">{deleteLoadingText}</p>
+            <p className="blog-edit-form-loading">{deleteLoadingText}</p>
           ) : (
-            <button className="blog-edit-form__delete-button" type="submit">Delete</button>
+            <button className="blog-edit-form-delete-button" type="submit">Delete</button>
           )}
         </form>
       )}
