@@ -162,18 +162,19 @@ const verifyStartAndEndDates = (startDate: Date, endDate?: Date): boolean => {
   return true;
 }
 
+// Assumes price is a string in the format "1000" for $10.00
+// Square stores prices without a decimal point
 const addFloatingPoint = (price: string): number => {
-  
   if (isNaN(Number(price))) {
     return 0;
   }
-  const indexToAddDecimalPoint = price.length - 3;
 
+  const indexToAddDecimalPoint = price.length - 3;
   const cents = price.substring(indexToAddDecimalPoint, price.length);
   const dollars = price.substring(0, indexToAddDecimalPoint);
 
   const priceWithDecimalPoint: string = `${dollars}.${cents}`;
-  const priceNumber = Number(price);
+  const priceNumber = Number(priceWithDecimalPoint);
 
-  return isNaN(priceNumber) ? 0 : priceNumber;
+  return priceNumber;
 }
