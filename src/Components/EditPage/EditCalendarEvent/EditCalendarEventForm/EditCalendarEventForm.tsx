@@ -1,9 +1,11 @@
 
 import { useState } from 'react';
 import { CalendarEvent } from '../../../../Types/ProjectTypes';
-import './EditCalendarEventForm.css';
 import { sendAPIPost } from 'UtilityFunctions/apiUtility';
 import { useLocation, useNavigate } from 'react-router';
+import { buildAzureFunctionURL } from 'UtilityFunctions/urlUtility';
+import { FunctionNames } from 'Enums/FunctionNames';
+import './EditCalendarEventForm.css';
 
 interface EditCalendarEventFormProps {
   event: CalendarEvent;
@@ -13,7 +15,7 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
   const [eventData, setEventData] = useState<CalendarEvent>(event);
   const [loadingText, setLoadingText] = useState<string | null>(null);
   const [deleteLoadingText, setDeleteLoadingText] = useState<string | null>(null);
-  const upsertEndpoint = process.env.REACT_APP_UPSERT_CALENDAR_EVENT;
+  const upsertEndpoint = buildAzureFunctionURL(FunctionNames.UpsertCalendarEvent, process.env.REACT_APP_UPSERT_CALENDAR_EVENT);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -32,14 +34,14 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
       return;
     }
 
-    let upsertResponse: Response = await sendAPIPost(upsertEndpoint!, JSON.stringify(eventData));
+    let upsertResponse: Response = await sendAPIPost(upsertEndpoint, JSON.stringify(eventData as CalendarEvent));
 
     if (upsertResponse.ok) {
-      setLoadingText(null);
       alert('Calendar event submitted successfully!');
       navigate(-1);
     } else {
       alert('Something went wrong, please try again later...')
+      window.location.reload();
     }
   };
 
@@ -112,12 +114,12 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
         <input
           className="edit-calendar-event-form-input"
           required
-          onChange={e => eventData.PriceInUSD = Number(e.target.value)}
+          onChange={e => eventData.PriceInUSD = removeFloatingPoint(e.target.value)}
           type="number"
           step="0.01"
           id="priceInUSD"
           name="priceInUSD"
-          defaultValue={eventData?.PriceInUSD || 0}
+          defaultValue={addFloatingPoint(eventData?.PriceInUSD) || 0}
         />
         {loadingText ? (
           <p className="edit-calendar-event-form-loading">{loadingText}</p>
@@ -150,7 +152,7 @@ const verifyCalendarEventData = (calendarEvent: CalendarEvent): boolean => {
   return true;
 }
 
-const verifyStartAndEndDates = (startDate: Date, endDate?: Date): boolean => {
+const verifyStartAndEndDates = (startDate: Date, endDate?: Date | null): boolean => {
   if (!endDate) 
     return true;
 
@@ -164,17 +166,26 @@ const verifyStartAndEndDates = (startDate: Date, endDate?: Date): boolean => {
 
 // Assumes price is a string in the format "1000" for $10.00
 // Square stores prices without a decimal point
-const addFloatingPoint = (price: string): number => {
+const addFloatingPoint = (price: number): string => {
+  if (isNaN(Number(price))) {
+    return '0.00';
+  }
+  const priceAsString: string = price.toString();
+  const indexToAddDecimalPoint = priceAsString.length - 2;
+  const cents = priceAsString.substring(indexToAddDecimalPoint, priceAsString.length);
+  const dollars = priceAsString.substring(0, indexToAddDecimalPoint);
+
+  const priceWithDecimalPoint: string = `${dollars}.${cents}`;
+
+  return priceWithDecimalPoint;
+}
+
+const removeFloatingPoint = (price: string): number => {
   if (isNaN(Number(price))) {
     return 0;
   }
 
-  const indexToAddDecimalPoint = price.length - 3;
-  const cents = price.substring(indexToAddDecimalPoint, price.length);
-  const dollars = price.substring(0, indexToAddDecimalPoint);
+  const priceWithoutDecimalPoint: string = price.replace('.', '');
 
-  const priceWithDecimalPoint: string = `${dollars}.${cents}`;
-  const priceNumber = Number(priceWithDecimalPoint);
-
-  return priceNumber;
+  return Number(priceWithoutDecimalPoint);
 }

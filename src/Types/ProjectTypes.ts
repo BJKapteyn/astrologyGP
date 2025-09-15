@@ -12,9 +12,9 @@ export type CalendarEvent = {
     EventName: string;
     EventDescription: string;
     StartDate: Date;
-    EndDate?: Date;
+    EndDate?: Date | null;
     EventOrganizerName?: string;
-    BannerImageUrl?: string;
+    BannerImageUrl?: string | null;
     PriceInUSD: number;
-    SquareEventId?: string;
+    SquareEventId?: string | null;
 }
