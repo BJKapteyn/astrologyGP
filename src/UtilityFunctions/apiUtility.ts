@@ -19,3 +19,13 @@ export const sendAPIPost = async (endpointUrl: string, requestBody: string): Pro
 
     return postResponse;
 }
+
+export const alertAPIResponse = (response: Response, successAction: (() => void) | null = null, successMessage: string = 'Operation Successful') => {
+  if (response.ok) {
+    alert(successMessage);
+    successAction && successAction();
+  } else {
+    alert('Something went wrong, please try again later...');
+    window.location.reload();
+  }
+};

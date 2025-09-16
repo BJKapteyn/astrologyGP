@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { CalendarEvent } from '../../../../Types/ProjectTypes';
-import { sendAPIPost } from 'UtilityFunctions/apiUtility';
+import { sendAPIPost, alertAPIResponse } from 'UtilityFunctions/apiUtility';
 import { useLocation, useNavigate } from 'react-router';
 import { buildAzureFunctionURL } from 'UtilityFunctions/urlUtility';
 import { FunctionNames } from 'Enums/FunctionNames';
@@ -36,19 +36,20 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
 
     let upsertResponse: Response = await sendAPIPost(upsertEndpoint, JSON.stringify(eventData as CalendarEvent));
 
-    if (upsertResponse.ok) {
-      alert('Calendar event submitted successfully!');
-      navigate(-1);
-    } else {
-      alert('Something went wrong, please try again later...')
-      window.location.reload();
-    }
+    alertAPIResponse(upsertResponse, null,  'Calendar event submitted successfully!');
   };
 
   const handleDelete = async (formEvent: React.FormEvent<HTMLFormElement>, eventId: string) => {
     formEvent.preventDefault();
-    // TODO: Implement delete logic
+    setDeleteLoadingText("Deleting calendar event...");
+    const deleteEndpoint = buildAzureFunctionURL(FunctionNames.DeleteCalendarEventById, process.env.REACT_APP_DELETE_CALENDAR_EVENT_BY_ID);
+    
+    let deleteResponse: Response = await sendAPIPost(deleteEndpoint, JSON.stringify({ id: eventId }));
+
+    alertAPIResponse(deleteResponse, () => { navigate(-1); }, 'Calendar event deleted successfully!');
   };
+
+  
 
   return (
     <div className="edit-calendar-event-form">
@@ -144,7 +145,7 @@ const verifyCalendarEventData = (calendarEvent: CalendarEvent): boolean => {
   const isStartAndEndDateValid = verifyStartAndEndDates(calendarEvent.StartDate, calendarEvent.EndDate);
 
   if (!isStartAndEndDateValid) {
-    alert('End date must be after start date, leave end date blank if event is a single day event.');
+    alert('End date must be after start date, leave the end date blank if event is a single day event.');
 
     return false;
   }
