@@ -1,4 +1,4 @@
-export type Blog = {
+export interface Blog {
     id: string;
     Title: string;
     Author: string;
@@ -7,7 +7,7 @@ export type Blog = {
     ImageUrl?: string;
 };
 
-export type CalendarEvent = {
+export interface CalendarEvent {
     id: string;
     EventName: string;
     EventDescription: string;
