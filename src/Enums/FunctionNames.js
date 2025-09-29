@@ -1,6 +1,6 @@
 export const FunctionNames =  {
-    GetServiceItems: 'GetServiceItems',
-    GetProductItems: 'GetProductItems',
+    // GetServiceItems: 'GetServiceItems',
+    // GetProductItems: 'GetProductItems',
     GetCategoriesByCategoryId: 'GetCategoriesByCategoryId',
     GetItemsByCategoryId: 'GetItemsByCategoryId',
     GetItemByItemId: 'GetItemByItemId',

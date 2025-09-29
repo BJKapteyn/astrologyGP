@@ -28,11 +28,11 @@ export const EventCalendarMobile: React.FC<EventCalendarProps> = ({ events }) =>
 
                 return (
                     <div className="event-calendar-mobile-item" key={mapKey}>
-                        <div className="event-calendar-mobile-image" style={{ backgroundImage: `url(${event.resource?.imageURL})` }}></div>
+                        <div className="event-calendar-mobile-image" style={{ backgroundImage: `url(${event.resource?.BannerImageUrl})` }}></div>
                         <h4 className="event-calendar-mobile-title">{event.title}</h4>
-                        {!didEventExpire &&<Link target='_blank' to={event.resource?.buyNowLink ?? window.location.origin}><ActionButton buttonSettings={purchaseButtonSettings}></ActionButton></Link>}
+                        {!didEventExpire &&<Link target='_blank' to={event.resource?.BannerImageUrl ?? window.location.origin}><ActionButton buttonSettings={purchaseButtonSettings}></ActionButton></Link>}
                         <p className="event-calendar-mobile-date">{dateText}</p>
-                        <div className="event-calendar-mobile-description">{event.resource?.description}</div>
+                        <div className="event-calendar-mobile-description">{event.resource?.EventDescription}</div>
                     </div>
                 );
             })}

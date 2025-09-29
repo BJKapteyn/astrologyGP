@@ -6,11 +6,6 @@ import './EventDetail.css'
 
 interface EventDetailProps {
   eventData?: CalendarEvent;
-  // itemData: ItemData;
-  // name: string;
-  // description: string;
-  // imageURL: string;
-  // buyNowLink?: string;
 }
 
 export const EventDetail: React.FC<EventDetailProps> = ({ eventData }) => {
@@ -18,10 +13,10 @@ export const EventDetail: React.FC<EventDetailProps> = ({ eventData }) => {
   const eventDataToItemData = useCallback((calendarEvent: CalendarEvent): ItemData => {
     const itemData: ItemData = {
       id: '1',
-      description: calendarEvent?.resource?.description ?? '',
-      name: calendarEvent?.resource?.eventName ?? '',
-      imageURL: calendarEvent?.resource?.imageURL ?? '',
-      buyNowLink: calendarEvent?.resource?.buyNowLink ?? '',
+      description: calendarEvent?.resource?.EventDescription ?? '',
+      name: calendarEvent?.resource?.EventName ?? '',
+      imageURL: calendarEvent?.resource?.BannerImageUrl ?? '',
+      buyNowLink: '',
       variations: [],
     }
 

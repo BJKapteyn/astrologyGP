@@ -12,6 +12,7 @@ export const sendAPIPost = async (endpointUrl: string, requestBody: string): Pro
     .then(response => {
       console.debug("Response received:", response);
       postResponse = response;
+      
       return response.json();
     })
     .then(data => console.log("Data received:", data))

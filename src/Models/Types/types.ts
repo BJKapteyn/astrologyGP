@@ -9,12 +9,17 @@ export interface ItemData {
     variations: ItemData[];
 }
 
-// Name change for consistency with CalendarEvent
+// Event is used to populate the calendar, resource is for updating the event
 export interface CalendarEvent extends Event {
     resource?: {
-        buyNowLink?: string | null;
-        eventName?: string;
-        imageURL?: string;
-        description?: string;
+        id: string;
+        BannerImageUrl?: string | null;
+        SquareEventId: string | null;
+        EventName?: string;
+        StartDate?: string;
+        EndDate?: string;
+        EventDescription?: string;
+        EventOrganizerName: string;
+        PriceInUSD?: number | null;
     };
 }
