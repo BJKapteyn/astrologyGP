@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { CalendarEvent } from 'Models/Types/types';
+import { CalendarEvent, CalendarEventResource } from 'Models/Types/types';
 import { EventDetail } from '../EventDetail/EventDetail';
 import { EventCalendar } from '../EventCalendar/EventCalendar';
 import { useRandomImageUrl } from 'CustomHooks/useRandomImageUrl';
@@ -25,41 +25,69 @@ export const EventCalendarView: React.FC = () => {
 
     useEffect(() => {
         const getEvents = async () => {
-            const getEventsResponse: Response = await sendAPIPost(getAllEventsEndpoint, '');
-        }
+            const getEventsResponse = await sendAPIPost(getAllEventsEndpoint, '');
+
+            if(Array.isArray(getEventsResponse) && getEventsResponse.length > 0) {
+                const eventData: CalendarEventResource[] = getEventsResponse;
+
+                const events: CalendarEvent[] = eventData?.map(eventJson => {
+                    let eventResources = {
+                        id: eventJson.id,
+                        BannerImageUrl: eventJson.BannerImageUrl,
+                        SquareEventId: eventJson.SquareEventId,
+                        EventName: eventJson.EventName,
+                        StartDate: eventJson.StartDate,
+                        EndDate: eventJson.EndDate,
+                        EventDescription: eventJson.EventDescription,
+                        EventOrganizerName: eventJson.EventOrganizerName ?? 'Vibe Collective',
+                        PriceInUSD: eventJson.PriceInUSD ?? null
+                    }
+
+                    return {
+                        title: eventJson.EventName,
+                        start: new Date(eventJson.StartDate ?? ''),
+                        end: new Date(eventJson.EndDate ?? ''),
+                        allDay: true,
+                        resource: eventResources
+                    } as CalendarEvent;
+                });
+
+                setCalendarEvents(events);
+            }
+        }   
 
         getEvents();
     }, []);
 
-    useEffect(() => {
-        if(!!calendarEvents === false && !!randomImage) {
-            let eventData = JSON.parse(JSON.stringify(eventDataJson));
-            const events: CalendarEvent[] = eventData.events.map((event: any) => {
-                let eventResources = {
-                    BannerImageUrl: event.resource.BannerImageUrl,
-                    EventName: event.resource.EventName,
-                    StartDate: event.resource.StartDate,
-                    EndDate: event.resource.EndDate,
-                    id: event.resource.id,
-                    SquareEventId: event.resource.SquareEventId,
-                    BannerImageURL: event.resource.BannerImageURL ?? randomImage,
-                    EventDescription: event.resource.EventDescription ?? '',
-                    EventOrganizerName: event.resource.EventOrganizerName ?? 'Vibe Collective',
-                    PriceInUSD: event.resource.PriceInUSD ?? null
-                } 
+    // useEffect(() => {
+    //     if(!!calendarEvents === false && !!randomImage) {
+    //         let eventData = JSON.parse(JSON.stringify(eventDataJson));
+    //         const events: CalendarEvent[] = eventData.events.map((event: any) => {
+    //             let eventResources = {
+    //                 BannerImageUrl: event.resource.BannerImageUrl,
+    //                 EventName: event.resource.EventName,
+    //                 StartDate: event.resource.StartDate,
+    //                 EndDate: event.resource.EndDate,
+    //                 id: event.resource.id,
+    //                 SquareEventId: event.resource.SquareEventId,
+    //                 BannerImageURL: event.resource.BannerImageURL ?? randomImage,
+    //                 EventDescription: event.resource.EventDescription ?? '',
+    //                 EventOrganizerName: event.resource.EventOrganizerName ?? 'Vibe Collective',
+    //                 PriceInUSD: event.resource.PriceInUSD ?? null
+    //             } 
 
-                return {
-                    title: event.title,
-                    start: new Date(event.start),
-                    end: new Date(event.end),
-                    allDay: true,
-                    resource: eventResources,
-                } as CalendarEvent;
-            });
+    //             return {
+    //                 title: event.title,
+    //                 start: new Date(event.start),
+    //                 end: new Date(event.end),
+    //                 allDay: true,
+    //                 resource: eventResources,
+    //             } as CalendarEvent;
+    //         });
             
-            setCalendarEvents(events);
-        }
-    }, [calendarEvents, randomImage]);
+    //         setCalendarEvents(events);
+    //     }
+    // }, [calendarEvents, randomImage]);
 
     const eventCalendar = (
         <div className="event-calendar">

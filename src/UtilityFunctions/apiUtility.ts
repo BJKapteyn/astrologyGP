@@ -1,7 +1,7 @@
 export const sendAPIPost = async (endpointUrl: string, requestBody: string): Promise<Response> => {
-    let postResponse: Response = {} as Response;
+    let postResponse: Response;
 
-    await fetch(endpointUrl, {
+    postResponse = await fetch(endpointUrl, {
       method: "post",
       headers: {
           'Accept': 'application/json',
@@ -12,17 +12,16 @@ export const sendAPIPost = async (endpointUrl: string, requestBody: string): Pro
     .then(response => {
       console.debug("Response received:", response);
       postResponse = response;
-      
+
       return response.json();
     })
-    .then(data => console.log("Data received:", data))
     .catch(err => console.debug(err));
 
     return postResponse;
 }
 
 export const alertAPIResponse = (response: Response, successAction: (() => void) | null = null, successMessage: string = 'Operation Successful') => {
-  if (response.ok) {
+  if (response?.ok) {
     alert(successMessage);
     successAction && successAction();
   } else {
