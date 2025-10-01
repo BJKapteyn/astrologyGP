@@ -1,6 +1,6 @@
 import { useEffect,useState } from 'react';
 import { animated, useSpring } from 'react-spring';
-import { Blog } from '../../../Types/ProjectTypes';
+import { Blog } from '../../../Models/Types/types';
 import { useRandomImageUrl } from '../../../CustomHooks/useRandomImageUrl';
 import { useIsElementInView } from '../../../CustomHooks/useIsElementInView';
 import './BlogPost.css';

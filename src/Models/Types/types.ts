@@ -14,14 +14,24 @@ export interface ItemData {
 export interface CalendarEvent extends Event {
     resource?: CalendarEventResource;
 }
+
+export interface Blog {
+    id: string;
+    Title: string;
+    Author: string;
+    PublishDate: Date;
+    Content: string;
+    ImageUrl?: string;
+};
+
 export interface CalendarEventResource {
     id: string;
+    SquareEventId?: string | null;
+    EventName: string;
+    EventDescription: string;
+    StartDate: Date;
+    EndDate?: Date | null;
+    EventOrganizerName?: string;
     BannerImageUrl?: string | null;
-    SquareEventId: string | null;
-    EventName?: string;
-    StartDate?: string;
-    EndDate?: string;
-    EventDescription?: string;
-    EventOrganizerName: string;
-    PriceInUSD?: number | null;
+    PriceInUSD: number;
 }

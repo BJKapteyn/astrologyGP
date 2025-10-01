@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Blog } from '../../../Types/ProjectTypes';
+import { Blog } from '../../../Models/Types/types';
 import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlUtility';
 import { sendAPIPost } from '../../../UtilityFunctions/apiUtility';
 import { FunctionNames } from 'Enums/FunctionNames';

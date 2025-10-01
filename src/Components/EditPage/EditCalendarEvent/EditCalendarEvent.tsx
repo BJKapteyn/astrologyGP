@@ -5,13 +5,13 @@ import { ActionButton } from "../../PageElements/ActionButton/ActionButton";
 import { useGetAzureFunction } from "../../../CustomHooks/useGetAzureFunction";
 import { LoadingIndicator } from "../../PageElements/LoadingIndicator/LoadingIndicator";
 import { buildAzureFunctionURL } from "../../../UtilityFunctions/urlUtility";
-import { CalendarEvent } from "../../../Types/ProjectTypes";
+import { CalendarEventResource } from "../../../Models/Types/types";
 import { FunctionNames } from "Enums/FunctionNames";
 import './EditCalendarEvent.css';
 
 export const EditCalendarEvent: React.FC = () => {
   const getAllCalendarEventsEndpoint = buildAzureFunctionURL(FunctionNames.GetAllCalendarEvents, process.env.REACT_APP_GET_ALL_CALENDAR_EVENTS);
-  const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[] | null>(null);
+  const [calendarEvents, setCalendarEvents] = useState<CalendarEventResource[] | null>(null);
 
   const eventData = useGetAzureFunction(getAllCalendarEventsEndpoint);
 
@@ -28,7 +28,7 @@ export const EditCalendarEvent: React.FC = () => {
       </Link>
       <h3>Edit Existing</h3>
       {calendarEvents ? 
-        calendarEvents.map((calendarEvent: CalendarEvent) => {
+        calendarEvents.map((calendarEvent: CalendarEventResource) => {
         return (
           <div className="edit-calendar-event" key={calendarEvent.id}>
             <h4>{calendarEvent.EventName}</h4>

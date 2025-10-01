@@ -4,7 +4,7 @@ import { ActionButton } from "../../PageElements/ActionButton/ActionButton";
 import { useGetAzureFunction } from "../../../CustomHooks/useGetAzureFunction";
 import { LoadingIndicator } from "../../PageElements/LoadingIndicator/LoadingIndicator";
 import { buildAzureFunctionURL } from "../../../UtilityFunctions/urlUtility";
-import { Blog } from "../../../Types/ProjectTypes";
+import { Blog } from "../../../Models/Types/types";
 import '../EditButtons/EditButtons.css';
 import { FunctionNames } from "Enums/FunctionNames";
 

@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { CalendarEvent } from '../../../../Types/ProjectTypes';
+import { CalendarEventResource } from '../../../../Models/Types/types';
 import { sendAPIPost, alertAPIResponse } from 'UtilityFunctions/apiUtility';
 import { useLocation, useNavigate } from 'react-router';
 import { buildAzureFunctionURL } from 'UtilityFunctions/urlUtility';
@@ -8,11 +8,11 @@ import { FunctionNames } from 'Enums/FunctionNames';
 import './EditCalendarEventForm.css';
 
 interface EditCalendarEventFormProps {
-  event: CalendarEvent;
+  event: CalendarEventResource;
 }
 
-export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ event = {} as CalendarEvent }) => {
-  const [eventData, setEventData] = useState<CalendarEvent>(event);
+export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ event = {} as CalendarEventResource }) => {
+  const [eventData, setEventData] = useState<CalendarEventResource>(event);
   const [loadingText, setLoadingText] = useState<string | null>(null);
   const [deleteLoadingText, setDeleteLoadingText] = useState<string | null>(null);
   const [priceDisplay, setPriceDisplay] = useState<string>(event?.PriceInUSD ? formatPriceDisplayWithTwoDecimals(event.PriceInUSD.toString()) : '0.00');
@@ -21,13 +21,12 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
   const navigate = useNavigate();
 
   if (location.state && location.state.id !== eventData.id) {
-      setEventData(location.state as CalendarEvent);
+      setEventData(location.state as CalendarEventResource);
   }
 
   // Blank handle methods
   const handleSubmit = async (formEvent: React.FormEvent<HTMLFormElement>) => {
     formEvent.preventDefault();
-    
     setLoadingText("Submitting calendar event...");
 
     if (!verifyCalendarEventData(eventData)) {
@@ -35,7 +34,7 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
       return;
     }
 
-    let upsertResponse: Response = await sendAPIPost(upsertEndpoint, JSON.stringify(eventData as CalendarEvent));
+    let upsertResponse: Response = await sendAPIPost(upsertEndpoint, JSON.stringify(eventData as CalendarEventResource));
 
     alertAPIResponse(upsertResponse, null,  'Calendar event submitted successfully!');
   };
@@ -157,7 +156,7 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
   );
 }
 
-const verifyCalendarEventData = (calendarEvent: CalendarEvent): boolean => {
+const verifyCalendarEventData = (calendarEvent: CalendarEventResource): boolean => {
   const isStartAndEndDateValid = verifyStartAndEndDates(calendarEvent.StartDate, calendarEvent.EndDate);
 
   if (!isStartAndEndDateValid) {

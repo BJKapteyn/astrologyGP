@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { LoadingIndicator } from '../../PageElements/LoadingIndicator/LoadingIndicator.jsx';
-import { Blog } from '../../../Types/ProjectTypes';
+import { Blog } from '../../../Models/Types/types';
 import { ReactComponent as Sparkle } from '../../../Pics/SvgDrawings/sparkle.svg';
 import { BlogPost } from '../BlogPost/BlogPost';
 import { TitleCard } from '../../PageElements/TitleCard/TitleCard.jsx';
