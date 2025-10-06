@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { CalendarEventResource } from '../../../../Models/Types/types';
+import { CalendarEventResource, DeleteCalendarEventRequestBody } from '../../../../Models/Types/types';
 import { sendAPIPost, alertAPIResponse } from 'UtilityFunctions/apiUtility';
 import { useLocation, useNavigate } from 'react-router';
 import { buildAzureFunctionURL } from 'UtilityFunctions/urlUtility';
@@ -36,23 +36,27 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
 
     let upsertResponse: Response = await sendAPIPost(upsertEndpoint, JSON.stringify(eventData as CalendarEventResource));
 
-    alertAPIResponse(upsertResponse, null,  'Calendar event submitted successfully!');
+    alertAPIResponse(upsertResponse, () => setLoadingText(null),  'Calendar event submitted successfully!');
   };
 
   const handleDelete = async (formEvent: React.FormEvent<HTMLFormElement>, eventId: string) => {
     formEvent.preventDefault();
     setDeleteLoadingText("Deleting calendar event...");
     const deleteEndpoint = buildAzureFunctionURL(FunctionNames.DeleteCalendarEventById, process.env.REACT_APP_DELETE_CALENDAR_EVENT_BY_ID);
+    let deleteResponse: Response = {} as Response;
     
-    let deleteResponse: Response = await sendAPIPost(deleteEndpoint, JSON.stringify({ id: eventId }));
+    if(eventData.SquareEventId) {
+      const deleteRequestBody: DeleteCalendarEventRequestBody = { id: eventId, partitionKey: eventData.EventOrganizerName, squareEventId: eventData.SquareEventId };
+
+      deleteResponse = await sendAPIPost(deleteEndpoint, JSON.stringify(deleteRequestBody));
+    }
 
     alertAPIResponse(deleteResponse, () => { navigate(-1); }, 'Calendar event deleted successfully!');
   };
 
-  const handlePriceInput = ( inputElementEvent: React.ChangeEvent<HTMLInputElement>, inputPrice: string): void => {
+  const updatePriceInput = ( inputElementEvent: React.ChangeEvent<HTMLInputElement>, inputPrice: string): void => {
     if(Number.MAX_SAFE_INTEGER.toString().length < inputPrice.length) {
       inputElementEvent.target.value = priceDisplay;
-
       return;
     }
 
@@ -64,7 +68,6 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
 
     inputElementEvent.target.value = formattedPrice;
   }
-  
   
   return (
     <div className="edit-calendar-event-form">
@@ -130,7 +133,7 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
         <input
           className="edit-calendar-event-form-input"
           required
-          onChange={e => handlePriceInput(e, e.target.value)}
+          onChange={e => updatePriceInput(e, e.target.value)}
           type="number"
           step="0.01"
           id="priceInUSD"
@@ -171,8 +174,10 @@ const verifyCalendarEventData = (calendarEvent: CalendarEventResource): boolean 
 const verifyStartAndEndDates = (startDate: Date, endDate?: Date | null): boolean => {
   if (!endDate) 
     return true;
+  const startDateObject = new Date(startDate);
+  const endDateObject = new Date(endDate);
 
-  const isStartDateBeforeEndDate = startDate <= endDate;
+  const isStartDateBeforeEndDate = startDateObject <= endDateObject;
 
   if (isStartDateBeforeEndDate === false) 
     return false;

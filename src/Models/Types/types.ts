@@ -15,6 +15,19 @@ export interface CalendarEvent extends Event {
     resource?: CalendarEventResource;
 }
 
+export interface CalendarEventResource {
+    id: string;
+    SquareEventId?: string | null;
+    EventName: string;
+    EventDescription: string;
+    StartDate: Date;
+    EndDate?: Date | null;
+    EventOrganizerName: string;
+    BannerImageUrl?: string | null;
+    PriceInUSD: number;
+    SquareVariationId?: string | null;
+}
+
 export interface Blog {
     id: string;
     Title: string;
@@ -24,14 +37,8 @@ export interface Blog {
     ImageUrl?: string;
 };
 
-export interface CalendarEventResource {
+export interface DeleteCalendarEventRequestBody {
     id: string;
-    SquareEventId?: string | null;
-    EventName: string;
-    EventDescription: string;
-    StartDate: Date;
-    EndDate?: Date | null;
-    EventOrganizerName?: string;
-    BannerImageUrl?: string | null;
-    PriceInUSD: number;
+    partitionKey: string;
+    squareEventId: string;
 }

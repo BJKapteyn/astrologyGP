@@ -27,14 +27,15 @@ export const EventCalendarView: React.FC = () => {
         const getEvents = async () => {
             const getEventsResponse = await sendAPIPost(getAllEventsEndpoint, '');
 
-            if(Array.isArray(getEventsResponse) && getEventsResponse.length > 0) {
-                const eventData: CalendarEventResource[] = getEventsResponse;
+            if(getEventsResponse.ok) {
+                const eventData: CalendarEventResource[] = await getEventsResponse.json();
 
                 const events: CalendarEvent[] = eventData?.map(eventJson => {
                     let eventResources = {
                         id: eventJson.id,
                         BannerImageUrl: eventJson.BannerImageUrl,
                         SquareEventId: eventJson.SquareEventId,
+                        SquareVariationId: eventJson.SquareVariationId,
                         EventName: eventJson.EventName,
                         StartDate: eventJson.StartDate,
                         EndDate: eventJson.EndDate,
@@ -46,7 +47,7 @@ export const EventCalendarView: React.FC = () => {
                     return {
                         title: eventJson.EventName,
                         start: new Date(eventJson.StartDate ?? ''),
-                        end: new Date(eventJson.EndDate ?? ''),
+                        end: new Date(eventJson.EndDate ?? eventJson.StartDate),
                         allDay: true,
                         resource: eventResources
                     } as CalendarEvent;
