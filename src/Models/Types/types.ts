@@ -18,6 +18,7 @@ export interface CalendarEvent extends Event {
 export interface CalendarEventResource {
     id: string;
     SquareEventId?: string | null;
+    SquareEventVersion: number | null;
     EventName: string;
     EventDescription: string;
     StartDate: Date;

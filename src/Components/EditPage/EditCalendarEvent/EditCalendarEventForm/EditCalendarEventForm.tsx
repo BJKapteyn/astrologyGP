@@ -115,18 +115,19 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
         <input
           className="edit-calendar-event-form-input"
           onChange={e => eventData.EventOrganizerName = e.target.value}
+          required
           type="text"
           id="eventOrganizerName"
           name="eventOrganizerName"
           defaultValue={eventData?.EventOrganizerName || ''}
         />
-        <label className="edit-calendar-event-form-label" htmlFor="bannerImage">Banner Image:</label>
+        {/* <label className="edit-calendar-event-form-label" htmlFor="bannerImage">Banner Image:</label>
         <input
           className="edit-calendar-event-form-input"
           type="file"
           id="bannerImage"
           name="bannerImage"
-          accept=".png, .jpg, .jpeg" />
+          accept=".png, .jpg, .jpeg" /> */}
         <label className="edit-calendar-event-form-label" htmlFor="priceInUSD">Price (USD):</label>
         <input
           className="edit-calendar-event-form-input"

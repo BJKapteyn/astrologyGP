@@ -36,6 +36,7 @@ export const EventCalendarView: React.FC = () => {
                         BannerImageUrl: eventJson.BannerImageUrl,
                         SquareEventId: eventJson.SquareEventId,
                         SquareVariationId: eventJson.SquareVariationId,
+                        SquareEventVersion: eventJson.SquareEventVersion,
                         EventName: eventJson.EventName,
                         StartDate: eventJson.StartDate,
                         EndDate: eventJson.EndDate,
