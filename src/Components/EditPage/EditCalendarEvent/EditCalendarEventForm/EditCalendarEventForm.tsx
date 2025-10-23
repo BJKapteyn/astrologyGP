@@ -5,6 +5,7 @@ import { sendAPIPost, alertAPIResponse } from 'UtilityFunctions/apiUtility';
 import { useLocation, useNavigate } from 'react-router';
 import { buildAzureFunctionURL } from 'UtilityFunctions/urlUtility';
 import { FunctionNames } from 'Enums/FunctionNames';
+import { ImageUpload } from '../../ImageUpload/ImageUpload';
 import './EditCalendarEventForm.css';
 
 interface EditCalendarEventFormProps {
@@ -121,13 +122,7 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
           name="eventOrganizerName"
           defaultValue={eventData?.EventOrganizerName || ''}
         />
-        {/* <label className="edit-calendar-event-form-label" htmlFor="bannerImage">Banner Image:</label>
-        <input
-          className="edit-calendar-event-form-input"
-          type="file"
-          id="bannerImage"
-          name="bannerImage"
-          accept=".png, .jpg, .jpeg" /> */}
+        <ImageUpload />
         <label className="edit-calendar-event-form-label" htmlFor="priceInUSD">Price (USD):</label>
         <input
           className="edit-calendar-event-form-input"

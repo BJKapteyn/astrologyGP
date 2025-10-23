@@ -1,11 +1,11 @@
-export const sendAPIPost = async (endpointUrl: string, requestBody: string): Promise<Response> => {
+export const sendAPIPost = async (endpointUrl: string, requestBody: string, contentType: string = 'application/json'): Promise<Response> => {
     let postResponse: Response = {} as Response;
 
     await fetch(endpointUrl, {
       method: "post",
       headers: {
           'Accept': 'application/json',
-          'Content-Type': 'application/json'
+          'Content-Type': contentType
       },
       body: requestBody
     })

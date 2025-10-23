@@ -1,6 +1,4 @@
 export const FunctionNames =  {
-    // GetServiceItems: 'GetServiceItems',
-    // GetProductItems: 'GetProductItems',
     GetCategoriesByCategoryId: 'GetCategoriesByCategoryId',
     GetItemsByCategoryId: 'GetItemsByCategoryId',
     GetItemByItemId: 'GetItemByItemId',
@@ -11,4 +9,5 @@ export const FunctionNames =  {
     GetAllCalendarEvents: 'GetAllCalendarEvents',
     UpsertCalendarEvent: 'UpsertCalendarEvent',
     DeleteCalendarEventById: 'DeleteCalendarEventById',
+    UploadImage: 'UploadImage'
 }
