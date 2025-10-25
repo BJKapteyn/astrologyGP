@@ -25,6 +25,11 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
       setEventData(location.state as CalendarEventResource);
   }
 
+  const uploadedImageUrlCallback = (url: string | null) => {
+    eventData.BannerImageUrl = url;
+    setEventData({ ...eventData });
+  }
+
   // Blank handle methods
   const handleSubmit = async (formEvent: React.FormEvent<HTMLFormElement>) => {
     formEvent.preventDefault();
@@ -122,7 +127,6 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
           name="eventOrganizerName"
           defaultValue={eventData?.EventOrganizerName || ''}
         />
-        <ImageUpload />
         <label className="edit-calendar-event-form-label" htmlFor="priceInUSD">Price (USD):</label>
         <input
           className="edit-calendar-event-form-input"
@@ -134,6 +138,7 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
           name="priceInUSD"
           defaultValue={formatPriceDisplayWithTwoDecimals(eventData?.PriceInUSD?.toString())}
         />
+        <ImageUpload setBannerImageUrlCallback={uploadedImageUrlCallback} bannerImageUrl={eventData?.BannerImageUrl ?? ''} />
         {loadingText ? (
           <p className="edit-calendar-event-form-loading">{loadingText}</p>
         ) : (
