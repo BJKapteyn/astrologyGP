@@ -34,12 +34,12 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({ setBannerImageUrlCallb
         }
     }
 
-    useEffect(() => {
-        if(imageFile) {
-            const objectUrl = URL.createObjectURL(imageFile);
-            setImageUrl(objectUrl);
-        }
-    }, [imageFile]);
+    // useEffect(() => {
+    //     if(imageFile) {
+    //         const objectUrl = URL.createObjectURL(imageFile);
+    //         setImageUrl(objectUrl);
+    //     }
+    // }, [imageFile]);
 
     return (
         <div>
@@ -56,7 +56,7 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({ setBannerImageUrlCallb
                 }}
             />
             {uploadStatus && <p className="edit-calendar-event-form-upload-status">{uploadStatus}</p>}
-            <img src={bannerImageUrl} alt="Preview" style={{ marginTop: '10px', maxWidth: '100%' }} />
+            {!!imageUrl && <img src={imageUrl} alt="Preview" style={{ marginTop: '10px', maxWidth: '100%' }} />}
         </div>
     );
 };
