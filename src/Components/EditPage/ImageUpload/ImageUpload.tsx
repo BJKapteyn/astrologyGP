@@ -1,5 +1,5 @@
 import { FunctionNames } from 'Enums/FunctionNames';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { sendAPIPost } from 'UtilityFunctions/apiUtility';
 import { buildAzureFunctionURL } from 'UtilityFunctions/urlUtility';
 
@@ -9,18 +9,22 @@ interface ImageUploadProps {
 }
 
 export const ImageUpload: React.FC<ImageUploadProps> = ({ setBannerImageUrlCallback, bannerImageUrl = "" }) => {
-    const [imageFile, setImageFile] = useState<File | null>(null);
+    // const [imageFile, setImageFile] = useState<File | null>(null);
     const [uploadStatus, setUploadStatus] = useState<string | null>(null);
     const [imageUrl, setImageUrl] = useState<string | null>(bannerImageUrl);
     const imageUploadUrl = buildAzureFunctionURL(FunctionNames.UploadImage, process.env.REACT_APP_UPLOAD_IMAGE);
 
+    if (!!imageUrl === false && !!bannerImageUrl) {
+        setImageUrl(bannerImageUrl);
+    }
+    
     const handleUpload = async (file: File | null) => {
         const fileExists = !!file;
 
         if (!fileExists) 
             return; 
 
-        setImageFile(file);
+        // setImageFile(file);
         const binaryData: ArrayBuffer = await file.arrayBuffer();
         setUploadStatus("Uploading image...");
         const postImageResponse: Response = await sendAPIPost(imageUploadUrl, binaryData, file.type);
@@ -29,17 +33,14 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({ setBannerImageUrlCallb
             const responseData = await postImageResponse.json();
             setBannerImageUrlCallback && setBannerImageUrlCallback(responseData);
             setUploadStatus(null);
+
+            if (!!imageUrl === false && !!bannerImageUrl) {
+                setImageUrl(bannerImageUrl);
+            }
         } else {
             setUploadStatus("Image upload failed. Please try again.");
         }
     }
-
-    // useEffect(() => {
-    //     if(imageFile) {
-    //         const objectUrl = URL.createObjectURL(imageFile);
-    //         setImageUrl(objectUrl);
-    //     }
-    // }, [imageFile]);
 
     return (
         <div>
