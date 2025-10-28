@@ -34,8 +34,11 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({ setBannerImageUrlCallb
             setBannerImageUrlCallback && setBannerImageUrlCallback(responseData);
             setUploadStatus(null);
 
-            if (!!imageUrl === false && !!bannerImageUrl) {
-                setImageUrl(bannerImageUrl);
+            const isImageUrlNOTSet = !!imageUrl === false && !!bannerImageUrl;
+            const isBannerImageUpdated = bannerImageUrl !== responseData;
+
+            if (isImageUrlNOTSet || isBannerImageUpdated) {
+                setImageUrl(responseData);
             }
         } else {
             setUploadStatus("Image upload failed. Please try again.");

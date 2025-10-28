@@ -42,6 +42,11 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
 
     let upsertResponse: Response = await sendAPIPost(upsertEndpoint, JSON.stringify(eventData as CalendarEventResource));
 
+    if (upsertResponse.ok) {
+      const responseData = await upsertResponse.json();
+      setEventData({ ...responseData });
+    }
+
     alertAPIResponse(upsertResponse, () => setLoadingText(null),  'Calendar event submitted successfully!');
   };
 
