@@ -15,6 +15,7 @@ export interface CalendarEvent extends Event {
     resource?: CalendarEventResource;
 }
 
+// Resource is our custom data structure for calendar events
 export interface CalendarEventResource {
     id: string;
     SquareEventId?: string | null;

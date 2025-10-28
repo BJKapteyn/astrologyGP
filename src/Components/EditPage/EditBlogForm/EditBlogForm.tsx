@@ -5,6 +5,7 @@ import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlUtility';
 import { sendAPIPost } from '../../../UtilityFunctions/apiUtility';
 import { FunctionNames } from 'Enums/FunctionNames';
 import './EditBlogForm.css'
+import { ImageUpload } from '../ImageUpload/ImageUpload';
 
 interface EditBlogFormProps {
   blog: Blog; 
@@ -33,6 +34,11 @@ export const EditBlogForm: React.FC<EditBlogFormProps> = ({ blog = {} as Blog })
     return publishDate;
   }
 
+  const setImageUrl = (url: string | null) => {
+    blogData.ImageUrl = url || undefined;
+    setBlogData({ ...blogData });
+  }
+
   const handleSubmit = async (formEvent: React.FormEvent<HTMLFormElement>) => {
     formEvent.preventDefault();
     blogData.PublishDate = blogData?.PublishDate ?? new Date().toISOString().split('T')[0]; 
@@ -46,7 +52,10 @@ export const EditBlogForm: React.FC<EditBlogFormProps> = ({ blog = {} as Blog })
 
       if (upsertResponse.status === 201) 
         alertMessage = 'Blog post created successfully!';
-      
+
+      const updatedBlogData = await upsertResponse.json();
+      setBlogData({ ...updatedBlogData });
+
       alert(alertMessage);
       window.location.reload();
     }
@@ -111,6 +120,10 @@ export const EditBlogForm: React.FC<EditBlogFormProps> = ({ blog = {} as Blog })
           id="publishDate"
           name="publishDate"
           defaultValue={new Date(getBlogPublishDate()).toISOString().split('T')[0]}
+        />
+        <ImageUpload
+          bannerImageUrl={blogData.ImageUrl}
+          setBannerImageUrlCallback={(url) => setImageUrl(url)}
         />
         {loadingText ? (
           <p className="blog-edit-form-loading">{loadingText}</p>
