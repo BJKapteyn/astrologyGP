@@ -56,8 +56,11 @@ export const EditBlogForm: React.FC<EditBlogFormProps> = ({ blog = {} as Blog })
       const updatedBlogData = await upsertResponse.json();
       setBlogData({ ...updatedBlogData });
 
+      location.state = { ...updatedBlogData };
+
       alert(alertMessage);
-      window.location.reload();
+
+      navigate(location.pathname, { state: { ...updatedBlogData } });
     }
     console.log("Form submitted:", blogData);
   };
@@ -73,9 +76,8 @@ export const EditBlogForm: React.FC<EditBlogFormProps> = ({ blog = {} as Blog })
       alert('Blog post deleted successfully!');
       setBlogData({} as Blog);
 
-      navigate(-1);
+      navigate('/edit/editBlog/');
     }
-    console.log("Form submitted:", blogData);
   };
 
   return (
