@@ -17,48 +17,6 @@ export const NavLinkData = [
         route: '/Offerings',
         text: 'OFFERINGS',
         subMenu: null
-        //[
-        //     {
-        //         id: 6,
-        //         route: '',
-        //         text: 'Tarot',
-        //     },
-        //     {
-        //         id: 7,
-        //         route: '',
-        //         text: 'Astrology',
-        //     },
-        //     {
-        //         id: 8,
-        //         route: '',
-        //         text: 'Mediumship',
-        //     },
-        //     {
-        //         id: 9,
-        //         route: '',
-        //         text: 'Past Life Regression',
-        //     },
-        //     {
-        //         id: 10,
-        //         route: '',
-        //         text: 'Reiki',
-        //     },
-        //     {
-        //         id: 11,
-        //         route: '',
-        //         text: 'Human Design',
-        //     },
-        //     {
-        //         id: 12,
-        //         route: '',
-        //         text: 'Sound Healing',
-        //     },
-        //     {
-        //         id: 13,
-        //         route: '',
-        //         text: 'Kundalini Yoga',
-        //     },
-        // ]
     },
     {
         id: 4,
@@ -78,23 +36,16 @@ export const NavLinkData = [
         ]
     },
     {
-        id: 7,
+        id: 5,
         route: '/EventCalendar',
         text: 'EVENT CALENDAR',
-        subMenu: [
-            {
-                id: 0,
-                route: '/CurrentVibe',
-                text: 'THE CURRENT VIBE',
-                subMenu: null
-            }
-        ]
-    },
-    {
-        id: 6,
-        route: '/WhyVibe',
-        text: 'WORK WITH US',
         subMenu: null
     },
+    {
+        id: 7,
+        route: '/CurrentVibe',
+        text: 'THE CURRENT VIBE',
+        subMenu: null
+    }
     
 ]
