@@ -9,7 +9,6 @@ interface ImageUploadProps {
 }
 
 export const ImageUpload: React.FC<ImageUploadProps> = ({ setBannerImageUrlCallback, bannerImageUrl = "" }) => {
-    // const [imageFile, setImageFile] = useState<File | null>(null);
     const [uploadStatus, setUploadStatus] = useState<string | null>(null);
     const [imageUrl, setImageUrl] = useState<string | null>(bannerImageUrl);
     const imageUploadUrl = buildAzureFunctionURL(FunctionNames.UploadImage, process.env.REACT_APP_UPLOAD_IMAGE);
@@ -24,7 +23,6 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({ setBannerImageUrlCallb
         if (!fileExists) 
             return; 
 
-        // setImageFile(file);
         const binaryData: ArrayBuffer = await file.arrayBuffer();
         setUploadStatus("Uploading image...");
         const postImageResponse: Response = await sendAPIPost(imageUploadUrl, binaryData, file.type);
@@ -53,7 +51,7 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({ setBannerImageUrlCallb
                 type="file"
                 id="bannerImage"
                 name="bannerImage"
-                accept=".png, .jpg, .jpeg"
+                accept=".jpg, .jpeg"
                 onChange={e => {
                     const file = e.target.files?.[0] || null;
                     handleUpload(file);

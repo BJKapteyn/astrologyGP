@@ -1,11 +1,13 @@
 .blogsection {
     display: flex;
     flex-direction: column;
-    padding-bottom: 2em;;
+    padding-bottom: 2em;
 }
 
 #blogsection-titlecard {
     height: 10em;
+    background-color: var(--secondary-orange);
+    margin: auto;
 }
 
 .blogsection-subtext {
