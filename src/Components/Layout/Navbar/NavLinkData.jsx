@@ -44,7 +44,7 @@ export const NavLinkData = [
     {
         id: 7,
         route: '/CurrentVibe',
-        text: 'THE CURRENT VIBE',
+        text: 'BLOG',
         subMenu: null
     }
     
