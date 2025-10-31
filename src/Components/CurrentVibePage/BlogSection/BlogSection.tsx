@@ -5,9 +5,9 @@ import { ReactComponent as Eye } from '../../../Pics/SvgDrawings/EYE-VECTOR.svg'
 import { ReactComponent as Sparkle } from '../../../Pics/SvgDrawings/sparkle.svg';
 import { BlogPost } from '../BlogPost/BlogPost';
 import { TitleCard } from '../../PageElements/TitleCard/TitleCard.jsx';
-import './BlogSection.css';
 import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction.jsx';
 import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlUtility.js';
+import './BlogSection.css';
 
 export const BlogSection: React.FC = () => {
     const [externalBlogPosts, setExternalBlogPosts] = useState<Blog[] | null>(null); 
@@ -24,7 +24,7 @@ export const BlogSection: React.FC = () => {
     const titleConfiguration = {
         titleText: 'The Current Vibe',
         styleId: 'blogsection-titlecard',
-        svgElement: <Eye style={{width: '4em', margin: '0 auto'}} />,
+        svgElement: <Eye style={{width: '4em', height: '4em', margin: '0 auto', justifyContent: 'center'}} />,
     };
 
     const blogSection = (
