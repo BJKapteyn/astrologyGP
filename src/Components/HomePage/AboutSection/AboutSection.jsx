@@ -1,7 +1,7 @@
 // import { useState, useRef } from 'react';
 // import { AboutCardData } from './AboutCardData';
 // import { AboutCard } from './AboutCard';
-// import '../../../App.css';
+// import '../../../App.scss';
 // import './AboutSection.css';
 
 // export const AboutSection = () => {

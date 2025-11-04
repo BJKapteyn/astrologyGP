@@ -5,7 +5,7 @@ import { ReactComponent as MenuExpand} from '../../../../Pics/Logos/MenuExpand.s
 import { ReactComponent as MenuRetract} from '../../../../Pics/Logos/MenuRetract.svg';
 import { NavLinkData } from '../NavLinkData.jsx';
 import yellowLogo from '../../../../Pics/Logos/MainLogoYellow.svg';
-import '../../../../App.css';
+import '../../../../App.scss';
 import './NavBarMobile.css';
 
 export const NavBarMobile = () => {

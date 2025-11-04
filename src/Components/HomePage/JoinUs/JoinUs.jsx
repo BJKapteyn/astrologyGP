@@ -1,6 +1,6 @@
 import { ActionButton } from '../../PageElements/ActionButton/ActionButton';
 import { Link } from 'react-router-dom';
-import '../../../App.css';
+import '../../../App.scss';
 import './JoinUs.css';
 
 export const JoinUs = () => {

@@ -1,5 +1,5 @@
 import { ValueCard } from "./ValueCard";
-import '../../App.css';
+import '../../App.scss';
 import './WhyVibe.css';
 
 export const ValueCards = ({cardDatas}) => {

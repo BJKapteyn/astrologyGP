@@ -5,7 +5,7 @@
 // import { LoadingIndicator } from '../../PageElements/LoadingIndicator/LoadingIndicator';
 // import { buildSingleOfferingURL } from '../../../Functions/urlBuilders';
 // import moon from '../../../Pics/Portraits/portrait-sunsetWaves.png';
-// import '../../../App.css';
+// import '../../../App.scss';
 // import './SingleOffering.css';
 
 // // View detailed offering information

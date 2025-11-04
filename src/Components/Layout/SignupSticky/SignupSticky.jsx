@@ -5,7 +5,7 @@ import { CardModal } from '../../PageElements/CardModal/CardModal';
 import { ReactComponent as Eye } from '../../../Pics/SvgDrawings/EYE-VECTOR.svg'
 import { ActionButton } from '../../PageElements/ActionButton/ActionButton';
 import './SignupSticky.css';
-import '../../../App.css';
+import '../../../App.scss';
 
 // pop up bar at the bottom of all pages for signing up for promotions
 export const SignupSticky = () => {

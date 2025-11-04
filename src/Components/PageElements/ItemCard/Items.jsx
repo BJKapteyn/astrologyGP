@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Item } from './Item/Item.jsx';
 import { Link } from 'react-router-dom';
 import { LoadingIndicator } from '../LoadingIndicator/LoadingIndicator.jsx';
-import '../../../App.css';
+import '../../../App.scss';
 import './Items.css';
 
 

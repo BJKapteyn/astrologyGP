@@ -3,7 +3,7 @@ import { ReactComponent as FaceBook } from '../../../Pics/Logos/facebook_yellow.
 import { ReactComponent as Instagram } from '../../../Pics/Logos/instagram_icon_yellow.svg'
 import { ReactComponent as Tiktok } from '../../../Pics/Logos/tiktok_yellow.svg';
 import { socialLinks } from '../../../Data/Socials/socialLinks';
-import '../../../App.css';
+import '../../../App.scss';
 import './Socials.css';
 
 // Links to social media pages
