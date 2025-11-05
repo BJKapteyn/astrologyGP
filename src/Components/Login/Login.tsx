@@ -1,10 +1,10 @@
-import LoginButton from "./LoginButton";
+import LoginButton from "./LoginButton/LoginButton";
 
 export const Login = () => {
 
   return (
-    <div> 
-        <h1>Login Page</h1>
+    <div className="login"> 
+        <h3>Login Page</h3>
         <LoginButton />
     </div>
   );

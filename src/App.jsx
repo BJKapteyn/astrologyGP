@@ -6,6 +6,7 @@ import { ProductTypes } from './Enums/ProductTypes.js';
 import { EditBlogForm } from './Components/EditPage/EditBlogForm/EditBlogForm.tsx';
 import { EditBlog } from './Components/EditPage/EditBlog/EditBlog.tsx';
 import { Login } from './Components/Login/Login.tsx';
+import {AuthenticationGuard} from './Components/Login/Auth0/AuthGuard.jsx';
 import Layout from './Components/Layout/Layout.jsx';
 import HomePage from './Pages/HomePage.jsx';
 import WhyVibePage from './Pages/WhyVibePage.jsx';
@@ -28,7 +29,7 @@ function App() {
           <Route path="/Store" element={<StorePage />}></Route>
           <Route path="/Store/:storecategory" element={<ItemListByCategory />}></Route>
           <Route path="/Store/:storecategory/:storeitem" element={<SingleItemView  />}></Route>
-          <Route path="/EventCalendar" element={<EventCalendarPage />}></Route>
+          {/* <Route path="/EventCalendar" element={<EventCalendarPage />}></Route> */}
           <Route path="/Offerings" element={<OfferingsPage />}></Route>
           <Route path="/Offerings/:offering" element={<ItemListByCategory productType={ProductTypes.AppointmentsService} />}></Route>
           <Route path="/Offerings/:offering/:singleoffering" element={<SingleItemView isService={true} hasVariation={true} />}></Route>
@@ -36,9 +37,9 @@ function App() {
           <Route path="/admin" element={<Login />}></Route>
         </Route>
         <Route path="edit">
-          <Route index element={<EditPage />}></Route>
-          <Route path="editBlog" element={<EditBlog />}></Route>
-          <Route path="editBlog/:blogId" element={<EditBlogForm />}></Route>
+          <Route index element={<AuthenticationGuard component={EditPage} />}></Route>
+          <Route path="editBlog" element={<AuthenticationGuard component={EditBlog} />}></Route>
+          <Route path="editBlog/:blogId" element={<AuthenticationGuard component={EditBlogForm} />}></Route>
         </Route>
       </Routes>
     </div>

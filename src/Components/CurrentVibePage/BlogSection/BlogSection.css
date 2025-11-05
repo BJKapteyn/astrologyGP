@@ -5,9 +5,10 @@
 }
 
 #blogsection-titlecard {
-    height: 10em;
+    height: 25em;
     background-color: var(--secondary-orange);
     margin: auto;
+    justify-content: center;
 }
 
 .blogsection-subtext {
