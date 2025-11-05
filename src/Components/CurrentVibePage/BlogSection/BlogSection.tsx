@@ -37,13 +37,13 @@ export const BlogSection: React.FC = () => {
             externalBlogPosts?.map(blogData => {
                 return <BlogPost key={blogData.id} blog={blogData} />
             }) : 
-            <LoadingIndicator />}
+            <LoadingIndicator message="No blogs currently available please check back later." />}
         </div>
     )
 
     return (
         <>
-            {externalBlogPosts ? blogSection : <LoadingIndicator />}
+            {blogSection}
         </>
     );
 };
