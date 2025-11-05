@@ -9,7 +9,7 @@ export const ComingSoon = ({ comingSoonData }) =>  {
         <section style={{backgroundImage: `url(${imagePath})`}} className="comingsoon">
             <h1 className="comingsoon-heading">{heading}</h1>
             <div className="comingsoon-sparkle">
-                <Sparkle></Sparkle>
+                <Sparkle style={{width: '10em', height: '10em', fill: 'white'}}></Sparkle>
             </div>
             <p className="comingsoon-subtext">{subtext}</p>
         </section>
