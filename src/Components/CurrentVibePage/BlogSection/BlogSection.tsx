@@ -15,7 +15,7 @@ export const BlogSection: React.FC = () => {
     
     const blogPostsData: Blog[] | null = usePostAzureFunction(getAllBlogPostsUrl, process.env.REACT_APP_GET_ALL_BLOG_POSTS) as Blog[] | null;
 
-    if (!!blogPostsData && !!externalBlogPosts === false && blogPostsData.length > 1) {
+    if (!!blogPostsData && !!externalBlogPosts === false && blogPostsData.length > 0) {
         setExternalBlogPosts(blogPostsData.sort((post1, post2) => {
             return new Date(post2.PublishDate).getTime() - new Date(post1.PublishDate).getTime();
         }) as Blog[]);
