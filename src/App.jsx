@@ -1,7 +1,7 @@
 
 import { Routes, Route } from 'react-router-dom';
 import { SingleItemView } from './Components/PageElements/SingleItemView/SingleItemView.jsx';
-import { ItemListByCategory } from './Components/PageElements/ItemListByCategory/ItemListByCategory.jsx';
+import { ItemListByCategory } from './Components/PageElements/ItemListByCategory/ItemListByCategory.jsx';}
 import { ProductTypes } from './Enums/ProductTypes.js';
 import { EditBlogForm } from './Components/EditPage/EditBlogForm/EditBlogForm.tsx';
 import { EditBlog } from './Components/EditPage/EditBlog/EditBlog.tsx';
@@ -15,6 +15,7 @@ import OfferingsPage from './Pages/OfferingsPage.jsx';
 import StorePage from './Pages/StorePage.jsx';
 import CurrentVibePage from './Pages/CurrentVibePage.jsx';
 import EditPage from './Pages/EditPage.tsx';
+import { ComingSoon } from 'Components/ComingSoon/ComingSoon.jsx';
 import './App.scss';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/Store" element={<StorePage />}></Route>
           <Route path="/Store/:storecategory" element={<ItemListByCategory />}></Route>
           <Route path="/Store/:storecategory/:storeitem" element={<SingleItemView  />}></Route>
+          <Route path="/EventCalendar" element={<ComingSoon />}></Route>
           <Route path="/Offerings" element={<OfferingsPage />}></Route>
           <Route path="/Offerings/:offering" element={<ItemListByCategory productType={ProductTypes.AppointmentsService} />}></Route>
           <Route path="/Offerings/:offering/:singleoffering" element={<SingleItemView isService={true} hasVariation={true} />}></Route>
