@@ -29,7 +29,6 @@ function App() {
           <Route path="/Store" element={<StorePage />}></Route>
           <Route path="/Store/:storecategory" element={<ItemListByCategory />}></Route>
           <Route path="/Store/:storecategory/:storeitem" element={<SingleItemView  />}></Route>
-          {/* <Route path="/EventCalendar" element={<EventCalendarPage />}></Route> */}
           <Route path="/Offerings" element={<OfferingsPage />}></Route>
           <Route path="/Offerings/:offering" element={<ItemListByCategory productType={ProductTypes.AppointmentsService} />}></Route>
           <Route path="/Offerings/:offering/:singleoffering" element={<SingleItemView isService={true} hasVariation={true} />}></Route>
