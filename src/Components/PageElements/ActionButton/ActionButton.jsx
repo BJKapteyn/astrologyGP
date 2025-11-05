@@ -1,9 +1,9 @@
-import '../../../App.css';
+import '../../../App.scss';
 import './ActionButton.css';
 
-// buttonSettings - settings used to define the button
-// callback       - used to change state of the parent component, will override the action even if the action is defined previously
-// action         - script to be executed on click
+// General styled button component to be used for links or running scripts
+//      buttonSettings - settings used to define the display name and action of the button
+//      callback       - used to change state of the parent component, will override the action even if the action is defined previously
 export const ActionButton = ({ buttonSettings, callback = null }) => {
     const {buttonText, buttonStyleId, action} = buttonSettings;
     
@@ -12,11 +12,7 @@ export const ActionButton = ({ buttonSettings, callback = null }) => {
         if(buttonAction) {
             event.preventDefault();
             buttonAction();
-        } else {
-            console.debug('Action button failed to fire:' +
-                            ` text: ${buttonText}` +
-                            ` buttonStyleId: ${buttonStyleId}`);
-        }
+        } 
     }
 
     function executeAction(event) {

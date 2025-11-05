@@ -2,7 +2,7 @@ import { Subscribe } from './Subscribe/Subscribe';
 import { Socials } from '../../PageElements/Socials/Socials';
 import sublogo from '../../../Pics/Logos/VC--01.png'
 import './Footer.css';
-import '../../../App.css';
+import '../../../App.scss';
 
 export const Footer = () => {
 

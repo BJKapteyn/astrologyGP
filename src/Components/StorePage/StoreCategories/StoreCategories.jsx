@@ -1,4 +1,3 @@
-import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { useRef, useState, useEffect } from 'react';
 import { Items } from '../../PageElements/ItemCard/Items';

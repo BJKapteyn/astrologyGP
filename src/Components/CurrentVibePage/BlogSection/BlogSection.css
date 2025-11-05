@@ -1,0 +1,27 @@
+.blogsection {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2em;
+}
+
+#blogsection-titlecard {
+    height: 25em;
+    background-color: var(--secondary-orange);
+    margin: auto;
+    justify-content: center;
+}
+
+.blogsection-subtext {
+    margin: auto;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 80%;
+}
+
+.blogsection-sparkle {
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    fill: var(--main-accent-color);
+}
+

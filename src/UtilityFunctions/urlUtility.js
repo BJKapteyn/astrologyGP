@@ -26,15 +26,8 @@ export function buildAzureFunctionURL(functionName, code) {
     return functionURL;
 }
 
-export function buildCalendarEventBuyUrl(eventName, eventId, eventReportingCategoryId) {
-    eventName = eventName.replace(/ /g, '-').toLowerCase();
-    const buyNowUrl = `https://the-vibe-collective.square.site/product/${eventName}/${eventId}?cp=true&sa=false&sbp=false&q=false&category_id=${eventReportingCategoryId}`;
-
-    return buyNowUrl;
-}
-
 /**
- * Extracts the item ID from a given URL path.
+ * Extracts the item ID from the end of a given URL path.
  *
  * @param {string} path - The URL path from which to extract the item ID.
  * @returns {string} The extracted item ID.
@@ -47,3 +40,5 @@ export function getItemIdFromUrlPath(path) {
 
     return itemId;
 }
+
+

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ActionButton } from "../../PageElements/ActionButton/ActionButton";
-import '../../../App.css';
+import '../../../App.scss';
 import './OfferingSection.css';
 
 export const OfferingItem = ({ offeringItemData }) => {

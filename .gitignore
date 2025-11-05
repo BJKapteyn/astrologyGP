@@ -1,6 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 .firebase/*
+firebase.json
+.firebaserc
 
 
 # dependencies
@@ -13,6 +15,8 @@
 
 # production
 /build
+.env.development
+.env.production
 .env
 
 # misc
