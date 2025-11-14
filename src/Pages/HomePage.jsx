@@ -6,8 +6,9 @@ import { JoinUs } from '../Components/HomePage/JoinUs/JoinUs.jsx';
 import { MeetCarly } from '../Components/HomePage/MeetCarly/MeetCarly.jsx';
 import { NewsCardSection } from '../Components/HomePage/NewsCard/NewsCardSection.jsx';
 import { OfferingSection } from '../Components/HomePage/OfferingSection/OfferingSection.jsx';
-import { titleCardData } from '../Components/HomePage/TitleCard/TitleCardData.jsx';
+import { titleCardData } from '../Components/HomePage/HomePageTitleCard/TitleCardData.jsx';
 import { addPageHeaderInfo } from '../UtilityFunctions/pageUtility.js';
+import '../Components/HomePage/HomePageTitleCard/HomePageTitleCard.css';
 
 export default function HomePage() {
     const videoDivider = {
