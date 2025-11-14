@@ -18,9 +18,9 @@ export const BlogSection: React.FC = () => {
     if (!!blogPostsData && !!externalBlogPosts === false && blogPostsData.length > 0) {
         if (blogPostsData.length > 1) {
             // Set only the most recent blog post
-            setExternalBlogPosts([blogPostsData.sort((post1, post2) => {
+            setExternalBlogPosts(blogPostsData.sort((post1, post2) => {
                 return new Date(post2.PublishDate).getTime() - new Date(post1.PublishDate).getTime();
-            })[0]]);
+            }));
         } else {
             setExternalBlogPosts(blogPostsData as Blog[]);
         }   

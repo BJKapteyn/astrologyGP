@@ -10,7 +10,6 @@ export function TitleCard({ titleData }) {
                 {svgElement && svgElement}
                 <h2 className="titleCard-flexitem" id="titlecard-title">{titleText}</h2>
                 {subText && <h4 className="titleCard-flexitem" id="titlecard-subtext">{subText}</h4>}
-
             </section>
         </div>
     );
