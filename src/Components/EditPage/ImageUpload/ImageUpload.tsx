@@ -1,6 +1,6 @@
 import { FunctionNames } from 'Enums/FunctionNames';
 import { useState } from 'react';
-import { sendAPIPost } from 'UtilityFunctions/apiUtility';
+import { requestAPIResource } from 'UtilityFunctions/apiUtility';
 import { buildAzureFunctionURL } from 'UtilityFunctions/urlUtility';
 
 interface ImageUploadProps {
@@ -25,7 +25,7 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({ setBannerImageUrlCallb
 
         const binaryData: ArrayBuffer = await file.arrayBuffer();
         setUploadStatus("Uploading image...");
-        const postImageResponse: Response = await sendAPIPost(imageUploadUrl, binaryData, file.type);
+        const postImageResponse: Response = await requestAPIResource(imageUploadUrl, binaryData, file.type);
 
         if (postImageResponse.ok) {
             const responseData = await postImageResponse.json();

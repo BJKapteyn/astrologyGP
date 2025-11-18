@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Blog } from '../../../Models/Types/types';
 import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlUtility';
-import { sendAPIPost } from '../../../UtilityFunctions/apiUtility';
+import { requestAPIResource } from '../../../UtilityFunctions/apiUtility';
 import { FunctionNames } from 'Enums/FunctionNames';
 import './EditBlogForm.css'
 import { ImageUpload } from '../ImageUpload/ImageUpload';
@@ -44,7 +44,7 @@ export const EditBlogForm: React.FC<EditBlogFormProps> = ({ blog = {} as Blog })
     blogData.PublishDate = blogData?.PublishDate ?? new Date().toISOString().split('T')[0]; 
     setLoadingText("Submitting blog post...");
 
-    let upsertResponse: Response = await sendAPIPost(upsertEndpoint, JSON.stringify(blogData));
+    let upsertResponse: Response = await requestAPIResource(upsertEndpoint, JSON.stringify(blogData));
 
     if (upsertResponse.ok) {
       setLoadingText(null);
@@ -69,7 +69,7 @@ export const EditBlogForm: React.FC<EditBlogFormProps> = ({ blog = {} as Blog })
     formEvent.preventDefault();
     setDeleteLoadingText("Deleting blog post...");
 
-    let deleteResponse: Response = await sendAPIPost(deleteEndpoint, JSON.stringify({ id: blogId, partitionKey: blogPartitionKey }));
+    let deleteResponse: Response = await requestAPIResource(deleteEndpoint, JSON.stringify({ id: blogId, partitionKey: blogPartitionKey }));
 
     if (deleteResponse.ok) {
       setDeleteLoadingText(null);
