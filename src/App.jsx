@@ -6,7 +6,9 @@ import { ProductTypes } from './Enums/ProductTypes.js';
 import { EditBlogForm } from './Components/EditPage/EditBlogForm/EditBlogForm.tsx';
 import { EditBlog } from './Components/EditPage/EditBlog/EditBlog.tsx';
 import { Login } from './Components/Login/Login.tsx';
-import {AuthenticationGuard} from './Components/Login/Auth0/AuthGuard.jsx';
+import { AuthenticationGuard } from './Components/Login/Auth0/AuthGuard.jsx';
+import { EditCalendarEvent } from 'Components/EditPage/EditCalendarEvent/EditCalendarEvent.tsx';
+import { EditCalendarEventForm } from './Components/EditPage/EditCalendarEvent/EditCalendarEventForm/EditCalendarEventForm.tsx';
 import Layout from './Components/Layout/Layout.jsx';
 import HomePage from './Pages/HomePage.jsx';
 import WhyVibePage from './Pages/WhyVibePage.jsx';
@@ -46,6 +48,8 @@ function App() {
           <Route index element={<AuthenticationGuard component={EditPage} />}></Route>
           <Route path="editBlog" element={<AuthenticationGuard component={EditBlog} />}></Route>
           <Route path="editBlog/:blogId" element={<AuthenticationGuard component={EditBlogForm} />}></Route>
+          <Route path="editCalendarEvent/" element={<AuthenticationGuard component={EditCalendarEvent} />}></Route>
+          <Route path="editCalendarEvent/:editCalendarEventId" element={<AuthenticationGuard component={EditCalendarEventForm} />}></Route>
         </Route>
       </Routes>
     </div>
