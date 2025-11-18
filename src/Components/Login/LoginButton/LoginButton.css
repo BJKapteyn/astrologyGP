@@ -1,0 +1,18 @@
+#login-button {
+    background-color: var(--main-accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    margin: auto;
+}
+#login-button:hover {
+    background-color: var(--secondary-orange);
+}
+
+.login-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2em;
+}

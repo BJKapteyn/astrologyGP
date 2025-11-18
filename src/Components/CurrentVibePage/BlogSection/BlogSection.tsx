@@ -15,10 +15,15 @@ export const BlogSection: React.FC = () => {
     
     const blogPostsData: Blog[] | null = usePostAzureFunction(getAllBlogPostsUrl, process.env.REACT_APP_GET_ALL_BLOG_POSTS) as Blog[] | null;
 
-    if (!!blogPostsData && !!externalBlogPosts === false && blogPostsData.length > 1) {
-        setExternalBlogPosts(blogPostsData.sort((post1, post2) => {
-            return new Date(post2.PublishDate).getTime() - new Date(post1.PublishDate).getTime();
-        }) as Blog[]);
+    if (!!blogPostsData && !!externalBlogPosts === false && blogPostsData.length > 0) {
+        if (blogPostsData.length > 1) {
+            // Set only the most recent blog post
+            setExternalBlogPosts(blogPostsData.sort((post1, post2) => {
+                return new Date(post2.PublishDate).getTime() - new Date(post1.PublishDate).getTime();
+            }));
+        } else {
+            setExternalBlogPosts(blogPostsData as Blog[]);
+        }   
     }
 
     const titleConfiguration = {
@@ -37,13 +42,13 @@ export const BlogSection: React.FC = () => {
             externalBlogPosts?.map(blogData => {
                 return <BlogPost key={blogData.id} blog={blogData} />
             }) : 
-            <LoadingIndicator />}
+            <LoadingIndicator message="No blogs currently available please check back later." />}
         </div>
     )
 
     return (
         <>
-            {externalBlogPosts ? blogSection : <LoadingIndicator />}
+            {blogSection}
         </>
     );
 };
