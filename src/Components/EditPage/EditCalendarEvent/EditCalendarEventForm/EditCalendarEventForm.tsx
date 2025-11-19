@@ -1,11 +1,12 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { CalendarEventResource, DeleteCalendarEventRequestBody } from '../../../../Models/Types/types';
 import { sendAPIPost, alertAPIResponse } from 'UtilityFunctions/apiUtility';
 import { useLocation, useNavigate } from 'react-router';
 import { buildAzureFunctionURL } from 'UtilityFunctions/urlUtility';
 import { FunctionNames } from 'Enums/FunctionNames';
 import { ImageUpload } from '../../ImageUpload/ImageUpload';
+import { TeamMemberDropdown } from '../TeamMemberDropdown/TeamMemberDropdown';
 import './EditCalendarEventForm.css';
 
 interface EditCalendarEventFormProps {
@@ -79,6 +80,10 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
 
     inputElementEvent.target.value = formattedPrice;
   }
+
+  function callbackSetTeamMemberId(teamMemberId: string) {
+    eventData.TeamMemberId = teamMemberId;
+  }
   
   return (
     <div className="edit-calendar-event-form">
@@ -123,7 +128,7 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
           defaultValue={eventData?.EndDate ? new Date(eventData.EndDate).toISOString().split('T')[0] : ''}
         />
         <label className="edit-calendar-event-form-label" htmlFor="eventOrganizerName">Organizer Name:</label>
-        <input
+        {/* <input
           className="edit-calendar-event-form-input"
           onChange={e => eventData.EventOrganizerName = e.target.value}
           required
@@ -131,7 +136,8 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
           id="eventOrganizerName"
           name="eventOrganizerName"
           defaultValue={eventData?.EventOrganizerName || ''}
-        />
+        /> */}
+        <TeamMemberDropdown callbackSelectTeamMember={(teamMemberId) => callbackSetTeamMemberId(teamMemberId)}></TeamMemberDropdown>
         <label className="edit-calendar-event-form-label" htmlFor="priceInUSD">Price (USD):</label>
         <input
           className="edit-calendar-event-form-input"
