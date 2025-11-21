@@ -1,11 +1,12 @@
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { CalendarEventResource, DeleteCalendarEventRequestBody } from '../../../../Models/Types/types';
 import { sendAPIPost, alertAPIResponse } from 'UtilityFunctions/apiUtility';
 import { useLocation, useNavigate } from 'react-router';
 import { buildAzureFunctionURL } from 'UtilityFunctions/urlUtility';
 import { FunctionNames } from 'Enums/FunctionNames';
 import { ImageUpload } from '../../ImageUpload/ImageUpload';
+import { TeamMember } from '../../../../Models/Types/types';
 import { TeamMemberDropdown } from '../TeamMemberDropdown/TeamMemberDropdown';
 import './EditCalendarEventForm.css';
 
@@ -81,8 +82,9 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
     inputElementEvent.target.value = formattedPrice;
   }
 
-  function callbackSetTeamMemberId(teamMemberId: string) {
-    eventData.TeamMemberId = teamMemberId;
+  function callbackSetTeamMemberInformation(teamMember: TeamMember) {
+    eventData.TeamMemberId = teamMember.id;
+    eventData.EventOrganizerName = teamMember.name;
   }
   
   return (
@@ -137,7 +139,7 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
           name="eventOrganizerName"
           defaultValue={eventData?.EventOrganizerName || ''}
         /> */}
-        <TeamMemberDropdown callbackSelectTeamMember={(teamMemberId) => callbackSetTeamMemberId(teamMemberId)}></TeamMemberDropdown>
+        <TeamMemberDropdown callbackSelectTeamMemberId={(teamMemberId) => callbackSetTeamMemberInformation(teamMemberId)} teamMemberId={eventData?.TeamMemberId}></TeamMemberDropdown>
         <label className="edit-calendar-event-form-label" htmlFor="priceInUSD">Price (USD):</label>
         <input
           className="edit-calendar-event-form-input"

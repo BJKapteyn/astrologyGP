@@ -5,10 +5,11 @@ import { buildAzureFunctionURL } from '../../../../UtilityFunctions/urlUtility';
 import { FunctionNames } from '../../../../Enums/FunctionNames';
 
 interface TeamMemberDropdownProps {
-    callbackSelectTeamMember: (teamMemberId: string) => void;
+    callbackSelectTeamMemberId: (teamMember: TeamMember) => void;
+    teamMemberId?: string;
 }
 
-export const TeamMemberDropdown: React.FC<TeamMemberDropdownProps> = ({callbackSelectTeamMember}) => {
+export const TeamMemberDropdown: React.FC<TeamMemberDropdownProps> = ({callbackSelectTeamMemberId: callbackSelectTeamMember, teamMemberId}) => {
     const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
     const [selectedTeamMember, setSelectedTeamMember] = useState<TeamMember>();
     const [loading, setLoading] = useState<boolean>(true);
@@ -27,11 +28,20 @@ export const TeamMemberDropdown: React.FC<TeamMemberDropdownProps> = ({callbackS
         fetchTeamMembers();
     }, []);
 
+    useEffect(() => {
+        if (teamMemberId && teamMembers.length > 0) {
+            const teamMember = teamMembers.find(member => member.id === teamMemberId); 
+            if (teamMember) {
+                setSelectedTeamMember(teamMember);
+            }
+        }
+    }, [teamMemberId, teamMembers]);
+
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const teamMember: TeamMember | undefined = teamMembers.find(member => member.id === e.target.value);
         if (teamMember) {
             setSelectedTeamMember(teamMember);
-            callbackSelectTeamMember(teamMember.id);
+            callbackSelectTeamMember(teamMember);
         }
     }
 
