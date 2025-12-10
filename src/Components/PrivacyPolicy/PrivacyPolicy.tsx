@@ -166,7 +166,7 @@ export const PrivacyPolicy = () => {
                         </p>
                         <div className="privacy-contact">
                             <p className="privacy-text">The Vibe Collective</p>
-                            <p className="privacy-text">Email: privacy@thevibecollective.co</p>
+                            <p className="privacy-text">Email: info@thevibecollective.co</p>
                             <p className="privacy-text">Website: www.thevibecollective.co</p>
                         </div>
                     </section>

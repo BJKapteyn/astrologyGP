@@ -1,9 +1,19 @@
+import { useEffect, useRef } from "react";
 import { PrivacyPolicy } from "../Components/PrivacyPolicy/PrivacyPolicy";
 
 export const PrivacyPolicyPage = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    const top = useRef<HTMLDivElement>(null);
 
-    return <PrivacyPolicy />;
+    useEffect(() => {
+        top.current?.scrollIntoView({ behavior: "smooth" });
+    }, []);
+
+    return (
+        <main>
+            <div ref={top}></div>
+            <PrivacyPolicy />
+        </main>
+    );
 };
 
 export default PrivacyPolicyPage;
