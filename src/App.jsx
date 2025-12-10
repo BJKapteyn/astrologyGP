@@ -6,10 +6,11 @@ import { ProductTypes } from './Enums/ProductTypes.js';
 import { EditBlogForm } from './Components/EditPage/EditBlogForm/EditBlogForm.tsx';
 import { EditBlog } from './Components/EditPage/EditBlog/EditBlog.tsx';
 import { Login } from './Components/Login/Login.tsx';
-import {AuthenticationGuard} from './Components/Login/Auth0/AuthGuard.jsx';
+import { AuthenticationGuard } from './Components/Login/Auth0/AuthGuard.jsx';
 import Layout from './Components/Layout/Layout.jsx';
 import HomePage from './Pages/HomePage.jsx';
 import WhyVibePage from './Pages/WhyVibePage.jsx';
+import PrivacyPolicyPage from './Pages/PrivacyPolicyPage.tsx';
 import CollectivePage from './Pages/CollectivePage.jsx';
 import OfferingsPage from './Pages/OfferingsPage.jsx';
 import StorePage from './Pages/StorePage.jsx';
@@ -41,6 +42,7 @@ function App() {
           <Route path="/Offerings/:offering/:singleoffering" element={<SingleItemView isService={true} hasVariation={true} />}></Route>
           <Route path="/CurrentVibe" element={<CurrentVibePage />}></Route>
           <Route path="/admin" element={<Login />}></Route>
+          <Route path="/PrivacyPolicy" element={<PrivacyPolicyPage />}></Route>
         </Route>
         <Route path="edit">
           <Route index element={<AuthenticationGuard component={EditPage} />}></Route>
