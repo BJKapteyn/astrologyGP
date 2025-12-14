@@ -1,0 +1,83 @@
+.event-calendar-bigcalendar {
+    margin: auto;
+    min-height: 500px;
+    height: 70vh;
+    max-width: 100em;
+    width: 100%;
+}
+
+ .rbc-event-content, .rbc-header {
+     font-family: Futura !important;
+}
+    
+.rbc-toolbar-label {
+    font-family: bivoac-regular;
+    color: var(--secondary-orange);
+    font-size: 1.5em;
+}
+
+.rbc-toolbar {
+    position: relative;
+}
+
+.rbc-header {
+    padding: .5em 3px;
+    color: var(--main-color) !important;
+    font-size: 100%;
+}
+
+.rbc-button-link {
+    color: var(--main-accent-color) !important;
+    font-size: 1em;
+}
+
+.rbc-event {
+    background-color: var(--main-color) !important;
+    transition: background-color .5s ease-out;
+    -webkit-transition: background-color .5s ease-out;
+    -moz-transition: background-color .5s ease-out;
+    -ms-transition: background-color .5s ease-out;
+    -o-transition: background-color .5s ease-out;
+}
+.rbc-event:hover {
+    background-color: var(--main-accent-color) !important;
+    color: white;
+}
+
+.rbc-btn-group {
+    position: absolute;
+    left: 0em;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+}
+.rbc-btn-group button{
+    font-family: bivoac-regular !important;
+    color: var(--main-color) !important;
+    border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    -ms-border-radius: 0px !important;
+    -o-border-radius: 0px !important;
+    transition: background-color .5s ease-out, border-color .5 ease-out;
+    -webkit-transition: background-color .5s ease-out, border-color .5 ease-out;
+    -moz-transition: background-color .5s ease-out, border-color .5 ease-out;
+    -ms-transition: background-color .5s ease-out, border-color .5 ease-out;
+    -o-transition: background-color .5s ease-out, border-color .5 ease-out;
+}
+
+@media only screen and (max-width: 768px) {
+    .rbc-btn-group {
+        position: relative !important;
+    }
+    .rbc-toolbar {
+        flex-direction: column-reverse !important;
+    }
+
+    .event-calendar-bigcalendar {
+        width: 100%;
+        height: 100vh;
+    }
+}

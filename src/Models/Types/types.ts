@@ -28,6 +28,7 @@ export interface CalendarEventResource {
     BannerImageUrl?: string | null;
     PriceInUSD: number;
     SquareVariationId?: string | null;
+    TeamMemberId: string
 }
 
 export interface Blog {
@@ -38,6 +39,15 @@ export interface Blog {
     Content: string;
     ImageUrl?: string;
 };
+
+export interface TeamMember {
+    id: string;
+    imageURL: string;
+    image: any;
+    name: string;
+    sign: string;
+    description: string
+}
 
 export interface DeleteCalendarEventRequestBody {
     id: string;
