@@ -1,0 +1,27 @@
+.latest-video {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 5em;
+}
+
+.video-container {
+    flex: 1;
+    max-width: 800px;
+    height: 450px;
+}
+
+@media screen and (max-width: 750px) {
+    .latest-video {
+        flex-direction: column;
+        padding-bottom: 2em;
+    }
+
+    .video-container {
+        width: 90%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        margin: 1em 0em;
+    }
+}

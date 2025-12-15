@@ -8,10 +8,11 @@ import { NewsCardSection } from '../Components/HomePage/NewsCard/NewsCardSection
 import { OfferingSection } from '../Components/HomePage/OfferingSection/OfferingSection.jsx';
 import { titleCardData } from '../Components/HomePage/HomePageTitleCard/TitleCardData.jsx';
 import { addPageHeaderInfo } from '../UtilityFunctions/pageUtility.js';
+import { LatestVideo } from '../Components/HomePage/LatestVideo/LatestVideo.tsx';
 import '../Components/HomePage/HomePageTitleCard/HomePageTitleCard.css';
 
 export default function HomePage() {
-    const videoDivider = {
+    const vibeVideoDivider = {
         id: 1,
         classname: 'divider-text',
         headingText: ['THE VIBE']
@@ -20,6 +21,11 @@ export default function HomePage() {
         id: 1,
         classname: 'divider-text',
         headingText: ['OFFERINGS']
+    }
+    const youtubeVideoDividerData = {
+        id: 1,
+        classname: 'divider-text',
+        headingText: ['LATEST VIDEO']
     }
 
     useEffect(() => {
@@ -34,10 +40,12 @@ export default function HomePage() {
             <TitleCard titleData={titleCardData}></TitleCard>
             <TitleDivider></TitleDivider>
             <MeetCarly></MeetCarly>
-            <SectionDivider dividerData={videoDivider}></SectionDivider>
+            <SectionDivider dividerData={vibeVideoDivider}></SectionDivider>
             <NewsCardSection></NewsCardSection>
             <SectionDivider dividerData={offeringsDividerData}></SectionDivider>
             <OfferingSection></OfferingSection>
+            <SectionDivider dividerData={youtubeVideoDividerData}></SectionDivider>
+            <LatestVideo></LatestVideo>
             <JoinUs></JoinUs>
         </main>
     )
