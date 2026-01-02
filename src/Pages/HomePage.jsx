@@ -39,13 +39,13 @@ export default function HomePage() {
         <main id="homepage">
             <TitleCard titleData={titleCardData}></TitleCard>
             <TitleDivider></TitleDivider>
-            <MeetCarly></MeetCarly>
+            <SectionDivider dividerData={youtubeVideoDividerData}></SectionDivider>
+            <LatestVideo></LatestVideo>
             <SectionDivider dividerData={vibeVideoDivider}></SectionDivider>
             <NewsCardSection></NewsCardSection>
             <SectionDivider dividerData={offeringsDividerData}></SectionDivider>
             <OfferingSection></OfferingSection>
-            <SectionDivider dividerData={youtubeVideoDividerData}></SectionDivider>
-            <LatestVideo></LatestVideo>
+            <MeetCarly></MeetCarly>
             <JoinUs></JoinUs>
         </main>
     )
