@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { LoadingIndicator } from '../../PageElements/LoadingIndicator/LoadingIndicator.jsx';
 import { Blog } from '../../../Models/Types/types';
 import { ReactComponent as Eye } from '../../../Pics/SvgDrawings/EYE-VECTOR.svg'
-import { ReactComponent as Sparkle } from '../../../Pics/SvgDrawings/sparkle.svg';
 import { BlogPost } from '../BlogPost/BlogPost';
 import { TitleCard } from '../../PageElements/TitleCard/TitleCard.jsx';
 import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction.jsx';
@@ -35,9 +34,6 @@ export const BlogSection: React.FC = () => {
     const blogSection = (
         <div className="blogsection" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
             <TitleCard titleData={titleConfiguration} />
-            <Sparkle className="blogsection-sparkle" />
-            <p className="blogsection-subtext">Welcome to a place for reflection, curiosity, and connection. Whether you're exploring patterns in your life or just looking for a fresh perspective, you'll find thoughtful insights and gentle guidance to help you navigate your journey—one day at a time.</p>
-            <Sparkle className="blogsection-sparkle" />
             {externalBlogPosts ? 
             externalBlogPosts?.map(blogData => {
                 return <BlogPost key={blogData.id} blog={blogData} />
