@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { SectionDivider } from '../Components/PageElements/SectionDivider/SectionDivider.jsx';
 import { TitleDivider } from '../Components/PageElements/SectionDivider/TitleDivider.jsx';
 import { TitleCard } from '../Components/PageElements/TitleCard/TitleCard.jsx';
-import { JoinUs } from '../Components/HomePage/JoinUs/JoinUs.jsx';
 import { MeetCarly } from '../Components/HomePage/MeetCarly/MeetCarly.jsx';
 import { NewsCardSection } from '../Components/HomePage/NewsCard/NewsCardSection.jsx';
 import { OfferingSection } from '../Components/HomePage/OfferingSection/OfferingSection.jsx';
@@ -46,7 +45,6 @@ export default function HomePage() {
             <SectionDivider dividerData={offeringsDividerData}></SectionDivider>
             <OfferingSection></OfferingSection>
             <MeetCarly></MeetCarly>
-            <JoinUs></JoinUs>
         </main>
     )
 }
