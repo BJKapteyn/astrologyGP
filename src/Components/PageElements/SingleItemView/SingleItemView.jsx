@@ -2,7 +2,7 @@ import { useState, useRef, useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 import { LoadingIndicator } from '../LoadingIndicator/LoadingIndicator.jsx';
 import { getItemIdFromUrlPath } from '../../../UtilityFunctions/urlUtility.js';
-import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction.jsx';
+import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction';
 import { FunctionNames } from '../../../Enums/FunctionNames.js';
 import { buildAzureFunctionURL, buildSingleServiceItemURL } from '../../../UtilityFunctions/urlUtility.js';
 import { SingleItem } from '../SingleItem/SingleItem.tsx';

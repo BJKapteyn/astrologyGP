@@ -9,5 +9,7 @@ export const FunctionNames =  {
     GetAllCalendarEvents: 'GetAllCalendarEvents',
     UpsertCalendarEvent: 'UpsertCalendarEvent',
     DeleteCalendarEventById: 'DeleteCalendarEventById',
-    UploadImage: 'UploadImage'
+    UploadImage: 'UploadImage',
+    GetBlogPostById: 'GetBlogPostById'
+
 }

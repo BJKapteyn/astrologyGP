@@ -41,6 +41,7 @@ function App() {
           <Route path="/Offerings/:offering" element={<ItemListByCategory productType={ProductTypes.AppointmentsService} />}></Route>
           <Route path="/Offerings/:offering/:singleoffering" element={<SingleItemView isService={true} hasVariation={true} />}></Route>
           <Route path="/CurrentVibe" element={<CurrentVibePage />}></Route>
+          <Route path="/CurrentVibe/:blogId" element={<CurrentVibePage />}></Route>
           <Route path="/admin" element={<Login />}></Route>
           <Route path="/PrivacyPolicy" element={<PrivacyPolicyPage />}></Route>
         </Route>

@@ -6,9 +6,9 @@ import { useLocalData } from "./useLocalData";
 //  requestBody              - object containing request body (required)
 //  localCacheKey (optional) - will cache the results locally if a key is provided
 // returns: data returned from cache or API call
-export function usePostAzureFunction(endpointUrl, requestBody, localCacheKey = null) {
+export function usePostAzureFunction(endpointUrl: string, requestBody: any, localCacheKey: string | null = null) {
     const [currentData, setCurrentData] = useState(null);
-    const minutesToCacheData = 60;
+    const minutesToCacheData: number = 60;
     const localStorageData = useLocalData(localCacheKey, minutesToCacheData);
     const hasLocalCacheData = !!localStorageData?.cache;
     const hasCurrentData = !!currentData;
@@ -53,7 +53,7 @@ export function usePostAzureFunction(endpointUrl, requestBody, localCacheKey = n
     }, [endpointUrl, requestBody, currentData, localCacheKey, hasCurrentData, hasLocalCacheData]);
 
     if(hasLocalCacheData === false && hasCurrentData && hasLocalCacheKey) {
-        localStorageData.setCache(currentData);
+        localStorageData?.setCache(currentData);
     }
 
     return currentData;

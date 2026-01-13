@@ -4,7 +4,7 @@ import { Blog } from '../../../Models/Types/types';
 import { ReactComponent as Eye } from '../../../Pics/SvgDrawings/EYE-VECTOR.svg'
 import { BlogPost } from '../BlogPost/BlogPost';
 import { TitleCard } from '../../PageElements/TitleCard/TitleCard.jsx';
-import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction.jsx';
+import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction';
 import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlUtility.js';
 import './BlogSection.css';
 
@@ -12,7 +12,7 @@ export const BlogSection: React.FC = () => {
     const [externalBlogPosts, setExternalBlogPosts] = useState<Blog[] | null>(null); 
     const getAllBlogPostsUrl = buildAzureFunctionURL('GetAllBlogPosts', process.env.REACT_APP_GET_ALL_BLOG_POSTS);
     
-    const blogPostsData: Blog[] | null = usePostAzureFunction(getAllBlogPostsUrl, process.env.REACT_APP_GET_ALL_BLOG_POSTS) as Blog[] | null;
+    const blogPostsData: Blog[] | null = usePostAzureFunction(getAllBlogPostsUrl, process.env.REACT_APP_GET_ALL_BLOG_POSTS ?? "") as Blog[] | null;
 
     if (!!blogPostsData && !!externalBlogPosts === false && blogPostsData.length > 0) {
         if (blogPostsData.length > 1) {

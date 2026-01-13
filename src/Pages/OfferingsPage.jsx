@@ -4,7 +4,7 @@ import { LoadingIndicator } from '../Components/PageElements/LoadingIndicator/Lo
 import { buildAzureFunctionURL } from '../UtilityFunctions/urlUtility.js';
 import { ParentCategoryIds } from '../Enums/ParentCategoryIds.js';
 import { FunctionNames } from '../Enums/FunctionNames.js';
-import { usePostAzureFunction } from '../CustomHooks/usePostAzureFunction.jsx';
+import { usePostAzureFunction } from '../CustomHooks/usePostAzureFunction';
 import { CategoryId } from '../Models/CategoryId.js';
 import { addPageHeaderInfo } from 'UtilityFunctions/pageUtility.js';
 
