@@ -41,14 +41,14 @@ function App() {
           <Route path="/Offerings/:offering" element={<ItemListByCategory productType={ProductTypes.AppointmentsService} />}></Route>
           <Route path="/Offerings/:offering/:singleoffering" element={<SingleItemView isService={true} hasVariation={true} />}></Route>
           <Route path="/CurrentVibe" element={<CurrentVibePage />}></Route>
-          <Route path="/CurrentVibe/:blogId" element={<CurrentVibePage />}></Route>
+          <Route path="/CurrentVibe/:blogGetParams" element={<CurrentVibePage />}></Route>
           <Route path="/admin" element={<Login />}></Route>
           <Route path="/PrivacyPolicy" element={<PrivacyPolicyPage />}></Route>
         </Route>
         <Route path="edit">
           <Route index element={<AuthenticationGuard component={EditPage} />}></Route>
           <Route path="editBlog" element={<AuthenticationGuard component={EditBlog} />}></Route>
-          <Route path="editBlog/:blogId" element={<AuthenticationGuard component={EditBlogForm} />}></Route>
+          <Route path="editBlog/:blogId/:partKey" element={<AuthenticationGuard component={EditBlogForm} />}></Route>
         </Route>
       </Routes>
     </div>
