@@ -7,6 +7,7 @@ import { TitleCard } from '../../PageElements/TitleCard/TitleCard.jsx';
 import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction';
 import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlUtility.js';
 import './BlogSection.css';
+import { Link } from 'react-router-dom';
 
 export const BlogSection: React.FC = () => {
     const [externalBlogPosts, setExternalBlogPosts] = useState<Blog[] | null>(null); 
@@ -36,11 +37,16 @@ export const BlogSection: React.FC = () => {
             <TitleCard titleData={titleConfiguration} />
             {externalBlogPosts ? 
             externalBlogPosts?.map(blogData => {
-                return <BlogPost key={blogData.id} blog={blogData} />
+                const blogLink = (
+                    <Link key={blogData.id} to={`./${blogData.id}/${blogData.PublishDate}`}>
+                        <BlogPost blog={blogData} />
+                    </Link>);
+
+                return blogLink;
             }) : 
             <LoadingIndicator message="No blogs currently available please check back later." />}
         </div>
-    )
+    );
 
     return (
         <>

@@ -15,5 +15,4 @@ export const SingleBlogPost: React.FC = () => {
     } else {
         return <LoadingIndicator />;
     }
-    
 };
