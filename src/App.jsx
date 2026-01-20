@@ -7,6 +7,8 @@ import { EditBlogForm } from './Components/EditPage/EditBlogForm/EditBlogForm.ts
 import { EditBlog } from './Components/EditPage/EditBlog/EditBlog.tsx';
 import { Login } from './Components/Login/Login.tsx';
 import { AuthenticationGuard } from './Components/Login/Auth0/AuthGuard.jsx';
+import { ComingSoon } from 'Components/ComingSoon/ComingSoon.jsx';
+import { SingleBlogPost } from 'Components/CurrentVibePage/SingleBlogPost/SingleBlogPost';
 import Layout from './Components/Layout/Layout.jsx';
 import HomePage from './Pages/HomePage.jsx';
 import WhyVibePage from './Pages/WhyVibePage.jsx';
@@ -16,9 +18,7 @@ import OfferingsPage from './Pages/OfferingsPage.jsx';
 import StorePage from './Pages/StorePage.jsx';
 import CurrentVibePage from './Pages/CurrentVibePage.jsx';
 import EditPage from './Pages/EditPage.tsx';
-import { ComingSoon } from 'Components/ComingSoon/ComingSoon.jsx';
 import './App.scss';
-import { SingleBlogPost } from 'Components/CurrentVibePage/SingleBlogPost/SingleBlogPost';
 
 function App() {
 
