@@ -6,10 +6,10 @@ import { FunctionNames } from '../../../../Enums/FunctionNames';
 
 interface TeamMemberDropdownProps {
     callbackSelectTeamMemberId: (teamMember: TeamMember) => void;
-    teamMemberId?: string;
+    teamMemberName?: string;
 }
 
-export const TeamMemberDropdown: React.FC<TeamMemberDropdownProps> = ({callbackSelectTeamMemberId: callbackSelectTeamMember, teamMemberId}) => {
+export const TeamMemberDropdown: React.FC<TeamMemberDropdownProps> = ({callbackSelectTeamMemberId: callbackSelectTeamMember, teamMemberName}) => {
     const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
     const [selectedTeamMember, setSelectedTeamMember] = useState<TeamMember>();
     const [loading, setLoading] = useState<boolean>(true);
@@ -29,13 +29,14 @@ export const TeamMemberDropdown: React.FC<TeamMemberDropdownProps> = ({callbackS
     }, []);
 
     useEffect(() => {
-        if (teamMemberId && teamMembers.length > 0) {
-            const teamMember = teamMembers.find(member => member.id === teamMemberId); 
+        if (teamMemberName && teamMembers.length > 0) {
+            const teamMember = teamMembers.find(member => member.name === teamMemberName); 
             if (teamMember) {
                 setSelectedTeamMember(teamMember);
+                callbackSelectTeamMember(teamMember);
             }
         }
-    }, [teamMemberId, teamMembers]);
+    }, [teamMemberName, teamMembers]);
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const teamMember: TeamMember | undefined = teamMembers.find(member => member.id === e.target.value);
@@ -47,11 +48,11 @@ export const TeamMemberDropdown: React.FC<TeamMemberDropdownProps> = ({callbackS
 
     return (
         <select 
-            value={selectedTeamMember?.name} 
+            value={selectedTeamMember?.id || ''} 
             onChange={handleChange}
             disabled={loading}
         >
-            <option value={selectedTeamMember?.name}>
+            <option value={selectedTeamMember?.id}>
                 {loading ? 'Loading...' : selectedTeamMember?.name || 'Select a team member'}
             </option>
             {teamMembers.map((member) => (

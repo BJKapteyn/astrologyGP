@@ -130,16 +130,7 @@ export const EditCalendarEventForm: React.FC<EditCalendarEventFormProps> = ({ ev
           defaultValue={eventData?.EndDate ? new Date(eventData.EndDate).toISOString().split('T')[0] : ''}
         />
         <label className="edit-calendar-event-form-label" htmlFor="eventOrganizerName">Organizer Name:</label>
-        {/* <input
-          className="edit-calendar-event-form-input"
-          onChange={e => eventData.EventOrganizerName = e.target.value}
-          required
-          type="text"
-          id="eventOrganizerName"
-          name="eventOrganizerName"
-          defaultValue={eventData?.EventOrganizerName || ''}
-        /> */}
-        <TeamMemberDropdown callbackSelectTeamMemberId={(teamMemberId) => callbackSetTeamMemberInformation(teamMemberId)} teamMemberId={eventData?.TeamMemberId}></TeamMemberDropdown>
+        <TeamMemberDropdown callbackSelectTeamMemberId={(teamMemberId) => callbackSetTeamMemberInformation(teamMemberId)} teamMemberName={eventData?.EventOrganizerName}></TeamMemberDropdown>
         <label className="edit-calendar-event-form-label" htmlFor="priceInUSD">Price (USD):</label>
         <input
           className="edit-calendar-event-form-input"
