@@ -33,7 +33,6 @@ export const TeamMemberDropdown: React.FC<TeamMemberDropdownProps> = ({callbackS
             const teamMember = teamMembers.find(member => member.name === teamMemberName); 
             if (teamMember) {
                 setSelectedTeamMember(teamMember);
-                callbackSelectTeamMember(teamMember);
             }
         }
     }, [teamMemberName, teamMembers]);
@@ -50,7 +49,7 @@ export const TeamMemberDropdown: React.FC<TeamMemberDropdownProps> = ({callbackS
         <select 
             value={selectedTeamMember?.id || ''} 
             onChange={handleChange}
-            disabled={loading}
+            disabled={loading || teamMemberName !== undefined}
         >
             <option value={selectedTeamMember?.id}>
                 {loading ? 'Loading...' : selectedTeamMember?.name || 'Select a team member'}
