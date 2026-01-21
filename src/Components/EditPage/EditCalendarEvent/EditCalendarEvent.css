@@ -1,0 +1,59 @@
+/* Match EditBlog.css rules for calendar event editing */
+.edit-calendar-event {
+	position: relative;
+}
+
+.edit-calendar-event-link {
+	position: absolute;
+	top: .5em;
+	right: .5em;
+	text-decoration: none;
+}
+/* Container for the edit buttons and content */
+.edit-buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+	padding: 2rem;
+	max-width: 600px;
+}
+
+.edit-calendar-event {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #f7f7f7;
+	border-radius: 6px;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	width: 90%;
+}
+
+.edit-calendar-event h4 {
+	margin: 0;
+	font-size: 1.1rem;
+	color: #333;
+}
+
+.edit-calendar-event-link {
+	text-decoration: none;
+}
+
+.edit-calendar-event-link .action-button {
+	margin-left: 1rem;
+}
+
+.edit-buttons h2 {
+	font-size: 1.5rem;
+	color: #222;
+	margin-bottom: 0.5rem;
+}
+
+.edit-buttons h3 {
+	font-size: 1.2rem;
+	color: #444;
+	margin-bottom: 0.5rem;
+}
