@@ -66,7 +66,7 @@ export const EventCalendarView: React.FC = () => {
         }   
 
         getEvents();
-    }, []);
+    }, [getAllEventsEndpoint]);
 
     const eventCalendar = (
         <div className="event-calendar">

@@ -23,7 +23,7 @@ export const EventDetail: React.FC<EventDetailProps> = ({ eventData }) => {
     }
 
     return itemData;
-  }, [])
+  }, [buyNowUrl])
 
   convertedItemData = eventDataToItemData(eventData as CalendarEvent);
 

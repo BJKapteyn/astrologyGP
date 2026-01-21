@@ -26,7 +26,7 @@ export const TeamMemberDropdown: React.FC<TeamMemberDropdownProps> = ({callbackS
             }
         }
         fetchTeamMembers();
-    }, []);
+    }, [getAllTeamMembersEndpoint]);
 
     useEffect(() => {
         if (teamMemberName && teamMembers.length > 0) {
