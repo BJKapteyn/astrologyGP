@@ -1,0 +1,82 @@
+{
+    "events": [
+        {
+            "id": 1,
+            "title": "Group Yoga",
+            "start": "2025-07-01T10:00:00",
+            "end": "2025-07-05T12:00:00",
+            "isAllDay": true,
+            "resource": {
+                "imageUrl": "https://cdn.pixabay.com/photo/2021/10/13/11/09/stars-6706214_960_720.jpg",
+                "description": "Start your day with energizing group yoga, focusing on flexibility and mindfulness.",
+                "eventName": "Morning Flow Yoga",
+                "buyNowLink": ""
+            }
+        },
+        {
+            "id": 2,
+            "title": "Group Support Chat",
+            "start": "2025-07-04T14:00:00",
+            "end": "2025-07-10T16:00:00",
+            "isAllDay": true,
+            "resource": {
+                "imageUrl": "https://cdn.pixabay.com/photo/2025/06/11/22/12/kackar-mountains-9655201_960_720.jpg",
+                "description": "A supportive online chat for sharing experiences and building community connections.",
+                "eventName": "Support Circle",
+                "buyNowLink": ""
+            }
+        },
+        {
+            "id": 3,
+            "title": "Group Yoga 2",
+            "start": "2025-07-20T14:00:00",
+            "end": "2025-07-26T16:00:00",
+            "isAllDay": true,
+            "resource": {
+                "imageUrl": "https://cdn.pixabay.com/photo/2014/12/07/09/30/milky-way-559641_960_720.jpg",
+                "description": "An afternoon yoga session focusing on strength and balance for all levels.",
+                "eventName": "Afternoon Balance Yoga",
+                "buyNowLink": ""
+            }
+        },
+        {
+            "id": 4,
+            "title": "MENOPAUSE VENT SESH",
+            "start": "2025-07-14T19:00:00",
+            "end": "2025-07-14T22:00:00",
+            "isAllDay": false,
+            "resource": {
+                "imageUrl": "https://items-images-production.s3.us-west-2.amazonaws.com/files/3a789ab84c1440a98fea1dc170b12ada95cfd095/original.png",
+                "description": "A candid online session for women to discuss menopause and share coping strategies.",
+                "eventName": "Menopause Support Night",
+                "buyNowLink": "https://the-vibe-collective.square.site/product/menopause-vent-sesh/36"
+            }
+        },
+        {
+            "id": 5,
+            "title": "KUNDALINI YOGA",
+            "start": "2025-07-29T18:30:00",
+            "end": "2025-07-29T19:30:00",
+            "isAllDay": false,
+            "resource": {
+                "imageUrl": "https://items-images-production.s3.us-west-2.amazonaws.com/files/e33ea48a5b1a9a08b574e1ff6bca54a3f08f1e08/original.png",
+                "description": "Experience Kundalini Yoga with Carly L, blending movement, mantra, and meditation for deep transformation.",
+                "eventName": "Kundalini Awakening",
+                "buyNowLink": "https://the-vibe-collective.square.site/product/kundalini-yoga/38"
+            }
+        },
+        {
+            "id": 6,
+            "title": "GENTLE BREATHWORK",
+            "start": "2025-07-19T20:00:00",
+            "end": "2025-07-19T21:00:00",
+            "isAllDay": false,
+            "resource": {
+                "imageUrl": "https://items-images-production.s3.us-west-2.amazonaws.com/files/fe78df2fb7eee55182826f2e6b8bd5050a4db1e7/original.png",
+                "description": "Relax and unwind with Jenny in a gentle breathwork class designed for stress relief and clarity.",
+                "eventName": "Evening Breathwork",
+                "buyNowLink": "https://the-vibe-collective.square.site/product/gentle-breathwork/37"
+            }
+        }
+    ]
+}

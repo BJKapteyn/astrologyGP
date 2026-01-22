@@ -1,0 +1,42 @@
+.event-calendar-mobile-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 1em auto;
+    padding-bottom: 3em;
+}
+
+.event-calendar-mobile-image {
+    width: 100%;
+    height: 25em;
+    background-size: cover;
+    background-position: center;
+}
+
+.event-calendar-mobile-title {
+    margin: .5em .2em;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.event-calendar-mobile-description {
+    margin: 0em .5em .5em 0em;
+}
+
+.event-calendar-mobile-description, .event-calendar-mobile-date {
+    font-family: futura;
+    color: var(--main-color);
+}
+
+.event-calendar-mobile-date {
+    margin: .5em .5em 0em .5em;
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 400px) {
+    .event-calendar-mobile-item {
+        width: 95%;
+    }
+}
