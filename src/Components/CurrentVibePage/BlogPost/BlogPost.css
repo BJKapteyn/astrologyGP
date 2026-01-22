@@ -35,9 +35,15 @@
     margin-bottom: .5em;
 }
 
+.blogpost-content-container {
+    width: 100%;
+}   
+
 .blogpost-content {
     margin-left: .5em;
     margin-top: 1rem;
+    width: 100%;
+    white-space: pre-wrap;
 }
 
 @media (max-width: 600px) {

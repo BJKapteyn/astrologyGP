@@ -12,6 +12,7 @@ import { EditCalendarEventForm } from './Components/EditPage/EditCalendarEvent/E
 import Layout from './Components/Layout/Layout.jsx';
 import HomePage from './Pages/HomePage.jsx';
 import WhyVibePage from './Pages/WhyVibePage.jsx';
+import PrivacyPolicyPage from './Pages/PrivacyPolicyPage.tsx';
 import CollectivePage from './Pages/CollectivePage.jsx';
 import OfferingsPage from './Pages/OfferingsPage.jsx';
 import StorePage from './Pages/StorePage.jsx';
@@ -21,11 +22,6 @@ import EventCalendarPage from 'Pages/EventCalendarPage.jsx';
 import './App.scss';
 
 function App() {
-
-//  const eventCalendarComingSoonData = {
-//     heading: 'Check Back Soon!',
-//     backgroundimage: 'jpeg/CHECK_BACK_Offerings.jpg'
-//   };
 
   return (
     <div className="App">
@@ -43,6 +39,7 @@ function App() {
           <Route path="/Offerings/:offering/:singleoffering" element={<SingleItemView isService={true} hasVariation={true} />}></Route>
           <Route path="/CurrentVibe" element={<CurrentVibePage />}></Route>
           <Route path="/admin" element={<Login />}></Route>
+          <Route path="/PrivacyPolicy" element={<PrivacyPolicyPage />}></Route>
         </Route>
         <Route path="edit">
           <Route index element={<AuthenticationGuard component={EditPage} />}></Route>

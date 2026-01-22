@@ -1,6 +1,6 @@
 
 // Sets the title tag, and meta description and keywords inside the <head> tag
-export function addPageHeaderInfo(description = '', keywords = '', title = 'TheVibeCollective', scriptSources = []) {
+export function addPageHeaderInfo(description = '', keywords = '', title = 'The VibeCollective', scriptSources = []) {
     const headTitle = title ?? 'The Vibe Collective';
 
     let titleElement = document.querySelector('title');

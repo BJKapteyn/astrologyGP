@@ -50,7 +50,9 @@ export const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
                     <em className="blogpost-date">{dateString}</em>
                 </p>
             </div>
-            <p className="blogpost-content">{blog.Content}</p>
+            <div className="blogpost-content-container">
+                <p className="blogpost-content">{blog.Content}</p>
+            </div>
         </animated.div>
     );
 };
