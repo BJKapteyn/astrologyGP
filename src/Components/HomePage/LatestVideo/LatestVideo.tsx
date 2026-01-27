@@ -64,7 +64,7 @@ export const LatestVideo: React.FC = () => {
                     src={`https://www.youtube.com/embed/${latestVideo.id}`}
                     referrerPolicy='strict-origin-when-cross-origin'
                     title={latestVideo.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                 />
             </div>
