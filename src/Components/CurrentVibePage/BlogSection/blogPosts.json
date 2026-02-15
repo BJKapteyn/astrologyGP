@@ -1,42 +1,42 @@
 [
-    {
-        "id": "1",
-        "Title": "Understanding Your Rising Sign",
-        "Author": "Jane Doe",
-        "PublishDate": "06-01-2024",
-        "Content": "Your rising sign, also known as the ascendant, is the zodiac sign that was rising on the eastern horizon at the time of your birth. It influences your outward personality and how others perceive you. Knowing your rising sign can help you understand the first impression you make and how you approach new situations. It often colors your appearance, demeanor, and the way you interact with the world. The rising sign acts as a filter through which your sun and moon signs are expressed. It can also affect your style, preferences, and even your physical features. Many astrologers consider the rising sign just as important as the sun sign in interpreting a birth chart. Understanding your ascendant can provide deeper insight into your strengths and challenges. By exploring your rising sign, you can gain a more complete picture of your astrological identity.",
-        "ImageUrl": ""
-    },
-    {
-        "id": "2",
-        "Title": "Mercury Retrograde Survival Guide",
-        "Author": "Alex Smith",
-        "PublishDate": "05-20-2024",
-        "Content": "Mercury retrograde is often blamed for communication mishaps and travel delays. Learn how to navigate this period with mindfulness and patience. Double-check important messages, back up your data, and avoid making major decisions if possible. Use this time for reflection, review, and tying up loose ends rather than starting new projects.",
-        "ImageUrl": ""
-    },
-    {
-        "id": "3",
-        "Title": "Full Moon Rituals for Manifestation",
-        "Author": "Priya Patel",
-        "PublishDate": "06-10-2024",
-        "Content": "Harness the energy of the full moon to set intentions and manifest your desires. Discover simple rituals you can perform at home. Light a candle, write down your goals, and visualize your dreams coming true. The full moon is a powerful time for releasing what no longer serves you and embracing new opportunities.",
-        "ImageUrl": ""
-    },
-    {
-        "id": "4",
-        "Title": "Astrology and Relationships: Venus in Your Chart",
-        "Author": "Carlos Rivera",
-        "PublishDate": "05-28-2024",
-        "Content": "Venus represents love and attraction in your birth chart. Find out what your Venus sign says about your romantic style. It reveals how you express affection, what you value in relationships, and the qualities you find attractive in others. Understanding your Venus sign can help you build deeper connections and navigate relationship challenges.",
-        "ImageUrl": ""
-    },
-    {
-        "id": "5",
-        "Title": "Saturn Return: Embracing Change",
-        "Author": "Emily Chen",
-        "PublishDate": "06-15-2024",
-        "Content": "The Saturn return marks a major turning point in your life, often bringing challenges and growth. Learn how to embrace this transformative period. It typically occurs around ages 29, 58, and 87, prompting you to reassess your goals and responsibilities. Facing your fears and making necessary changes during this time can lead to lasting personal development.",
-        "ImageUrl": ""
-    }
+    // {
+    //     "id": "1",
+    //     "Title": "Understanding Your Rising Sign",
+    //     "Author": "Jane Doe",
+    //     "PublishDate": "06-01-2024",
+    //     "Content": "Your rising sign, also known as the ascendant, is the zodiac sign that was rising on the eastern horizon at the time of your birth. It influences your outward personality and how others perceive you. Knowing your rising sign can help you understand the first impression you make and how you approach new situations. It often colors your appearance, demeanor, and the way you interact with the world. The rising sign acts as a filter through which your sun and moon signs are expressed. It can also affect your style, preferences, and even your physical features. Many astrologers consider the rising sign just as important as the sun sign in interpreting a birth chart. Understanding your ascendant can provide deeper insight into your strengths and challenges. By exploring your rising sign, you can gain a more complete picture of your astrological identity.",
+    //     "ImageUrl": ""
+    // },
+    // {
+    //     "id": "2",
+    //     "Title": "Mercury Retrograde Survival Guide",
+    //     "Author": "Alex Smith",
+    //     "PublishDate": "05-20-2024",
+    //     "Content": "Mercury retrograde is often blamed for communication mishaps and travel delays. Learn how to navigate this period with mindfulness and patience. Double-check important messages, back up your data, and avoid making major decisions if possible. Use this time for reflection, review, and tying up loose ends rather than starting new projects.",
+    //     "ImageUrl": ""
+    // },
+    // {
+    //     "id": "3",
+    //     "Title": "Full Moon Rituals for Manifestation",
+    //     "Author": "Priya Patel",
+    //     "PublishDate": "06-10-2024",
+    //     "Content": "Harness the energy of the full moon to set intentions and manifest your desires. Discover simple rituals you can perform at home. Light a candle, write down your goals, and visualize your dreams coming true. The full moon is a powerful time for releasing what no longer serves you and embracing new opportunities.",
+    //     "ImageUrl": ""
+    // },
+    // {
+    //     "id": "4",
+    //     "Title": "Astrology and Relationships: Venus in Your Chart",
+    //     "Author": "Carlos Rivera",
+    //     "PublishDate": "05-28-2024",
+    //     "Content": "Venus represents love and attraction in your birth chart. Find out what your Venus sign says about your romantic style. It reveals how you express affection, what you value in relationships, and the qualities you find attractive in others. Understanding your Venus sign can help you build deeper connections and navigate relationship challenges.",
+    //     "ImageUrl": ""
+    // },
+    // {
+    //     "id": "5",
+    //     "Title": "Saturn Return: Embracing Change",
+    //     "Author": "Emily Chen",
+    //     "PublishDate": "06-15-2024",
+    //     "Content": "The Saturn return marks a major turning point in your life, often bringing challenges and growth. Learn how to embrace this transformative period. It typically occurs around ages 29, 58, and 87, prompting you to reassess your goals and responsibilities. Facing your fears and making necessary changes during this time can lead to lasting personal development.",
+    //     "ImageUrl": ""
+    // }
 ]
