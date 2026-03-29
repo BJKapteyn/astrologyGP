@@ -4,7 +4,7 @@
     fill: var(--secondary-orange);
     background-color: rgba(0,0,0,0);
     border: none;
-    position: absolute;
+    position: fixed;
     padding: 0px;
     right: .5em;
     top: .5em;
