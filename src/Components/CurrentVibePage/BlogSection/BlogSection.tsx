@@ -6,8 +6,8 @@ import { BlogPost } from '../BlogPost/BlogPost';
 import { TitleCard } from '../../PageElements/TitleCard/TitleCard.jsx';
 import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction';
 import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlUtility.js';
-import './BlogSection.css';
 import { Link } from 'react-router-dom';
+import './BlogSection.css';
 
 export const BlogSection: React.FC = () => {
     const [externalBlogPosts, setExternalBlogPosts] = useState<Blog[] | null>(null); 
