@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { BlogSection } from '../Components/CurrentVibePage/BlogSection/BlogSection.tsx';
-import { addPageHeaderInfo } from 'UtilityFunctions/pageUtility.js';
+import { addPageHeaderInfo } from '../UtilityFunctions/pageUtility.js';
 
 
 function CurrentVibePage() {

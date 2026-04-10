@@ -1,10 +1,10 @@
 
 import { useState } from 'react';
 import { CalendarEventResource, DeleteCalendarEventRequestBody } from '../../../../Models/Types/types';
-import { sendAPIPost, alertAPIResponse } from 'UtilityFunctions/apiUtility';
+import { sendAPIPost, alertAPIResponse } from '../../../../UtilityFunctions/apiUtility';
 import { useLocation, useNavigate } from 'react-router';
-import { buildAzureFunctionURL } from 'UtilityFunctions/urlUtility';
-import { FunctionNames } from 'Enums/FunctionNames';
+import { buildAzureFunctionURL } from '../../../../UtilityFunctions/urlUtility';
+import { FunctionNames } from '../../../../Enums/FunctionNames';
 import { ImageUpload } from '../../ImageUpload/ImageUpload';
 import { TeamMember } from '../../../../Models/Types/types';
 import { TeamMemberDropdown } from '../TeamMemberDropdown/TeamMemberDropdown';

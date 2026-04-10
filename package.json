@@ -57,7 +57,7 @@
     "@babel/plugin-transform-private-methods": "^7.25.9",
     "@babel/plugin-transform-private-property-in-object": "^7.25.9",
     "@babel/preset-typescript": "^7.27.0",
-    "@types/node": "^22.14.1",
+    "@types/node": "^22.19.17",
     "@types/react": "^19.1.8",
     "@types/react-big-calendar": "^1.16.1",
     "@types/react-dom": "^19.1.6"

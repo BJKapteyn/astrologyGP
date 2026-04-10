@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { ItemData } from "Models/Types/types";
+import { ItemData } from "../../../Models/Types/types";
 import { Link } from "react-router-dom";
-import { useRandomImageUrl } from "CustomHooks/useRandomImageUrl";
-import { ActionButton } from "Components/PageElements/ActionButton/ActionButton";
+import { useRandomImageUrl } from "../../../CustomHooks/useRandomImageUrl";
+import { ActionButton } from "../../PageElements/ActionButton/ActionButton";
 import { LoadingIndicator } from "../LoadingIndicator/LoadingIndicator";
 import './SingleItem.css';
+import { animated } from 'react-spring';
 
 interface SingleItemProps {
     itemData: ItemData;
@@ -51,7 +52,7 @@ export const SingleItem: React.FC<SingleItemProps> = ({
                 <div className="singleitem-information">
                     <p id="singleitem-name">{itemData.name?.toUpperCase()}</p>
                     {!hasVariation && <Link target='_blank' to={purchaseLink}><ActionButton buttonSettings={purchaseButtonSettings}></ActionButton></Link>}
-                    {hasVariation && itemData.variations.map(variation => {
+                    {hasVariation && itemData.variations.map((variation: typeof itemData.variations[number]) => {
                         return (
                             <div key={variation.id+variation.name} className="singleitem-variation-container">
                                 <p className="singleitem-variation">{variation.name.toUpperCase()}</p>

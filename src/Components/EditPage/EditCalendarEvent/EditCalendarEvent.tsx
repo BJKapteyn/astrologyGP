@@ -6,7 +6,7 @@ import { useGetAzureFunction } from "../../../CustomHooks/useGetAzureFunction";
 import { LoadingIndicator } from "../../PageElements/LoadingIndicator/LoadingIndicator";
 import { buildAzureFunctionURL } from "../../../UtilityFunctions/urlUtility";
 import { CalendarEventResource } from "../../../Models/Types/types";
-import { FunctionNames } from "Enums/FunctionNames";
+import { FunctionNames } from "../../../Enums/FunctionNames";
 import './EditCalendarEvent.css';
 
 export const EditCalendarEvent: React.FC = () => {

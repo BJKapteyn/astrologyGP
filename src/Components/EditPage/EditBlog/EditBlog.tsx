@@ -6,7 +6,7 @@ import { LoadingIndicator } from "../../PageElements/LoadingIndicator/LoadingInd
 import { buildAzureFunctionURL } from "../../../UtilityFunctions/urlUtility";
 import { Blog } from "../../../Models/Types/types";
 import '../EditButtons/EditButtons.css';
-import { FunctionNames } from "Enums/FunctionNames";
+import { FunctionNames } from "../../../Enums/FunctionNames";
 
 export const EditBlog: React.FC = () => {
     const getAllBlogPostsEndpoint = buildAzureFunctionURL(FunctionNames.GetAllBlogPosts, process.env.REACT_APP_GET_ALL_BLOG_POSTS);

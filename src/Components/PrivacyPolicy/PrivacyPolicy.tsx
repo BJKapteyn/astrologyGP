@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./PrivacyPolicy.css";
-import { ActionButton } from "Components/PageElements/ActionButton/ActionButton";
+import { ActionButton } from "../PageElements/ActionButton/ActionButton";
 import { Link } from "react-router-dom";
 
 export const PrivacyPolicy = () => {

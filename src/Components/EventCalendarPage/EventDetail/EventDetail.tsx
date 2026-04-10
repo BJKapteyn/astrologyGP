@@ -1,8 +1,8 @@
 import { useCallback } from 'react';
 import { SingleItem } from '../../PageElements/SingleItem/SingleItem';
-import { ItemData } from 'Models/Types/types';
-import { CalendarEvent } from 'Models/Types/types';
-import { buildSingleServiceItemURL } from 'UtilityFunctions/urlUtility';
+import { ItemData } from '../../../Models/Types/types';
+import { CalendarEvent } from '../../../Models/Types/types';
+import { buildSingleServiceItemURL } from '../../../UtilityFunctions/urlUtility';
 import './EventDetail.css'
 
 interface EventDetailProps {

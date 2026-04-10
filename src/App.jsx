@@ -7,8 +7,8 @@ import { EditBlogForm } from './Components/EditPage/EditBlogForm/EditBlogForm.ts
 import { EditBlog } from './Components/EditPage/EditBlog/EditBlog.tsx';
 import { Login } from './Components/Login/Login.tsx';
 import { AuthenticationGuard } from './Components/Login/Auth0/AuthGuard.jsx';
-import { SingleBlogPost } from 'Components/CurrentVibePage/SingleBlogPost/SingleBlogPost';
-import { EditCalendarEvent } from 'Components/EditPage/EditCalendarEvent/EditCalendarEvent.tsx';
+import { SingleBlogPost } from './Components/CurrentVibePage/SingleBlogPost/SingleBlogPost';
+import { EditCalendarEvent } from './Components/EditPage/EditCalendarEvent/EditCalendarEvent.tsx';
 import { EditCalendarEventForm } from './Components/EditPage/EditCalendarEvent/EditCalendarEventForm/EditCalendarEventForm';
 import Layout from './Components/Layout/Layout.jsx';
 import HomePage from './Pages/HomePage.jsx';
@@ -19,7 +19,7 @@ import OfferingsPage from './Pages/OfferingsPage.jsx';
 import StorePage from './Pages/StorePage.jsx';
 import CurrentVibePage from './Pages/CurrentVibePage.jsx';
 import EditPage from './Pages/EditPage.tsx';
-import EventCalendarPage from 'Pages/EventCalendarPage.jsx';
+import EventCalendarPage from './Pages/EventCalendarPage.jsx';
 import './App.scss';
 
 function App() {

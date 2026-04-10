@@ -1,7 +1,7 @@
-import { FunctionNames } from 'Enums/FunctionNames';
+import { FunctionNames } from '../../../Enums/FunctionNames';
 import { useState } from 'react';
-import { sendAPIPost } from 'UtilityFunctions/apiUtility';
-import { buildAzureFunctionURL } from 'UtilityFunctions/urlUtility';
+import { sendAPIPost } from '../../../UtilityFunctions/apiUtility';
+import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlUtility';
 
 interface ImageUploadProps {
     setBannerImageUrlCallback?: (url: string | null) => void;

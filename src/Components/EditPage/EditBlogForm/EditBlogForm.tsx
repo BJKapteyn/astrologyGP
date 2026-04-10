@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { Blog } from '../../../Models/Types/types';
 import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlUtility';
 import { sendAPIPost } from '../../../UtilityFunctions/apiUtility';
-import { FunctionNames } from 'Enums/FunctionNames';
+import { FunctionNames } from '../../../Enums/FunctionNames';
 import './EditBlogForm.css'
 import { ImageUpload } from '../ImageUpload/ImageUpload';
 

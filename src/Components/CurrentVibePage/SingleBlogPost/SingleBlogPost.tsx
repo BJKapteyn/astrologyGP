@@ -1,9 +1,9 @@
-import { usePostAzureFunction } from 'CustomHooks/usePostAzureFunction';
+import { usePostAzureFunction } from '../../../CustomHooks/usePostAzureFunction';
 import { useParams } from 'react-router-dom';
 import { BlogPost } from '../BlogPost/BlogPost';
-import { buildAzureFunctionURL } from 'UtilityFunctions/urlUtility';
-import { LoadingIndicator } from 'Components/PageElements/LoadingIndicator/LoadingIndicator';
-import { Blog } from 'Models/Types/types';
+import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlUtility';
+import { LoadingIndicator } from '../../../Components/PageElements/LoadingIndicator/LoadingIndicator';
+import { Blog } from '../../../Models/Types/types';
 import { useEffect, useRef } from 'react';
 
 export const SingleBlogPost: React.FC = () => {

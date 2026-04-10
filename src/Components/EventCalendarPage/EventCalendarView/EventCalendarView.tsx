@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { CalendarEvent, CalendarEventResource } from 'Models/Types/types';
+import { CalendarEvent, CalendarEventResource } from '../../../Models/Types/types';
 import { EventDetail } from '../EventDetail/EventDetail';
 import { EventCalendar } from '../EventCalendar/EventCalendar';
 import { EventCalendarMobile } from '../EventCalendarMobile/EventCalendarMobile';
-import { sendAPIPost } from 'UtilityFunctions/apiUtility';
-import { buildAzureFunctionURL } from 'UtilityFunctions/urlUtility';
-import { FunctionNames } from 'Enums/FunctionNames';
+import { sendAPIPost } from '../../../UtilityFunctions/apiUtility';
+import { buildAzureFunctionURL } from '../../../UtilityFunctions/urlUtility';
+import { FunctionNames } from '../../../Enums/FunctionNames';
 import './EventCalendarView.css';
 
 // Functionality and display for the Event Calendar page.

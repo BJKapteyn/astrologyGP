@@ -1,7 +1,7 @@
-import { CalendarEvent } from "Models/Types/types";
+import { CalendarEvent } from "../../../Models/Types/types";
 import './EventCalendarMobile.css';
 import { Link } from "react-router-dom";
-import { ActionButton } from "Components/PageElements/ActionButton/ActionButton";
+import { ActionButton } from "../../../Components/PageElements/ActionButton/ActionButton";
 
 interface EventCalendarProps {
     events: CalendarEvent[] | null; 
