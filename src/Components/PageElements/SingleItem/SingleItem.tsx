@@ -5,7 +5,6 @@ import { useRandomImageUrl } from "../../../CustomHooks/useRandomImageUrl";
 import { ActionButton } from "../../PageElements/ActionButton/ActionButton";
 import { LoadingIndicator } from "../LoadingIndicator/LoadingIndicator";
 import './SingleItem.css';
-import { animated } from 'react-spring';
 
 interface SingleItemProps {
     itemData: ItemData;
