@@ -35,6 +35,11 @@
     font-size: 1.2em;
 }
 
+.event-calendar-mobile-no-events {
+    margin-bottom: 3em;
+    
+}
+
 @media screen and (max-width: 400px) {
     .event-calendar-mobile-item {
         width: 95%;

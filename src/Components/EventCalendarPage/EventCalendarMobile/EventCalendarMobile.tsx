@@ -27,8 +27,8 @@ export const EventCalendarMobile: React.FC<EventCalendarProps> = ({ events }) =>
     
     return (
         <div className="event-calendar-mobile">
-            {isAnyEventActive ? 
-                events && events.map((event) => {
+            {isAnyEventActive 
+                ? events && events.map((event) => {
                     const mapKey: string = event.start?.toString() ?? "" + event.title;   
                     const didEventExpire = new Date(event?.start ?? Date.now()) < new Date(Date.now());
                     let dateText = event.start?.toLocaleDateString() ?? '';
@@ -46,8 +46,8 @@ export const EventCalendarMobile: React.FC<EventCalendarProps> = ({ events }) =>
                             <div className="event-calendar-mobile-description">{event.resource?.EventDescription}</div>
                         </div>
                     );
-                }) : 
-                <h5 className="event-calendar-mobile-no-events">No upcoming events at this time, check back later!</h5>
+                }) 
+                : <h5 className="event-calendar-mobile-no-events">No upcoming events at this time, check back later!</h5>
             }
         </div>
     );
